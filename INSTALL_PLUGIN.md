@@ -33,13 +33,18 @@ Use PM Thought Partner across ALL your projects and repos.
 ```bash
 # Clone the repository
 git clone https://github.com/breethomas/pm-thought-partner.git
-cd pm-thought-partner
 
-# Install globally
-claude plugin install .
+# Copy to Claude's plugins directory
+mkdir -p ~/.claude/plugins
+cp -r pm-thought-partner ~/.claude/plugins/
+
+# Or create a symlink (easier for updates)
+ln -s "$(pwd)/pm-thought-partner" ~/.claude/plugins/pm-thought-partner
 ```
 
-This installs to `~/.claude/plugins/pm-thought-partner/` and makes it available everywhere.
+This makes it available in all your Claude Code sessions.
+
+**Tip:** Use symlink if you want to `git pull` updates easily. Use copy if you want a stable version.
 
 **When to use global:**
 - You're a PM working across multiple projects
@@ -79,19 +84,19 @@ Team members automatically get the plugin when they work on this project.
 
 **For global install:**
 ```bash
-# Check plugin is installed
-claude plugin list
+# Check if directory exists
+ls -la ~/.claude/plugins/pm-thought-partner
 ```
 
-You should see `pm-thought-partner` in the list.
+You should see the plugin files.
 
 **For per-project install:**
 ```bash
 # In your project directory
-ls -la .claude/plugins/
+ls -la .claude/plugins/pm-thought-partner
 ```
 
-You should see `pm-thought-partner/` directory.
+You should see the plugin files.
 
 ---
 
