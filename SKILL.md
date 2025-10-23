@@ -25,8 +25,8 @@ claude mcp add https://github.com/breethomas/pm-thought-partner
 ```
 
 **In Claude Code Browser:**
-1. Install the Claude GitHub App at [claude.ai/code](https://claude.ai/code)
-2. Fork this repository to your GitHub account
+1. Fork this repository to your GitHub account
+2. Install the Claude GitHub App at [claude.ai/code](https://claude.ai/code)
 3. Select the repository from your list
 
 **What you get:**

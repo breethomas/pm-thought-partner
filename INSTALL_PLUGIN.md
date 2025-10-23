@@ -44,17 +44,17 @@ You should see `pm-thought-partner` in the list.
 
 **Install:**
 
-1. **Install the Claude GitHub App** (if you haven't already):
+1. **Fork the repository to your GitHub account**:
+   - Go to https://github.com/breethomas/pm-thought-partner
+   - Click "Fork" (top right) to create your own copy
+   - This adds the repository to your GitHub account
+
+2. **Install the Claude GitHub App** (if you haven't already):
    - Go to [claude.ai/code](https://claude.ai/code)
    - Click "Select repository"
    - Click "Install GitHub App"
    - Authorize Claude to access your GitHub account
-   - Select which repositories Claude can access (include `pm-thought-partner`)
-
-2. **Fork or clone the repository to your GitHub account**:
-   - Go to https://github.com/breethomas/pm-thought-partner
-   - Click "Fork" (top right) to create your own copy
-   - Or add the Claude GitHub App to this specific repository if you have access
+   - Select which repositories Claude can access (include your `pm-thought-partner` fork)
 
 3. **Select the repository in Claude Code**:
    - Go to [claude.ai/code](https://claude.ai/code)
