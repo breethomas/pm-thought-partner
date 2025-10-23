@@ -24,19 +24,60 @@
 - Git (for cloning the repo)
 - Command line access (Terminal on Mac/Linux, PowerShell on Windows)
 
-### Install Steps
+### Choose Your Install Type
+
+**Option A: Global Install (Recommended for Individual PMs)**
+
+Use PM Thought Partner across ALL your projects and repos.
 
 ```bash
 # Clone the repository
 git clone https://github.com/breethomas/pm-thought-partner.git
 cd pm-thought-partner
 
-# Install as plugin
+# Install globally
 claude plugin install .
 ```
 
+This installs to `~/.claude/plugins/pm-thought-partner/` and makes it available everywhere.
+
+**When to use global:**
+- You're a PM working across multiple projects
+- You want frameworks available in any Claude Code session
+- You're an individual user (not coordinating with a team)
+
+---
+
+**Option B: Per-Project Install (For Teams)**
+
+Install only in specific project repositories where your team wants PM frameworks.
+
+```bash
+# In YOUR project directory (not pm-thought-partner)
+cd /path/to/your/project
+
+# Add as project plugin
+mkdir -p .claude/plugins
+cp -r /path/to/pm-thought-partner .claude/plugins/pm-thought-partner
+
+# Commit to your repo
+git add .claude/
+git commit -m "Add PM Thought Partner plugin"
+git push
+```
+
+Team members automatically get the plugin when they work on this project.
+
+**When to use per-project:**
+- You're on a product team and want shared frameworks
+- You only want it in product repos (not infrastructure/backend repos)
+- You want version control over which frameworks the team uses
+
+---
+
 ### Verify Installation
 
+**For global install:**
 ```bash
 # Check plugin is installed
 claude plugin list
@@ -44,13 +85,26 @@ claude plugin list
 
 You should see `pm-thought-partner` in the list.
 
-**Test it works:**
+**For per-project install:**
 ```bash
-# In any project directory with Claude Code
+# In your project directory
+ls -la .claude/plugins/
+```
+
+You should see `pm-thought-partner/` directory.
+
+---
+
+### Test It Works
+
+```bash
+# Start Claude Code in any directory (global) or your project (per-project)
 claude code
 ```
 
-Then ask: "Should I write a PRD or prototype first?" - It should push you toward prototyping.
+Then ask: "Should I write a PRD or prototype first?"
+
+**Expected behavior:** Claude pushes you toward prototyping, references frameworks, challenges assumptions.
 
 ---
 

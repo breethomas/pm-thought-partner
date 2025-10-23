@@ -78,22 +78,30 @@ Simple setup, works across all your PM conversations, no coding required.
 
 ### 🏢 For Teams
 
-**Option: Add to your project repository**
+**Option: Per-Project Plugin Install**
 
-Add as a shared skill so your whole team has access automatically.
+Add PM Thought Partner to specific project repositories so your whole team has access.
 
 ```bash
-# In your project directory
-mkdir -p .claude/skills/pm-thought-partner
-cp -r /path/to/pm-thought-partner/skills/pm-thought-partner/* .claude/skills/pm-thought-partner/
+# In YOUR project directory
+cd /path/to/your/project
+
+# Add as project plugin
+mkdir -p .claude/plugins
+cp -r /path/to/pm-thought-partner .claude/plugins/pm-thought-partner
 
 # Commit to your repo
 git add .claude/
-git commit -m "Add PM Thought Partner skill"
+git commit -m "Add PM Thought Partner plugin"
 git push
 ```
 
-Team members get the skill when they work on the project with Claude Code
+**Benefits:**
+- Team members automatically get it when working on this project
+- Version controlled (everyone uses same frameworks)
+- Can have different versions per project if needed
+
+**[→ See full team setup guide](INSTALL_PLUGIN.md#option-b-per-project-install-for-teams)**
 
 ---
 
