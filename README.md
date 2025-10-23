@@ -41,16 +41,16 @@ If you want to receive updates and optionally contribute back:
    git clone https://github.com/breethomas/pm-thought-partner.git ~/pm-thought-partner
    ```
 
-2. **Link as a Claude Code skill:**
+2. **Install as a Personal Skill:**
    ```bash
-   mkdir -p ~/.claude-code/skills
-   ln -s ~/pm-thought-partner ~/.claude-code/skills/pm-thought-partner
+   mkdir -p ~/.claude/skills/pm-thought-partner
+   cp ~/pm-thought-partner/SKILL.md ~/.claude/skills/pm-thought-partner/
    ```
 
 3. **Verify installation:**
    ```bash
-   ls -la ~/.claude-code/skills/
-   # You should see: pm-thought-partner -> /Users/[you]/pm-thought-partner
+   ls -la ~/.claude/skills/pm-thought-partner/
+   # You should see SKILL.md in the directory
    ```
 
 4. **Restart Claude Code**
@@ -59,15 +59,34 @@ If you want to receive updates and optionally contribute back:
 ```bash
 cd ~/pm-thought-partner
 git pull
+cp ~/pm-thought-partner/SKILL.md ~/.claude/skills/pm-thought-partner/
 ```
 
-#### Option 3: Direct Install
+#### Option 3: Direct Install (Personal Skill)
 
 ```bash
-git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude-code/skills/pm-thought-partner
+# Clone and install in one step
+git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/skills/pm-thought-partner
 ```
 
 Then restart Claude Code.
+
+#### Option 4: Project Skill (Team Sharing)
+
+If you want your whole team to have access automatically:
+
+```bash
+# In your project directory
+mkdir -p .claude/skills/pm-thought-partner
+cp ~/pm-thought-partner/SKILL.md .claude/skills/pm-thought-partner/
+
+# Commit to your project repo
+git add .claude/skills/pm-thought-partner/
+git commit -m "Add PM Thought Partner skill"
+git push
+```
+
+Team members get the skill automatically when they pull your project.
 
 ---
 
