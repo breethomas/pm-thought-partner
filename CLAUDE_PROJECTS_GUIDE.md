@@ -18,21 +18,27 @@ Claude Projects allow you to create persistent conversations with custom instruc
 1. Go to [claude.ai](https://claude.ai)
 2. Click on **"Projects"** in the left sidebar
 3. Click **"Create Project"**
-4. Name it: **"PM Thought Partner"**
-5. (Optional) Add a description: "AI-era product management frameworks and guidance"
+4. **Name:** "PM Thought Partner"
+5. **Description (optional):** "AI-era product management thought partner grounded in frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and other top PM leaders"
+
+⚠️ **Important:** Keep the description short! The actual content goes in Custom Instructions (next step).
 
 ### Step 2: Add Custom Instructions
 
-This tells Claude to act as your PM thought partner using the frameworks.
+This is the **critical step** that tells Claude to act as your PM thought partner using the frameworks.
 
-1. In your new project, click **"Add custom instructions"**
+1. In your new project, click **"Add custom instructions"** or the settings icon
 2. Go to the [SKILL.md file on GitHub](https://github.com/breethomas/pm-thought-partner/blob/main/SKILL.md)
 3. Click **"Raw"** to see the plain text version
-4. **Copy the entire content** (Cmd+A, Cmd+C on Mac or Ctrl+A, Ctrl+C on Windows)
-5. **Paste it** into the custom instructions field in your Claude Project
+4. **Copy the ENTIRE content** (Cmd+A, Cmd+C on Mac or Ctrl+A, Ctrl+C on Windows)
+5. **Paste it into the "Custom Instructions" field** in your Claude Project
+   - ⚠️ **Do NOT paste it in the description field**
+   - ⚠️ **Do NOT paste just a portion—copy the entire SKILL.md file**
 6. Click **"Save"**
 
 **What this does:** Claude will now follow the PM Thought Partner philosophy—pushing you toward prototyping, challenging assumptions with proven frameworks, and applying AI-era practices.
+
+**Common mistake to avoid:** Pasting SKILL.md content into the Project Description instead of Custom Instructions. The description is just a label for you; Custom Instructions is what Claude actually reads.
 
 ### Step 3: Add Framework Files (Optional but Recommended)
 

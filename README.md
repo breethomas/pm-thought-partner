@@ -97,11 +97,13 @@ Team members get the skill automatically when they pull your project.
 #### Option 1: Create a Claude Project (Recommended)
 
 1. Go to [claude.ai](https://claude.ai) and create a new Project
-2. Name it "PM Thought Partner"
-3. Add custom instructions: Copy the content from [SKILL.md](https://github.com/breethomas/pm-thought-partner/blob/main/SKILL.md)
-4. Optionally upload key framework files as project knowledge
+2. Name it **"PM Thought Partner"**
+3. **Description (optional):** "AI-era product management thought partner grounded in frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and other top PM leaders"
+4. **Custom Instructions:** Copy the **entire content** from [SKILL.md](https://github.com/breethomas/pm-thought-partner/blob/main/SKILL.md) and paste it here
+   - ⚠️ **Important:** Put SKILL.md content in "Custom Instructions", NOT in the description field
+5. Optionally upload key framework files as project knowledge (for deeper reference)
 
-**See:** [Claude Projects Setup Guide](./CLAUDE_PROJECTS_GUIDE.md) for detailed instructions.
+**See:** [Claude Projects Setup Guide](./CLAUDE_PROJECTS_GUIDE.md) for detailed step-by-step instructions with screenshots.
 
 #### Option 2: Use Prompt Library
 
