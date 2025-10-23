@@ -17,13 +17,29 @@ Acts as your product management thought partner to:
 
 ## Installation
 
-**Choose your installation method based on your technical comfort level:**
+**⚠️ Important:** This skill requires access to framework files to work properly. Claude Projects has limited file access, so **we recommend using Claude Code (CLI or Browser)** for the full experience.
 
-### For Claude Code Users (CLI/Desktop)
+### Recommended: Claude Code (CLI or Browser)
 
-#### Option 1: Ask Claude Code to Install It (Easiest)
+Claude Code gives you full access to all 15+ frameworks with detailed content.
 
-Not comfortable with terminal commands? Just ask Claude Code:
+#### For Browser Users: Claude Code in Browser
+
+Anthropic recently launched Claude Code in the browser! This gives you the full skill experience without needing the CLI.
+
+1. Go to [claude.ai/code](https://claude.ai/code) or click "Code" in the sidebar
+2. Follow the same installation steps as CLI (Claude Code can handle git clone)
+3. Simply ask: "Install the PM Thought Partner skill from https://github.com/breethomas/pm-thought-partner"
+
+**Benefits:**
+- ✅ Full framework file access (unlike Claude Projects)
+- ✅ No terminal required
+- ✅ Browser-based interface
+- ✅ All 15+ frameworks work properly
+
+#### For CLI Users: Ask Claude Code to Install It
+
+If you're using Claude Code CLI:
 
 ```
 Hey Claude, can you install the PM Thought Partner skill from
@@ -90,9 +106,14 @@ Team members get the skill automatically when they pull your project.
 
 ---
 
-### For Claude.ai Web Users (Browser)
+### Alternative: Claude Projects (Limited Functionality)
 
-**Note:** The full skill functionality only works in Claude Code. However, you can still use these frameworks in the web browser:
+**⚠️ Limitation:** Claude Projects cannot access framework files by reference, which means you'll get high-level guidance but not detailed framework content like "What are the 5 steps in the CODER framework?"
+
+**This works for:** General PM guidance and philosophy
+**This doesn't work for:** Detailed framework walkthroughs and specific methodologies
+
+If you need the full experience, use Claude Code instead.
 
 #### Option 1: Create a Claude Project (Recommended)
 
