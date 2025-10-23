@@ -197,24 +197,189 @@ Model: $100K+ annual contracts
 ❌ **Wrong channel for product type** - Enterprise sales for viral product
 ❌ **Assuming one model fits all markets** - Same pricing for SMB and Enterprise
 
-## AI's Impact on Four Fits (2024-2025 Update)
+## AI Era Update: The Four Fits 2.0 (2025)
 
-Brian Balfour's recent thinking on how AI changes the framework:
+**Source:** Brian Balfour (blog.brianbalfour.com, 2025)
 
-### New Product-Channel Fits
-- **AI products with embedded virality:** ChatGPT share links, Midjourney galleries
-- **AI-generated content for SEO:** Automated content loops
-- **Personalized channel optimization:** AI determines best channel per user
+It's been 10 years since Brian first wrote about the Four Fits. While the framework still holds, **"AI has massively changed each of the four elements as well as how they fit together."**
 
-### Changed Channel Economics
-- AI reduces CAC through better targeting
-- AI chatbots reduce sales cost for mid-market
-- Product-led growth enhanced by AI onboarding
+Balfour notes: "I only recently felt I had enough clarity to update the framework based on AI and its halo effect."
 
-### Market Expansion
-- AI lowers barriers to entry (reduces need for specialists)
-- New markets emerge for AI-native tools
-- Traditional markets disrupted by AI alternatives
+### Critical Insight: Speed of Change
+
+**The biggest shift:** "This is all happening so fast."
+
+Previously, companies had years to adapt when market conditions shifted. Now, **"the time between new AI tech capability and customer expectations increasing" is measured in months or weeks.**
+
+**Key implication:** Companies must continuously monitor fit alignment and build flexibility into strategies, as "windows of massive opportunity are also opening" alongside risks.
+
+### 1. How AI Changes Market-Product Fit
+
+#### Acceleration of PMF Collapse
+
+**The Chegg Case Study (2024):**
+Homework help platform Chegg illustrates rapid PMF collapse:
+- Lost **90% of its valuation in nine months** (January-October 2024)
+- Cause: ChatGPT launch
+- Their growth loop—curated human answers distributed via SEO—broke
+- **Why?** "Students could just enter their homework and get an immediate personalized answer"
+
+**The New Dynamic:**
+Companies can now **"find and lose product market fit almost instantly"** rather than experiencing gradual erosion.
+
+**What this means:**
+- Continuous PMF validation required
+- Watch for new AI capabilities that could obsolete your value prop
+- Speed to adapt is now competitive advantage
+- User expectations shift with each major AI release
+
+### 2. How AI Changes Product-Channel Fit
+
+#### Distribution Disruption
+
+**Traditional channels face collapse:**
+- "SEO traffic is down across the board"
+- "Social sites are walled gardens"
+- "PPC platforms are cashing in"
+
+**The ChatGPT Distribution Shift:**
+Users increasingly start research in ChatGPT instead of traditional search or category-specific sites. This represents **"a fundamental shift in user behavior and starting points."**
+
+**Multi-Channel Risk:**
+Even stable existing channels become vulnerable when users shift attention elsewhere. Companies can be **"disrupted even if your existing channels continue performing well."**
+
+**New Channel Opportunities:**
+- AI chat interfaces as discovery channels
+- AI-generated content ecosystems
+- Embedded AI features that create viral loops
+
+**Strategic Questions:**
+- "Where do users start their journey now vs. 6 months ago?"
+- "Is ChatGPT/Claude becoming the first touch point?"
+- "Are we building for traditional SEO or AI-powered discovery?"
+
+### 3. How AI Changes Channel-Model Fit
+
+#### Cost Structure Breaks
+
+**The Margin Problem:**
+AI introduces **"meaningful costs with every use of the product."**
+
+**Traditional SaaS:**
+- 70%+ gross margins
+- Marginal cost of serving additional users approaches zero
+
+**AI-Powered Products:**
+- Dramatically lower margins
+- Example: **"Lovable's gross margin is 35% but it doesn't include the cost of serving free users"**
+- Every AI inference costs money
+
+#### Freemium Model Stress
+
+**"Freemium products will have difficulty introducing meaningful AI features as part of the free tier without drastically increasing the costs to support those free users."**
+
+**Three Channel-Model Risks:**
+1. **Forced monetization changes** due to rising infrastructure costs
+2. **Channel shifts** requiring higher CAC
+3. **"Stranded in the 'Danger Zone'"** between ARPU (Average Revenue Per User) and viable channels
+
+**The Danger Zone:**
+```
+If your ARPU decreases (AI costs) but your required CAC increases (channel shifts),
+you get trapped between unprofitable unit economics and unsustainable channels.
+```
+
+**Strategic Implications:**
+- Model AI costs into pricing from day one
+- Consider usage-based pricing for AI features
+- Free tiers may need to be AI-limited
+- Watch for margin compression as AI features expand
+
+### 4. How AI Changes Model-Market Fit
+
+#### Market Expansion & Contraction Simultaneously
+
+**Markets Exploding:**
+- "Canva always pitched itself as a design tool for everyone, but its TAM is exploding" (AI makes design accessible)
+- No-code app builders (Lovable, Bolt) transformed niche markets into massive ones
+- AI lowers barriers → More people can do specialized work
+
+**Markets Shrinking:**
+- Customer support markets shrink as AI automates jobs
+- Specialized SaaS categories consolidate into AI-powered platforms
+- Jobs disappear → Buyer personas change
+
+#### Pricing Commoditization
+
+**New competitors often undercut pricing dramatically:**
+- AI-enabled solutions can reduce costs from **"$1,000/year for specialized services"** to **"$100/year or free"**
+- What was once specialized knowledge becomes AI-accessible
+- Race to the bottom in commoditized categories
+
+#### New Buyer Personas
+
+**"AI creates new buyer personas with different authority, timelines, and success metrics."**
+
+**Traditional IT Buyers:**
+- Focused on features, integrations, security
+- Long sales cycles
+- ROI based on efficiency gains
+
+**AI-Era Buyers:**
+- Evaluate headcount savings and process automation
+- Faster buying decisions (can test immediately)
+- ROI based on displacement of human labor
+- Different stakeholders (ops teams, not just IT)
+
+#### Market Category Shifts
+
+Companies must recalculate whether their revenue model still supports $100M+ potential:
+- Categories consolidating under AI platforms
+- New mega-categories emerging (AI assistants, AI agents)
+- Vertical SaaS being disrupted by horizontal AI tools
+
+### Key Framework Insight (Unchanged)
+
+**"I can't emphasize enough how much each of these fits influences each other...without that harmony, you have almost no chance at becoming a $100 million+ company."**
+
+All four fits are interdependent. **Changing one requires revisiting all others.**
+
+**AI Era Addition:**
+With AI, the interdependencies shift faster and more dramatically. A single AI capability release can break multiple fits simultaneously.
+
+### Practical Application: AI-Era Audit
+
+**Questions to ask quarterly:**
+
+**Market-Product Fit:**
+- "Has a new AI capability made our value prop obsolete?"
+- "Are user expectations shifting due to AI alternatives?"
+- "How quickly could we lose PMF to AI disruption?"
+
+**Product-Channel Fit:**
+- "Are users discovering solutions in ChatGPT instead of our channels?"
+- "Should we build for AI discovery (API access, plugins)?"
+- "Which channels are AI-resistant vs. AI-vulnerable?"
+
+**Channel-Model Fit:**
+- "Can we afford AI inference costs at scale?"
+- "Does our pricing support AI feature margins?"
+- "Are we trapped in the danger zone?"
+
+**Model-Market Fit:**
+- "Is our TAM expanding or contracting due to AI?"
+- "Who are the new buyers in an AI-automated world?"
+- "Can we still reach $100M+ in this category?"
+
+### The Urgency Factor
+
+Balfour emphasizes: **"This is all happening so fast. I hope this post triggers at least some urgency on your part."**
+
+**The AI Era Reality:**
+- Fits can break in months, not years
+- Windows of opportunity close quickly
+- Speed of adaptation > perfection
+- Continuous monitoring required
 
 ## Integration with Other Frameworks
 

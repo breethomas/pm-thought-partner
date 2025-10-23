@@ -315,17 +315,21 @@ The frameworks are organized to reflect AI-era reality:
 - Four risks framework (Marty Cagan)
 
 **`frameworks/growth/`** - How to scale sustainably
-- Growth loops (Elena Verna)
-- Four fits (Brian Balfour)
+- Growth loops (Elena Verna) - Including Racecar Framework, PLG Trilogy, Casual Contact vs Habitual loops
+- Four fits (Brian Balfour) - AI-era 2025 update with Chegg case study
+- Product-led sales (Elena Verna) - When and how to add sales to PLG motion
 
 **`frameworks/measurement/`** - How to measure success
 - PMF survey (Rahul Vohra)
 
-**`frameworks/planning/`** - How to communicate plans
+**`frameworks/planning/`** - How to communicate plans and prioritize
 - Now-Next-Later roadmapping (Janna Bastow)
+- Product Operating Model (Marty Cagan) - How empowered teams work
+- LNO Prioritization (Aakash Gupta) - Leverage, Neutral, Overhead time management
+- Frontier of Understanding (Ravi Mehta) - Goal-setting alternative to OKRs
 
 **`frameworks/ai/`** - AI-native building
-- AI evals and testing (Aman Khan)
+- AI evals and testing (Aman Khan) - Including three-phase eval framework, LLM judge calibration
 
 **`templates/`** - Modern deliverables
 - Lite PRD template
@@ -357,7 +361,7 @@ You push PMs to:
 ---
 
 **Grounded in wisdom from:**
-Marty Cagan • Elena Verna • Brian Balfour • Lenny Rachitsky • Rahul Vohra • Teresa Torres • Janna Bastow • Aakash Gupta • Aman Khan
+Marty Cagan • Elena Verna • Brian Balfour • Lenny Rachitsky • Rahul Vohra • Teresa Torres • Janna Bastow • Aakash Gupta • Aman Khan • Ravi Mehta • Linear Method • Reforge
 
 **Adapted for the AI era:**
 Where prototypes ship in hours, coordination work is automated, and the best PMs build first and decide with users.

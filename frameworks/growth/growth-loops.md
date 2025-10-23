@@ -156,6 +156,142 @@ Track metrics for each stage of the loop
 ❌ **Forcing loops that don't fit user behavior** - Must be natural
 ❌ **Optimizing retention without a growth loop** - Retention alone isn't enough
 
+## The Racecar Growth Framework
+
+**Source:** Lenny Rachitsky & Dan Hockenmaier (popularized by Elena Verna)
+
+Elena uses this framework to "maintain the ideal balance across areas of focus, particularly to avoid over-indexing on fuel or lubricants only."
+
+The Racecar Framework separates growth activities into four categories:
+
+### Engine (Growth Loops)
+The core mechanism that drives self-sustaining growth. This is what makes your product grow automatically without constant new inputs.
+
+**Examples:**
+- Viral loops (Dropbox referrals)
+- Network effects (LinkedIn)
+- Content/SEO loops (Stack Overflow)
+
+**Why it matters:** This is your only path to compounding, exponential growth.
+
+### Lubricants (Optimizations)
+Improvements that make your engine run more efficiently. These are conversion rate optimizations, UX improvements, and incremental wins.
+
+**Examples:**
+- A/B testing landing pages
+- Improving onboarding conversion
+- Reducing signup friction
+- Email nurture campaigns
+
+**Why it matters:** Lubricants improve your loop velocity but don't create new loops.
+
+### Turbo Boosts (One-off Tactics)
+Short-term initiatives that provide temporary growth spikes but don't compound.
+
+**Examples:**
+- Product launches
+- PR campaigns
+- Partnerships
+- Conference sponsorships
+
+**Why it matters:** Useful for short-term goals but unsustainable as primary strategy.
+
+### Fuel (Traditional Funnels)
+Linear acquisition channels that require constant investment. No compounding effect.
+
+**Examples:**
+- Paid advertising
+- Sales outreach
+- Content marketing (non-SEO)
+- Cold email campaigns
+
+**Why it matters:** Essential for many businesses but fundamentally linear—stop spending, growth stops.
+
+**The Key Insight:**
+Most companies over-index on fuel and lubricants because they're easier and show immediate results. But only the engine (growth loops) creates compounding, sustainable growth.
+
+**How to use it:**
+Audit your growth efforts and categorize them. Are you investing enough in building your engine? Or are you just pouring more fuel and adding lubricants to a fundamentally linear system?
+
+## The PLG Trilogy
+
+**Source:** Elena Verna
+
+As a SaaS startup, your focus should be on creating loops for three critical areas:
+
+### 1. Acquisition Loop
+How do new users discover and start using your product?
+
+**Example (Slack):**
+- Team uses Slack → Sends message to external partner → Partner sees Slack interface → Partner signs up → ...
+
+### 2. Retention Loop
+What brings users back and keeps them engaged?
+
+**Example (Notion):**
+- User creates doc → Shares with teammate → Teammate edits → User gets notification → Returns to respond → Creates more docs → ...
+
+### 3. Monetization Loop
+How does usage lead to revenue, which funds more growth?
+
+**Example (Figma):**
+- Designer creates files → Team collaborates → Needs paid features → Upgrades → More designers join → ...
+
+**The Trilogy Mindset:**
+Don't just build one loop. Build complementary loops across acquisition, retention, and monetization that reinforce each other.
+
+## Loop Classifications: Casual Contact vs. Habitual
+
+**Source:** Elena Verna
+
+### Casual Contact Loop
+A user distributes content using your product and another person becomes aware of your brand by interacting with that content.
+
+**Characteristics:**
+- Lower-intent awareness
+- Broader reach
+- Longer conversion cycles
+- Examples: Loom video recordings, Calendly scheduling links, Miro board shares
+
+**Use when:** You want broad brand awareness and top-of-funnel growth
+
+### Habitual Loop
+A habitual loop has one goal: to drive the user back into your product with actions that generate additional triggers to bring back other collaborators to engage with your product.
+
+**Characteristics:**
+- High-intent engagement
+- Tighter cycles
+- Higher activation rates
+- Examples: Slack messages, Notion comments, Figma file updates
+
+**Use when:** You want deep engagement and retention
+
+**Strategic Choice:**
+Some products lean heavily on one type (Loom = Casual Contact, Slack = Habitual), while others balance both. Your choice depends on your product category and growth goals.
+
+## Fast-Moving Water Framework
+
+**Source:** James Currier (NFX), adopted by Elena Verna
+
+The concept emphasizes market conditions over execution alone. The framework suggests companies should "jump into fast-moving water (a rapidly expanding industry)" to increase success odds.
+
+**Key Insight:**
+Strong execution in a stagnant category won't overcome market headwinds. It's easier to grow fast in a fast-growing market than to grow fast in a slow/declining market, even with superior execution.
+
+**Elena's Application:**
+"Find the lanes that have momentum and dive in."
+
+**How to identify fast-moving water:**
+- Markets experiencing rapid growth (10%+ annual growth)
+- Categories with new technological enablers (AI, blockchain, etc.)
+- Industries undergoing regulatory change
+- Shifting user behaviors creating new opportunities
+
+**Conversely, avoid:**
+- Declining markets, even if you can gain market share
+- Categories where incumbents have complete lock-in
+- "Mature" industries without disruption catalysts
+
 ## AI's Impact on Growth Loops (2024-2025 Update)
 
 Elena Verna's recent thinking on how AI changes growth:
@@ -169,6 +305,9 @@ Elena Verna's recent thinking on how AI changes growth:
 - AI can automate parts of loops that were manual
 - AI can personalize loop incentives per user
 - AI can identify loop optimization opportunities faster
+
+### PLG Evolution (2024)
+According to Elena, PLG is evolving from "more signups" to "more revenue per account." The focus shifts from acquisition loops to monetization and expansion loops.
 
 ## Integration with Other Frameworks
 

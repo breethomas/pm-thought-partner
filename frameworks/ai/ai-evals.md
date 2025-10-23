@@ -197,7 +197,7 @@ Expected: Doesn't follow malicious instructions
 - Rating scale (1-5) on quality
 - Flag edge cases for eval dataset
 
-## Aman's Eval Framework
+## Aman's Eval Framework (Basic)
 
 ```
 ┌─────────────────────────────────────┐
@@ -225,6 +225,207 @@ Expected: Doesn't follow malicious instructions
 │     (Add failing cases to evals)    │
 └─────────────────────────────────────┘
 ```
+
+## Beyond Vibe Checks: Three-Phase Eval Framework
+
+**Source:** Aman Khan (Arize AI) via Lenny's Newsletter
+
+Aman emphasizes that effective eval systems must be "grounded in real user problems, not generic metrics." This three-phase framework comes from training 2,000+ engineers at OpenAI and Anthropic.
+
+### Phase 1: Error Analysis Foundation
+
+**Start with a single principal domain expert** reviewing ~100 representative user interactions.
+
+**Why a single expert?**
+- Eliminates annotation conflicts
+- Avoids decision paralysis
+- Ensures consistency
+- Faster iteration
+
+**The expert should be able to:**
+- Deeply understand what constitutes quality in your domain
+- Explain decisions clearly enough that "a brand-new employee or an LLM could understand it"
+
+**Two-Step Process:**
+
+#### Step 1A: Open Coding
+Experts write free-form critiques explaining what succeeded or failed in each interaction.
+
+**Quality bar:**
+- Detailed enough for new employees to understand
+- Specific enough for LLM few-shot prompts
+- Captures nuance, not just pass/fail
+
+**Example (apartment leasing assistant):**
+```
+Interaction 23:
+❌ Failed to maintain conversation context
+❌ Didn't recognize user was asking about rescheduling
+❌ Offered irrelevant amenities information
+✅ Tone was friendly and professional
+```
+
+#### Step 1B: Axial Coding
+Group observations into 5-10 manageable failure mode categories.
+
+**Example categories (real product):**
+1. Conversation flow issues
+2. Handoff failures (bot → human)
+3. Rescheduling problems
+4. Context loss across turns
+5. Off-topic responses
+
+**Why 5-10 categories?**
+- Fewer: Too broad to be actionable
+- More: Too complex to manage
+
+### Phase 2: Building Reliable Evaluators
+
+#### Objective vs. Subjective Tests
+
+**Code-Based Evaluators (Objective):**
+Use for rule-based checks:
+- Valid JSON output
+- Contains required keywords
+- Executes without error
+- Follows format constraints
+
+**LLM-as-a-Judge (Subjective):**
+Use for qualities requiring judgment:
+- Tone and voice
+- Helpfulness
+- Semantic correctness
+- User satisfaction
+
+#### LLM Judge Calibration (Critical!)
+
+**The Core Challenge:**
+"LLM judges require constant calibration, explicit instructions, and human oversight."
+
+**Ground Truth Dataset Creation:**
+
+**Step 1: Expert Labeling**
+- Binary pass/fail judgments (not Likert scales!)
+- Detailed critiques for each example
+- Why? Likert scales create inconsistent "3 vs 4" distinctions
+
+**Step 2: Data Split Strategy**
+```
+Train Set (10-20%):
+- Clear examples with critiques
+- Use for prompt engineering
+- Few-shot examples for LLM judge
+
+Dev Set (40-45%):
+- Iterative testing and refinement
+- Tune judge prompt here
+- Measure performance
+
+Test Set (40-45%):
+- Held-out validation
+- NEVER use for tuning
+- Final performance measurement
+```
+
+**Step 3: Measure TPR/TNR, Not Accuracy**
+
+**Why accuracy misleads:**
+A judge predicting "pass" 99% of the time achieves high accuracy but catches zero failures.
+
+**Better metrics:**
+- **TPR (True Positive Rate):** Of examples that should pass, what % did the judge correctly identify?
+- **TNR (True Negative Rate):** Of examples that should fail, what % did the judge correctly identify?
+
+**Example:**
+```
+Dataset: 100 examples (80 pass, 20 fail)
+
+Bad Judge (99% accuracy):
+- Predicts "pass" for all 100
+- TPR: 100% (caught all passes)
+- TNR: 0% (caught zero failures)
+- Useless for quality control!
+
+Good Judge (85% accuracy):
+- TPR: 90% (72/80 passes correct)
+- TNR: 85% (17/20 failures caught)
+- Actually useful!
+```
+
+**Statistical Correction:**
+You can "statistically correct" raw scores using known error rates from your test set.
+
+### Phase 3: Architecture-Specific Strategies
+
+Different AI architectures require different eval approaches:
+
+#### Multi-Turn Conversations
+
+**Eval at session level first:**
+- Did the conversation achieve the user's goal?
+- Track success rate across full sessions
+
+**Before diagnosing dialogue failures:**
+- Reproduce issues in single-turn prompts
+- Isolate knowledge gaps from conversational memory problems
+- Fix knowledge first, then optimize multi-turn behavior
+
+**Example:**
+```
+Multi-turn failure:
+User: "Can you help me with pricing?"
+Bot: "Sure, what would you like to know?"
+User: "The enterprise plan"
+Bot: "I can help with that. What specifically?"
+User: "How much does it cost?"
+Bot: "Let me check..."
+
+Single-turn test:
+User: "How much does the enterprise plan cost?"
+Bot: [correct answer]
+
+Diagnosis: Not a knowledge problem, it's a context-tracking problem
+```
+
+#### RAG (Retrieval-Augmented Generation) Systems
+
+**Evaluate retriever and generator separately.**
+
+**Retrieval Metrics:**
+- **Recall@k:** Percentage of relevant documents in top-k results (MOST IMPORTANT)
+- **Precision@k:** Percentage of retrieved documents that are relevant
+- **Why Recall matters most:** If correct information isn't retrieved, generation cannot succeed
+
+**Generation Metrics:**
+- Answer relevance
+- Faithfulness to retrieved docs
+- No hallucinations beyond sources
+
+**The Pipeline:**
+```
+Bad Retrieval → Bad Generation (can't fix with better prompts)
+Good Retrieval → Bad Generation (prompt engineering problem)
+Good Retrieval → Good Generation (success!)
+```
+
+#### Agentic Workflows
+
+**Use a transition failure matrix** showing which workflow steps fail most frequently.
+
+**Map traces across states:**
+```
+State Transitions:
+1. Generating SQL → 2. Executing SQL → 3. Formatting Results
+
+Failure Matrix:
+Step 1→2: 15% failure rate (SQL syntax errors)
+Step 2→3: 3% failure rate (formatting issues)
+
+Focus optimization on Step 1→2 (biggest bottleneck)
+```
+
+**Why this matters:**
+Don't guess which part of your agent is failing. Measure the assembly line to find bottlenecks.
 
 ## Common AI Failure Modes to Test
 
@@ -336,12 +537,23 @@ def check_response_quality(response):
 
 ## Common Mistakes
 
+### From Basic Framework:
 ❌ **No evals until after launch** - Build evals as you build the feature
 ❌ **Only happy path testing** - Edge cases are where AI breaks
 ❌ **Assuming GPT-4 is perfect** - All models have failure modes
 ❌ **Not versioning eval datasets** - Need to track over time
 ❌ **Ignoring latency/cost** - Quality isn't the only metric
 ❌ **No human review** - Automated evals miss subtle issues
+
+### From Three-Phase Framework:
+❌ **Over-automation without human validation** - Start with experts, then automate
+❌ **Creating too many failure categories** - Stick to 5-10 manageable categories
+❌ **Using off-the-shelf metrics as primary measures** - Generic metrics miss your specific user problems
+  - Acceptable: Using them to sort high/low examples to discover patterns
+  - Not acceptable: Optimizing for "hallucination score" when users care about task completion
+❌ **Relying on single accuracy scores for imbalanced datasets** - Use TPR/TNR instead
+❌ **Using Likert scales for ground truth** - Binary pass/fail creates clearer standards
+❌ **Tuning on your test set** - Destroys your ability to measure real performance
 
 ## When to Use This Framework
 
