@@ -17,13 +17,14 @@ Acts as your product management thought partner to:
 
 ## Installation
 
-### Option 1: Link to Repository (Recommended)
+### Option 1: Clone from GitHub (Recommended)
 
-If you want to contribute back or receive updates:
+If you want to receive updates and optionally contribute back:
 
-1. **Clone or keep this repository accessible:**
+1. **Clone the repository:**
    ```bash
-   cd ~/Documents/pm-thought-partner
+   # Clone to any location you prefer
+   git clone https://github.com/breethomas/pm-thought-partner.git ~/pm-thought-partner
    ```
 
 2. **Link as a Claude Code skill:**
@@ -32,28 +33,33 @@ If you want to contribute back or receive updates:
    mkdir -p ~/.claude-code/skills
 
    # Create symlink to this skill
-   ln -s ~/Documents/pm-thought-partner ~/.claude-code/skills/pm-thought-partner
+   ln -s ~/pm-thought-partner ~/.claude-code/skills/pm-thought-partner
    ```
 
 3. **Verify installation:**
    ```bash
    ls -la ~/.claude-code/skills/
-   # You should see pm-thought-partner -> /Users/[you]/Documents/pm-thought-partner
+   # You should see: pm-thought-partner -> /Users/[you]/pm-thought-partner
    ```
 
 4. **Restart Claude Code or reload skills**
 
-### Option 2: Copy to Skills Directory
+**To receive updates later:**
+```bash
+cd ~/pm-thought-partner
+git pull
+```
 
-If you want a standalone installation:
+### Option 2: Direct Install to Skills Directory
 
-1. **Copy the entire directory:**
-   ```bash
-   mkdir -p ~/.claude-code/skills
-   cp -r ~/Documents/pm-thought-partner ~/.claude-code/skills/
-   ```
+If you want a standalone installation without git:
 
-2. **Restart Claude Code or reload skills**
+```bash
+# Clone directly into Claude Code skills directory
+git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude-code/skills/pm-thought-partner
+```
+
+Then restart Claude Code.
 
 ### Verification
 
