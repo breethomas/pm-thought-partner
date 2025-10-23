@@ -44,7 +44,7 @@ Install the PM Thought Partner plugin from
 https://github.com/breethomas/pm-thought-partner
 ```
 
-That's it. Claude handles the cloning and setup.
+Claude will ask if you want it globally (all projects) or per-project. Choose **globally** for most use cases.
 
 **[→ See full guide with slash commands](INSTALL_PLUGIN.md)** (includes Linear setup)
 
