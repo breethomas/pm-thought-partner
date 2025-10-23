@@ -1,11 +1,16 @@
 ---
 name: lno-prioritize
-description: Apply Aakash Gupta's LNO framework to categorize Linear issues by impact (Leverage, Neutral, Overhead)
+description: Apply Aakash Gupta's LNO framework to categorize issues by impact (Leverage, Neutral, Overhead)
 ---
 
 # LNO Prioritize Command
 
-Apply the **LNO Prioritization Framework** (Aakash Gupta) to categorize your Linear issues by impact level.
+Apply the **LNO Prioritization Framework** (Aakash Gupta) to categorize your issues by impact level.
+
+**Works with:**
+- **Linear (recommended)** - If Linear MCP is configured
+- **GitHub Issues (fallback)** - If in a GitHub repo without Linear
+- **Manual input** - Paste issues if neither is available
 
 ## What This Does
 
@@ -28,7 +33,7 @@ Analyzes your Linear issues and categorizes them as:
 
 ## What Happens
 
-1. **Fetches Linear issues** via MCP (requires Linear connection)
+1. **Fetches issues** from Linear (if configured) or GitHub Issues (fallback)
 2. **Applies LNO framework** from PM Thought Partner skill
 3. **Categorizes each issue** based on:
    - Strategic importance
@@ -40,7 +45,7 @@ Analyzes your Linear issues and categorizes them as:
    - LNO category assignment
    - Reasoning for categorization
    - Recommended time allocation
-5. **Optionally updates Linear** with labels (if `--label` flag used)
+5. **Optionally updates source** with labels (if `--label` flag used and using Linear)
 
 ## Example Output
 
@@ -77,13 +82,16 @@ Analyzes your Linear issues and categorizes them as:
 ## Requirements
 
 - ✅ PM Thought Partner plugin installed
-- ✅ Linear MCP server configured (`claude mcp add linear`)
-- ✅ Linear authentication completed
+- ✅ **Recommended:** Linear MCP server configured ([setup guide](../INSTALL_PLUGIN.md#setup-linear-mcp-server))
+- ✅ **Fallback:** GitHub repo with issues, or manual issue input
 
-## Without Linear MCP
+## Without Linear
 
-If you don't have Linear MCP configured, you can still use the framework manually:
+**If you have GitHub Issues:**
+The command will automatically fall back to analyzing GitHub Issues in your current repository.
 
+**If you have neither:**
+You can still use the framework manually:
 ```
 Apply the LNO framework to these issues: [paste issue list]
 ```

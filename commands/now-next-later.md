@@ -1,11 +1,16 @@
 ---
 name: now-next-later
-description: Generate a Now-Next-Later roadmap from Linear projects using Janna Bastow's framework
+description: Generate a Now-Next-Later roadmap using Janna Bastow's framework
 ---
 
 # Now-Next-Later Roadmap Command
 
-Create a **Now-Next-Later roadmap** from your Linear projects using Janna Bastow's framework.
+Create a **Now-Next-Later roadmap** using Janna Bastow's framework.
+
+**Works with:**
+- **Linear Projects (recommended)** - If Linear MCP is configured
+- **GitHub Projects/Milestones (fallback)** - If in a GitHub repo without Linear
+- **Manual input** - Describe your projects if neither is available
 
 ## What This Does
 
@@ -24,7 +29,7 @@ Transforms your Linear projects into a roadmap that communicates **sequence and 
 
 ## What Happens
 
-1. **Fetches Linear projects** via MCP
+1. **Fetches projects** from Linear (if configured) or GitHub Projects (fallback)
 2. **Applies Janna Bastow's framework:**
    - **NOW:** High certainty, committed work (current sprint/cycle)
    - **NEXT:** Medium certainty, exploring solutions (next 1-2 cycles)
@@ -83,13 +88,16 @@ Transforms your Linear projects into a roadmap that communicates **sequence and 
 ## Requirements
 
 - ✅ PM Thought Partner plugin installed
-- ✅ Linear MCP server configured
-- ✅ Linear projects with status/labels
+- ✅ **Recommended:** Linear MCP server configured ([setup guide](../INSTALL_PLUGIN.md#setup-linear-mcp-server))
+- ✅ **Fallback:** GitHub Projects/Milestones, or manual project list
 
-## Without Linear MCP
+## Without Linear
 
+**If you have GitHub Projects:**
+The command will automatically fall back to analyzing GitHub Projects or Milestones in your current repository.
+
+**If you have neither:**
 You can still use the framework manually:
-
 ```
 Help me organize these projects into a Now-Next-Later roadmap: [paste projects]
 ```

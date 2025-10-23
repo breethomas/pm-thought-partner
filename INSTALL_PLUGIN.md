@@ -60,15 +60,26 @@ Then ask: **"Should I write a PRD or prototype first?"**
 
 ---
 
-## Adding Linear Integration (Optional)
+## Adding Linear Integration (Recommended)
 
-The plugin includes powerful Linear integration for applying frameworks directly to your backlog.
+The plugin works with **Linear (recommended)** or **GitHub Issues (fallback)**.
 
-**What Linear integration enables:**
-- `/lno-prioritize` - Categorize Linear issues by impact (Leverage/Neutral/Overhead)
-- `/four-risks [issue-id]` - Run Marty Cagan's risk assessment on specific issues
+**Why Linear?**
+- Built for PMs (roadmaps, discovery, prioritization)
+- Linear Method is one of our core frameworks
+- Richer project/issue metadata for better framework analysis
+- Better labeling and workflow integration
+
+**Slash commands work with:**
+- **Linear** - Full features (labeling, commenting, projects)
+- **GitHub Issues** - Automatic fallback if Linear not configured
+- **Manual input** - Always works (paste issues/projects)
+
+**What you get with Linear:**
+- `/lno-prioritize` - Categorize issues by impact + auto-label
+- `/four-risks [issue-id]` - Risk assessment + add to Linear comments
 - `/now-next-later` - Generate roadmap from Linear projects
-- Auto-label issues with framework categorizations
+- Richer analysis from Linear's structured data
 
 ### Setup Linear MCP Server
 

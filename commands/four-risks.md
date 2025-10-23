@@ -1,11 +1,16 @@
 ---
 name: four-risks
-description: Run Marty Cagan's Four Risks assessment on a Linear issue (value, usability, feasibility, viability)
+description: Run Marty Cagan's Four Risks assessment on an issue (value, usability, feasibility, viability)
 ---
 
 # Four Risks Assessment Command
 
-Apply **Marty Cagan's Four Risks Framework** to assess a Linear issue before building.
+Apply **Marty Cagan's Four Risks Framework** to assess an issue before building.
+
+**Works with:**
+- **Linear (recommended)** - If Linear MCP is configured
+- **GitHub Issues (fallback)** - If in a GitHub repo without Linear
+- **Manual input** - Describe the feature if neither is available
 
 ## What This Does
 
@@ -28,7 +33,7 @@ Evaluates a feature/project against the four critical risks:
 
 ## What Happens
 
-1. **Fetches Linear issue** details via MCP
+1. **Fetches issue details** from Linear (if configured) or GitHub Issues (fallback)
 2. **Applies Four Risks framework:**
    - Analyzes issue description
    - Asks clarifying questions if needed
@@ -37,7 +42,7 @@ Evaluates a feature/project against the four critical risks:
    - Risk level for each dimension (High/Medium/Low)
    - Key questions to de-risk
    - Recommended discovery activities
-4. **Optionally adds comment** to Linear issue with assessment
+4. **Optionally adds comment** to source issue with assessment (if using Linear)
 
 ## Example Output
 
@@ -116,13 +121,16 @@ Only proceed if:
 ## Requirements
 
 - ✅ PM Thought Partner plugin installed
-- ✅ Linear MCP server configured
-- ✅ Access to issue details
+- ✅ **Recommended:** Linear MCP server configured ([setup guide](../INSTALL_PLUGIN.md#setup-linear-mcp-server))
+- ✅ **Fallback:** GitHub repo with issues, or manual feature description
 
-## Without Linear MCP
+## Without Linear
 
+**If you have GitHub Issues:**
+The command will automatically fall back to analyzing GitHub Issues in your current repository.
+
+**If you have neither:**
 You can still use the framework manually:
-
 ```
 Run a four risks assessment on this feature: [describe feature]
 ```

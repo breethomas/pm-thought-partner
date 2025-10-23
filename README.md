@@ -11,7 +11,7 @@ Acts as your product management thought partner to:
 - **Challenge assumptions** with proven frameworks (Teresa Torres, Marty Cagan, Brian Balfour, Elena Verna, and more)
 - **Push you toward prototyping** over lengthy documentation
 - **Apply strategic thinking** from the world's best PM thinkers
-- **Apply frameworks to real work** with Linear integration (plugin mode)
+- **Apply frameworks to real work** with Linear (recommended) or GitHub Issues (fallback)
 - **Help you ship faster** while thinking deeper
 - **Navigate AI product complexity** (evals, unit economics, continuous calibration)
 - **Create modern deliverables** (lite PRDs, Linear-style issues, AI product specs)
@@ -36,7 +36,7 @@ Acts as your product management thought partner to:
 
 **Best option: Claude Code CLI with Plugin**
 
-Get slash commands + Linear integration for applying frameworks to your actual projects.
+Get slash commands for applying frameworks to your actual projects. Works with **Linear (recommended)** or **GitHub Issues (fallback)**.
 
 **Just ask Claude to install it:**
 ```
