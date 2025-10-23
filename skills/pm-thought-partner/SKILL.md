@@ -5,71 +5,6 @@ description: AI-era product management thought partner. Pushes you to prototype 
 
 # PM Thought Partner for the AI Era
 
-> **⚠️ This skill has moved to a plugin structure.**
->
-> **If you're installing fresh:**
-> - For full experience with slash commands + Linear integration: See [Plugin Installation](#plugin-installation)
-> - For lightweight skill-only: See [Skill-Only Installation](#skill-only-installation)
->
-> **If you already have this installed as a skill:** Everything still works! This file remains for backward compatibility.
-
----
-
-## Plugin Installation (Recommended)
-
-Get slash commands + optional Linear integration for applying frameworks to your backlog.
-
-**In Claude Code CLI:**
-```bash
-claude mcp add https://github.com/breethomas/pm-thought-partner
-```
-
-**In Claude Code Browser:**
-Simply ask: "Install the PM Thought Partner plugin from https://github.com/breethomas/pm-thought-partner"
-
-**What you get:**
-- ✅ All frameworks from 12 PM thought leaders
-- ✅ Slash commands: `/lno-prioritize`, `/four-risks`, `/now-next-later`, `/coder`, `/pmf-survey`
-- ✅ Optional Linear integration (apply frameworks to real issues)
-- ✅ Same AI thought partner behavior
-
----
-
-## Skill-Only Installation
-
-Just want the AI thought partner without commands or Linear? See [`INSTALL_SKILL_ONLY.md`](INSTALL_SKILL_ONLY.md)
-
----
-
-## Quick Start Examples
-
-**Using the thought partner:**
-- "Should I write a PRD for this feature or prototype it first?"
-- "Apply the Four Risks framework to [feature idea]"
-- "Help me prioritize my backlog using LNO"
-- "Create a Now-Next-Later roadmap from these projects"
-
-**With plugin commands (if installed):**
-- `/lno-prioritize` - Categorize Linear issues by impact (Leverage/Neutral/Overhead)
-- `/four-risks [issue-id]` - Run Marty Cagan's risk assessment
-- `/now-next-later` - Generate Janna Bastow roadmap from Linear projects
-- `/coder` - Plan organizational AI adoption using Brian Balfour's framework
-- `/pmf-survey` - Create/analyze PMF survey (Rahul Vohra method)
-
----
-
-## Full Skill Documentation
-
-The complete thought partner instructions (what makes this AI different) live in:
-**[`skills/pm-thought-partner/SKILL.md`](skills/pm-thought-partner/SKILL.md)**
-
-All frameworks are in: **[`frameworks/`](frameworks/)**
-
----
-
-<details>
-<summary><strong>What's Below: Original Skill Instructions (for backward compatibility)</strong></summary>
-
 You are a product management thought partner built for the modern reality: prototypes ship in hours, AI automates coordination work, and the best PMs build first and let users decide.
 
 You challenge PMs to embrace AI-era product development while staying grounded in proven strategic thinking from the world's best product leaders.
@@ -430,5 +365,3 @@ Marty Cagan • Elena Verna • Brian Balfour • Lenny Rachitsky • Rahul Vohr
 
 **Adapted for the AI era:**
 Where prototypes ship in hours, coordination work is automated, and the best PMs build first and decide with users.
-
-</details>

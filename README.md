@@ -1,161 +1,187 @@
 # PM Thought Partner for the AI Era
 
-An AI-powered product management thought partner built for Claude Code. Grounded in proven frameworks from 9+ top PM thought leaders, adapted for the reality where you can build MVPs in hours, AI handles coordination work, and speed is the moat.
+An AI-powered product management thought partner for Claude Code. Grounded in proven frameworks from 12+ top PM thought leaders, adapted for the reality where you can build MVPs in hours, AI handles coordination work, and speed is the moat.
 
 **This is not classic PM knowledge with AI updates bolted on.** It's built AI-era first—emphasizing prototype-first development, issues over user stories, continuous calibration, and modern execution velocity.
 
-## What This Skill Does
+## What This Does
 
 Acts as your product management thought partner to:
 
 - **Challenge assumptions** with proven frameworks (Teresa Torres, Marty Cagan, Brian Balfour, Elena Verna, and more)
 - **Push you toward prototyping** over lengthy documentation
 - **Apply strategic thinking** from the world's best PM thinkers
+- **Apply frameworks to real work** with Linear integration (plugin mode)
 - **Help you ship faster** while thinking deeper
 - **Navigate AI product complexity** (evals, unit economics, continuous calibration)
 - **Create modern deliverables** (lite PRDs, Linear-style issues, AI product specs)
 
+## Quick Links
+
+- **[Plugin Installation (Recommended)](INSTALL_PLUGIN.md)** - Full experience with slash commands + Linear
+- **[Skill-Only Installation](INSTALL_SKILL_ONLY.md)** - Lightweight AI thought partner
+- **[Browse Frameworks](frameworks/)** - See all 15+ PM frameworks included
+- **[View Slash Commands](#slash-commands)** - Quick framework access (plugin mode)
+
 ## Installation
 
-**⚠️ Important:** This skill requires access to framework files to work properly. Claude Projects has limited file access, so **we recommend using Claude Code (CLI or Browser)** for the full experience.
+Choose your installation method based on your needs:
 
-### Recommended: Claude Code (CLI or Browser)
+### 🚀 Option 1: Plugin (Recommended)
 
-Claude Code gives you full access to all 15+ frameworks with detailed content.
+**Get the full experience** with slash commands and optional Linear integration.
 
-#### For Browser Users: Claude Code in Browser
+**What you get:**
+- ✅ AI thought partner with 12+ frameworks
+- ✅ Slash commands (`/lno-prioritize`, `/four-risks`, `/now-next-later`, etc.)
+- ✅ Optional Linear integration (apply frameworks to your backlog)
+- ✅ Auto-labeling and issue analysis
 
-Anthropic recently launched Claude Code in the browser! This gives you the full skill experience without needing the CLI.
+**Install:**
 
-1. Go to [claude.ai/code](https://claude.ai/code) or click "Code" in the sidebar
-2. Follow the same installation steps as CLI (Claude Code can handle git clone)
-3. Simply ask: "Install the PM Thought Partner skill from https://github.com/breethomas/pm-thought-partner"
-
-**Benefits:**
-- ✅ Full framework file access (unlike Claude Projects)
-- ✅ No terminal required
-- ✅ Browser-based interface
-- ✅ All 15+ frameworks work properly
-
-#### For CLI Users: Ask Claude Code to Install It
-
-If you're using Claude Code CLI:
-
-```
-Hey Claude, can you install the PM Thought Partner skill from
-https://github.com/breethomas/pm-thought-partner for me?
-```
-
-Claude Code will handle the git clone and setup automatically.
-
-#### Option 2: Manual Installation (Recommended for updates)
-
-If you want to receive updates and optionally contribute back:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/breethomas/pm-thought-partner.git ~/pm-thought-partner
-   ```
-
-2. **Install as a Personal Skill:**
-   ```bash
-   mkdir -p ~/.claude/skills/pm-thought-partner
-   cp ~/pm-thought-partner/SKILL.md ~/.claude/skills/pm-thought-partner/
-   ```
-
-3. **Verify installation:**
-   ```bash
-   ls -la ~/.claude/skills/pm-thought-partner/
-   # You should see SKILL.md in the directory
-   ```
-
-4. **Restart Claude Code**
-
-**To receive updates later:**
+**Claude Code CLI:**
 ```bash
-cd ~/pm-thought-partner
-git pull
-cp ~/pm-thought-partner/SKILL.md ~/.claude/skills/pm-thought-partner/
+git clone https://github.com/breethomas/pm-thought-partner.git
+cd pm-thought-partner
+claude plugin install .
 ```
 
-#### Option 3: Direct Install (Personal Skill)
-
-```bash
-# Clone and install in one step
-git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/skills/pm-thought-partner
+**Claude Code Browser:**
+Go to [claude.ai/code](https://claude.ai/code) and ask:
+```
+Install the PM Thought Partner plugin from https://github.com/breethomas/pm-thought-partner
 ```
 
-Then restart Claude Code.
-
-#### Option 4: Project Skill (Team Sharing)
-
-If you want your whole team to have access automatically:
-
-```bash
-# In your project directory
-mkdir -p .claude/skills/pm-thought-partner
-cp ~/pm-thought-partner/SKILL.md .claude/skills/pm-thought-partner/
-
-# Commit to your project repo
-git add .claude/skills/pm-thought-partner/
-git commit -m "Add PM Thought Partner skill"
-git push
-```
-
-Team members get the skill automatically when they pull your project.
+**[→ See full plugin installation guide](INSTALL_PLUGIN.md)** (includes Linear setup)
 
 ---
 
-### Alternative: Claude Projects (Limited Functionality)
+### 📦 Option 2: Skill Only (Lightweight)
 
-**⚠️ Limitation:** Claude Projects cannot access framework files by reference, which means you'll get high-level guidance but not detailed framework content like "What are the 5 steps in the CODER framework?"
+**Get just the AI thought partner** without slash commands or Linear integration.
 
-**This works for:** General PM guidance and philosophy
-**This doesn't work for:** Detailed framework walkthroughs and specific methodologies
+**What you get:**
+- ✅ AI thought partner with 12+ frameworks
+- ✅ Context-aware framework application
+- ✅ Prototype-first guidance
+- ❌ No slash commands
+- ❌ No Linear integration
 
-If you need the full experience, use Claude Code instead.
+**Install:**
 
-#### Option 1: Create a Claude Project (Recommended)
+**Claude Code CLI:**
+```bash
+git clone https://github.com/breethomas/pm-thought-partner.git
+cd pm-thought-partner
+claude skill install skills/pm-thought-partner
+```
 
-1. Go to [claude.ai](https://claude.ai) and create a new Project
-2. Name it **"PM Thought Partner"**
-3. **Description (optional):** "AI-era product management thought partner grounded in frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and other top PM leaders"
-4. **Custom Instructions:** Copy the **entire content** from [SKILL.md](https://github.com/breethomas/pm-thought-partner/blob/main/SKILL.md) and paste it here
-   - ⚠️ **Important:** Put SKILL.md content in "Custom Instructions", NOT in the description field
-5. Optionally upload key framework files as project knowledge (for deeper reference)
+**Claude Code Browser:**
+Go to [claude.ai/code](https://claude.ai/code) and ask:
+```
+Install the PM Thought Partner skill from https://github.com/breethomas/pm-thought-partner/tree/main/skills/pm-thought-partner
+```
 
-**See:** [Claude Projects Setup Guide](./CLAUDE_PROJECTS_GUIDE.md) for detailed step-by-step instructions with screenshots.
-
-#### Option 2: Use Prompt Library
-
-Browse the [`/prompts/`](./prompts/) folder for ready-to-use prompts that include full framework context. Simply copy and paste into any Claude conversation.
-
-**Available prompts:**
-- PMF Survey Helper
-- Roadmap Planning (Now-Next-Later)
-- AI Product Strategy
-- Growth Strategy (Four Fits)
-- CODER Framework for AI Adoption
-- And more...
+**[→ See full skill-only installation guide](INSTALL_SKILL_ONLY.md)**
 
 ---
 
 ### Verification
 
-**For Claude Code:** Ask in a new conversation:
+**Test it works:**
 ```
-Can you help me prioritize my roadmap using proven PM frameworks?
+"Should I write a PRD for this recommendation engine or prototype it first?"
 ```
 
-**For Claude.ai Projects:** Your project will automatically have access to PM frameworks based on the custom instructions you added.
+**With plugin installed, try slash commands:**
+```
+/lno-prioritize
+/four-risks
+/now-next-later
+```
 
-If working correctly, you'll get responses grounded in frameworks like Now-Next-Later (Janna Bastow), Four Fits (Brian Balfour), and others from this repository.
+If working correctly, you'll get responses grounded in frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and other top PM leaders.
+
+## Slash Commands
+
+**Available with plugin installation only.** These commands give you quick access to specific frameworks.
+
+### `/lno-prioritize`
+
+Apply Aakash Gupta's LNO framework to categorize Linear issues by impact:
+- **Leverage (L):** 10x impact tasks - your highest priority
+- **Neutral (N):** Regular impact tasks
+- **Overhead (O):** Minimal impact tasks to minimize
+
+```bash
+/lno-prioritize                    # Categorize all issues
+/lno-prioritize --team product     # Specific team
+/lno-prioritize --label            # Auto-add Linear labels
+```
+
+### `/four-risks`
+
+Run Marty Cagan's Four Risks assessment on a Linear issue:
+- Value Risk: Will customers use/buy this?
+- Usability Risk: Can users figure it out?
+- Feasibility Risk: Can we build it?
+- Viability Risk: Does it work for our business?
+
+```bash
+/four-risks ENG-245               # Assess specific issue
+/four-risks --current-sprint      # Assess sprint issues
+/four-risks --add-comment         # Add assessment to Linear
+```
+
+### `/now-next-later`
+
+Generate a Now-Next-Later roadmap from Linear projects using Janna Bastow's framework:
+- **NOW:** High certainty, committed work
+- **NEXT:** Medium certainty, exploring solutions
+- **LATER:** Low certainty, ideas and options
+
+```bash
+/now-next-later                   # Generate roadmap
+/now-next-later --team eng        # Specific team
+/now-next-later --export          # Export markdown
+```
+
+### `/coder`
+
+Apply Brian Balfour's CODER framework for organizational AI adoption:
+- **C**onstraints - Make new behavior easier
+- **O**wnership - Assign responsibility
+- **D**irectives - Create instructions
+- **E**xpectations - Set measurable goals
+- **R**ewards - Tie to career progression
+
+```bash
+/coder                            # Start CODER framework
+/coder --diagnose                 # Identify adoption barriers
+```
+
+### `/pmf-survey`
+
+Create and analyze PMF surveys using Rahul Vohra's Superhuman framework:
+- The magic "very disappointed" >40% benchmark
+- Segment by high-expectation customers
+- Generate improvement plan
+
+```bash
+/pmf-survey                       # Start PMF survey wizard
+/pmf-survey --create              # Generate survey questions
+/pmf-survey --analyze [data]      # Analyze results
+```
+
+**[→ See command documentation](commands/)** for detailed usage
+
+---
 
 ## How to Use
 
 ### General Workflow
 
-Just start a conversation with Claude Code about product management work:
+Just start a conversation with Claude about product management work:
 
 - **"I'm trying to figure out if we have product-market fit"**
   - Will apply Rahul Vohra's PMF survey framework
