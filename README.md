@@ -25,62 +25,70 @@ Acts as your product management thought partner to:
 
 ## Installation
 
-Choose your installation method based on your needs:
+**Choose based on your role and needs:**
 
-### 🚀 Option 1: Plugin (Recommended)
+### 👨‍💻 For Technical PMs / Engineers
 
-**Get the full experience** with slash commands and optional Linear integration.
+**Best option: Claude Code CLI with Plugin**
 
-**What you get:**
-- ✅ AI thought partner with 12+ frameworks
-- ✅ Slash commands (`/lno-prioritize`, `/four-risks`, `/now-next-later`, etc.)
-- ✅ Optional Linear integration (apply frameworks to your backlog)
-- ✅ Auto-labeling and issue analysis
+Get slash commands + Linear integration for applying frameworks to your actual projects.
 
-**Install:**
-
-**Claude Code CLI:**
 ```bash
 git clone https://github.com/breethomas/pm-thought-partner.git
 cd pm-thought-partner
 claude plugin install .
 ```
 
-**Claude Code Browser:**
-1. Fork this repository to your GitHub account
-2. Install the Claude GitHub App (if needed)
-3. Select the repository in [claude.ai/code](https://claude.ai/code)
-
-**[→ See full plugin installation guide](INSTALL_PLUGIN.md)** (includes GitHub App setup + Linear)
+**[→ See full CLI installation guide](INSTALL_PLUGIN.md)** (includes Linear setup)
 
 ---
 
-### 📦 Option 2: Skill Only (Lightweight)
+### 📋 For Non-Technical PMs
 
-**Get just the AI thought partner** without slash commands or Linear integration.
+**Best option: Claude Projects**
 
-**What you get:**
-- ✅ AI thought partner with 12+ frameworks
-- ✅ Context-aware framework application
-- ✅ Prototype-first guidance
-- ❌ No slash commands
-- ❌ No Linear integration
+Simple setup, works across all your PM conversations, no coding required.
 
-**Install:**
+**Why Claude Projects instead of Claude Code Browser?**
+- ✅ Works on ANY of your PM work (roadmaps, PRDs, prioritization, etc.)
+- ✅ Not tied to a specific code repository
+- ✅ No Git, no GitHub App, no command line
+- ✅ Full access to all framework content
 
-**Claude Code CLI:**
+**Setup (15 minutes):**
+1. Download the framework files from this repository
+2. Create a Claude Project
+3. Upload the framework files as Project Knowledge
+4. Add the PM Thought Partner instructions
+
+**[→ See step-by-step Claude Projects setup guide](CLAUDE_PROJECTS_GUIDE.md)**
+
+---
+
+### 🤔 What About Claude Code in Browser?
+
+**We're skipping it** because it opens a coding session in the PM Thought Partner repository itself, not your actual work. Claude Projects is simpler and more useful for day-to-day PM conversations.
+
+---
+
+### 🏢 For Teams
+
+**Option: Add to your project repository**
+
+Add as a shared skill so your whole team has access automatically.
+
 ```bash
-git clone https://github.com/breethomas/pm-thought-partner.git
-cd pm-thought-partner
-claude skill install skills/pm-thought-partner
+# In your project directory
+mkdir -p .claude/skills/pm-thought-partner
+cp -r /path/to/pm-thought-partner/skills/pm-thought-partner/* .claude/skills/pm-thought-partner/
+
+# Commit to your repo
+git add .claude/
+git commit -m "Add PM Thought Partner skill"
+git push
 ```
 
-**Claude Code Browser:**
-1. Fork this repository to your GitHub account
-2. Install the Claude GitHub App (if needed)
-3. Select the repository in [claude.ai/code](https://claude.ai/code)
-
-**[→ See full skill-only installation guide](INSTALL_SKILL_ONLY.md)** (includes GitHub App setup)
+Team members get the skill when they work on the project with Claude Code
 
 ---
 

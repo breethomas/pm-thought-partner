@@ -1,214 +1,327 @@
-# Using PM Thought Partner with Claude Projects (Web)
+# PM Thought Partner Setup Guide for Non-Technical PMs
 
-**For PMs who prefer using Claude in the browser (claude.ai) instead of Claude Code CLI.**
+**Simple browser-based setup. No coding, no command line, no Git required.**
 
-## What Are Claude Projects?
+This guide shows you how to set up the PM Thought Partner in Claude Projects so you can use it on all your PM work—roadmaps, PRDs, prioritization, strategy, etc.
 
-Claude Projects allow you to create persistent conversations with custom instructions and knowledge. Think of it as creating a specialized version of Claude that knows about PM frameworks.
+**Time required:** 15 minutes
 
-**Perfect for:**
-- PMs who work primarily in the browser
-- Teams who want to share PM framework knowledge
-- Anyone not comfortable with terminal/CLI tools
+---
 
-## Setup Instructions
+## What You'll Get
 
-### Step 1: Create a New Project
+Once set up, you'll have an AI thought partner that:
+- Challenges your assumptions with proven frameworks from top PM leaders
+- Pushes you to prototype instead of write lengthy docs
+- Applies frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and more
+- Works across ALL your PM conversations (not tied to a specific project)
+- Has access to 15+ detailed PM frameworks
 
-1. Go to [claude.ai](https://claude.ai)
-2. Click on **"Projects"** in the left sidebar
-3. Click **"Create Project"**
-4. **Name:** "PM Thought Partner"
-5. **Description (optional):** "AI-era product management thought partner grounded in frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and other top PM leaders"
+---
 
-⚠️ **Important:** Keep the description short! The actual content goes in Custom Instructions (next step).
+## Step 1: Download the Framework Files (5 minutes)
 
-### Step 2: Add Custom Instructions
+You need to download the framework files from GitHub to your computer so you can upload them to Claude.
 
-This is the **critical step** that tells Claude to act as your PM thought partner using the frameworks.
+### Option A: Download the Entire Repository (Easiest)
 
-1. In your new project, click **"Add custom instructions"** or the settings icon
-2. Go to the [SKILL.md file on GitHub](https://github.com/breethomas/pm-thought-partner/blob/main/SKILL.md)
-3. Click **"Raw"** to see the plain text version
-4. **Copy the ENTIRE content** (Cmd+A, Cmd+C on Mac or Ctrl+A, Ctrl+C on Windows)
-5. **Paste it into the "Custom Instructions" field** in your Claude Project
-   - ⚠️ **Do NOT paste it in the description field**
-   - ⚠️ **Do NOT paste just a portion—copy the entire SKILL.md file**
-6. Click **"Save"**
+1. **Go to the repository:** https://github.com/breethomas/pm-thought-partner
+2. **Click the green "Code" button** (top right)
+3. **Click "Download ZIP"**
+4. **Find the downloaded file** (usually in your Downloads folder)
+5. **Double-click the ZIP file** to unzip it
+6. **You now have a folder** called `pm-thought-partner-main` with all the files
 
-**What this does:** Claude will now follow the PM Thought Partner philosophy—pushing you toward prototyping, challenging assumptions with proven frameworks, and applying AI-era practices.
+### Option B: Download Individual Files (If you want specific frameworks only)
 
-**Common mistake to avoid:** Pasting SKILL.md content into the Project Description instead of Custom Instructions. The description is just a label for you; Custom Instructions is what Claude actually reads.
+1. Go to https://github.com/breethomas/pm-thought-partner
+2. Click into the `frameworks/` folder
+3. Click on a framework file (like `discovery/four-risks.md`)
+4. Click the **"Raw"** button (top right)
+5. **Save the page** (Cmd+S on Mac, Ctrl+S on Windows)
+6. Repeat for each framework you want
 
-### Step 3: Add Framework Files (Optional but Recommended)
+**Recommended frameworks to download:**
+- All files in `frameworks/ai-era-practices/`
+- All files in `frameworks/discovery/`
+- All files in `frameworks/growth/`
+- All files in `frameworks/measurement/`
+- All files in `frameworks/planning/`
 
-You can upload specific framework files as project knowledge so Claude has easy access to detailed frameworks.
+---
 
-**Recommended files to upload:**
+## Step 2: Create Your Claude Project (2 minutes)
 
-**Core Frameworks (choose 3-5 most relevant to you):**
-- `frameworks/ai-era-practices/prototype-first.md`
-- `frameworks/ai-era-practices/organizational-ai-adoption.md` (CODER)
-- `frameworks/discovery/continuous-discovery.md`
-- `frameworks/growth/four-fits.md`
-- `frameworks/measurement/pmf-survey.md`
+1. **Go to Claude:** https://claude.ai
+2. **Click "Projects"** in the left sidebar
+3. **Click "Create Project"**
+4. **Name it:** "PM Thought Partner"
+5. **Description (optional):** "AI-era product management thought partner with frameworks from top PM leaders"
+6. **Click "Create"**
 
-**How to upload:**
-1. Go to the [GitHub repository](https://github.com/breethomas/pm-thought-partner)
-2. Navigate to the framework file you want
-3. Click **"Raw"** and save the file (Cmd+S or Ctrl+S)
-4. In your Claude Project, click **"Add content"** → **"Upload files"**
-5. Upload the saved markdown files
+---
 
-**Note:** Claude Projects have limits on uploaded files. Start with 3-5 most relevant frameworks, not all of them.
+## Step 3: Add the PM Thought Partner Instructions (3 minutes)
 
-### Step 4: Add Thought Leader Profiles (Optional)
+This tells Claude how to act as your PM thought partner.
 
-Upload 2-3 thought leader profiles relevant to your work:
+1. **In your new project, look for "Custom Instructions"** (might be in settings/gear icon)
+2. **Open this file in a new tab:** https://github.com/breethomas/pm-thought-partner/blob/main/skills/pm-thought-partner/SKILL.md
+3. **Click "Raw"** (button at top right of the file)
+4. **Select all the text** (Cmd+A on Mac, Ctrl+A on Windows)
+5. **Copy it** (Cmd+C on Mac, Ctrl+C on Windows)
+6. **Go back to your Claude Project**
+7. **Paste into the "Custom Instructions" field** (NOT the description!)
+8. **Click "Save"**
 
-**Popular choices:**
-- `thought-leaders/teresa-torres.md` (discovery)
-- `thought-leaders/brian-balfour.md` (growth, CODER)
-- `thought-leaders/ravi-mehta.md` (strategy, AI integration)
-- `thought-leaders/aman-khan.md` (AI products)
+⚠️ **Important:** Make sure you paste into "Custom Instructions", not the project description. Custom Instructions is what Claude actually reads.
 
-Upload the same way as framework files.
+---
 
-## How to Use Your Project
+## Step 4: Upload Framework Files (5 minutes)
 
-### Start a Conversation
+Now upload the framework files so Claude has access to detailed content.
 
-Once set up, start conversations in your PM Thought Partner project just like you would with regular Claude:
+### If you downloaded the ZIP (Option A from Step 1):
 
-**Example prompts:**
-- "I'm trying to figure out if we have product-market fit"
-- "Help me prioritize my roadmap for next quarter"
-- "We're adding an AI feature—what do I need to think about?"
-- "Should I write a PRD or prototype first?"
-- "How do we drive AI adoption across our organization?"
+1. **In your Claude Project, click "Add content"** or look for an upload button
+2. **Click "Upload files"**
+3. **Navigate to your Downloads folder**
+4. **Open the `pm-thought-partner-main` folder**
+5. **Open the `frameworks` folder**
+6. **Select all the folders/files inside:**
+   - `ai-era-practices/` folder
+   - `discovery/` folder
+   - `growth/` folder
+   - `measurement/` folder
+   - `planning/` folder
+7. **Click "Open" or "Upload"**
 
-### What to Expect
+**Note:** Claude Projects may have upload limits. If you hit a limit:
+- Start with the most relevant folders for your work
+- You can always add more later
 
-Claude will:
-- ✅ Challenge your assumptions with proven frameworks
-- ✅ Push you toward prototyping over documentation
-- ✅ Apply frameworks from thought leaders (Teresa Torres, Brian Balfour, etc.)
-- ✅ Reference specific frameworks you've uploaded
-- ✅ Help you think strategically while shipping fast
+### If you downloaded individual files (Option B from Step 1):
 
-## Tips for Best Results
+1. **In your Claude Project, click "Add content"** → **"Upload files"**
+2. **Select all the framework markdown files you downloaded**
+3. **Click "Open" or "Upload"**
 
-### 1. Reference Specific Frameworks
+### What you're uploading:
 
-If you've uploaded framework files, you can ask:
-- "Walk me through the continuous discovery framework"
-- "Apply the Four Fits to our growth strategy"
-- "Help me run a PMF survey like Rahul Vohra"
+**Core frameworks** (these cover most PM work):
+- `prototype-first.md` - AI-era build-to-learn approach
+- `organizational-ai-adoption.md` - CODER framework for AI adoption
+- `four-risks.md` - Marty Cagan's validation framework
+- `continuous-discovery.md` - Teresa Torres' customer research approach
+- `four-fits.md` - Elena Verna's growth framework
+- `growth-loops.md` - Brian Balfour's growth loops
+- `pmf-survey.md` - Rahul Vohra's PMF measurement
+- `now-next-later.md` - Janna Bastow's roadmap framework
+- `lno-prioritization.md` - Aakash Gupta's prioritization method
+- And more...
 
-### 2. Share Context About Your Product
+---
 
-The more Claude knows about your situation, the better the guidance:
-- Stage (0-1, PMF, growth, scale)
-- Product type (B2B SaaS, consumer, marketplace, AI product)
-- Your role (PM, founder, product leader)
-- Current challenge
+## Step 5: Test It Works (2 minutes)
 
-**Example:**
-> "I'm a PM at an early-stage B2B SaaS company. We think we have PMF but aren't sure. We have 50 paying customers and 80% retention. How do I validate if we're actually there?"
+1. **Start a new conversation** in your PM Thought Partner project
+2. **Ask a PM question** like:
+   - "Should I write a PRD for this recommendation engine or prototype it first?"
+   - "How do I know if we have product-market fit?"
+   - "Help me prioritize these 5 features"
 
-### 3. Ask for Templates
+**What you should see:**
+- Claude pushes you toward prototyping (not documentation)
+- References frameworks like Four Risks, PMF Survey, etc.
+- Challenges your assumptions
+- Asks about evidence and customer validation
 
-If you need to create deliverables:
-- "Give me a lite PRD template"
-- "Help me write a Linear-style issue for this feature"
-- "Create a competitive analysis for [competitors]"
+**If it's working:** Claude should feel different—more challenging, more strategic, prototype-focused.
 
-### 4. Iterate with Follow-ups
+---
 
-Have a conversation, don't just ask one question:
-- Challenge the advice Claude gives
+## How to Use Your PM Thought Partner
+
+### Example Conversations
+
+**Discovery & Validation:**
+```
+"I want to validate this feature idea before we build it"
+→ Claude applies Four Risks framework, pushes for prototyping
+```
+
+**Prioritization:**
+```
+"Help me prioritize these 10 features for next quarter"
+→ Claude uses LNO framework (Leverage/Neutral/Overhead)
+```
+
+**Growth Strategy:**
+```
+"How should we think about growing our product?"
+→ Claude applies Growth Loops, Four Fits frameworks
+```
+
+**PMF Measurement:**
+```
+"How do I know if we have product-market fit?"
+→ Claude walks you through Rahul Vohra's PMF Survey
+```
+
+**AI Adoption:**
+```
+"We want to get our team using AI tools more. How do we drive adoption?"
+→ Claude applies CODER framework (Brian Balfour)
+```
+
+**Roadmapping:**
+```
+"I need to create a roadmap for leadership"
+→ Claude suggests Now-Next-Later approach (Janna Bastow)
+```
+
+### Tips for Best Results
+
+**1. Give context:**
+Tell Claude about your product, stage, and situation:
+- "I'm a PM at a Series A B2B SaaS company"
+- "We have 200 customers and are trying to figure out PMF"
+- "I'm a solo founder building an AI product"
+
+**2. Reference specific frameworks:**
+- "Apply the Four Risks framework to this feature"
+- "Walk me through continuous discovery"
+- "Help me run a PMF survey"
+
+**3. Push back and iterate:**
+- Challenge Claude's advice
 - Ask "why" and "how"
 - Request examples
-- Dig deeper into specific frameworks
+- Go deeper on frameworks
 
-## Limitations vs. Claude Code
+**4. Ask for templates:**
+- "Give me a lite PRD template"
+- "Help me write this as a clear Linear issue"
+- "Create a competitive analysis template"
 
-**What works in Projects:**
-- ✅ All PM frameworks and guidance
-- ✅ Custom instructions (PM thought partner behavior)
-- ✅ Framework files you upload (up to the limit)
-- ✅ All the wisdom from thought leaders
+---
 
-**What doesn't work:**
-- ❌ Automatic file reading from your computer
-- ❌ Tool integration (can't automatically create files, run commands)
-- ❌ Full access to all 13 frameworks at once (file upload limits)
+## What Makes This Different
 
-**Workaround:** Use the [Prompt Library](./prompts/) for specific frameworks you need but haven't uploaded.
+### Without PM Thought Partner:
+- Generic product advice
+- Might suggest lengthy documentation
+- No specific framework grounding
+- Doesn't challenge assumptions
 
-## Updating Your Project
+### With PM Thought Partner:
+- Pushes you to prototype first
+- References proven frameworks (Cagan, Verna, Balfour, Torres)
+- Challenges assumptions, asks for evidence
+- AI-era focused (build fast, iterate, prototype-to-learn)
+- Applies the right framework for the situation
 
-As new frameworks are added to the PM Thought Partner:
-
-1. Check the [GitHub repository](https://github.com/breethomas/pm-thought-partner) for updates
-2. Download updated SKILL.md or new framework files
-3. Update your project's custom instructions or add new files
-
-**To stay updated:** Watch/star the GitHub repo to get notified of new frameworks.
-
-## Sharing with Your Team
-
-Want your whole team to have access?
-
-**Option 1: Each person creates their own**
-- Follow these instructions
-- Takes ~5 minutes per person
-
-**Option 2: Share via Organizational Projects** (if available)
-- Some Claude plans support shared team projects
-- Set it up once, whole team has access
+---
 
 ## Troubleshooting
 
-**"Claude isn't using the frameworks"**
-- Make sure you pasted the SKILL.md content into custom instructions
-- Try being more explicit: "Use the Four Fits framework to analyze this"
+**"Claude isn't acting like a thought partner"**
+- Make sure you pasted SKILL.md into Custom Instructions (not description)
+- Start a new conversation IN the project (look at the project name at the top)
+- Try: "Challenge my thinking on this feature idea"
 
-**"I hit the file upload limit"**
+**"Claude says it can't access a framework"**
+- Check that you uploaded the framework files in Step 4
+- Try uploading the specific file Claude is looking for
+- Or ask: "Explain the concept without the file"
+
+**"I hit the upload limit"**
 - Prioritize the 3-5 most relevant frameworks for your work
-- Use the Prompt Library for others as needed
+- You can remove and re-upload different frameworks as needed
+- Core essentials: prototype-first, four-risks, pmf-survey, growth-loops
 
-**"The responses don't feel like a thought partner"**
-- Check that custom instructions are saved
-- Start a new conversation in the project (not outside it)
-- Be specific about what you're trying to do
+**"The responses are too generic"**
+- Give more context about your product and situation
+- Reference specific frameworks by name
+- Be specific about what you're trying to accomplish
 
-## Alternative: Prompt Library
+---
 
-If you don't want to set up a full project, use the ready-made prompts in [`/prompts/`](./prompts/):
+## Keeping It Updated
 
-1. Browse available prompts
-2. Copy the full prompt (includes framework context)
-3. Paste into any Claude conversation
-4. Works in regular claude.ai, no project needed
+As new frameworks are added:
 
-**Trade-off:** You have to paste context each time vs. projects remember everything.
+1. **Watch the GitHub repository** for updates: https://github.com/breethomas/pm-thought-partner
+2. **Download new framework files** using the same process as Step 1
+3. **Upload them to your project** using Step 4
+4. **Update Custom Instructions** if SKILL.md changes
+
+**How to watch:** Click "Watch" at the top of the GitHub page to get notifications.
+
+---
+
+## Sharing with Your Team
+
+Want your whole team to use this?
+
+**Option 1: Everyone sets up their own project**
+- Share this guide with your team
+- Takes 15 minutes per person
+- Everyone customizes for their work
+
+**Option 2: Team/Organizational Projects** (if available on your Claude plan)
+- Set it up once
+- Share with the whole team
+- Everyone has access to the same frameworks
+
+---
+
+## Alternative: One-Off Prompts
+
+Don't want a persistent project? Use individual prompts:
+
+1. **Browse the `/prompts/` folder** in the repository
+2. **Copy a pre-made prompt** (includes framework context)
+3. **Paste into any Claude conversation**
+4. **Get framework-based advice** without setup
+
+**Trade-off:** Have to paste context each time vs. project remembers everything.
 
 ---
 
 ## Quick Start Checklist
 
-- [ ] Create new Project at claude.ai
-- [ ] Name it "PM Thought Partner"
-- [ ] Copy SKILL.md content from GitHub
-- [ ] Paste into custom instructions
-- [ ] Upload 3-5 most relevant framework files
-- [ ] Upload 2-3 thought leader profiles (optional)
-- [ ] Test with: "Help me validate product-market fit"
-- [ ] Bookmark your project for easy access
+- [ ] Download ZIP or framework files from GitHub
+- [ ] Create Claude Project named "PM Thought Partner"
+- [ ] Copy SKILL.md from GitHub
+- [ ] Paste into Custom Instructions (not description!)
+- [ ] Upload framework files to the project
+- [ ] Test with: "Should I write a PRD or prototype first?"
+- [ ] Bookmark your project for daily use
 
-**Estimated setup time:** 5-10 minutes
+**Estimated setup time:** 15 minutes
 
 ---
 
-**Ready to get started?** [Create your project now](https://claude.ai) and start shipping better products faster. 🚀
+## What's Next?
+
+Once set up, use your PM Thought Partner for:
+- Daily prioritization decisions
+- Feature validation before building
+- Growth strategy discussions
+- Roadmap planning
+- PMF measurement
+- Team AI adoption planning
+- Competitive analysis
+- Stakeholder communication
+
+**This is your on-demand PM advisor, grounded in frameworks from the world's best product leaders.**
+
+---
+
+**Ready to get started?** [Create your Claude Project now →](https://claude.ai)
+
+**Need help?** Open an issue on GitHub: https://github.com/breethomas/pm-thought-partner/issues
+
+🚀 **Happy shipping!**
