@@ -1,23 +1,31 @@
-# Plugin Installation Guide
+# Plugin Installation Guide (CLI Only)
 
-Get the **full PM Thought Partner experience** with slash commands and optional Linear integration.
+**For technical PMs and engineers** who work in Claude Code CLI and want slash commands + Linear integration.
+
+**Looking for non-technical PM setup?** → [Claude Projects Guide](CLAUDE_PROJECTS_GUIDE.md)
+
+---
 
 ## What You Get
 
 - ✅ AI thought partner grounded in 12+ PM frameworks
-- ✅ Slash commands for quick framework access
+- ✅ Slash commands for quick framework access (`/lno-prioritize`, `/four-risks`, etc.)
 - ✅ Optional Linear integration (apply frameworks to your backlog)
+- ✅ Works in your actual project repositories
 - ✅ All frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and more
 
-## Installation Methods
+---
 
-### Option 1: Claude Code CLI (Recommended)
+## Installation
 
-**Prerequisites:**
-- Claude Code CLI installed ([instructions](https://docs.anthropic.com/claude/docs/claude-code))
+### Prerequisites
+
+- Claude Code CLI installed ([get it here](https://docs.anthropic.com/claude/docs/claude-code))
 - Git (for cloning the repo)
+- Command line access (Terminal on Mac/Linux, PowerShell on Windows)
 
-**Install:**
+### Install Steps
+
 ```bash
 # Clone the repository
 git clone https://github.com/breethomas/pm-thought-partner.git
@@ -27,51 +35,22 @@ cd pm-thought-partner
 claude plugin install .
 ```
 
-**Verify installation:**
+### Verify Installation
+
 ```bash
+# Check plugin is installed
 claude plugin list
 ```
 
 You should see `pm-thought-partner` in the list.
 
----
+**Test it works:**
+```bash
+# In any project directory with Claude Code
+claude code
+```
 
-### Option 2: Claude Code in Browser
-
-**Prerequisites:**
-- Access to Claude Code in Browser ([claude.ai/code](https://claude.ai/code))
-- GitHub account (free)
-
-**Note:** The Claude GitHub App is required for browser access, but we'll install it as part of the setup below.
-
-**Install:**
-
-1. **Fork the repository to your GitHub account**:
-   - Go to https://github.com/breethomas/pm-thought-partner
-   - Click "Fork" (top right) to create your own copy
-   - This adds the repository to your GitHub account
-
-2. **Install the Claude GitHub App** (if you haven't already):
-   - Go to [claude.ai/code](https://claude.ai/code)
-   - Click "Select repository"
-   - Click "Install GitHub App"
-   - Authorize Claude to access your GitHub account
-   - Select which repositories Claude can access (include your `pm-thought-partner` fork)
-
-3. **Select the repository in Claude Code**:
-   - Go to [claude.ai/code](https://claude.ai/code)
-   - Click "Select repository"
-   - Find `pm-thought-partner` in your list
-   - Click to open a session
-
-**Note:** Browser installation works differently than CLI. The skill/plugin will be available in that session, but slash commands may not work the same way. Use natural language instead:
-- Instead of `/lno-prioritize`, say: "Apply LNO prioritization to my issues"
-- Instead of `/four-risks`, say: "Run a Four Risks assessment on this feature"
-
-**Verify installation:**
-- Repository should appear in your "Select repository" dropdown
-- Ask: "What PM frameworks are available?"
-- Test: "Should I write a PRD or prototype first?" (should push toward prototyping)
+Then ask: "Should I write a PRD or prototype first?" - It should push you toward prototyping.
 
 ---
 

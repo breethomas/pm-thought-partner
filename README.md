@@ -18,10 +18,15 @@ Acts as your product management thought partner to:
 
 ## Quick Links
 
-- **[Plugin Installation (Recommended)](INSTALL_PLUGIN.md)** - Full experience with slash commands + Linear
-- **[Skill-Only Installation](INSTALL_SKILL_ONLY.md)** - Lightweight AI thought partner
-- **[Browse Frameworks](frameworks/)** - See all 15+ PM frameworks included
-- **[View Slash Commands](#slash-commands)** - Quick framework access (plugin mode)
+**For Technical PMs:**
+- **[CLI Plugin Installation](INSTALL_PLUGIN.md#option-1-claude-code-cli-recommended)** - Full experience with slash commands + Linear
+
+**For Non-Technical PMs:**
+- **[Claude Projects Setup Guide](CLAUDE_PROJECTS_GUIDE.md)** - Simple browser-based setup (15 min)
+
+**Reference:**
+- **[Browse All Frameworks](frameworks/)** - See all 15+ PM frameworks included
+- **[View Slash Commands](#slash-commands)** - Quick framework access (CLI plugin only)
 
 ## Installation
 
