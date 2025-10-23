@@ -1,6 +1,6 @@
-# Plugin Installation Guide (CLI Only)
+# Plugin Installation Guide (CLI)
 
-**For technical PMs and engineers** who work in Claude Code CLI and want slash commands + Linear integration.
+**For technical PMs and engineers** who use Claude Code CLI.
 
 **Looking for non-technical PM setup?** → [Claude Projects Guide](CLAUDE_PROJECTS_GUIDE.md)
 
@@ -18,98 +18,41 @@
 
 ## Installation
 
-### Prerequisites
+### Just Ask Claude
 
-- Claude Code CLI installed ([get it here](https://docs.anthropic.com/claude/docs/claude-code))
-- Git (for cloning the repo)
-- Command line access (Terminal on Mac/Linux, PowerShell on Windows)
+**If you're using Claude Code CLI, just ask Claude to install it:**
 
-### Choose Your Install Type
-
-**Option A: Global Install (Recommended for Individual PMs)**
-
-Use PM Thought Partner across ALL your projects and repos.
-
-```bash
-# Clone the repository
-git clone https://github.com/breethomas/pm-thought-partner.git
-
-# Copy to Claude's plugins directory
-mkdir -p ~/.claude/plugins
-cp -r pm-thought-partner ~/.claude/plugins/
-
-# Or create a symlink (easier for updates)
-ln -s "$(pwd)/pm-thought-partner" ~/.claude/plugins/pm-thought-partner
+```
+Install the PM Thought Partner plugin from
+https://github.com/breethomas/pm-thought-partner
 ```
 
-This makes it available in all your Claude Code sessions.
+Claude will:
+1. Clone the repository
+2. Install it to `~/.claude/plugins/`
+3. Verify it's working
+4. Show you how to use it
 
-**Tip:** Use symlink if you want to `git pull` updates easily. Use copy if you want a stable version.
-
-**When to use global:**
-- You're a PM working across multiple projects
-- You want frameworks available in any Claude Code session
-- You're an individual user (not coordinating with a team)
-
----
-
-**Option B: Per-Project Install (For Teams)**
-
-Install only in specific project repositories where your team wants PM frameworks.
-
-```bash
-# In YOUR project directory (not pm-thought-partner)
-cd /path/to/your/project
-
-# Add as project plugin
-mkdir -p .claude/plugins
-cp -r /path/to/pm-thought-partner .claude/plugins/pm-thought-partner
-
-# Commit to your repo
-git add .claude/
-git commit -m "Add PM Thought Partner plugin"
-git push
-```
-
-Team members automatically get the plugin when they work on this project.
-
-**When to use per-project:**
-- You're on a product team and want shared frameworks
-- You only want it in product repos (not infrastructure/backend repos)
-- You want version control over which frameworks the team uses
-
----
-
-### Verify Installation
-
-**For global install:**
-```bash
-# Check if directory exists
-ls -la ~/.claude/plugins/pm-thought-partner
-```
-
-You should see the plugin files.
-
-**For per-project install:**
-```bash
-# In your project directory
-ls -la .claude/plugins/pm-thought-partner
-```
-
-You should see the plugin files.
+**That's it.** You're using an AI coding assistant—let it do the installation work.
 
 ---
 
 ### Test It Works
 
+Start Claude Code in any project:
+
 ```bash
-# Start Claude Code in any directory (global) or your project (per-project)
-claude code
+claude
 ```
 
-Then ask: "Should I write a PRD or prototype first?"
+Then ask: **"Should I write a PRD or prototype first?"**
 
 **Expected behavior:** Claude pushes you toward prototyping, references frameworks, challenges assumptions.
+
+**Try slash commands:**
+- `/lno-prioritize` - Categorize issues by impact
+- `/four-risks` - Run risk assessment on a feature
+- `/now-next-later` - Generate a roadmap
 
 ---
 
@@ -125,186 +68,198 @@ The plugin includes powerful Linear integration for applying frameworks directly
 
 ### Setup Linear MCP Server
 
-**Prerequisites:**
-- Linear account
-- Linear API key ([get one here](https://linear.app/settings/api))
+**Just ask Claude:**
 
-**Install Linear MCP server:**
+```
+Set up the Linear MCP server for me
+```
+
+Claude will prompt you for your Linear API key ([get one here](https://linear.app/settings/api)) and configure everything.
+
+**Or manually:**
 
 ```bash
-# Using Claude Code CLI
 claude mcp add linear
-
-# Follow prompts to add your Linear API key
 ```
 
-**Alternative: Manual setup**
-
-1. Create `.claude/mcp.json` in your home directory if it doesn't exist:
-   ```json
-   {
-     "mcpServers": {
-       "linear": {
-         "command": "npx",
-         "args": ["-y", "@linear/mcp-server"],
-         "env": {
-           "LINEAR_API_KEY": "your-linear-api-key-here"
-         }
-       }
-     }
-   }
-   ```
-
-2. Restart Claude Code
-
-**Verify Linear connection:**
-Ask Claude: "List my Linear issues" or run `/lno-prioritize`
+Follow the prompts to add your Linear API key.
 
 ---
 
-## Quick Start
+## Available Slash Commands
 
-Once installed, try:
+### `/lno-prioritize`
 
-### Using the Thought Partner
+Apply Aakash Gupta's LNO framework to categorize Linear issues:
+- **Leverage (L):** 10x impact tasks - your highest priority
+- **Neutral (N):** Regular impact tasks
+- **Overhead (O):** Minimal impact tasks to minimize
 
-**Prototype-first challenges:**
-```
-"Should I write a PRD for this recommendation engine or prototype it first?"
-```
-
-**Apply frameworks:**
-```
-"Apply the Four Risks framework to this feature: [describe feature]"
-```
-
-**Roadmap planning:**
-```
-"Help me create a Now-Next-Later roadmap from these projects: [paste projects]"
-```
-
-### Using Slash Commands
-
-**Prioritize your backlog:**
-```
-/lno-prioritize
-/lno-prioritize --team product
-/lno-prioritize --label  (adds Linear labels)
-```
-
-**Risk assessment:**
-```
-/four-risks ENG-245
-/four-risks --current-sprint
-/four-risks --add-comment  (adds assessment to Linear)
-```
-
-**Roadmap generation:**
-```
-/now-next-later
-/now-next-later --team engineering
-/now-next-later --export  (generates markdown)
-```
-
-**Organizational AI adoption:**
-```
-/coder
-/coder --diagnose
-```
-
-**PMF measurement:**
-```
-/pmf-survey
-/pmf-survey --create
-/pmf-survey --analyze [survey-data]
-```
-
----
-
-## Available Frameworks
-
-The plugin includes frameworks from:
-
-**Discovery & Validation:**
-- Four Risks (Marty Cagan)
-- Opportunity Solution Trees (Teresa Torres)
-- Continuous Discovery (Teresa Torres)
-- PMF Survey (Rahul Vohra / Sean Ellis)
-
-**Planning & Prioritization:**
-- LNO Prioritization (Aakash Gupta / Shreyas Doshi)
-- Now-Next-Later Roadmaps (Janna Bastow)
-- North Star Metric
-- One Metric That Matters (Elena Verna)
-
-**Growth & Retention:**
-- Four Fits Framework (Elena Verna)
-- Growth Loops (Brian Balfour)
-- Product-Led Sales (Elena Verna)
-
-**Team Execution:**
-- Linear Method
-- Product Operating Model (Brian Balfour)
-- Product Trio (Marty Cagan)
-
-**AI-Specific:**
-- AI Eval Frameworks (Hamel Husain, Eugene Yan)
-- Organizational AI Adoption / CODER (Brian Balfour)
-
-All frameworks are in the [`frameworks/`](frameworks/) directory.
-
----
-
-## Updating the Plugin
-
-**Claude Code CLI:**
 ```bash
-cd pm-thought-partner
-git pull
-claude plugin update pm-thought-partner
+/lno-prioritize                    # Categorize all issues
+/lno-prioritize --team product     # Specific team
+/lno-prioritize --label            # Auto-add Linear labels
 ```
 
-**Claude Code Browser:**
-Claude will notify you when updates are available.
+### `/four-risks`
+
+Run Marty Cagan's Four Risks assessment (value, usability, feasibility, viability):
+
+```bash
+/four-risks ENG-245               # Assess specific issue
+/four-risks --current-sprint      # Assess sprint issues
+/four-risks --add-comment         # Add assessment to Linear
+```
+
+### `/now-next-later`
+
+Generate a Now-Next-Later roadmap from Linear projects (Janna Bastow's framework):
+
+```bash
+/now-next-later                   # Generate roadmap
+/now-next-later --team eng        # Specific team
+/now-next-later --export          # Export markdown
+```
+
+### `/coder`
+
+Apply Brian Balfour's CODER framework for organizational AI adoption:
+
+```bash
+/coder                            # Start CODER framework
+/coder --diagnose                 # Identify adoption barriers
+```
+
+### `/pmf-survey`
+
+Create and analyze PMF surveys (Rahul Vohra's Superhuman method):
+
+```bash
+/pmf-survey                       # Start PMF survey wizard
+/pmf-survey --create              # Generate survey questions
+/pmf-survey --analyze [data]      # Analyze results
+```
+
+**[→ See detailed command documentation](commands/)**
+
+---
+
+## For Teams: Per-Project Installation
+
+Want your whole team to have PM Thought Partner when working on a specific project?
+
+**Just ask Claude:**
+
+```
+Add the PM Thought Partner plugin to this project repository
+so my team can use it
+```
+
+Claude will add it to `.claude/plugins/` in your project and you can commit it.
+
+**Benefits:**
+- Team members automatically get it when working on this project
+- Version controlled (everyone uses same frameworks)
+- Can have different versions per project if needed
+
+---
+
+## Updating
+
+**To get the latest frameworks:**
+
+```
+Update the PM Thought Partner plugin to the latest version
+```
+
+Claude will pull the latest changes from GitHub.
 
 ---
 
 ## Troubleshooting
 
-### Plugin not showing in list
-- Verify `.claude-plugin/plugin.json` exists in the repo
-- Try: `claude plugin install --force .`
+**"Slash commands aren't working"**
+- Make sure you're in a Claude Code session (`claude` command)
+- Try using natural language: "Apply LNO prioritization to my issues"
+- Restart Claude Code
 
-### Slash commands not working
-- Verify command files exist in `commands/` directory
-- Check command syntax: `/command-name` (use hyphens, not spaces)
-- Try restarting Claude Code
+**"Claude says it can't find Linear issues"**
+- Check Linear MCP is set up: Ask Claude "Is Linear MCP configured?"
+- Verify Linear API key is correct
+- Try: "List my Linear issues" to test connection
 
-### Linear integration not working
-- Verify Linear API key is correct: `claude mcp list`
-- Check Linear MCP is running: `claude mcp status linear`
-- Test connection: Ask Claude "List my Linear issues"
-
-### Commands return "No Linear issues found"
-- Verify you have active Linear issues in your workspace
-- Check Linear API key has correct permissions
-- Try: `/lno-prioritize --team [your-team-name]`
-
----
-
-## Support
-
-- **Report issues:** https://github.com/breethomas/pm-thought-partner/issues
-- **Contribute:** See [CONTRIBUTING.md](CONTRIBUTING.md)
-- **Discuss:** Open a GitHub Discussion
+**"The frameworks seem generic"**
+- Ask specific questions: "Apply the Four Risks framework to this feature"
+- Reference frameworks by name
+- Give context about your product and situation
 
 ---
 
 ## What's Next?
 
-1. **Try the slash commands** - Start with `/lno-prioritize` to see frameworks in action
-2. **Connect Linear** (if you use it) - Apply frameworks to your actual backlog
-3. **Explore frameworks** - Browse [`frameworks/`](frameworks/) to see what's available
-4. **Share feedback** - What frameworks are missing? What would make this more useful?
+Once installed, use your PM Thought Partner for:
+- Feature validation before building
+- Backlog prioritization
+- Growth strategy planning
+- Roadmap generation
+- PMF measurement
+- AI adoption planning
 
-**Happy shipping! 🚀**
+**This is your on-demand PM advisor, grounded in frameworks from the world's best product leaders.**
+
+---
+
+<details>
+<summary><strong>Advanced: Manual Installation</strong></summary>
+
+If you prefer to install manually without asking Claude:
+
+### Global Install (Available in all projects)
+
+```bash
+# Clone the repository
+git clone https://github.com/breethomas/pm-thought-partner.git
+
+# Symlink to Claude's plugins directory (recommended)
+ln -s "$(pwd)/pm-thought-partner" ~/.claude/plugins/pm-thought-partner
+
+# Or copy if you prefer a stable version
+mkdir -p ~/.claude/plugins
+cp -r pm-thought-partner ~/.claude/plugins/
+```
+
+**Tip:** Symlink is better - `git pull` updates automatically apply.
+
+### Per-Project Install (Team access)
+
+```bash
+# In YOUR project directory
+cd /path/to/your/project
+
+# Add as project plugin
+mkdir -p .claude/plugins
+cp -r /path/to/pm-thought-partner .claude/plugins/pm-thought-partner
+
+# Commit to your repo
+git add .claude/
+git commit -m "Add PM Thought Partner plugin"
+git push
+```
+
+### Verify Manual Installation
+
+```bash
+# Check global install
+ls -la ~/.claude/plugins/pm-thought-partner
+
+# Check per-project install
+ls -la .claude/plugins/pm-thought-partner
+```
+
+</details>
+
+---
+
+**Need help?** Open an issue: https://github.com/breethomas/pm-thought-partner/issues
+
+🚀 **Happy shipping!**

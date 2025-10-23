@@ -38,13 +38,15 @@ Acts as your product management thought partner to:
 
 Get slash commands + Linear integration for applying frameworks to your actual projects.
 
-```bash
-git clone https://github.com/breethomas/pm-thought-partner.git
-cd pm-thought-partner
-claude plugin install .
+**Just ask Claude to install it:**
+```
+Install the PM Thought Partner plugin from
+https://github.com/breethomas/pm-thought-partner
 ```
 
-**[→ See full CLI installation guide](INSTALL_PLUGIN.md)** (includes Linear setup)
+That's it. Claude handles the cloning and setup.
+
+**[→ See full guide with slash commands](INSTALL_PLUGIN.md)** (includes Linear setup)
 
 ---
 
@@ -82,26 +84,20 @@ Simple setup, works across all your PM conversations, no coding required.
 
 Add PM Thought Partner to specific project repositories so your whole team has access.
 
-```bash
-# In YOUR project directory
-cd /path/to/your/project
-
-# Add as project plugin
-mkdir -p .claude/plugins
-cp -r /path/to/pm-thought-partner .claude/plugins/pm-thought-partner
-
-# Commit to your repo
-git add .claude/
-git commit -m "Add PM Thought Partner plugin"
-git push
+**Just ask Claude:**
 ```
+Add the PM Thought Partner plugin to this project repository
+so my team can use it
+```
+
+Claude will add it to `.claude/plugins/` and you can commit it to version control.
 
 **Benefits:**
 - Team members automatically get it when working on this project
 - Version controlled (everyone uses same frameworks)
 - Can have different versions per project if needed
 
-**[→ See full team setup guide](INSTALL_PLUGIN.md#option-b-per-project-install-for-teams)**
+**[→ See full team setup guide](INSTALL_PLUGIN.md#for-teams-per-project-installation)**
 
 ---
 
