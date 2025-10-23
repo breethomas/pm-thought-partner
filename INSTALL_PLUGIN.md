@@ -40,25 +40,36 @@ You should see `pm-thought-partner` in the list.
 
 **Prerequisites:**
 - Access to Claude Code in Browser ([claude.ai/code](https://claude.ai/code))
+- **GitHub App installed** on your repository (required for browser access)
 
 **Install:**
 
-1. Go to [claude.ai/code](https://claude.ai/code)
-2. Enter the GitHub repository URL in the text field at the top:
-   ```
-   https://github.com/breethomas/pm-thought-partner
-   ```
-3. Press Enter or click the upload button
-4. Claude Code will clone the repository and you can start a session
+1. **Install the Claude GitHub App** (if you haven't already):
+   - Go to [claude.ai/code](https://claude.ai/code)
+   - Click "Select repository"
+   - Click "Install GitHub App"
+   - Authorize Claude to access your GitHub account
+   - Select which repositories Claude can access (include `pm-thought-partner`)
 
-**Note:** Plugin installation in the browser may work differently than CLI. If slash commands don't work immediately:
-- Try asking Claude directly: "Use the PM Thought Partner plugin"
-- Or use natural language instead of slash commands: "Apply LNO prioritization to my issues"
+2. **Fork or clone the repository to your GitHub account**:
+   - Go to https://github.com/breethomas/pm-thought-partner
+   - Click "Fork" (top right) to create your own copy
+   - Or add the Claude GitHub App to this specific repository if you have access
+
+3. **Select the repository in Claude Code**:
+   - Go to [claude.ai/code](https://claude.ai/code)
+   - Click "Select repository"
+   - Find `pm-thought-partner` in your list
+   - Click to open a session
+
+**Note:** Browser installation works differently than CLI. The skill/plugin will be available in that session, but slash commands may not work the same way. Use natural language instead:
+- Instead of `/lno-prioritize`, say: "Apply LNO prioritization to my issues"
+- Instead of `/four-risks`, say: "Run a Four Risks assessment on this feature"
 
 **Verify installation:**
-- Check if the repository appears in your sessions
-- Try: "What frameworks are available in the PM Thought Partner?"
-- Test natural language: "Help me prioritize my backlog using LNO"
+- Repository should appear in your "Select repository" dropdown
+- Ask: "What PM frameworks are available?"
+- Test: "Should I write a PRD or prototype first?" (should push toward prototyping)
 
 ---
 

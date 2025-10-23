@@ -47,12 +47,11 @@ claude plugin install .
 ```
 
 **Claude Code Browser:**
-Go to [claude.ai/code](https://claude.ai/code) and enter the repo URL in the text field:
-```
-https://github.com/breethomas/pm-thought-partner
-```
+1. Install the Claude GitHub App (if needed)
+2. Fork this repository to your GitHub account
+3. Select the repository in [claude.ai/code](https://claude.ai/code)
 
-**[→ See full plugin installation guide](INSTALL_PLUGIN.md)** (includes Linear setup)
+**[→ See full plugin installation guide](INSTALL_PLUGIN.md)** (includes GitHub App setup + Linear)
 
 ---
 
@@ -77,12 +76,11 @@ claude skill install skills/pm-thought-partner
 ```
 
 **Claude Code Browser:**
-Go to [claude.ai/code](https://claude.ai/code) and enter the repo URL in the text field:
-```
-https://github.com/breethomas/pm-thought-partner
-```
+1. Install the Claude GitHub App (if needed)
+2. Fork this repository to your GitHub account
+3. Select the repository in [claude.ai/code](https://claude.ai/code)
 
-**[→ See full skill-only installation guide](INSTALL_SKILL_ONLY.md)**
+**[→ See full skill-only installation guide](INSTALL_SKILL_ONLY.md)** (includes GitHub App setup)
 
 ---
 

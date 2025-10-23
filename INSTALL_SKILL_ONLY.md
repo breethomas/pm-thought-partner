@@ -50,20 +50,30 @@ You should see `pm-thought-partner` in the list.
 
 **Prerequisites:**
 - Access to Claude Code in Browser ([claude.ai/code](https://claude.ai/code))
+- **GitHub App installed** (required for browser access)
 
 **Install:**
 
-1. Go to [claude.ai/code](https://claude.ai/code)
-2. Enter the GitHub repository URL in the text field at the top:
-   ```
-   https://github.com/breethomas/pm-thought-partner
-   ```
-3. Press Enter or click the upload button
-4. Claude Code will clone the repository and load the skill automatically
+1. **Install the Claude GitHub App** (if you haven't already):
+   - Go to [claude.ai/code](https://claude.ai/code)
+   - Click "Select repository"
+   - Click "Install GitHub App"
+   - Authorize Claude to access your GitHub account
+
+2. **Fork the repository to your GitHub account**:
+   - Go to https://github.com/breethomas/pm-thought-partner
+   - Click "Fork" (top right) to create your own copy
+   - Make sure the Claude GitHub App can access your fork
+
+3. **Select the repository in Claude Code**:
+   - Go to [claude.ai/code](https://claude.ai/code)
+   - Click "Select repository"
+   - Find `pm-thought-partner` in your list
+   - Click to open a session with the skill loaded
 
 **Verify installation:**
-- Check if the repository appears in your sessions
-- Ask: "Should I write a PRD or prototype first?" (should push you toward prototyping)
+- Repository appears in your "Select repository" dropdown
+- Ask: "Should I write a PRD or prototype first?" (should push toward prototyping)
 - Try: "What PM frameworks are available?"
 
 ---
