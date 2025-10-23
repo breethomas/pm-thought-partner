@@ -25,7 +25,10 @@ claude mcp add https://github.com/breethomas/pm-thought-partner
 ```
 
 **In Claude Code Browser:**
-Simply ask: "Install the PM Thought Partner plugin from https://github.com/breethomas/pm-thought-partner"
+Go to [claude.ai/code](https://claude.ai/code) and enter the repo URL in the text field:
+```
+https://github.com/breethomas/pm-thought-partner
+```
 
 **What you get:**
 - ✅ All frameworks from 12 PM thought leaders

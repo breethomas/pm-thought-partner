@@ -44,14 +44,21 @@ You should see `pm-thought-partner` in the list.
 **Install:**
 
 1. Go to [claude.ai/code](https://claude.ai/code)
-2. In the chat, type:
+2. Enter the GitHub repository URL in the text field at the top:
    ```
-   Install the PM Thought Partner plugin from https://github.com/breethomas/pm-thought-partner
+   https://github.com/breethomas/pm-thought-partner
    ```
-3. Claude will fetch and install the plugin automatically
+3. Press Enter or click the upload button
+4. Claude Code will clone the repository and you can start a session
+
+**Note:** Plugin installation in the browser may work differently than CLI. If slash commands don't work immediately:
+- Try asking Claude directly: "Use the PM Thought Partner plugin"
+- Or use natural language instead of slash commands: "Apply LNO prioritization to my issues"
 
 **Verify installation:**
-Ask Claude: "What plugins are installed?" or try a slash command like `/lno-prioritize`
+- Check if the repository appears in your sessions
+- Try: "What frameworks are available in the PM Thought Partner?"
+- Test natural language: "Help me prioritize my backlog using LNO"
 
 ---
 

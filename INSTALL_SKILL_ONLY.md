@@ -54,14 +54,17 @@ You should see `pm-thought-partner` in the list.
 **Install:**
 
 1. Go to [claude.ai/code](https://claude.ai/code)
-2. In the chat, type:
+2. Enter the GitHub repository URL in the text field at the top:
    ```
-   Install the PM Thought Partner skill from https://github.com/breethomas/pm-thought-partner/tree/main/skills/pm-thought-partner
+   https://github.com/breethomas/pm-thought-partner
    ```
-3. Claude will fetch and install the skill automatically
+3. Press Enter or click the upload button
+4. Claude Code will clone the repository and load the skill automatically
 
 **Verify installation:**
-Ask Claude: "What skills are installed?" or ask a PM question like "Should I write a PRD or prototype first?"
+- Check if the repository appears in your sessions
+- Ask: "Should I write a PRD or prototype first?" (should push you toward prototyping)
+- Try: "What PM frameworks are available?"
 
 ---
 
