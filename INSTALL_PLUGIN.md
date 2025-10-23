@@ -40,7 +40,9 @@ You should see `pm-thought-partner` in the list.
 
 **Prerequisites:**
 - Access to Claude Code in Browser ([claude.ai/code](https://claude.ai/code))
-- **GitHub App installed** on your repository (required for browser access)
+- GitHub account (free)
+
+**Note:** The Claude GitHub App is required for browser access, but we'll install it as part of the setup below.
 
 **Install:**
 
