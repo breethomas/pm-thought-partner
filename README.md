@@ -548,6 +548,54 @@ Yes! Open an issue with:
 
 Quality and uniqueness matter more than quantity.
 
+### Does the skill limit what Claude can answer?
+
+**No.** The skill enhances Claude's PM capabilities by providing proven frameworks, but doesn't restrict general knowledge.
+
+**How it works:**
+- The skill adds PM frameworks and thought leader context to Claude's system prompt
+- This makes Claude better at PM advice (grounded in proven frameworks)
+- But Claude can still help with anything else (code, writing, analysis, etc.)
+
+**You can freely mix topics:**
+- Ask about growth strategy → Uses skill frameworks
+- Ask Claude to write Python code → Uses general knowledge
+- Ask about competitive analysis → Uses skill template
+- Ask about deployment → Uses general knowledge
+
+The skill is **enhancement, not restriction**.
+
+### What if I ask about a PM framework not in the skill?
+
+**Claude will still help using general PM knowledge.**
+
+**Example:** If you ask about AARRR pirate metrics (not currently in the skill), Claude will:
+1. Answer using general knowledge
+2. Be transparent that it's not in the PM Thought Partner frameworks
+3. Suggest it could be a good addition if you find it valuable
+
+**The skill provides:**
+- ✅ Curated frameworks from 12+ thought leaders
+- ✅ AI-era adaptations
+- ✅ Cross-framework integration
+- ✅ Proven, battle-tested approaches
+
+**But doesn't prevent:**
+- ✅ General PM help outside these frameworks
+- ✅ Other PM methodologies and approaches
+- ✅ Custom solutions for your specific situation
+
+### Can I use the skill for non-PM work?
+
+**Yes, absolutely.**
+
+The skill is active in the background, but you can ask Claude anything:
+- PM questions → Enhanced with frameworks
+- Code questions → Normal Claude capabilities
+- Writing/analysis/anything else → Normal Claude capabilities
+
+**Think of it as:** Claude with a PM expert on call, not Claude that only knows PM.
+
 ## License & Attribution
 
 **License:** MIT (see LICENSE file)
