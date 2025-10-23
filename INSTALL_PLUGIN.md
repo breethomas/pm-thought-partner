@@ -29,9 +29,13 @@ https://github.com/breethomas/pm-thought-partner
 
 Claude will:
 1. Clone the repository
-2. Install it to `~/.claude/plugins/`
-3. Verify it's working
-4. Show you how to use it
+2. Ask if you want it globally (all projects) or per-project (this repo only)
+3. Install it to the appropriate location
+4. Verify it's working
+
+**When Claude asks:**
+- Choose **"globally"** if you want PM frameworks everywhere (recommended)
+- Choose **"per-project"** if you only want it in specific repos
 
 **That's it.** You're using an AI coding assistant—let it do the installation work.
 
