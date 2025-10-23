@@ -1,0 +1,593 @@
+# PM Thought Partner - Sources & Attribution
+
+# This file tracks all frameworks, thought leaders, and sources used in this skill.
+# Every framework must have attribution to publicly available content.
+# Last Updated: January 2025
+
+---
+
+thought_leaders:
+
+  marty_cagan:
+    name: "Marty Cagan"
+    title: "Partner at Silicon Valley Product Group"
+    website: "https://www.svpg.com"
+    key_works:
+      - title: "Inspired: How to Create Tech Products Customers Love"
+        type: "book"
+        year: 2017
+        updated: 2024
+      - title: "Empowered: Ordinary People, Extraordinary Products"
+        type: "book"
+        year: 2020
+      - title: "SVPG Blog"
+        type: "blog"
+        url: "https://www.svpg.com/articles/"
+    frameworks:
+      - "Four Risks (value, usability, feasibility, viability)"
+      - "Product Discovery"
+      - "Empowered Teams"
+    where_to_follow:
+      - "SVPG Blog: https://www.svpg.com/articles/"
+      - "Book: Inspired (2nd edition)"
+      - "Book: Empowered"
+      - "LinkedIn: Regular product management insights"
+
+  teresa_torres:
+    name: "Teresa Torres"
+    title: "Product Discovery Coach, Author"
+    website: "https://www.producttalk.org"
+    key_works:
+      - title: "Continuous Discovery Habits"
+        type: "book"
+        year: 2021
+      - title: "Product Talk Blog"
+        type: "blog"
+        url: "https://www.producttalk.org/blog/"
+    frameworks:
+      - "Continuous Discovery Habits"
+      - "Opportunity Solution Trees"
+      - "Weekly customer conversations"
+    where_to_follow:
+      - "Product Talk: https://www.producttalk.org"
+      - "Book: Continuous Discovery Habits"
+      - "Newsletter: Product Talk insights"
+
+  elena_verna:
+    name: "Elena Verna"
+    title: "Growth Advisor, Interim Chief Growth Officer"
+    background: "Former growth leader at Miro, MongoDB, SurveyMonkey, Malwarebytes"
+    website: "https://elenaverna.com"
+    key_works:
+      - title: "Growth Loops Framework"
+        type: "framework"
+        url: "https://www.reforge.com/blog/growth-loops"
+      - title: "Elena's Growth Newsletter"
+        type: "newsletter"
+      - title: "Lenny's Podcast Appearances"
+        type: "podcast"
+        episodes:
+          - "How to leverage your growth model"
+          - "Product-led growth deep dive"
+    frameworks:
+      - "Growth Loops (not just funnels)"
+      - "Product-Led Growth (PLG)"
+      - "5 Growth Models"
+    where_to_follow:
+      - "Website: https://elenaverna.com"
+      - "Newsletter: Elena's Growth insights"
+      - "LinkedIn: Regular growth strategy posts"
+      - "Lenny's Podcast: Multiple episodes"
+
+  brian_balfour:
+    name: "Brian Balfour"
+    title: "Founder & CEO of Reforge"
+    background: "Former VP Growth at HubSpot, EIR at Trinity Ventures"
+    website: "https://brianbalfour.com"
+    key_works:
+      - title: "Four Fits for $100M+ Growth"
+        type: "article"
+        url: "https://brianbalfour.com/four-fits-growth"
+      - title: "Why Focus Wins"
+        type: "article"
+        year: 2014
+        url: "https://brianbalfour.com/essays/focus-wins"
+      - title: "The CODER Framework: How To Become AI-Native"
+        type: "article"
+        year: 2025
+        url: "https://www.reforge.com/blog/the-coder-framework"
+      - title: "Brian Balfour Blog"
+        type: "blog"
+        url: "https://brianbalfour.com"
+    frameworks:
+      - "Four Fits (market-product, product-channel, channel-model, model-market)"
+      - "Focus Wins (zoom out, zoom in, execute)"
+      - "CODER Framework (Constraints, Ownership, Directives, Expectations, Rewards)"
+      - "Growth Loops vs Funnels"
+      - "Value Capture vs Value Creation"
+    where_to_follow:
+      - "Blog: https://brianbalfour.com"
+      - "Reforge: https://www.reforge.com"
+      - "Twitter/X: Growth and strategy insights"
+
+  lenny_rachitsky:
+    name: "Lenny Rachitsky"
+    title: "Author, Podcaster, Product Advisor"
+    background: "Former PM at Airbnb"
+    website: "https://www.lennysnewsletter.com"
+    key_works:
+      - title: "Lenny's Newsletter"
+        type: "newsletter"
+        url: "https://www.lennysnewsletter.com"
+        subscribers: "700,000+"
+      - title: "Lenny's Podcast"
+        type: "podcast"
+        url: "https://www.lennyspodcast.com"
+        episodes: "300+"
+    role: "Synthesizer and connector of PM best practices"
+    contribution: "Interviews top practitioners, distills lessons, makes frameworks accessible"
+    where_to_follow:
+      - "Newsletter: https://www.lennysnewsletter.com"
+      - "Podcast: https://www.lennyspodcast.com"
+      - "LinkedIn: PM insights and community"
+
+  rahul_vohra:
+    name: "Rahul Vohra"
+    title: "Founder & CEO of Superhuman"
+    background: "Creator of PMF survey methodology"
+    key_works:
+      - title: "How Superhuman Built an Engine to Find Product-Market Fit"
+        type: "article"
+        url: "https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit"
+      - title: "Superhuman's PMF Survey"
+        type: "framework"
+        description: "40% 'very disappointed' threshold"
+    frameworks:
+      - "PMF Survey ('How would you feel if you could no longer use this product?')"
+      - "High-Expectation Customers (segment and focus)"
+      - "PMF Score (% very disappointed)"
+    where_to_follow:
+      - "First Round Review article (canonical)"
+      - "Superhuman updates and case studies"
+      - "Occasional talks and presentations"
+
+  janna_bastow:
+    name: "Janna Bastow"
+    title: "Co-founder of ProdPad and Mind the Product"
+    website: "https://www.prodpad.com"
+    key_works:
+      - title: "Now-Next-Later Roadmapping"
+        type: "framework"
+        url: "https://www.prodpad.com/blog/now-next-later-roadmap/"
+      - title: "Lean Roadmapping"
+        type: "book/methodology"
+      - title: "Mind the Product"
+        type: "community"
+        url: "https://www.mindtheproduct.com"
+    frameworks:
+      - "Now-Next-Later Roadmapping"
+      - "Cone of Uncertainty"
+      - "Outcome-based roadmaps"
+    where_to_follow:
+      - "ProdPad Blog: https://www.prodpad.com/blog/"
+      - "Mind the Product: https://www.mindtheproduct.com"
+      - "Twitter/X: Roadmapping insights"
+
+  aakash_gupta:
+    name: "Aakash Gupta"
+    title: "Product Leader, Educator"
+    focus: "Visual frameworks, stakeholder communication, AI prototyping"
+    website: "https://www.news.aakashg.com"
+    key_works:
+      - title: "One Minute PM Newsletter"
+        type: "newsletter"
+        url: "https://www.news.aakashg.com"
+      - title: "AI Prototyping Tutorial"
+        type: "guide"
+        description: "Comparison of v0, Bolt, Replit, Lovable"
+        url: "https://www.news.aakashg.com"
+      - title: "Prompt Engineering for PMs"
+        type: "article"
+        url: "https://www.news.aakashg.com/p/prompt-engineering"
+      - title: "Visual Framework Library"
+        type: "content"
+        description: "PM frameworks visualized"
+    frameworks:
+      - "Visual frameworks for PM concepts"
+      - "Stakeholder communication strategies"
+      - "AI prototyping tool comparison"
+      - "Prompt engineering mental models"
+    where_to_follow:
+      - "Newsletter: https://www.news.aakashg.com"
+      - "LinkedIn: Daily visual frameworks"
+      - "YouTube: Framework explanations"
+
+  aman_khan:
+    name: "Aman Khan"
+    title: "AI Product Leader"
+    background: "Stealth AI startup, former growth at Clipboard Health"
+    focus: "AI-native product development, evals, vibe-driven development"
+    key_works:
+      - title: "Vibe-Driven Development"
+        type: "methodology"
+        description: "Building AI products through rapid iteration and vibes"
+      - title: "AI Evals Framework"
+        type: "framework"
+        description: "Testing AI quality systematically"
+      - title: "Lenny's Podcast: Building AI Products"
+        type: "podcast"
+        url: "https://www.lennyspodcast.com"
+    frameworks:
+      - "AI Evals (LLM-as-judge, human evaluation, structured testing)"
+      - "Vibe-Driven Development"
+      - "Prototype → Vibe → Eval → Scale"
+      - "Start low agency, earn autonomy"
+    where_to_follow:
+      - "Lenny's Podcast episodes"
+      - "Twitter/X: AI product insights"
+      - "Occasional articles and talks"
+
+  ravi_mehta:
+    name: "Ravi Mehta"
+    title: "CEO of Outpace, Former CPO at Tinder"
+    background: "Product leadership at Tinder, Facebook, TripAdvisor, Xbox"
+    website: "https://www.ravi-mehta.com"
+    key_works:
+      - title: "Product Strategy Stack"
+        type: "framework"
+        description: "Mission → Vision → Pillars → Roadmap → Metrics"
+      - title: "Building AI Products"
+        type: "article"
+        url: "https://blog.ravi-mehta.com"
+      - title: "Lenny's Podcast: Product Strategy Stack"
+        type: "podcast"
+      - title: "Outpace Blog"
+        type: "blog"
+        url: "https://www.outpace.com"
+    frameworks:
+      - "Product Strategy Stack"
+      - "AI Integration Framework (data + functionality + AI = defensible product)"
+      - "You don't need frontier models"
+      - "Four interaction patterns (context, output, orchestration, tool use)"
+    where_to_follow:
+      - "Blog: https://www.ravi-mehta.com and https://blog.ravi-mehta.com"
+      - "LinkedIn: Product strategy insights"
+      - "Outpace: https://www.outpace.com"
+
+  linear:
+    name: "Linear (Methodology)"
+    type: "organization"
+    description: "Modern issue tracking and product development methodology"
+    website: "https://linear.app"
+    key_works:
+      - title: "Linear Method"
+        type: "methodology"
+        url: "https://linear.app/method"
+      - title: "Direction, Not Roadmaps"
+        type: "philosophy"
+      - title: "Issues, Not User Stories"
+        type: "practice"
+    frameworks:
+      - "Direction → Building → Quality"
+      - "Issues not user stories (clear, direct task descriptions)"
+      - "Operate transparently"
+      - "Build with momentum, ship continuously"
+    where_to_follow:
+      - "Linear Method: https://linear.app/method"
+      - "Linear Blog: Product development insights"
+
+  reforge:
+    name: "Reforge"
+    type: "organization"
+    description: "Practitioner-focused product, growth, and monetization education"
+    founded_by: "Brian Balfour (2017)"
+    partners: "Elena Verna, Casey Winters, and others"
+    website: "https://www.reforge.com"
+    key_works:
+      - title: "Growth Series"
+        type: "curriculum"
+        description: "Growth loops, four fits, experimentation"
+      - title: "Monetization & Pricing Program"
+        type: "curriculum"
+        description: "6 mistakes, 5 levers, unit economics"
+      - title: "Product Strategy Program"
+        type: "curriculum"
+      - title: "AI Strategy Course"
+        type: "curriculum"
+        year: 2024-2025
+      - title: "Reforge Blog"
+        type: "blog"
+        url: "https://www.reforge.com/blog"
+    frameworks:
+      - "6 Monetization Mistakes"
+      - "5 Monetization Levers"
+      - "Stage-appropriate tactics (PMF → Growth → Scale)"
+      - "Data-informed, not data-driven"
+      - "Mental models over playbooks"
+    contribution: "Synthesizes operational wisdom from dozens of practitioners at top tech companies"
+    where_to_follow:
+      - "Website: https://www.reforge.com"
+      - "Blog: Case studies and frameworks"
+      - "Programs: Cohort-based learning"
+
+---
+
+frameworks:
+
+  ai_era_practices:
+    category: "Modern product development"
+    location: "/frameworks/ai-era-practices/"
+    frameworks:
+
+      prototype_first:
+        name: "Prototype-First Development"
+        file: "prototype-first.md"
+        sources:
+          - "Aakash Gupta: AI Prototyping Tutorial"
+          - "Linear Method: Build with momentum"
+          - "Modern PM practices (2024-2025)"
+        tools_referenced:
+          - "v0 (Vercel)"
+          - "Bolt"
+          - "Replit"
+          - "Lovable"
+          - "Cursor"
+          - "Claude Code"
+          - "Windsurf"
+          - "Warp"
+        key_insight: "Build to learn, not document to build"
+
+      ai_unit_economics:
+        name: "AI Unit Economics & Monetization"
+        file: "ai-unit-economics.md"
+        sources:
+          - "Reforge: 6 Monetization Mistakes"
+          - "Reforge: 5 Monetization Levers"
+          - "Elena Verna: Growth models"
+          - "Real examples: Munchery, Airbnb evolution"
+        key_insight: "AI products have marginal costs (inference scales with usage)"
+
+      issues_not_stories:
+        name: "Issues Not User Stories"
+        file: "issues-not-stories.md"
+        sources:
+          - "Linear Method: https://linear.app/method"
+          - "Modern development practices"
+        key_insight: "Clear, direct task descriptions. Skip the ceremony."
+
+      continuous_calibration:
+        name: "Continuous Calibration (CC/CD)"
+        file: "continuous-calibration.md"
+        sources:
+          - "Lenny's Newsletter: AI product development"
+          - "Aman Khan: Start low agency, earn autonomy"
+          - "AI product best practices (2024-2025)"
+        key_insight: "AI products need CC/CD (Continuous Calibration), not just CI/CD"
+
+      prompt_engineering_for_pms:
+        name: "Prompt Engineering for PMs"
+        file: "prompt-engineering-for-pms.md"
+        sources:
+          - "Aakash Gupta: Prompt Engineering article"
+          - "Reforge: Steal These Prompts"
+          - "AI product best practices"
+        key_insight: "Prompt engineering is product strategy in disguise. PMs own this."
+
+      organizational_ai_adoption:
+        name: "Organizational AI Adoption (CODER Framework)"
+        file: "organizational-ai-adoption.md"
+        sources:
+          - "Brian Balfour: The CODER Framework (2025)"
+          - "Reforge Blog"
+          - "Zapier: Wade Foster's AI adoption handbook"
+          - "Shopify: Tobi Lütke's AI transformation"
+        key_insight: "Constraints, Ownership, Directives, Expectations, Rewards. Value creation > value capture."
+
+  discovery:
+    category: "How to learn what to build"
+    location: "/frameworks/discovery/"
+    frameworks:
+
+      continuous_discovery:
+        name: "Continuous Discovery Habits"
+        file: "continuous-discovery.md"
+        sources:
+          - "Teresa Torres: Continuous Discovery Habits (book, 2021)"
+          - "Product Talk: https://www.producttalk.org"
+        key_components:
+          - "Weekly customer conversations"
+          - "Opportunity Solution Trees"
+          - "Assumption testing"
+        key_insight: "Talk to customers every week, not in big research projects"
+
+      four_risks:
+        name: "Four Risks Framework"
+        file: "four-risks.md"
+        sources:
+          - "Marty Cagan: Inspired (book)"
+          - "SVPG Blog: https://www.svpg.com/articles/"
+        risks:
+          - "Value: Will customers use/buy this?"
+          - "Usability: Can users figure it out?"
+          - "Feasibility: Can we build it?"
+          - "Viability: Does it work for our business?"
+        key_insight: "Test all four risks before building"
+
+  growth:
+    category: "How to scale sustainably"
+    location: "/frameworks/growth/"
+    frameworks:
+
+      growth_loops:
+        name: "Growth Loops"
+        file: "growth-loops.md"
+        sources:
+          - "Elena Verna: Growth Loops framework"
+          - "Reforge: Growth Series"
+          - "Brian Balfour: Loops vs Funnels"
+        key_insight: "Sustainable growth comes from loops (circular, compounding), not just funnels (linear, leaky)"
+
+      four_fits:
+        name: "Four Fits"
+        file: "four-fits.md"
+        sources:
+          - "Brian Balfour: Four Fits for $100M+ Growth"
+          - "brianbalfour.com"
+        fits:
+          - "Market-Product Fit"
+          - "Product-Channel Fit"
+          - "Channel-Model Fit"
+          - "Model-Market Fit"
+        key_insight: "All four must align for sustainable scaling"
+
+  measurement:
+    category: "How to measure success"
+    location: "/frameworks/measurement/"
+    frameworks:
+
+      pmf_survey:
+        name: "PMF Survey"
+        file: "pmf-survey.md"
+        sources:
+          - "Rahul Vohra: How Superhuman Built an Engine to Find PMF"
+          - "First Round Review: https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit"
+        methodology:
+          question: "How would you feel if you could no longer use this product?"
+          threshold: ">40% saying 'very disappointed' indicates PMF"
+          approach: "Segment by user type, focus on high-expectation customers"
+        key_insight: "Quantitative measurement of product-market fit"
+
+  planning:
+    category: "How to communicate plans"
+    location: "/frameworks/planning/"
+    frameworks:
+
+      now_next_later:
+        name: "Now-Next-Later Roadmapping"
+        file: "now-next-later.md"
+        sources:
+          - "Janna Bastow: Now-Next-Later framework"
+          - "ProdPad: https://www.prodpad.com/blog/now-next-later-roadmap/"
+          - "Lean Roadmapping methodology"
+        components:
+          - "Now: Committed and being built"
+          - "Next: Likely, in validation"
+          - "Later: Possible, being explored"
+        key_insight: "Communicate sequence and certainty, not false dates"
+
+  ai:
+    category: "AI-native product development"
+    location: "/frameworks/ai/"
+    frameworks:
+
+      ai_evals:
+        name: "AI Evals & Testing"
+        file: "ai-evals.md"
+        sources:
+          - "Aman Khan: AI evals framework"
+          - "Lenny's Podcast: Building AI Products"
+          - "AI product best practices"
+        components:
+          - "LLM-as-judge evals"
+          - "Human evaluation"
+          - "Golden datasets"
+          - "Regression testing"
+        key_insight: "Define success criteria before building. Test failure modes systematically."
+
+---
+
+templates:
+  location: "/templates/"
+  templates:
+
+    lite_prd:
+      name: "Lite PRD Template"
+      file: "lite-prd.md"
+      philosophy: "1-2 pages, outcome-focused, not 20-page specifications"
+      sources:
+        - "Modern PM practices"
+        - "AI-era emphasis on prototypes > docs"
+
+    linear_issue:
+      name: "Linear-Style Issue Template"
+      file: "linear-issue.md"
+      philosophy: "Clear, direct task descriptions. No user story ceremony."
+      sources:
+        - "Linear Method: https://linear.app/method"
+
+    ai_product_spec:
+      name: "AI Product Spec Template"
+      file: "ai-product-spec.md"
+      components:
+        - "Evals strategy"
+        - "Unit economics model"
+        - "Calibration plan"
+        - "Success criteria for AI responses"
+      sources:
+        - "Aman Khan: AI evals"
+        - "Reforge: AI unit economics"
+        - "Continuous calibration best practices"
+
+    competitive_analysis:
+      name: "Competitive Analysis Template"
+      file: "competitive-analysis.md"
+      philosophy: "Strategic insights, not feature checklists"
+      focus:
+        - "What can we learn and apply?"
+        - "Where are the gaps?"
+        - "How do we differentiate?"
+      sources:
+        - "Standard PM competitive analysis practices"
+        - "AI-specific analysis section"
+
+---
+
+attribution_philosophy:
+
+  core_principle: >
+    This PM Thought Partner synthesizes publicly available wisdom from top
+    practitioners. It does not claim to create new frameworks—only to curate,
+    adapt, and integrate proven frameworks for AI-era product management.
+
+  every_framework_must_have:
+    - "Attribution to original creator"
+    - "Link to publicly available source content"
+    - "Clear explanation of the framework"
+    - "Practical application guidance"
+    - "AI-era adaptations where relevant"
+
+  what_this_project_adds:
+    - "Curation of best PM frameworks in one place"
+    - "AI-era adaptations and integrations"
+    - "Cross-framework connections and applications"
+    - "Modern execution practices (prototype-first, issues not stories)"
+    - "Templates and practical deliverables"
+    - "Systematic approach to applying proven wisdom"
+
+  open_source_approach:
+    - "All sources publicly attributed"
+    - "Community contributions welcome"
+    - "Quality standards maintained"
+    - "Regular updates as frameworks evolve"
+
+  maintenance:
+    - "Check source links quarterly"
+    - "Update when thought leaders publish new frameworks"
+    - "Version framework files with 'Last Updated' dates"
+    - "Document changes and rationale"
+
+---
+
+license:
+  type: "MIT"
+  note: >
+    This repository is open source. Frameworks remain the intellectual property
+    of their original creators. This project provides curation, synthesis, and
+    application guidance under MIT license.
+
+---
+
+last_updated: "January 2025"
+version: "1.0"
+maintainer: "Bree Thomas"
+repository: "https://github.com/[username]/pm-thought-partner"
