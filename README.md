@@ -17,22 +17,33 @@ Acts as your product management thought partner to:
 
 ## Installation
 
-### Option 1: Clone from GitHub (Recommended)
+**Choose your installation method based on your technical comfort level:**
+
+### For Claude Code Users (CLI/Desktop)
+
+#### Option 1: Ask Claude Code to Install It (Easiest)
+
+Not comfortable with terminal commands? Just ask Claude Code:
+
+```
+Hey Claude, can you install the PM Thought Partner skill from
+https://github.com/breethomas/pm-thought-partner for me?
+```
+
+Claude Code will handle the git clone and setup automatically.
+
+#### Option 2: Manual Installation (Recommended for updates)
 
 If you want to receive updates and optionally contribute back:
 
 1. **Clone the repository:**
    ```bash
-   # Clone to any location you prefer
    git clone https://github.com/breethomas/pm-thought-partner.git ~/pm-thought-partner
    ```
 
 2. **Link as a Claude Code skill:**
    ```bash
-   # Create skills directory if it doesn't exist
    mkdir -p ~/.claude-code/skills
-
-   # Create symlink to this skill
    ln -s ~/pm-thought-partner ~/.claude-code/skills/pm-thought-partner
    ```
 
@@ -42,7 +53,7 @@ If you want to receive updates and optionally contribute back:
    # You should see: pm-thought-partner -> /Users/[you]/pm-thought-partner
    ```
 
-4. **Restart Claude Code or reload skills**
+4. **Restart Claude Code**
 
 **To receive updates later:**
 ```bash
@@ -50,26 +61,53 @@ cd ~/pm-thought-partner
 git pull
 ```
 
-### Option 2: Direct Install to Skills Directory
-
-If you want a standalone installation without git:
+#### Option 3: Direct Install
 
 ```bash
-# Clone directly into Claude Code skills directory
 git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude-code/skills/pm-thought-partner
 ```
 
 Then restart Claude Code.
 
+---
+
+### For Claude.ai Web Users (Browser)
+
+**Note:** The full skill functionality only works in Claude Code. However, you can still use these frameworks in the web browser:
+
+#### Option 1: Create a Claude Project (Recommended)
+
+1. Go to [claude.ai](https://claude.ai) and create a new Project
+2. Name it "PM Thought Partner"
+3. Add custom instructions: Copy the content from [SKILL.md](https://github.com/breethomas/pm-thought-partner/blob/main/SKILL.md)
+4. Optionally upload key framework files as project knowledge
+
+**See:** [Claude Projects Setup Guide](./CLAUDE_PROJECTS_GUIDE.md) for detailed instructions.
+
+#### Option 2: Use Prompt Library
+
+Browse the [`/prompts/`](./prompts/) folder for ready-to-use prompts that include full framework context. Simply copy and paste into any Claude conversation.
+
+**Available prompts:**
+- PMF Survey Helper
+- Roadmap Planning (Now-Next-Later)
+- AI Product Strategy
+- Growth Strategy (Four Fits)
+- CODER Framework for AI Adoption
+- And more...
+
+---
+
 ### Verification
 
-Once installed, test by asking Claude Code:
-
+**For Claude Code:** Ask in a new conversation:
 ```
 Can you help me prioritize my roadmap using proven PM frameworks?
 ```
 
-If the skill is active, you'll get a response grounded in frameworks like Now-Next-Later (Janna Bastow), Four Fits (Brian Balfour), and others from this repository.
+**For Claude.ai Projects:** Your project will automatically have access to PM frameworks based on the custom instructions you added.
+
+If working correctly, you'll get responses grounded in frameworks like Now-Next-Later (Janna Bastow), Four Fits (Brian Balfour), and others from this repository.
 
 ## How to Use
 

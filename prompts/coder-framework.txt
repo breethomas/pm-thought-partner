@@ -1,0 +1,130 @@
+I need help driving organizational AI adoption using Brian Balfour's CODER framework.
+
+FRAMEWORK CONTEXT:
+
+Brian Balfour (founder of Reforge, former VP Growth at HubSpot) developed the CODER framework for systematic AI transformation across organizations.
+
+THE PROBLEM:
+Most companies write AI-first memos but see no behavior change. The gap between aspiration and reality is enormous.
+
+THE GOAL:
+Move from VALUE CAPTURE (10-15% efficiency gains) to VALUE CREATION (entirely new capabilities that were previously impossible).
+
+THE CODER FRAMEWORK:
+
+C - CONSTRAINTS (make new behavior easier than old)
+O - OWNERSHIP (someone drives the bus)
+D - DIRECTIVES (specific actions to take)
+E - EXPECTATIONS (what good looks like)
+R - REWARDS (tie to career progression)
+
+THE FIVE BARRIERS TO AI ADOPTION:
+
+1. Political Barriers
+   - Roles colliding as AI blurs boundaries
+   - Fear of stepping on toes
+   - Projects dropped to avoid conflict
+
+2. Retrofitting
+   - Layering AI onto old processes instead of rethinking
+   - Only incremental gains, missing transformation
+   - Optimizing existing work vs. reimagining it
+
+3. Procurement Barriers
+   - Legal/IT/finance slowing transformation
+   - Risk mitigation without weighing opportunity cost
+   - Months to approve tools
+
+4. Knowledge Barriers
+   - Surface learning without application
+   - People speak the language but don't know how to change daily work
+   - Understanding without action
+
+5. Permission Barriers
+   - Fear of doing something wrong
+   - Unclear boundaries about what's allowed
+   - Paralysis by uncertainty
+
+THE THREE TYPES OF ADOPTERS:
+
+1. Catalysts (15-20%)
+   - Early adopters, self-motivated
+   - Already experimenting on personal accounts
+   - Strategy: Get out of their way, amplify their successes
+
+2. Converts (60-70%)
+   - Willing majority, need structure
+   - Not resistant but won't self-direct
+   - Strategy: Full CODER framework, clear support
+
+3. Anchors (15-20%)
+   - Skeptics and resisters
+   - Scared or quietly resistant
+   - Strategy: Binary choices, decisive action
+
+CODER FRAMEWORK DETAILS:
+
+1. CONSTRAINTS (Most Important)
+   - Make new behavior easier than old behavior
+   - Four types: Time, Resource, Process, Tool constraints
+   - Example: "I only review work that demonstrates AI augmentation"
+   - Example: Zapier's company-wide AI hackathon
+
+2. OWNERSHIP
+   - CEO/Founder level for cultural shifts
+   - Functional leaders own their domains
+   - Optional: VP of AI to coordinate across functions
+   - Clear escalation paths when teams hit barriers
+
+3. DIRECTIVES
+   - 2-3 specific directives per functional team
+   - Immediately actionable
+   - Example: "All project phases must include AI prototyping before design reviews"
+   - Not vague "use AI" - specific when and how
+
+4. EXPECTATIONS
+   - Specific: Not "use AI effectively" but "every feature must include AI prototype"
+   - Universal: Everyone means everyone, no opt-outs
+   - Measurable: Can self-assess without subjective interpretation
+
+5. REWARDS
+   - Performance reviews: AI adoption as evaluation criteria
+   - Leveling guides: Add AI competency to role requirements
+   - Promotion criteria: Make AI usage factor in advancement
+
+ZAPIER'S APPROACH:
+- Full-company hackathon (entire week paused)
+- Everyone participates regardless of technical capability
+- AI fluency measured by role (Aware → Exploratory → Proficient → Advanced → Expert)
+- "Usage surged, but more importantly, the AI builder mentality stuck"
+
+KEY PRINCIPLES:
+
+1. Value creation > value capture - New capabilities beat efficiency
+2. Design for converts (70%) not catalysts (15%)
+3. Constraints are most important - Force behavior change
+4. Create dedicated time and space - Hackathons break the cycle
+5. Tie to careers - Without consequences, adoption stays optional
+
+APPLYING THE FRAMEWORK:
+
+Step 1: Identify your primary barrier (political, retrofitting, procurement, knowledge, permission)
+Step 2: Design 1-2 constraints that address your barrier
+Step 3: Assign clear ownership (top level + functional leaders)
+Step 4: Create 2-3 directives per function
+Step 5: Set specific, universal, measurable expectations
+Step 6: Tie to performance reviews and career progression
+Step 7: Run hackathons to create momentum
+Step 8: Monitor adoption by group (catalysts, converts, anchors)
+
+---
+
+MY SITUATION:
+[Add your context - company size, current AI adoption level, primary barriers, your role]
+
+HELP ME:
+1. Diagnose our primary barrier to AI adoption
+2. Design appropriate constraints for our situation
+3. Create function-specific directives
+4. Plan how to tie AI adoption to career progression
+5. Develop a systematic rollout plan using CODER
