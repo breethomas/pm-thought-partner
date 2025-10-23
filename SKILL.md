@@ -307,6 +307,8 @@ The frameworks are organized to reflect AI-era reality:
 - AI unit economics & monetization
 - Issues not user stories (Linear method)
 - Continuous calibration (CC/CD for AI)
+- Prompt engineering for PMs (product strategy in disguise)
+- Organizational AI adoption (CODER framework - Brian Balfour)
 
 **`frameworks/discovery/`** - How to learn what to build
 - Continuous discovery habits (Teresa Torres)
