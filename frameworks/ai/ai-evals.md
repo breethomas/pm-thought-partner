@@ -4,6 +4,16 @@
 **Category:** AI Product Management
 **Last Updated:** January 2025
 
+---
+
+> **New to evals? Start here first:** [PM-Friendly Evals Guide](./pm-friendly-evals-guide.md)
+>
+> That guide gives you a "Good, Better, Best" progression—start with 20 test cases in a spreadsheet,
+> then come back here when you're ready for systematic testing. This framework is comprehensive.
+> The PM-friendly guide is the lightweight entry point.
+
+---
+
 ## Overview
 
 Building AI products requires a fundamentally different approach to testing and quality assurance. Traditional software testing (unit tests, integration tests) isn't sufficient for AI systems that are probabilistic, not deterministic. Systematic evaluation (evals) helps catch AI failure modes before they reach production.

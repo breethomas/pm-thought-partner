@@ -311,7 +311,8 @@ Just start a conversation with Claude about product management work:
 
 **What you'll get:**
 - Chip Huyen's production AI systems (demo-to-product gap, data quality, cost optimization)
-- Aman Khan's AI evals framework (testing AI quality systematically)
+- PM-friendly evals guide (start with 20 test cases, scale smart - Aman Khan + Hamel Husain)
+- Aman Khan's comprehensive evals framework (systematic testing when you're ready)
 - Continuous calibration (CC/CD) approach
 - Prompt engineering for PMs
 - AI unit economics and monetization
@@ -408,7 +409,8 @@ pm-thought-partner/
 │   │   └── product-operating-model.md # Marty Cagan
 │   │
 │   └── ai/                          # AI-native building
-│       ├── ai-evals.md              # Aman Khan
+│       ├── pm-friendly-evals-guide.md # Start here for evals (Aman Khan + Hamel Husain)
+│       ├── ai-evals.md              # Comprehensive evals (Aman Khan)
 │       └── production-ai-systems.md # Chip Huyen
 │
 ├── templates/                       # Modern deliverables
@@ -553,7 +555,8 @@ While grounded in proven frameworks, the PM Thought Partner emphasizes AI-era re
 
 **AI-specific frameworks:**
 - Production AI Systems (Chip Huyen) - Demo-to-product gap, data quality over tools, cost optimization
-- AI Evals (Aman Khan) - Testing AI quality systematically
+- PM-Friendly Evals Guide - Start small (20 test cases), scale smart (Aman Khan + Hamel Husain)
+- AI Evals & Testing (Aman Khan) - Comprehensive systematic testing approach
 - AI Unit Economics - Modeling costs and monetization with marginal inference costs
 - Continuous Calibration (CC/CD) - How to develop AI products differently
 - Prompt Engineering for PMs - Product strategy in disguise
@@ -615,6 +618,7 @@ The PM Thought Partner is designed to be:
 **PM Thought Partner:**
 - "Have you tried prompt engineering before fine-tuning? Fine-tuning should be your last resort." (Chip Huyen)
 - "What's your data quality strategy? Data quality beats tool selection." (Chip Huyen)
+- "Have you started with evals? Write 20 test cases in a spreadsheet this week." (PM-friendly evals)
 - "Have you designed evals for what makes a 'good' recommendation vs 'bad'?" (Aman Khan)
 - "What's your cost model? Inference costs scale with usage." (AI unit economics, Chip Huyen)
 - "Start with low agency—AI suggests, human decides. Earn autonomy." (Continuous calibration)

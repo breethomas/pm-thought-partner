@@ -227,6 +227,46 @@ thought_leaders:
       - "Twitter/X: AI product insights"
       - "Occasional articles and talks"
 
+  hamel_husain:
+    name: "Hamel Husain"
+    title: "ML Engineering Expert, Educator"
+    background: "Former data scientist at GitHub, Airbnb; creator of nbdev, fastpages"
+    website: "https://hamel.dev"
+    note: "Referenced as source for practical eval insights, not included as standalone thought leader"
+    key_works:
+      - title: "Evals FAQ"
+        type: "article"
+        url: "https://hamel.dev/blog/posts/evals-faq/"
+        year: 2024
+      - title: "Your AI Product Needs Evals"
+        type: "article"
+        url: "https://hamel.dev/blog/posts/evals/"
+      - title: "LLM Judge as a Hack for Looking at Data"
+        type: "article"
+        url: "https://hamel.dev/blog/posts/llm-judge/"
+      - title: "Field Guide to AI Product Development"
+        type: "article"
+        url: "https://hamel.dev/blog/posts/field-guide/"
+      - title: "Lenny's Newsletter: Why AI Evals Are the Hottest New Skill"
+        type: "podcast/article"
+        url: "https://www.lennysnewsletter.com/p/why-ai-evals-are-the-hottest-new-skill"
+        collaboration: "With Shreya Shankar"
+    key_insights:
+      - "Error analysis is the most important activity in evals"
+      - "Start with 20-50 test cases, not thousands"
+      - "Don't buy fancy LLM tools, use what you have first"
+      - "Creating an LLM judge is a hack to trick people into looking at their data"
+      - "If you're passing 100% of evals, you're not challenging your system enough"
+    frameworks:
+      - "Three-level eval hierarchy (unit tests, human/model eval, A/B testing)"
+      - "Pragmatic eval approach (start small, scale smart)"
+      - "LLM-as-judge methodology"
+    contribution: "Pragmatic, PM-accessible approach to evals. Synthesized with Aman Khan's frameworks in PM-friendly evals guide."
+    where_to_follow:
+      - "Blog: https://hamel.dev"
+      - "Twitter/X: @HamelHusain"
+      - "GitHub: @hamelsmu"
+
   ravi_mehta:
     name: "Ravi Mehta"
     title: "CEO of Outpace, Former CPO at Tinder"
@@ -537,6 +577,22 @@ frameworks:
           - "Golden datasets"
           - "Regression testing"
         key_insight: "Define success criteria before building. Test failure modes systematically."
+
+      pm_friendly_evals_guide:
+        name: "PM-Friendly Evals Guide: Start Small, Scale Smart"
+        file: "pm-friendly-evals-guide.md"
+        sources:
+          - "Aman Khan: AI evals framework"
+          - "Hamel Husain: Pragmatic evals approach (hamel.dev)"
+          - "Shreya Shankar: Evals getting a bad reputation"
+          - "Lenny's Newsletter: Why AI Evals Are the Hottest New Skill"
+        components:
+          - "Good, Better, Best progression"
+          - "Start with 20 test cases"
+          - "Three-level eval hierarchy (Hamel)"
+          - "When to graduate to more depth"
+          - "Real-world examples"
+        key_insight: "Start small (20 test cases in a spreadsheet). Scale when manual process becomes painful. Error analysis > automation."
 
       production_ai_systems:
         name: "Production AI Systems"
