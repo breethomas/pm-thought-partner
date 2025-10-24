@@ -21,10 +21,10 @@ echo "1. Globally (available in all projects) - Recommended"
 if [ "$IN_GIT_REPO" = true ]; then
     echo "2. Per-project (only in this repository)"
     echo ""
-    read -p "Enter your choice (1 or 2): " choice
+    read -p "Enter your choice (1 or 2): " choice </dev/tty
 else
     echo ""
-    read -p "Enter your choice (1): " choice
+    read -p "Enter your choice (1): " choice </dev/tty
 fi
 
 case $choice in
@@ -54,7 +54,7 @@ echo ""
 # Check if directory already exists
 if [ -d "$INSTALL_PATH" ]; then
     echo "⚠️  PM Thought Partner already exists at $INSTALL_PATH"
-    read -p "Do you want to update it? (y/n): " update_choice
+    read -p "Do you want to update it? (y/n): " update_choice </dev/tty
 
     if [ "$update_choice" = "y" ] || [ "$update_choice" = "Y" ]; then
         echo "🔄 Updating..."
