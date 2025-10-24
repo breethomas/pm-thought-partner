@@ -7,14 +7,14 @@
   "license": "MIT",
   "homepage": "https://github.com/breethomas/pm-thought-partner#readme",
   "skills": [
-    "skills/pm-thought-partner"
+    "./skills/pm-thought-partner"
   ],
   "commands": [
-    "commands/lno-prioritize.md",
-    "commands/now-next-later.md",
-    "commands/four-risks.md",
-    "commands/coder.md",
-    "commands/pmf-survey.md"
+    "./commands/lno-prioritize.md",
+    "./commands/now-next-later.md",
+    "./commands/four-risks.md",
+    "./commands/coder.md",
+    "./commands/pmf-survey.md"
   ],
   "agents": [],
   "hooks": [],
