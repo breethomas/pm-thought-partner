@@ -1,6 +1,6 @@
 # PM Thought Partner for the AI Era
 
-An AI-powered product management thought partner for Claude Code. Grounded in proven frameworks from 12+ top PM thought leaders, adapted for the reality where you can build MVPs in hours, AI handles coordination work, and speed is the moat.
+An AI-powered product management thought partner for Claude Code. Grounded in proven frameworks from 13 top PM thought leaders, adapted for the reality where you can build MVPs in hours, AI handles coordination work, and speed is the moat.
 
 **This is not classic PM knowledge with AI updates bolted on.** It's built AI-era first—emphasizing prototype-first development, issues over user stories, continuous calibration, and modern execution velocity.
 
@@ -26,12 +26,12 @@ This is also an homage to product leaders who gave back to the community in ways
 
 Acts as your product management thought partner to:
 
-- **Challenge assumptions** with proven frameworks (Teresa Torres, Marty Cagan, Brian Balfour, Elena Verna, and more)
+- **Challenge assumptions** with proven frameworks (Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, and more)
 - **Push you toward prototyping** over lengthy documentation
 - **Apply strategic thinking** from the world's best PM thinkers
+- **Navigate AI product complexity** (production systems, evals, unit economics, continuous calibration)
 - **Apply frameworks to real work** with Linear (recommended) or GitHub Issues (fallback)
 - **Help you ship faster** while thinking deeper
-- **Navigate AI product complexity** (evals, unit economics, continuous calibration)
 - **Create modern deliverables** (lite PRDs, Linear-style issues, AI product specs)
 
 ### Works With Your Issue Tracker
@@ -173,7 +173,7 @@ Claude will add it to `.claude/plugins/` and you can commit it to version contro
 /now-next-later
 ```
 
-If working correctly, you'll get responses grounded in frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and other top PM leaders.
+If working correctly, you'll get responses grounded in frameworks from thought leaders like Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, Aman Khan, and more.
 
 ## Slash Commands
 
@@ -310,7 +310,8 @@ Just start a conversation with Claude about product management work:
 ```
 
 **What you'll get:**
-- Aman Khan's AI evals framework
+- Chip Huyen's production AI systems (demo-to-product gap, data quality, cost optimization)
+- Aman Khan's AI evals framework (testing AI quality systematically)
 - Continuous calibration (CC/CD) approach
 - Prompt engineering for PMs
 - AI unit economics and monetization
@@ -450,7 +451,7 @@ This tool operates on these principles:
    - Skip the ceremony, focus on outcomes
 
 4. **Apply proven frameworks**
-   - Grounded in wisdom from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, and others
+   - Grounded in wisdom from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, Aman Khan, and others
    - Adapted for AI-era speed and tooling
 
 5. **AI products need different approaches**
@@ -551,11 +552,12 @@ While grounded in proven frameworks, the PM Thought Partner emphasizes AI-era re
 ### What the PM Thought Partner Adds
 
 **AI-specific frameworks:**
-- Continuous Calibration (CC/CD) - How to develop AI products differently
-- AI Evals - Testing AI quality systematically
+- Production AI Systems (Chip Huyen) - Demo-to-product gap, data quality over tools, cost optimization
+- AI Evals (Aman Khan) - Testing AI quality systematically
 - AI Unit Economics - Modeling costs and monetization with marginal inference costs
+- Continuous Calibration (CC/CD) - How to develop AI products differently
 - Prompt Engineering for PMs - Product strategy in disguise
-- AI Integration Framework - Combining off-the-shelf AI with your unique advantages
+- AI Integration Framework (Ravi Mehta) - Combining off-the-shelf AI with your unique advantages
 
 **Modern execution practices:**
 - Prototype-first development
@@ -611,10 +613,12 @@ The PM Thought Partner is designed to be:
 **You:** "We want to add AI-powered recommendations."
 
 **PM Thought Partner:**
+- "Have you tried prompt engineering before fine-tuning? Fine-tuning should be your last resort." (Chip Huyen)
+- "What's your data quality strategy? Data quality beats tool selection." (Chip Huyen)
 - "Have you designed evals for what makes a 'good' recommendation vs 'bad'?" (Aman Khan)
-- "What's your cost model? Inference costs scale with usage." (AI unit economics)
+- "What's your cost model? Inference costs scale with usage." (AI unit economics, Chip Huyen)
 - "Start with low agency—AI suggests, human decides. Earn autonomy." (Continuous calibration)
-- "How will users override when the AI is wrong?"
+- "How will users override when the AI is wrong?" (UX for AI failures)
 - "What's your prompt strategy for this?" (Prompt engineering)
 
 ### Example 4: Roadmap Planning
@@ -728,8 +732,8 @@ The PM Thought Partner is **enhancement, not restriction**.
 3. Suggest it could be a good addition if you find it valuable
 
 **The PM Thought Partner provides:**
-- ✅ Curated frameworks from 12+ thought leaders
-- ✅ AI-era adaptations
+- ✅ Curated frameworks from 13 thought leaders
+- ✅ AI-era adaptations (including production AI systems, evals, and cost optimization)
 - ✅ Cross-framework integration
 - ✅ Proven, battle-tested approaches
 
@@ -761,7 +765,7 @@ This repository synthesizes and applies existing wisdom. It does not claim owner
 
 Grateful to the thought leaders whose public work made this possible:
 
-Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Lenny Rachitsky, Rahul Vohra, Janna Bastow, Aakash Gupta, Aman Khan, Ravi Mehta, the Linear team, and the Reforge community.
+Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Lenny Rachitsky, Rahul Vohra, Janna Bastow, Aakash Gupta, Aman Khan, Chip Huyen, Ravi Mehta, the Linear team, and the Reforge community.
 
 Their generosity in sharing frameworks publicly enables PMs everywhere to improve their craft.
 
