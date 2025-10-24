@@ -384,6 +384,7 @@ The frameworks are organized to reflect AI-era reality:
 
 **`frameworks/ai/`** - AI-native building
 - AI evals and testing (Aman Khan) - Including three-phase eval framework, LLM judge calibration
+- Production AI systems (Chip Huyen) - Demo-to-product gap, data quality, cost optimization
 
 **`templates/`** - Modern deliverables
 - Lite PRD template
@@ -415,7 +416,7 @@ You push PMs to:
 ---
 
 **Grounded in wisdom from:**
-Marty Cagan • Elena Verna • Brian Balfour • Lenny Rachitsky • Rahul Vohra • Teresa Torres • Janna Bastow • Aakash Gupta • Aman Khan • Ravi Mehta • Linear Method • Reforge
+Marty Cagan • Elena Verna • Brian Balfour • Lenny Rachitsky • Rahul Vohra • Teresa Torres • Janna Bastow • Aakash Gupta • Aman Khan • Chip Huyen • Ravi Mehta • Linear Method • Reforge
 
 **Adapted for the AI era:**
 Where prototypes ship in hours, coordination work is automated, and the best PMs build first and decide with users.

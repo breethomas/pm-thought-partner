@@ -407,7 +407,8 @@ pm-thought-partner/
 │   │   └── product-operating-model.md # Marty Cagan
 │   │
 │   └── ai/                          # AI-native building
-│       └── ai-evals.md              # Aman Khan
+│       ├── ai-evals.md              # Aman Khan
+│       └── production-ai-systems.md # Chip Huyen
 │
 ├── templates/                       # Modern deliverables
 │   ├── lite-prd.md                  # Outcome-focused, concise
@@ -425,6 +426,7 @@ pm-thought-partner/
     ├── janna-bastow.md              # Now-Next-Later roadmapping
     ├── aakash-gupta.md              # Visual frameworks, communication
     ├── aman-khan.md                 # AI evals, AI-native products
+    ├── chip-huyen.md                # Production AI, ML systems engineering
     ├── ravi-mehta.md                # Product Strategy Stack, AI integration
     ├── linear-method.md             # Issues not stories, direction over process
     ├── reforge.md                   # Practitioner wisdom, monetization
@@ -473,6 +475,7 @@ The PM Thought Partner synthesizes publicly available frameworks from:
 - **Janna Bastow** - Now-Next-Later roadmapping, cone of uncertainty
 - **Aakash Gupta** - Visual frameworks, stakeholder communication, AI prototyping
 - **Aman Khan** - AI evals, vibe-driven development, AI-native products
+- **Chip Huyen** - Production AI systems, ML engineering, data quality over tools
 - **Ravi Mehta** - Product Strategy Stack, AI integration framework
 - **Linear** - Issues not stories, direction → building → quality
 - **Reforge** - Practitioner wisdom, monetization, growth frameworks

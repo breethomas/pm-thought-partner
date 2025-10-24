@@ -30,6 +30,8 @@ These profiles help you:
 
 ### AI-Native Product Management
 - **Aman Khan** - AI evals, testing AI systems, AI product reliability
+- **Chip Huyen** - Production AI systems, ML engineering, data quality over tools
+- **Ravi Mehta** - Product Strategy Stack, AI integration framework
 
 ### Modern Execution
 - **Linear Team** - Issues not stories, direction-building-quality, modern workflows

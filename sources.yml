@@ -254,6 +254,50 @@ thought_leaders:
       - "LinkedIn: Product strategy insights"
       - "Outpace: https://www.outpace.com"
 
+  chip_huyen:
+    name: "Chip Huyen"
+    title: "ML Systems Expert, Author, Educator"
+    background: "Former ML at NVIDIA, Snorkel AI co-founder, Stanford CS educator"
+    website: "https://huyenchip.com"
+    key_works:
+      - title: "Designing Machine Learning Systems"
+        type: "book"
+        year: 2022
+        publisher: "O'Reilly"
+      - title: "Chip Huyen's Blog"
+        type: "blog"
+        url: "https://huyenchip.com/blog/"
+      - title: "Lenny's Newsletter: AI Engineering 101"
+        type: "podcast/article"
+        url: "https://www.lennysnewsletter.com/p/al-engineering-101-with-chip-huyen"
+      - title: "Lenny's Newsletter: Why AI Evals Are the Hottest New Skill"
+        type: "podcast/article"
+        url: "https://www.lennysnewsletter.com/p/why-ai-evals-are-the-hottest-new-skill"
+      - title: "Common Pitfalls When Building Generative AI Applications"
+        type: "article"
+        url: "https://huyenchip.com/blog/"
+      - title: "Real-Time Machine Learning: Challenges and Solutions"
+        type: "article"
+        url: "https://huyenchip.com/blog/"
+    frameworks:
+      - "Production AI Systems (demo vs production gap)"
+      - "Pre-training vs Post-training hierarchy (prompting → context → tools → fine-tuning)"
+      - "Data quality over tool selection"
+      - "System-level AI optimization"
+      - "Real-time vs Batch ML tradeoffs"
+      - "AI cost optimization strategies"
+    key_insights:
+      - "Fine-tuning should be your last resort"
+      - "User interaction beats model chasing"
+      - "Most AI failures are UX problems, not technical ones"
+      - "Data quality beats debating vector databases"
+      - "Platform reliability beats flashy tools"
+    where_to_follow:
+      - "Blog: https://huyenchip.com"
+      - "Twitter/X: @chipro"
+      - "LinkedIn: https://www.linkedin.com/in/chiphuyen"
+      - "Book: Designing Machine Learning Systems (O'Reilly)"
+
   linear:
     name: "Linear (Methodology)"
     type: "organization"
@@ -493,6 +537,23 @@ frameworks:
           - "Golden datasets"
           - "Regression testing"
         key_insight: "Define success criteria before building. Test failure modes systematically."
+
+      production_ai_systems:
+        name: "Production AI Systems"
+        file: "production-ai-systems.md"
+        sources:
+          - "Chip Huyen: Designing Machine Learning Systems (O'Reilly, 2022)"
+          - "Chip Huyen: Blog (huyenchip.com)"
+          - "Lenny's Newsletter: AI Engineering 101 with Chip Huyen"
+          - "Lenny's Newsletter: Why AI Evals Are the Hottest New Skill"
+        components:
+          - "Demo-to-product gap"
+          - "Pre-training vs post-training hierarchy"
+          - "Data quality over tool selection"
+          - "System-level optimization"
+          - "Cost optimization strategies"
+          - "Production monitoring"
+        key_insight: "Fine-tuning is the last resort. Most AI failures are UX problems. Data quality beats tool selection."
 
 ---
 
