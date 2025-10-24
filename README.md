@@ -65,9 +65,17 @@ Install the PM Thought Partner plugin from
 https://github.com/breethomas/pm-thought-partner
 ```
 
-**Option 2: Clone it yourself**
+**Option 2: Clone and run install script**
 ```bash
 git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
+cd ~/.claude/plugins/pm-thought-partner
+./install.sh
+```
+
+**Option 3: Manual installation (no script)**
+```bash
+git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
+ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
 ```
 
 **⚠️ RESTART REQUIRED:** After installation, exit and restart Claude Code to load slash commands.

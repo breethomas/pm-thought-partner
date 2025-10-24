@@ -35,12 +35,25 @@ Claude will handle everything - cloning the repo, setting up the plugin director
 
 ---
 
-### Option 2: Clone It Yourself
+### Option 2: Clone and Run Install Script
 
-**If you prefer to do it manually:**
+**Automated setup with install script:**
 
 ```bash
 git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
+cd ~/.claude/plugins/pm-thought-partner
+./install.sh
+```
+
+The install script will automatically symlink the slash commands to `~/.claude/commands/`.
+
+### Option 3: Manual Installation (No Script)
+
+**If you prefer full control:**
+
+```bash
+git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
+ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
 ```
 
 **⚠️ IMPORTANT: YOU MUST RESTART CLAUDE CODE** to load the slash commands. Exit your current session and run `claude` again.
@@ -203,8 +216,10 @@ Claude will pull the latest changes from GitHub.
 
 **"Slash commands aren't working"**
 - Make sure you're in a Claude Code session (`claude` command)
+- Check if commands are symlinked: `ls -la ~/.claude/commands/` should show the command files
+- If commands aren't symlinked, run: `ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/`
+- Restart Claude Code after symlinking
 - Try using natural language: "Apply LNO prioritization to my issues"
-- Restart Claude Code
 
 **"Claude says it can't find Linear issues"**
 - Check Linear MCP is set up: Ask Claude "Is Linear MCP configured?"
@@ -246,12 +261,16 @@ git clone https://github.com/breethomas/pm-thought-partner.git
 # Symlink to Claude's plugins directory (recommended)
 ln -s "$(pwd)/pm-thought-partner" ~/.claude/plugins/pm-thought-partner
 
+# Symlink the slash commands
+ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
+
 # Or copy if you prefer a stable version
 mkdir -p ~/.claude/plugins
 cp -r pm-thought-partner ~/.claude/plugins/
+ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
 ```
 
-**Tip:** Symlink is better - `git pull` updates automatically apply.
+**Tip:** Plugin symlink is better - `git pull` updates automatically apply. Commands must always be symlinked to `~/.claude/commands/`.
 
 ### Per-Project Install (Team access)
 
@@ -263,11 +282,16 @@ cd /path/to/your/project
 mkdir -p .claude/plugins
 cp -r /path/to/pm-thought-partner .claude/plugins/pm-thought-partner
 
+# Symlink the slash commands to global commands directory
+ln -sf "$(pwd)/.claude/plugins/pm-thought-partner/commands"/*.md ~/.claude/commands/
+
 # Commit to your repo
 git add .claude/
 git commit -m "Add PM Thought Partner plugin"
 git push
 ```
+
+**Note:** Commands are still symlinked to `~/.claude/commands/` globally, but the plugin content lives in your project.
 
 ### Verify Manual Installation
 
@@ -277,6 +301,9 @@ ls -la ~/.claude/plugins/pm-thought-partner
 
 # Check per-project install
 ls -la .claude/plugins/pm-thought-partner
+
+# Check commands are linked
+ls -la ~/.claude/commands/
 ```
 
 </details>
