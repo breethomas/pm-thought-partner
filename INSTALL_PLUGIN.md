@@ -31,6 +31,8 @@ https://github.com/breethomas/pm-thought-partner
 
 Claude will handle everything - cloning the repo, setting up the plugin directory, and verifying the installation.
 
+**⚠️ IMPORTANT: YOU MUST RESTART CLAUDE CODE** to load the slash commands. Exit your current session and run `claude` again.
+
 ---
 
 ### Option 2: Clone It Yourself
@@ -41,7 +43,7 @@ Claude will handle everything - cloning the repo, setting up the plugin director
 git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
 ```
 
-That's it. Restart Claude Code and you're ready.
+**⚠️ IMPORTANT: YOU MUST RESTART CLAUDE CODE** to load the slash commands. Exit your current session and run `claude` again.
 
 **For per-project installation** (team access), see the [Manual Installation](#advanced-manual-installation) section below.
 
@@ -49,7 +51,7 @@ That's it. Restart Claude Code and you're ready.
 
 ### Test It Works
 
-Start Claude Code in any project:
+**After restarting Claude Code**, start a new session in any project:
 
 ```bash
 claude

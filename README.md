@@ -70,6 +70,8 @@ https://github.com/breethomas/pm-thought-partner
 git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
 ```
 
+**⚠️ RESTART REQUIRED:** After installation, exit and restart Claude Code to load slash commands.
+
 **[→ Full installation guide](INSTALL_PLUGIN.md)** (includes Linear setup and troubleshooting)
 
 ---
