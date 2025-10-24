@@ -18,26 +18,38 @@
 
 ## Installation
 
-### Just Ask Claude
+> **Note:** PM Thought Partner is not yet in the Claude Code Marketplace. For now, installation requires cloning from GitHub. Once published to the marketplace, installation will be simpler: `claude plugin install pm-thought-partner`
 
-**If you're using Claude Code CLI, just ask Claude to install it:**
+### Option 1: Automated Install Script (Recommended)
+
+**Run the installer:**
+
+```bash
+curl -sSL https://raw.githubusercontent.com/breethomas/pm-thought-partner/main/install.sh | bash
+```
+
+The script will:
+1. Ask if you want it globally (all projects) or per-project (this repo only)
+2. Clone to the appropriate location
+3. Verify installation
+4. Show next steps
+
+**Choose:**
+- **Global** - Available everywhere (recommended)
+- **Per-project** - Only in this repository
+
+---
+
+### Option 2: Ask Claude to Install
+
+**If you prefer, ask Claude Code CLI to install it:**
 
 ```
 Install the PM Thought Partner plugin from
 https://github.com/breethomas/pm-thought-partner
 ```
 
-Claude will:
-1. Clone the repository
-2. Ask if you want it globally (all projects) or per-project (this repo only)
-3. Install it to the appropriate location
-4. Verify it's working
-
-**When Claude asks:**
-- Choose **"globally"** if you want PM frameworks everywhere (recommended)
-- Choose **"per-project"** if you only want it in specific repos
-
-**That's it.** You're using an AI coding assistant—let it do the installation work.
+Claude will guide you through the installation process.
 
 ---
 
@@ -155,7 +167,7 @@ Create and analyze PMF surveys (Rahul Vohra's Superhuman method):
 /pmf-survey --analyze [data]      # Analyze results
 ```
 
-**[→ See detailed command documentation](commands/)**
+**[→ See detailed command documentation in README](README.md#slash-commands)**
 
 ---
 

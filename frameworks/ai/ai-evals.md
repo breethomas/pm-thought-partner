@@ -1,12 +1,40 @@
 # AI Evals and Testing Framework
 
-**Author:** Aman Khan
+**Authors:** Aman Khan, Lenny Rachitsky, Shreya Ramachandran
 **Category:** AI Product Management
 **Last Updated:** January 2025
 
 ## Overview
 
-Building AI products requires a fundamentally different approach to testing and quality assurance. Traditional software testing (unit tests, integration tests) isn't sufficient for AI systems that are probabilistic, not deterministic. Aman Khan advocates for comprehensive evaluation (eval) systems to catch AI failure modes before they reach production.
+Building AI products requires a fundamentally different approach to testing and quality assurance. Traditional software testing (unit tests, integration tests) isn't sufficient for AI systems that are probabilistic, not deterministic. Systematic evaluation (evals) helps catch AI failure modes before they reach production.
+
+**But:** Evals are meant to help you ship faster, not slower.
+
+## ⚠️ The Eval Balance
+
+**Two extremes to avoid:**
+
+❌ **No evals (vibes only)**
+- "It looks good to me"
+- No systematic validation
+- Flying blind in production
+- Can't measure improvement
+
+❌ **Over-engineered evals (shipping blocker)**
+- Waiting for perfect eval suite before launch
+- Measuring everything (analysis paralysis)
+- Building in isolation instead of learning from users
+- Evals become more important than shipping
+
+✅ **The sweet spot: Pragmatic validation**
+- Ship fast with basic evals
+- Measure what matters
+- Learn from real usage
+- Add sophistication as you understand what's important
+
+**Key principle:** "Prompts may make headlines, but evals quietly decide whether your product thrives or dies." (Lenny x Aman)
+
+**But also:** User feedback > perfect evals. Real usage reveals what to measure.
 
 ## The Core Problem
 
@@ -37,6 +65,209 @@ Test: ???
 - Measure improvement over time
 - Ensure consistent quality
 - Build confidence in AI systems
+- **Enable faster shipping** (not block it)
+
+## The Eval Spectrum: Start Simple, Add Sophistication
+
+**Don't start here:** Elaborate eval suite with dozens of metrics before you've shipped anything.
+
+**Start here:** Does this obviously suck?
+
+### Phase 1: Pre-Launch (Minimum Viable Evals)
+
+**Goal:** Catch catastrophic failures, not perfect quality.
+
+**What to test:**
+- Does it work for the happy path?
+- Does it fail catastrophically on known edge cases?
+- Can you measure basic quality (accuracy, relevance, safety)?
+
+**Example: Travel planning AI**
+- ✅ Test: Does it book the right city? (San Francisco not San Diego)
+- ✅ Test: Does it stay within budget?
+- ✅ Test: Does it avoid obviously unsafe suggestions?
+- ❌ Don't test yet: Optimal itinerary ordering, user tone preferences, edge cases you haven't seen
+
+**Time investment:** Hours to days, not weeks.
+
+### Phase 2: Post-Launch (Learn from Users)
+
+**Goal:** Understand what actually matters to users.
+
+**What to add:**
+- Patterns from user feedback
+- Common correction types
+- Real edge cases discovered in production
+- Quality dimensions users care about
+
+**Example: After launch, you learn:**
+- Users retry when AI picks wrong dates (add eval)
+- Users correct hotel choices often (add eval)
+- Users don't care about restaurant order (skip eval)
+
+### Phase 3: Scale (Systematic Testing)
+
+**Goal:** Maintain quality as you grow.
+
+**What to add:**
+- Comprehensive test coverage
+- Regression prevention
+- Performance benchmarks
+- Edge case handling
+
+**Only reach this phase if:**
+- You have product-market fit
+- You understand what quality means to users
+- You're scaling to many users
+
+**Key insight:** Most PMs over-engineer Phase 3 before finishing Phase 1. Ship to learn what matters.
+
+## Three Evaluation Approaches
+
+**Source:** Lenny Rachitsky x Aman Khan
+
+Every eval uses one of three approaches (or a combination):
+
+### 1. Human Evals
+
+**How it works:** Real humans judge AI outputs.
+
+**Methods:**
+- User feedback (thumbs up/down in product)
+- Expert labeling (hire domain experts to grade outputs)
+- Internal review (team manually checks outputs)
+
+**Pros:**
+- Directly tied to real user experience
+- Catches subjective quality issues
+- Gold standard for "good enough"
+
+**Cons:**
+- Sparse signals (users don't always give feedback)
+- Expensive at scale (expert labeling costs money)
+- Ambiguous meaning (thumbs down = wrong answer? bad tone? too slow?)
+- Slow feedback loop
+
+**When to use:**
+- Early product exploration
+- Subjective quality (tone, style, creativity)
+- High-stakes decisions (medical, legal)
+- Calibrating other eval types
+
+**Example:**
+```
+Travel agent outputs 5 itineraries
+→ Show to 10 test users
+→ Ask: "Which would you book?"
+→ Learn: Users prefer 3-day itineraries over 7-day
+→ Update prompts to favor shorter trips
+```
+
+### 2. Code-Based Evals
+
+**How it works:** Deterministic checks on outputs.
+
+**Methods:**
+- Format validation (is JSON valid?)
+- Rule checking (does output follow constraints?)
+- Logic tests (does code compile? do numbers add up?)
+- Boundary checks (is price within budget?)
+
+**Pros:**
+- Fast (milliseconds)
+- Cheap (no API calls)
+- Deterministic (same input = same result)
+- Easy to debug
+
+**Cons:**
+- Only works for objective criteria
+- Weak for subjective tasks (tone, quality, relevance)
+- Brittle (hard-coded rules break)
+
+**When to use:**
+- Output format requirements
+- Hard constraints (budget, dates, safety rules)
+- Technical correctness (code syntax, math)
+- Fast regression tests
+
+**Example:**
+```python
+def eval_travel_itinerary(output):
+    # Code-based checks
+    assert is_valid_json(output)
+    assert output["total_cost"] <= budget
+    assert all(date in valid_range for date in output["dates"])
+    assert len(output["activities"]) >= 3
+    return True
+```
+
+### 3. LLM-as-Judge Evals
+
+**How it works:** External LLM grades outputs using natural language prompts.
+
+**Why this matters:** PMs can write these evals without engineering help.
+
+**Pros:**
+- Scalable (run thousands of evals cheaply)
+- Flexible (natural language criteria)
+- Explanatory (LLM explains why something failed)
+- PM-friendly (write eval prompts like product prompts)
+
+**Cons:**
+- Probabilistic, not deterministic
+- Requires calibration against human judgment
+- Can have biases (LLMs prefer their own outputs)
+- Costs more than code-based
+
+**When to use:**
+- Subjective quality (relevance, helpfulness, tone)
+- Nuanced criteria (is this answer comprehensive?)
+- Scalable human-like judgment
+- Rapid iteration on eval criteria
+
+**The Four-Part Eval Formula:**
+
+Every LLM-as-judge eval should have:
+
+1. **Role setting** - Prime the judge for context
+2. **Data provision** - Supply actual application outputs
+3. **Clear goals** - Define success/failure precisely
+4. **Terminology grounding** - Establish shared definitions
+
+**Example:**
+```
+You are an expert travel agent evaluating itinerary quality.
+
+Here's an itinerary generated by our AI:
+{output}
+
+Evaluate on these criteria:
+- Accuracy: Are cities, dates, and prices correct?
+- Feasibility: Can this actually be completed in the time given?
+- Appeal: Would a traveler find this exciting and well-paced?
+
+For each criterion, rate 1-5 and explain why.
+
+Definitions:
+- "Feasible" means realistic travel times between locations
+- "Well-paced" means not too rushed, not too much downtime
+```
+
+### Combining Approaches
+
+**Best practice:** Use all three where they shine.
+
+**Example: Customer support AI**
+
+1. **Code-based:** Output is valid JSON, has required fields
+2. **LLM-as-judge:** Response is helpful and empathetic
+3. **Human:** User gives thumbs up/down after resolution
+
+**Example: Code generation AI**
+
+1. **Code-based:** Code compiles, tests pass, follows style guide
+2. **LLM-as-judge:** Code is readable, well-structured, has good variable names
+3. **Human:** Developer accepts or modifies suggestion
 
 ## Types of Evals
 
@@ -604,9 +835,161 @@ Expected: No issue or minor style suggestion
 - Add poor reviews to eval dataset
 - Iterate and improve
 
+## Common Eval Mistakes
+
+**Source:** Shreya Ramachandran + Lenny/Aman
+
+### ❌ Mistake 1: Waiting for Perfect Evals Before Launch
+
+**Problem:** "We need a comprehensive eval suite before we can ship."
+
+**Why it's wrong:**
+- You don't know what quality means until users tell you
+- Building in isolation misses real failure modes
+- Perfect evals are a shipping blocker
+
+**Better approach:**
+- Start with minimum viable evals (does it obviously suck?)
+- Ship to learn what matters
+- Add eval sophistication based on real user feedback
+
+**Shreya's insight:** "If your eval suite takes 2 weeks to set up, you're doing it wrong."
+
+### ❌ Mistake 2: Measuring Everything (Analysis Paralysis)
+
+**Problem:** "Let's track 47 different quality metrics for every output."
+
+**Why it's wrong:**
+- Most metrics won't matter to users
+- Analysis paralysis prevents shipping
+- Can't optimize for everything
+
+**Better approach:**
+- Start with 2-3 key metrics
+- Ship and learn what users actually care about
+- Add metrics when you discover they matter
+
+**Example:**
+- Start: Accuracy, safety
+- Later add (if users care): Tone, brevity, formatting
+- Skip (if users don't care): Response time variance, synonym usage
+
+### ❌ Mistake 3: Optimizing for Benchmarks, Not Users
+
+**Problem:** "We improved our eval score by 15%!"
+
+**Reality check:** Did user satisfaction improve?
+
+**Why it's wrong:**
+- Evals are proxies for user value
+- Easy to game eval metrics
+- Benchmarks ≠ real-world performance
+
+**Better approach:**
+- Tie evals to user outcomes
+- Measure both eval scores AND user feedback
+- When they diverge, trust users
+
+### ❌ Mistake 4: Over-Engineering Before Understanding
+
+**Problem:** Building elaborate LLM-as-judge systems before you know what quality means.
+
+**Better approach:**
+1. Start with human evals (you manually check outputs)
+2. Learn patterns of good/bad
+3. Codify as simple rules (code-based evals)
+4. Scale with LLM-as-judge when patterns are clear
+
+**Progression:**
+- Week 1: Manual review (what's actually wrong?)
+- Week 2: Simple code checks (format, constraints)
+- Week 3: LLM-as-judge for patterns you've identified
+- Week 4: Automated suite for regression testing
+
+### ❌ Mistake 5: No Evals (Vibes Only)
+
+**Other extreme:** "We'll just see how it goes in production."
+
+**Why it's wrong:**
+- Flying blind
+- Can't measure improvement
+- Miss systematic failures
+- No way to prevent regressions
+
+**Better approach:**
+- Minimum viable evals before launch
+- Basic quality checks (does it work? is it safe?)
+- User feedback mechanisms
+- Gradual sophistication
+
+### ❌ Mistake 6: Evals as One-Time Setup
+
+**Problem:** "We built our eval suite, we're done."
+
+**Reality:** Evals need to evolve with your product.
+
+**Better approach:**
+- Update evals when product changes
+- Add evals for discovered failure modes
+- Remove evals that don't provide signal
+- Continuous eval maintenance
+
+**Example:**
+- Month 1: Travel AI evals for booking accuracy
+- Month 3: Users want restaurant recommendations → add food eval
+- Month 6: Destination search changes → update location evals
+- Month 9: Remove hotel eval that never catches issues
+
+### ✅ The Pragmatic Approach
+
+**Shreya's principle:** "Evals should help you ship faster, not slower."
+
+**How to apply:**
+1. **Pre-launch:** Minimum viable evals (catastrophic failure prevention)
+2. **Launch:** Ship with basic quality checks
+3. **Post-launch:** Learn from users what actually matters
+4. **Scale:** Add systematic testing as you grow
+
+**Time investment:**
+- Pre-launch: Hours to days, not weeks
+- Ongoing: Add evals when you discover they're needed
+- Maintenance: Regular review and updates
+
+**Key questions:**
+- Are my evals blocking shipping? (Bad sign)
+- Are my evals catching real user problems? (Good sign)
+- Am I learning from users and updating evals? (Good sign)
+- Am I optimizing for eval scores instead of user value? (Bad sign)
+
+---
+
+## Key Takeaways
+
+✅ **Evals help you ship faster, not slower**
+✅ **Start simple: Does it obviously suck?**
+✅ **Ship to learn what quality actually means**
+✅ **Three approaches: Human, Code-based, LLM-as-judge (use all three)**
+✅ **User feedback > perfect evals**
+✅ **Evals evolve with your product**
+✅ **Avoid both extremes: No evals (vibes) AND over-engineered evals (blocker)**
+
+**Bottom line:** Evals are a tool for faster iteration and better products. If they're slowing you down, you're doing them wrong.
+
+---
+
 ## Resources
 
-- Aman Khan's Substack: [amankhan1.substack.com](https://amankhan1.substack.com)
+**Lenny x Aman:**
+- [Beyond Vibe Checks: A PM's Complete Guide to AI Evals](https://www.lennysnewsletter.com/p/beyond-vibe-checks-a-pms-complete)
+
+**Shreya Ramachandran:**
+- [In Defense of AI Evals](https://www.sh-reya.com/blog/in-defense-ai-evals/)
+
+**Aman Khan:**
+- Substack: [amankhan1.substack.com](https://amankhan1.substack.com)
 - Article: "How we discovered our AI still couldn't do basic math"
-- Concept: LLM-as-Judge for automated evaluation
-- Tools: OpenAI Evals, LangChain evaluation, custom frameworks
+
+**Tools:**
+- OpenAI Evals
+- LangChain evaluation
+- Custom evaluation frameworks

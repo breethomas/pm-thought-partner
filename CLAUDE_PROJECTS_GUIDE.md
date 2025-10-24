@@ -111,14 +111,15 @@ Now upload the framework files so Claude has access to detailed content.
 
 **Core frameworks** (these cover most PM work):
 - `prototype-first.md` - AI-era build-to-learn approach
-- `organizational-ai-adoption.md` - CODER framework for AI adoption
 - `four-risks.md` - Marty Cagan's validation framework
 - `continuous-discovery.md` - Teresa Torres' customer research approach
-- `four-fits.md` - Elena Verna's growth framework
-- `growth-loops.md` - Brian Balfour's growth loops
+- `four-fits.md` - Brian Balfour's growth framework
+- `growth-loops.md` - Elena Verna's growth loops
 - `pmf-survey.md` - Rahul Vohra's PMF measurement
 - `now-next-later.md` - Janna Bastow's roadmap framework
 - `lno-prioritization.md` - Aakash Gupta's prioritization method
+- `scope-projects-down.md` - Linear Method scoping
+- `prioritize-enablers-blockers.md` - Linear Method prioritization
 - And more...
 
 ---
@@ -160,7 +161,7 @@ Now upload the framework files so Claude has access to detailed content.
 **Growth Strategy:**
 ```
 "How should we think about growing our product?"
-→ Claude applies Growth Loops, Four Fits frameworks
+→ Claude applies Growth Loops and Four Fits frameworks
 ```
 
 **PMF Measurement:**
@@ -169,11 +170,6 @@ Now upload the framework files so Claude has access to detailed content.
 → Claude walks you through Rahul Vohra's PMF Survey
 ```
 
-**AI Adoption:**
-```
-"We want to get our team using AI tools more. How do we drive adoption?"
-→ Claude applies CODER framework (Brian Balfour)
-```
 
 **Roadmapping:**
 ```
@@ -277,18 +273,6 @@ Want your whole team to use this?
 
 ---
 
-## Alternative: One-Off Prompts
-
-Don't want a persistent project? Use individual prompts:
-
-1. **Browse the `/prompts/` folder** in the repository
-2. **Copy a pre-made prompt** (includes framework context)
-3. **Paste into any Claude conversation**
-4. **Get framework-based advice** without setup
-
-**Trade-off:** Have to paste context each time vs. project remembers everything.
-
----
 
 ## Quick Start Checklist
 

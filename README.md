@@ -19,7 +19,7 @@ Acts as your product management thought partner to:
 ## Quick Links
 
 **For Technical PMs:**
-- **[CLI Plugin Installation](INSTALL_PLUGIN.md#option-1-claude-code-cli-recommended)** - Full experience with slash commands + Linear
+- **[CLI Plugin Installation](INSTALL_PLUGIN.md)** - Full experience with slash commands + Linear
 
 **For Non-Technical PMs:**
 - **[Claude Projects Setup Guide](CLAUDE_PROJECTS_GUIDE.md)** - Simple browser-based setup (15 min)
@@ -30,37 +30,50 @@ Acts as your product management thought partner to:
 
 ## Installation
 
-**Choose based on your role and needs:**
+**Choose based on your workflow:**
 
-### 👨‍💻 For Technical PMs / Engineers
+### CLI Plugin (Command Line) — Recommended
 
-**Best option: Claude Code CLI with Plugin**
+**Fastest and easiest setup.** One command, 30 seconds.
 
-Get slash commands for applying frameworks to your actual projects. Works with **Linear (recommended)** or **GitHub Issues (fallback)**.
+**What you get:**
+- Slash commands (`/lno-prioritize`, `/four-risks`, `/now-next-later`)
+- Linear (recommended) or GitHub Issues integration
+- Applies frameworks directly to your backlog
 
-**Just ask Claude to install it:**
+> **Note:** Not yet in Claude Code Marketplace. Installation requires cloning from GitHub for now.
+
+**Install:**
+```bash
+curl -sSL https://raw.githubusercontent.com/breethomas/pm-thought-partner/main/install.sh | bash
+```
+
+Or ask Claude to install it:
 ```
 Install the PM Thought Partner plugin from
 https://github.com/breethomas/pm-thought-partner
 ```
 
-Claude will ask if you want it globally (all projects) or per-project. Choose **globally** for most use cases.
-
-**[→ See full guide with slash commands](INSTALL_PLUGIN.md)** (includes Linear setup)
+**[→ See full CLI installation guide](INSTALL_PLUGIN.md)** (includes Linear setup)
 
 ---
 
-### 📋 For Non-Technical PMs
+### Claude Projects (Browser)
 
-**Best option: Claude Projects**
+**What you get:**
+- Works across all your PM conversations
+- Full access to all framework content
+- Not tied to a specific repository
 
-Simple setup, works across all your PM conversations, no coding required.
+**Limitations:**
+- ❌ No slash commands
+- ❌ No Linear/GitHub integration
+- ❌ Manual framework application (no automated backlog analysis)
 
-**Why Claude Projects instead of Claude Code Browser?**
-- ✅ Works on ANY of your PM work (roadmaps, PRDs, prioritization, etc.)
-- ✅ Not tied to a specific code repository
-- ✅ No Git, no GitHub App, no command line
-- ✅ Full access to all framework content
+**Why you'd choose this:**
+- ✅ Works on strategy, planning, roadmaps, prioritization
+- ✅ Available everywhere (not repository-specific)
+- ✅ No command line required
 
 **Setup (15 minutes):**
 1. Download the framework files from this repository
@@ -322,6 +335,7 @@ pm-thought-partner/
 │   ├── ai-era-practices/            # Modern product development
 │   │   ├── prototype-first.md       # Build to learn, don't document to build
 │   │   ├── issues-not-stories.md    # Linear Method approach
+│   │   ├── organizational-ai-adoption.md # CODER framework
 │   │   ├── ai-unit-economics.md     # Monetization and cost modeling
 │   │   ├── continuous-calibration.md # CC/CD for AI products
 │   │   └── prompt-engineering-for-pms.md # How PMs should think about prompting
@@ -332,13 +346,19 @@ pm-thought-partner/
 │   │
 │   ├── growth/                      # How to scale sustainably
 │   │   ├── growth-loops.md          # Elena Verna
-│   │   └── four-fits.md             # Brian Balfour
+│   │   ├── four-fits.md             # Brian Balfour
+│   │   └── product-led-sales.md     # Elena Verna
 │   │
 │   ├── measurement/                 # How to measure success
 │   │   └── pmf-survey.md            # Rahul Vohra
 │   │
 │   ├── planning/                    # How to communicate plans
-│   │   └── now-next-later.md        # Janna Bastow
+│   │   ├── now-next-later.md        # Janna Bastow
+│   │   ├── lno-prioritization.md    # Aakash Gupta
+│   │   ├── scope-projects-down.md   # Linear Method
+│   │   ├── prioritize-enablers-blockers.md # Linear Method
+│   │   ├── frontier-of-understanding.md # Teresa Torres
+│   │   └── product-operating-model.md # Marty Cagan
 │   │
 │   └── ai/                          # AI-native building
 │       └── ai-evals.md              # Aman Khan
@@ -361,7 +381,8 @@ pm-thought-partner/
     ├── aman-khan.md                 # AI evals, AI-native products
     ├── ravi-mehta.md                # Product Strategy Stack, AI integration
     ├── linear-method.md             # Issues not stories, direction over process
-    └── reforge.md                   # Practitioner wisdom, monetization
+    ├── reforge.md                   # Practitioner wisdom, monetization
+    └── README.md                    # Overview of thought leaders
 ```
 
 ### Core Philosophy
@@ -704,15 +725,6 @@ Their generosity in sharing frameworks publicly enables PMs everywhere to improv
 **Questions or feedback?** Open an issue on GitHub or reach out directly.
 
 ---
-
-## Quick Start Checklist
-
-- [ ] Install the skill (symlink or copy to `~/.claude-code/skills/`)
-- [ ] Restart Claude Code
-- [ ] Test: Ask Claude Code to help with a PM task
-- [ ] Explore: Browse `/frameworks/` and `/thought-leaders/` to see what's available
-- [ ] Apply: Use templates in `/templates/` for your actual work
-- [ ] Contribute: Open issues or PRs if you find improvements
 
 **Remember:** This is a thought partner for the AI era. It will push you to prototype instead of document, challenge assumptions with proven frameworks, and help you ship faster while thinking deeper.
 

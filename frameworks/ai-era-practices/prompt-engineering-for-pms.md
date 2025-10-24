@@ -10,6 +10,39 @@ Prompt engineering isn't a technical implementation detail—it's **product stra
 
 As a PM, you can't outsource this work to engineering. You understand user intent better than anyone, and prompt changes enable iteration speeds that engineering sprints can't match.
 
+## ⚠️ What This Framework Is NOT About
+
+**This framework is NOT about building a "prompt library."**
+
+The future of AI products isn't collecting perfect prompts—it's building systems that give AI the right context, tools, and feedback loops to solve problems iteratively.
+
+**Two related but different skills:**
+
+**Context Engineering** (see [context-engineering.md](context-engineering.md))
+- Designing the environment AI operates in
+- Data, tools, memory, constraints, feedback loops
+- Systems thinking > one-shot prompting
+- **This is the strategic skill**
+
+**Prompt Engineering** (this framework)
+- Writing effective instructions within that context
+- Product decisions about behavior and tradeoffs
+- Iteration and testing methodology
+- **This is a tactical skill within the bigger system**
+
+**The hierarchy:**
+```
+Context Engineering (the system)
+  ↓
+Prompt Engineering (the instructions)
+  ↓
+Output (what users see)
+```
+
+**Key insight:** Great prompts with bad context fail. Okay prompts with great context work. Perfect is both, but prioritize context.
+
+**If you're choosing where to start, read [context-engineering.md](context-engineering.md) first.**
+
 ## Why PMs Own Prompt Engineering
 
 ### 1. User Understanding

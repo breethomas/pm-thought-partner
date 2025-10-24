@@ -12,6 +12,23 @@ AI products need a fundamentally different development approach than traditional
 - **Traditional software:** Deterministic → Test once → Deploy → Works predictably
 - **AI systems:** Non-deterministic → Need ongoing calibration → Deploy → Monitor → Adjust
 
+## The Calibration Paradox
+
+**You can't calibrate without shipping.**
+
+**The mistake:** Building elaborate systems to perfectly calibrate AI behavior before launch.
+
+**The reality:** You learn what quality means by shipping to users and seeing what they actually need.
+
+**The approach:**
+1. **Ship with low agency** (AI suggests, human decides)
+2. **Learn from real usage** (what do users correct? what breaks?)
+3. **Calibrate based on data** (adjust prompts, context, constraints)
+4. **Increase agency gradually** (earn autonomy by proving reliability)
+5. **Repeat continuously** (calibration never ends)
+
+**Key insight:** Calibration happens through iteration with real users, not through pre-launch perfection.
+
 ## Why AI is Different
 
 ### Non-Determinism on Both Ends
