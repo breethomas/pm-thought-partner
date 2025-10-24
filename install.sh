@@ -20,9 +20,12 @@ echo ""
 echo "1. Globally (available in all projects) - Recommended"
 if [ "$IN_GIT_REPO" = true ]; then
     echo "2. Per-project (only in this repository)"
+    echo ""
+    read -p "Enter your choice (1 or 2): " choice
+else
+    echo ""
+    read -p "Enter your choice (1): " choice
 fi
-echo ""
-read -p "Enter your choice (1 or 2): " choice
 
 case $choice in
     1)
