@@ -246,6 +246,77 @@ Create and analyze PMF surveys using Rahul Vohra's Superhuman framework:
 /pmf-survey --analyze [data]      # Analyze results
 ```
 
+### `/start-evals`
+
+Start AI quality testing without overengineering (Aman Khan + Hamel Husain):
+- Generates your first 20 test cases
+- Good → Better → Best progression
+- Spreadsheet tracking or Linear project
+
+```bash
+/start-evals "AI product recommendations"  # Generate test cases
+/start-evals --create-project              # Create Linear eval project
+/start-evals --interactive                 # Step-by-step wizard
+```
+
+### `/ai-health-check`
+
+Pre-launch readiness assessment for AI features (Chip Huyen):
+- Model selection strategy (tried prompting before fine-tuning?)
+- Data quality & preparation
+- Cost modeling at scale
+- Production monitoring plan
+- Failure handling UX
+- System-level optimization
+
+```bash
+/ai-health-check ENG-245          # Assess specific AI feature
+/ai-health-check --pre-launch     # Check all sprint AI features
+/ai-health-check --add-comment    # Add checklist to Linear
+```
+
+### `/ai-cost-check`
+
+Calculate AI feature costs at scale to validate viability:
+- Cost per request
+- Cost per user at 100, 1K, 10K, 100K scale
+- % of revenue consumed by AI
+- Optimization opportunities (caching, cheaper models)
+
+```bash
+/ai-cost-check "product recommendations"   # Calculate costs
+/ai-cost-check --model gpt-4               # Specify model
+/ai-cost-check --compare                   # Compare across models
+```
+
+### `/growth-loops`
+
+Design compounding growth systems (Elena Verna):
+- Identify viral, content, network effect, or paid loops
+- Map where output becomes input
+- Analyze loop velocity
+- Implementation suggestions
+
+```bash
+/growth-loops                     # Analyze current product
+/growth-loops "referral program"  # Design loop for feature
+/growth-loops --velocity          # Optimize loop speed
+```
+
+### `/four-fits`
+
+Validate sustainable scaling readiness (Brian Balfour):
+- Market ↔ Product: Do customers want this?
+- Product ↔ Channel: Can we reach them efficiently?
+- Channel ↔ Model: Do economics work?
+- Model ↔ Market: Can we monetize profitably?
+
+```bash
+/four-fits                        # Full assessment
+/four-fits --validate             # Pre-scale validation
+/four-fits --diagnose             # Identify blocking fit
+```
+
 **[→ See command documentation](commands/)** for detailed usage
 
 ---
