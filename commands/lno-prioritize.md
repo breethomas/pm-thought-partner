@@ -7,13 +7,13 @@ description: Apply Aakash Gupta's LNO framework to categorize issues by impact (
 Apply the **LNO Prioritization Framework** (Aakash Gupta) to categorize your issues by impact level.
 
 **Works with:**
-- **Linear (recommended)** - If Linear MCP is configured
-- **GitHub Issues (fallback)** - If in a GitHub repo without Linear
-- **Manual input** - Paste issues if neither is available
+- **Linear** - Full integration via Linear MCP
+- **GitHub** - Full integration via GitHub MCP
+- **Manual** - Works without any MCP configuration
 
 ## What This Does
 
-Analyzes your Linear issues and categorizes them as:
+Analyzes your issues and categorizes them as:
 - **Leverage (L):** 10x impact tasks - your highest priority strategic work
 - **Neutral (N):** Regular impact tasks - important but not transformational
 - **Overhead (O):** Minimal impact tasks - necessary evils to minimize
@@ -32,7 +32,7 @@ Analyzes your Linear issues and categorizes them as:
 
 ## What Happens
 
-1. **Fetches issues** from Linear (if configured) or GitHub Issues (fallback)
+1. **Fetches issues** from Linear or GitHub (if MCPs configured)
 2. **Applies LNO framework** from PM Thought Partner skill
 3. **Categorizes each issue** based on:
    - Strategic importance
@@ -81,16 +81,19 @@ Analyzes your Linear issues and categorizes them as:
 ## Requirements
 
 - ✅ PM Thought Partner plugin installed
-- ✅ **Recommended:** Linear MCP server configured ([setup guide](../INSTALL_PLUGIN.md#setup-linear-mcp-server))
-- ✅ **Fallback:** GitHub repo with issues, or manual issue input
+- ✅ **Optional:** Linear MCP or GitHub MCP for automatic issue fetching ([setup guide](../INSTALL_PLUGIN.md#connect-your-issue-tracker))
+- ✅ **Manual mode:** Works without MCP - paste your issue list
 
-## Without Linear
+## Integration Options
 
-**If you have GitHub Issues:**
-The command will automatically fall back to analyzing GitHub Issues in your current repository.
+**With Linear MCP:**
+Automatically fetches Linear issues and can add L/N/O labels.
 
-**If you have neither:**
-You can still use the framework manually:
+**With GitHub MCP:**
+Automatically fetches GitHub issues and can add labels.
+
+**Manual mode:**
+Paste your issues and the command will categorize them:
 ```
 Apply the LNO framework to these issues: [paste issue list]
 ```

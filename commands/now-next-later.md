@@ -7,13 +7,13 @@ description: Generate a Now-Next-Later roadmap using Janna Bastow's framework
 Create a **Now-Next-Later roadmap** using Janna Bastow's framework.
 
 **Works with:**
-- **Linear Projects (recommended)** - If Linear MCP is configured
-- **GitHub Projects/Milestones (fallback)** - If in a GitHub repo without Linear
-- **Manual input** - Describe your projects if neither is available
+- **Linear** - Full integration via Linear MCP
+- **GitHub** - Full integration via GitHub MCP
+- **Manual** - Works without any MCP configuration
 
 ## What This Does
 
-Transforms your Linear projects into a roadmap that communicates **sequence and certainty** without false dates.
+Transforms your projects into a roadmap that communicates **sequence and certainty** without false dates.
 
 ## Usage
 
@@ -28,7 +28,7 @@ Transforms your Linear projects into a roadmap that communicates **sequence and 
 
 ## What Happens
 
-1. **Fetches projects** from Linear (if configured) or GitHub Projects (fallback)
+1. **Fetches projects** from Linear or GitHub (if MCPs configured)
 2. **Applies Janna Bastow's framework:**
    - **NOW:** High certainty, committed work (current sprint/cycle)
    - **NEXT:** Medium certainty, exploring solutions (next 1-2 cycles)
@@ -87,16 +87,19 @@ Transforms your Linear projects into a roadmap that communicates **sequence and 
 ## Requirements
 
 - ✅ PM Thought Partner plugin installed
-- ✅ **Recommended:** Linear MCP server configured ([setup guide](../INSTALL_PLUGIN.md#setup-linear-mcp-server))
-- ✅ **Fallback:** GitHub Projects/Milestones, or manual project list
+- ✅ **Optional:** Linear MCP or GitHub MCP for automatic project fetching ([setup guide](../INSTALL_PLUGIN.md#connect-your-issue-tracker))
+- ✅ **Manual mode:** Works without MCP - describe your projects directly
 
-## Without Linear
+## Integration Options
 
-**If you have GitHub Projects:**
-The command will automatically fall back to analyzing GitHub Projects or Milestones in your current repository.
+**With Linear MCP:**
+Automatically fetches Linear projects and roadmap data.
 
-**If you have neither:**
-You can still use the framework manually:
+**With GitHub MCP:**
+Automatically fetches GitHub Projects and Milestones.
+
+**Manual mode:**
+Describe your projects and the command will organize them:
 ```
 Help me organize these projects into a Now-Next-Later roadmap: [paste projects]
 ```

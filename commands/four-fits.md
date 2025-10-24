@@ -7,9 +7,9 @@ description: Validate product-market-channel-model alignment using Brian Balfour
 Validate **sustainable scaling readiness** using Brian Balfour's Four Fits framework.
 
 **Works with:**
-- **Manual** - Assesses your current product/business model
-- **Linear** - Analyzes product strategy issues
-- **GitHub** - Reviews strategy docs
+- **Linear** - Full integration via Linear MCP
+- **GitHub** - Full integration via GitHub MCP
+- **Manual** - Works without any MCP configuration
 
 ## What This Does
 

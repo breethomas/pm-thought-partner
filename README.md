@@ -30,7 +30,7 @@ Acts as your product management thought partner to:
 - **Push you toward prototyping** over lengthy documentation
 - **Apply strategic thinking** from the world's best PM thinkers
 - **Navigate AI product complexity** (production systems, evals, unit economics, continuous calibration)
-- **Apply frameworks to real work** with Linear (recommended) or GitHub Issues (fallback)
+- **Apply frameworks to real work** with Linear or GitHub via MCP integration
 - **Help you ship faster** while thinking deeper
 - **Create modern deliverables** (lite PRDs, Linear-style issues, AI product specs)
 
@@ -38,20 +38,21 @@ Acts as your product management thought partner to:
 
 The PM Thought Partner works best when connected to your backlog. It'll check what you have and work with it:
 
-**Linear (Recommended)** - Full features for applying frameworks:
+**Linear MCP** - Full integration for PM workflows:
 - **`/lno-prioritize`** - Auto-categorize all your issues by impact (L/N/O framework)
-- **`/four-risks [issue-id]`** - Run risk assessments and add them as Linear comments
-- **`/now-next-later`** - Generate roadmaps from your Linear projects
+- **`/four-risks [issue-id]`** - Run risk assessments and add them as issue comments
+- **`/now-next-later`** - Generate roadmaps from your projects
 - Setup takes 2 minutes with a Linear API key ([get one here](https://linear.app/settings/api))
 
-**GitHub Issues** - Automatic fallback if you have GitHub connected:
-- Works with the GitHub MCP server that's already available
-- Supports basic prioritization and analysis
-- No additional setup needed if GitHub is configured
+**GitHub MCP** - Full integration if you use GitHub Issues:
+- Same slash command capabilities as Linear MCP
+- Issue management, PR integration, project boards
+- Setup via [GitHub MCP server](https://github.com/github/github-mcp-server)
+- Great if your team already lives in GitHub
 
 **No integration?** You can always provide manual input - just paste issues or describe your backlog.
 
-The plugin will prompt you about connecting Linear during installation, but will automatically detect and use GitHub if it's already set up.
+The plugin will prompt you about connecting an MCP during installation and will work seamlessly with either Linear or GitHub.
 
 ## Quick Links
 
@@ -73,7 +74,7 @@ The plugin will prompt you about connecting Linear during installation, but will
 
 **What you get:**
 - Slash commands (`/lno-prioritize`, `/four-risks`, `/now-next-later`)
-- Linear (recommended) or GitHub Issues integration
+- Linear MCP or GitHub MCP integration
 - Applies frameworks directly to your backlog
 
 > **Note:** Not yet in Claude Code Marketplace. Installation requires cloning from GitHub for now.

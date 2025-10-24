@@ -7,9 +7,9 @@ description: Run Marty Cagan's Four Risks assessment on an issue (value, usabili
 Apply **Marty Cagan's Four Risks Framework** to assess an issue before building.
 
 **Works with:**
-- **Linear (recommended)** - If Linear MCP is configured
-- **GitHub Issues (fallback)** - If in a GitHub repo without Linear
-- **Manual input** - Describe the feature if neither is available
+- **Linear** - Full integration via Linear MCP
+- **GitHub** - Full integration via GitHub MCP
+- **Manual** - Works without any MCP configuration
 
 ## What This Does
 
@@ -32,7 +32,7 @@ Evaluates a feature/project against the four critical risks:
 
 ## What Happens
 
-1. **Fetches issue details** from Linear (if configured) or GitHub Issues (fallback)
+1. **Fetches issue details** from Linear or GitHub (if MCPs configured)
 2. **Applies Four Risks framework:**
    - Analyzes issue description
    - Asks clarifying questions if needed
@@ -120,16 +120,19 @@ Only proceed if:
 ## Requirements
 
 - ✅ PM Thought Partner plugin installed
-- ✅ **Recommended:** Linear MCP server configured ([setup guide](../INSTALL_PLUGIN.md#setup-linear-mcp-server))
-- ✅ **Fallback:** GitHub repo with issues, or manual feature description
+- ✅ **Optional:** Linear MCP or GitHub MCP for automatic issue fetching ([setup guide](../INSTALL_PLUGIN.md#connect-your-issue-tracker))
+- ✅ **Manual mode:** Works without MCP - describe the feature directly
 
-## Without Linear
+## Integration Options
 
-**If you have GitHub Issues:**
-The command will automatically fall back to analyzing GitHub Issues in your current repository.
+**With Linear MCP:**
+Automatically fetches Linear issue details and can add assessment as comment.
 
-**If you have neither:**
-You can still use the framework manually:
+**With GitHub MCP:**
+Automatically fetches GitHub issue details and can add assessment as comment.
+
+**Manual mode:**
+Describe the feature and the command will assess it:
 ```
 Run a four risks assessment on this feature: [describe feature]
 ```

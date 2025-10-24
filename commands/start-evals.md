@@ -7,9 +7,9 @@ description: Start AI evals without overengineering - create your first 20 test 
 Launch your AI evaluation process using the **PM-Friendly Evals approach** (Aman Khan + Hamel Husain).
 
 **Works with:**
-- **Linear (recommended)** - Creates eval project and test case issues
-- **Manual workflow** - Generates test cases in markdown/spreadsheet format
-- **GitHub Issues (fallback)** - Creates issues for test cases
+- **Linear** - Full integration via Linear MCP
+- **GitHub** - Full integration via GitHub MCP
+- **Manual** - Works without any MCP configuration
 
 ## What This Does
 

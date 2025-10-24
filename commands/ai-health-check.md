@@ -7,9 +7,9 @@ description: Pre-launch health check for AI features using Chip Huyen's producti
 Run a comprehensive **production AI readiness assessment** using Chip Huyen's framework.
 
 **Works with:**
-- **Linear** - Analyzes AI feature issues and adds readiness assessment
-- **GitHub Issues** - Reviews AI feature specs
-- **Manual** - Assesses feature description you provide
+- **Linear** - Full integration via Linear MCP
+- **GitHub** - Full integration via GitHub MCP
+- **Manual** - Works without any MCP configuration
 
 ## What This Does
 

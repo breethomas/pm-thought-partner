@@ -7,9 +7,9 @@ description: Calculate AI feature costs at scale to validate economic viability
 Calculate the **true cost of your AI feature at scale** to validate economic viability.
 
 **Works with:**
-- **Linear** - Analyzes AI feature issues and adds cost breakdown
-- **GitHub Issues** - Reviews feature specs for cost modeling
-- **Manual** - Calculates based on description you provide
+- **Linear** - Full integration via Linear MCP
+- **GitHub** - Full integration via GitHub MCP
+- **Manual** - Works without any MCP configuration
 
 ## What This Does
 

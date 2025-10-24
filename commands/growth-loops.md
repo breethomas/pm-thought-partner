@@ -7,9 +7,9 @@ description: Identify and design growth loops using Elena Verna's framework for 
 Design **compounding growth systems** using Elena Verna's Growth Loops framework.
 
 **Works with:**
-- **Linear** - Analyzes product/feature issues for loop potential
-- **Manual** - Maps your product to loop opportunities
-- **GitHub Issues** - Reviews features for growth mechanics
+- **Linear** - Full integration via Linear MCP
+- **GitHub** - Full integration via GitHub MCP
+- **Manual** - Works without any MCP configuration
 
 ## What This Does
 

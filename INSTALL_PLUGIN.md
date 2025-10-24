@@ -62,23 +62,22 @@ ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
 
 ---
 
-## Connect Your Issue Tracker (Recommended)
+## Connect Your Issue Tracker (Optional)
 
 The PM Thought Partner works best when connected to your backlog. Set this up right after installation to get the most value.
 
-### Option 1: Linear (Recommended for PMs)
+### Option 1: Linear MCP
 
 **Why Linear?**
 - Built for product teams (roadmaps, discovery, prioritization)
 - Linear Method is one of our core frameworks
-- Richer project/issue metadata for better framework analysis
-- Full slash command features (auto-labeling, commenting, projects)
+- Rich project/issue metadata for better framework analysis
 
 **What you get:**
-- `/lno-prioritize` - Auto-categorize issues by impact + add Linear labels
-- `/four-risks [issue-id]` - Risk assessment + add to Linear comments
-- `/now-next-later` - Generate roadmap from Linear projects
-- Richer analysis from Linear's structured data
+- `/lno-prioritize` - Auto-categorize issues by impact + add labels
+- `/four-risks [issue-id]` - Risk assessment + add to issue comments
+- `/now-next-later` - Generate roadmap from projects
+- Full integration with Linear's API
 
 **Setup (2 minutes):**
 
@@ -100,14 +99,18 @@ Follow the prompts to add your Linear API key.
 
 ---
 
-### Option 2: GitHub Issues (Automatic Fallback)
+### Option 2: GitHub MCP
 
 **Already have GitHub connected?** The PM Thought Partner will automatically detect and use it.
 
 **What you get:**
-- Basic prioritization and issue analysis
-- Slash commands work with GitHub Issues
-- No additional setup if GitHub MCP is already configured
+- Same slash command capabilities as Linear MCP
+- Issue management, PR integration, project boards
+- Full create/update/label capabilities
+- Great if your team already lives in GitHub
+
+**Setup:**
+Use the [GitHub MCP server](https://github.com/github/github-mcp-server)
 
 **Not set up yet?**
 ```
