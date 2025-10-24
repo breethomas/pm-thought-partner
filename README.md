@@ -30,29 +30,28 @@ Acts as your product management thought partner to:
 - **Push you toward prototyping** over lengthy documentation
 - **Apply strategic thinking** from the world's best PM thinkers
 - **Navigate AI product complexity** (production systems, evals, unit economics, continuous calibration)
-- **Apply frameworks to real work** with Linear or GitHub via MCP integration
+- **Auto-analyze your backlog** - Prioritize 50+ issues in 10 seconds with `/lno-prioritize` (Linear/GitHub MCP)
 - **Help you ship faster** while thinking deeper
 - **Create modern deliverables** (lite PRDs, Linear-style issues, AI product specs)
 
 ### Works With Your Issue Tracker
 
-The PM Thought Partner works best when connected to your backlog. It'll check what you have and work with it:
+**The real power:** Connect Linear or GitHub to auto-analyze your entire backlog in seconds instead of manual spreadsheet work.
 
-**Linear MCP** - Full integration for PM workflows:
-- **`/lno-prioritize`** - Auto-categorize all your issues by impact (L/N/O framework)
-- **`/four-risks [issue-id]`** - Run risk assessments and add them as issue comments
-- **`/now-next-later`** - Generate roadmaps from your projects
-- Setup takes 2 minutes with a Linear API key ([get one here](https://linear.app/settings/api))
+**Backlog automation commands** (MCP highly recommended):
+- **`/lno-prioritize`** - Analyze 50+ issues and auto-label by impact (Leverage/Neutral/Overhead) in 10 seconds
+- **`/four-risks [issue-id]`** - Pull issue details, assess risks, add analysis as comment
+- **`/now-next-later`** - Generate roadmap from your Linear projects or GitHub milestones
 
-**GitHub MCP** - Full integration if you use GitHub Issues:
-- Same slash command capabilities as Linear MCP
-- Issue management, PR integration, project boards
-- Setup via [GitHub MCP server](https://github.com/github/github-mcp-server)
-- Great if your team already lives in GitHub
+**Strategic framework commands** (MCP optional):
+- **`/growth-loops`**, **`/four-fits`**, **`/ai-cost-check`**, **`/ai-health-check`** - Best with your voice-to-text context
+- MCP integration lets you attach analysis back to issues as comments (optional)
 
-**No integration?** You can always provide manual input - just paste issues or describe your backlog.
+**Setup (2 minutes):**
+- **Linear MCP:** [Get API key](https://linear.app/settings/api) → Ask Claude "Set up the Linear MCP server for me"
+- **GitHub MCP:** [GitHub MCP server](https://github.com/github/github-mcp-server) → Follow setup guide
 
-The plugin will prompt you about connecting an MCP during installation and will work seamlessly with either Linear or GitHub.
+**No MCP?** All commands work with manual input—just paste issues or describe your context directly.
 
 ## Quick Links
 

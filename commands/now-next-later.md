@@ -7,9 +7,9 @@ description: Generate a Now-Next-Later roadmap using Janna Bastow's framework
 Create a **Now-Next-Later roadmap** using Janna Bastow's framework.
 
 **Works with:**
-- **Linear** - Full integration via Linear MCP
-- **GitHub** - Full integration via GitHub MCP
-- **Manual** - Works without any MCP configuration
+- **Linear MCP** - Reads your projects and generates roadmap automatically
+- **GitHub MCP** - Reads your projects/milestones and generates roadmap automatically
+- **Manual** - Describe your projects directly
 
 ## What This Does
 

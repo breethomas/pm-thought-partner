@@ -7,9 +7,9 @@ description: Run Marty Cagan's Four Risks assessment on an issue (value, usabili
 Apply **Marty Cagan's Four Risks Framework** to assess an issue before building.
 
 **Works with:**
-- **Linear** - Full integration via Linear MCP
-- **GitHub** - Full integration via GitHub MCP
-- **Manual** - Works without any MCP configuration
+- **Linear MCP** - Reads issue details and adds assessment as comment
+- **GitHub MCP** - Reads issue details and adds assessment as comment
+- **Manual** - Describe the feature directly
 
 ## What This Does
 

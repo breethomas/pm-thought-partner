@@ -7,9 +7,9 @@ description: Apply Aakash Gupta's LNO framework to categorize issues by impact (
 Apply the **LNO Prioritization Framework** (Aakash Gupta) to categorize your issues by impact level.
 
 **Works with:**
-- **Linear** - Full integration via Linear MCP
-- **GitHub** - Full integration via GitHub MCP
-- **Manual** - Works without any MCP configuration
+- **Linear MCP** - Analyzes your issues and auto-labels by priority (L/N/O)
+- **GitHub MCP** - Analyzes your issues and auto-labels by priority (L/N/O)
+- **Manual** - Paste your issues if no MCP configured
 
 ## What This Does
 

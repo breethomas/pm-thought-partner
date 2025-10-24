@@ -62,22 +62,31 @@ ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
 
 ---
 
-## Connect Your Issue Tracker (Optional)
+## Connect Your Issue Tracker (Highly Recommended)
 
-The PM Thought Partner works best when connected to your backlog. Set this up right after installation to get the most value.
+**One-liner value:** Auto-analyze 50+ issues in 10 seconds with `/lno-prioritize` instead of spending hours in spreadsheets.
+
+**The real power of this plugin** is applying frameworks from Marty Cagan, Elena Verna, and Brian Balfour directly to your backlog—not just talking about them.
+
+### What MCP Integration Unlocks
+
+**Backlog automation** (this is where MCP shines):
+- **`/lno-prioritize`** - Analyze your entire backlog and auto-label by impact (Leverage/Neutral/Overhead)
+- **`/four-risks [issue-id]`** - Pull issue details, assess all four risks, add analysis as comment
+- **`/now-next-later`** - Generate roadmap from your Linear projects or GitHub milestones
+
+**Strategic frameworks** (these work great without MCP too):
+- **`/growth-loops`**, **`/four-fits`**, **`/ai-cost-check`** - Best with your voice-to-text context
+- MCP lets you attach analysis to issues (optional), but doesn't read issues for insights
+
+---
 
 ### Option 1: Linear MCP
 
 **Why Linear?**
 - Built for product teams (roadmaps, discovery, prioritization)
 - Linear Method is one of our core frameworks
-- Rich project/issue metadata for better framework analysis
-
-**What you get:**
-- `/lno-prioritize` - Auto-categorize issues by impact + add labels
-- `/four-risks [issue-id]` - Risk assessment + add to issue comments
-- `/now-next-later` - Generate roadmap from projects
-- Full integration with Linear's API
+- Rich project/issue metadata
 
 **Setup (2 minutes):**
 
