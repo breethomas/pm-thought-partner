@@ -335,7 +335,7 @@ You can explicitly ask for specific frameworks:
 "What's the continuous calibration framework for AI?"
 ```
 
-The skill will reference specific markdown files in this repository and explain how to apply them.
+The PM Thought Partner will reference specific markdown files in this repository and explain how to apply them.
 
 ## What's Inside
 
@@ -404,7 +404,7 @@ pm-thought-partner/
 
 ### Core Philosophy
 
-This skill operates on these principles:
+This tool operates on these principles:
 
 1. **Prototype in hours, not document for weeks**
    - Modern tools (Cursor, Claude Code, v0, Bolt, Replit) enable rapid prototyping
@@ -433,7 +433,7 @@ This skill operates on these principles:
 
 ## Thought Leaders Included
 
-This skill synthesizes publicly available frameworks from:
+The PM Thought Partner synthesizes publicly available frameworks from:
 
 - **Marty Cagan** - Product discovery, four risks, empowered teams
 - **Teresa Torres** - Continuous discovery habits, opportunity solution trees
@@ -492,11 +492,11 @@ If a thought leader updates their framework or new insights emerge:
 
 All frameworks in this repository come from publicly available content. See `sources.yml` for complete attribution and links to original sources.
 
-**Key principle:** This skill synthesizes and applies existing wisdom. It does not claim to create new frameworks—it makes proven frameworks accessible and applicable.
+**Key principle:** The PM Thought Partner synthesizes and applies existing wisdom. It does not claim to create new frameworks—it makes proven frameworks accessible and applicable.
 
 ## AI-Era Adaptations
 
-While grounded in proven frameworks, this skill emphasizes AI-era realities:
+While grounded in proven frameworks, the PM Thought Partner emphasizes AI-era realities:
 
 ### What's Different from Classic PM
 
@@ -516,7 +516,7 @@ While grounded in proven frameworks, this skill emphasizes AI-era realities:
 
 **Classic PM frameworks still apply** (discovery, four risks, growth loops, PMF measurement)—but **execution velocity has fundamentally changed**.
 
-### What This Skill Adds
+### What the PM Thought Partner Adds
 
 **AI-specific frameworks:**
 - Continuous Calibration (CC/CD) - How to develop AI products differently
@@ -533,7 +533,7 @@ While grounded in proven frameworks, this skill emphasizes AI-era realities:
 
 ## Tone & Approach
 
-This skill is designed to be:
+The PM Thought Partner is designed to be:
 
 - **Direct and challenging** - Pushes back when needed, doesn't just agree
 - **Modern and pragmatic** - Embraces AI-era tools and speed
@@ -598,7 +598,7 @@ This skill is designed to be:
 
 ## Limitations
 
-This skill:
+The PM Thought Partner:
 
 - ❌ **Does not create new PM frameworks** - It synthesizes existing wisdom
 - ❌ **Is not a substitute for talking to users** - Discovery still requires real conversations
@@ -612,7 +612,7 @@ It's a thought partner, not a replacement for PM judgment.
 
 ### How is this different from just asking Claude about PM topics?
 
-**Claude has general knowledge.** This skill has:
+**Claude has general knowledge.** The PM Thought Partner has:
 - Curated frameworks from specific thought leaders
 - AI-era adaptations of classic PM wisdom
 - Bias toward prototype-first, modern execution
@@ -627,7 +627,7 @@ Yes! This is designed for:
 - Coaching junior PMs
 - Aligning on product practices
 
-Share the repository, install as a skill, use together.
+Share the repository, install it, use together.
 
 ### How do I know these frameworks are good?
 
@@ -642,7 +642,7 @@ Check `sources.yml` for original attributions.
 
 **Frameworks are tools, not rules.**
 
-The skill encourages adaptation:
+It encourages adaptation:
 - "Here's the framework, here's the context it was designed for"
 - "What's different in your situation?"
 - "How might you adapt this?"
@@ -669,33 +669,33 @@ Yes! Open an issue with:
 
 Quality and uniqueness matter more than quantity.
 
-### Does the skill limit what Claude can answer?
+### Does the PM Thought Partner limit what Claude can answer?
 
-**No.** The skill enhances Claude's PM capabilities by providing proven frameworks, but doesn't restrict general knowledge.
+**No.** The PM Thought Partner enhances Claude's PM capabilities by providing proven frameworks, but doesn't restrict general knowledge.
 
 **How it works:**
-- The skill adds PM frameworks and thought leader context to Claude's system prompt
+- The PM Thought Partner adds PM frameworks and thought leader context to Claude's system prompt
 - This makes Claude better at PM advice (grounded in proven frameworks)
 - But Claude can still help with anything else (code, writing, analysis, etc.)
 
 **You can freely mix topics:**
-- Ask about growth strategy → Uses skill frameworks
+- Ask about growth strategy → Uses PM Thought Partner frameworks
 - Ask Claude to write Python code → Uses general knowledge
-- Ask about competitive analysis → Uses skill template
+- Ask about competitive analysis → Uses PM Thought Partner template
 - Ask about deployment → Uses general knowledge
 
-The skill is **enhancement, not restriction**.
+The PM Thought Partner is **enhancement, not restriction**.
 
-### What if I ask about a PM framework not in the skill?
+### What if I ask about a PM framework not included?
 
 **Claude will still help using general PM knowledge.**
 
-**Example:** If you ask about AARRR pirate metrics (not currently in the skill), Claude will:
+**Example:** If you ask about AARRR pirate metrics (not currently included), Claude will:
 1. Answer using general knowledge
 2. Be transparent that it's not in the PM Thought Partner frameworks
 3. Suggest it could be a good addition if you find it valuable
 
-**The skill provides:**
+**The PM Thought Partner provides:**
 - ✅ Curated frameworks from 12+ thought leaders
 - ✅ AI-era adaptations
 - ✅ Cross-framework integration
@@ -706,11 +706,11 @@ The skill is **enhancement, not restriction**.
 - ✅ Other PM methodologies and approaches
 - ✅ Custom solutions for your specific situation
 
-### Can I use the skill for non-PM work?
+### Can I use the PM Thought Partner for non-PM work?
 
 **Yes, absolutely.**
 
-The skill is active in the background, but you can ask Claude anything:
+The PM Thought Partner is active in the background, but you can ask Claude anything:
 - PM questions → Enhanced with frameworks
 - Code questions → Normal Claude capabilities
 - Writing/analysis/anything else → Normal Claude capabilities
