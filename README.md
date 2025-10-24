@@ -34,6 +34,25 @@ Acts as your product management thought partner to:
 - **Navigate AI product complexity** (evals, unit economics, continuous calibration)
 - **Create modern deliverables** (lite PRDs, Linear-style issues, AI product specs)
 
+### Works With Your Issue Tracker
+
+The PM Thought Partner works best when connected to your backlog. It'll check what you have and work with it:
+
+**Linear (Recommended)** - Full features for applying frameworks:
+- **`/lno-prioritize`** - Auto-categorize all your issues by impact (L/N/O framework)
+- **`/four-risks [issue-id]`** - Run risk assessments and add them as Linear comments
+- **`/now-next-later`** - Generate roadmaps from your Linear projects
+- Setup takes 2 minutes with a Linear API key ([get one here](https://linear.app/settings/api))
+
+**GitHub Issues** - Automatic fallback if you have GitHub connected:
+- Works with the GitHub MCP server that's already available
+- Supports basic prioritization and analysis
+- No additional setup needed if GitHub is configured
+
+**No integration?** You can always provide manual input - just paste issues or describe your backlog.
+
+The plugin will prompt you about connecting Linear during installation, but will automatically detect and use GitHub if it's already set up.
+
 ## Quick Links
 
 **Installation:**

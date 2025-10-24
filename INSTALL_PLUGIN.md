@@ -62,6 +62,71 @@ ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
 
 ---
 
+## Connect Your Issue Tracker (Recommended)
+
+The PM Thought Partner works best when connected to your backlog. Set this up right after installation to get the most value.
+
+### Option 1: Linear (Recommended for PMs)
+
+**Why Linear?**
+- Built for product teams (roadmaps, discovery, prioritization)
+- Linear Method is one of our core frameworks
+- Richer project/issue metadata for better framework analysis
+- Full slash command features (auto-labeling, commenting, projects)
+
+**What you get:**
+- `/lno-prioritize` - Auto-categorize issues by impact + add Linear labels
+- `/four-risks [issue-id]` - Risk assessment + add to Linear comments
+- `/now-next-later` - Generate roadmap from Linear projects
+- Richer analysis from Linear's structured data
+
+**Setup (2 minutes):**
+
+Just ask Claude:
+```
+Set up the Linear MCP server for me
+```
+
+Claude will prompt you for your Linear API key and configure everything.
+
+**Get your Linear API key:** [linear.app/settings/api](https://linear.app/settings/api)
+
+**Or manually:**
+```bash
+claude mcp add linear
+```
+
+Follow the prompts to add your Linear API key.
+
+---
+
+### Option 2: GitHub Issues (Automatic Fallback)
+
+**Already have GitHub connected?** The PM Thought Partner will automatically detect and use it.
+
+**What you get:**
+- Basic prioritization and issue analysis
+- Slash commands work with GitHub Issues
+- No additional setup if GitHub MCP is already configured
+
+**Not set up yet?**
+```
+Set up the GitHub MCP server for me
+```
+
+---
+
+### Option 3: No Integration
+
+**Works fine without either!** You can:
+- Paste issues or project lists manually
+- Describe your backlog in conversation
+- Still get all framework guidance and strategic advice
+
+The slash commands will prompt you for manual input instead of pulling from an integration.
+
+---
+
 ### Test It Works
 
 **After restarting Claude Code**, start a new session in any project:
@@ -78,47 +143,6 @@ Then ask: **"Should I write a PRD or prototype first?"**
 - `/lno-prioritize` - Categorize issues by impact
 - `/four-risks` - Run risk assessment on a feature
 - `/now-next-later` - Generate a roadmap
-
----
-
-## Adding Linear Integration (Recommended)
-
-The plugin works with **Linear (recommended)** or **GitHub Issues (fallback)**.
-
-**Why Linear?**
-- Built for PMs (roadmaps, discovery, prioritization)
-- Linear Method is one of our core frameworks
-- Richer project/issue metadata for better framework analysis
-- Better labeling and workflow integration
-
-**Slash commands work with:**
-- **Linear** - Full features (labeling, commenting, projects)
-- **GitHub Issues** - Automatic fallback if Linear not configured
-- **Manual input** - Always works (paste issues/projects)
-
-**What you get with Linear:**
-- `/lno-prioritize` - Categorize issues by impact + auto-label
-- `/four-risks [issue-id]` - Risk assessment + add to Linear comments
-- `/now-next-later` - Generate roadmap from Linear projects
-- Richer analysis from Linear's structured data
-
-### Setup Linear MCP Server
-
-**Just ask Claude:**
-
-```
-Set up the Linear MCP server for me
-```
-
-Claude will prompt you for your Linear API key ([get one here](https://linear.app/settings/api)) and configure everything.
-
-**Or manually:**
-
-```bash
-claude mcp add linear
-```
-
-Follow the prompts to add your Linear API key.
 
 ---
 
