@@ -1,5 +1,4 @@
 ---
-name: now-next-later
 description: Generate a Now-Next-Later roadmap using Janna Bastow's framework
 ---
 

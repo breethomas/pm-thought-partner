@@ -1,5 +1,4 @@
 ---
-name: pmf-survey
 description: Create and analyze a PMF survey using Rahul Vohra's Superhuman framework
 ---
 

@@ -1,5 +1,4 @@
 ---
-name: four-risks
 description: Run Marty Cagan's Four Risks assessment on an issue (value, usability, feasibility, viability)
 ---
 

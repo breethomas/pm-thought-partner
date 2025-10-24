@@ -1,5 +1,4 @@
 ---
-name: lno-prioritize
 description: Apply Aakash Gupta's LNO framework to categorize issues by impact (Leverage, Neutral, Overhead)
 ---
 

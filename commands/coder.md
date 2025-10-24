@@ -1,5 +1,4 @@
 ---
-name: coder
 description: Apply Brian Balfour's CODER framework to drive organizational AI adoption
 ---
 
