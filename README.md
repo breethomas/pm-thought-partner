@@ -6,19 +6,17 @@ An AI-powered product management thought partner for Claude Code. Grounded in pr
 
 ## Why I Built This
 
-I started exploring Anthropic's Skills feature and realized I was building the thought partner I'd always wanted.
+I have favorite frameworks. Articles I reference constantly. Thought leaders whose work shaped how I think. But it's hard to keep all of that accessible when you're actually building.
 
-Here's the problem: I have favorite frameworks. Articles I reference constantly. Thought leaders whose work shaped how I think. But it's hard to keep all of that accessible, let alone apply it quickly when you're building.
+I'm not dogmatic about process. Follow the recipe exactly the first time—then tweak it. Same with frameworks. Learn the foundation, adapt to your context.
 
-I'm not dogmatic about process. I follow the recipe exactly the first time—then tweak it every time after. Same with frameworks. Learn the foundation, adapt to your context.
-
-This is also an homage to product leaders who gave back to the community in ways that shaped how we all work. Marty Cagan. Teresa Torres. Elena Verna. Brian Balfour. Their generosity in sharing frameworks publicly made me better at my job.
+**This is an homage** to product leaders who gave back—Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour. Their generosity made me better at my job.
 
 **And honestly?** Product teams got stale. Engineers, PMs, designers, UX, data analysts—we'd settled into predictable patterns. AI changed that. We're all breaking out of old processes, the technology is moving fast, and we're collaborating in ways that feel new again. It's some of the most fun I've had in a long time. I like that it's all getting weird.
 
-**This is opinionated.** It's not every PM practice ever described. It's focused on those who push modern practices while honoring timeless foundations. Context over prompts. Shipping to learn. Frameworks as tools, not rules.
+**This is opinionated.** Focused on those who push modern practices while honoring timeless foundations. Context over prompts. Shipping to learn. Frameworks as tools, not rules.
 
-**It's open source** because the best frameworks came from people sharing what works. If this helps you, contribute back. Add a framework. Update one that evolved. Make it better.
+**It's open source** because the best frameworks came from people sharing what works. If this helps you, contribute back.
 
 ---
 
@@ -327,33 +325,6 @@ Validate sustainable scaling readiness (Brian Balfour):
 
 ## How to Use
 
-### General Workflow
-
-Just start a conversation with Claude about product management work:
-
-- **"I'm trying to figure out if we have product-market fit"**
-  - Will apply Rahul Vohra's PMF survey framework
-  - Challenge you on evidence and measurement
-
-- **"Should I write a PRD for this feature idea?"**
-  - Will push you to prototype first instead
-  - Reference AI-era practices (prototype-first development)
-
-- **"How should I prioritize these 10 features?"**
-  - Will apply prioritization frameworks
-  - Ask about strategy, measurement, and evidence
-
-- **"I need to present our product strategy to executives"**
-  - Will help create visual frameworks (Aakash Gupta style)
-  - Reference Ravi Mehta's Product Strategy Stack
-
-- **"We're adding an AI feature—how do I think about pricing?"**
-  - Will apply AI unit economics frameworks
-  - Reference Reforge monetization mistakes
-  - Challenge you on cost modeling
-
-### Specific Use Cases
-
 #### Discovery & Validation
 
 ```
@@ -513,32 +484,17 @@ pm-thought-partner/
 
 ### Core Philosophy
 
-This tool operates on these principles:
+1. **Prototype in hours, not document for weeks** - Show, don't tell. Working prototypes beat specs.
 
-1. **Prototype in hours, not document for weeks**
-   - Modern tools (Cursor, Claude Code, v0, Bolt, Replit) enable rapid prototyping
-   - Show, don't tell—working prototypes communicate better than specs
+2. **Build to learn, not spec to build** - Iteration is cheap. Test assumptions with real artifacts.
 
-2. **Build to learn, not spec to build**
-   - AI-era reality: iteration is cheaper than ever
-   - Test assumptions with real artifacts, not documents
+3. **Issues not user stories** - Clear tasks. Skip the ceremony.
 
-3. **Issues not user stories**
-   - Clear, direct task descriptions (Linear Method)
-   - Skip the ceremony, focus on outcomes
+4. **Apply proven frameworks** - Grounded in wisdom from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, Aman Khan, and others. Adapted for AI-era speed.
 
-4. **Apply proven frameworks**
-   - Grounded in wisdom from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, Aman Khan, and others
-   - Adapted for AI-era speed and tooling
+5. **AI products need different approaches** - Continuous calibration (CC/CD). Evals for quality. Unit economics for viability.
 
-5. **AI products need different approaches**
-   - Continuous calibration (CC/CD) not just CI/CD
-   - Evals for quality, unit economics for viability
-   - Prompt engineering as product strategy
-
-6. **Speed is the moat**
-   - When everyone has access to GPT-4, execution velocity matters
-   - Ship continuously, learn from real users
+6. **Speed is the moat** - When everyone has GPT-4, execution velocity matters.
 
 ## Thought Leaders Included
 
@@ -786,40 +742,25 @@ Quality and uniqueness matter more than quantity.
 
 ### Does the PM Thought Partner limit what Claude can answer?
 
-**No.** The PM Thought Partner enhances Claude's PM capabilities by providing proven frameworks, but doesn't restrict general knowledge.
-
-**How it works:**
-- The PM Thought Partner adds PM frameworks and thought leader context to Claude's system prompt
-- This makes Claude better at PM advice (grounded in proven frameworks)
-- But Claude can still help with anything else (code, writing, analysis, etc.)
+**No.** It enhances Claude's PM capabilities with proven frameworks but doesn't restrict general knowledge.
 
 **You can freely mix topics:**
 - Ask about growth strategy → Uses PM Thought Partner frameworks
 - Ask Claude to write Python code → Uses general knowledge
 - Ask about competitive analysis → Uses PM Thought Partner template
-- Ask about deployment → Uses general knowledge
 
-The PM Thought Partner is **enhancement, not restriction**.
+Enhancement, not restriction.
 
 ### What if I ask about a PM framework not included?
 
-**Claude will still help using general PM knowledge.**
+**Claude will still help using general PM knowledge.** It'll be transparent that the framework isn't in the curated set and suggest it could be added if valuable.
 
-**Example:** If you ask about AARRR pirate metrics (not currently included), Claude will:
-1. Answer using general knowledge
-2. Be transparent that it's not in the PM Thought Partner frameworks
-3. Suggest it could be a good addition if you find it valuable
-
-**The PM Thought Partner provides:**
-- ✅ Curated frameworks from 13 thought leaders
-- ✅ AI-era adaptations (including production AI systems, evals, and cost optimization)
-- ✅ Cross-framework integration
-- ✅ Proven, battle-tested approaches
-
-**But doesn't prevent:**
+**What you get:**
+- ✅ Curated frameworks from 13 thought leaders + AI-era adaptations
 - ✅ General PM help outside these frameworks
-- ✅ Other PM methodologies and approaches
 - ✅ Custom solutions for your specific situation
+
+Curated doesn't mean limited.
 
 ### Can I use the PM Thought Partner for non-PM work?
 
