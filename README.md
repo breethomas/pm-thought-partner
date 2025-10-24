@@ -36,14 +36,12 @@ Acts as your product management thought partner to:
 
 ## Quick Links
 
-**For Technical PMs:**
-- **[CLI Plugin Installation](INSTALL_PLUGIN.md)** - Full experience with slash commands + Linear
-
-**For Non-Technical PMs:**
-- **[Claude Projects Setup Guide](CLAUDE_PROJECTS_GUIDE.md)** - Simple browser-based setup (15 min)
+**Installation:**
+- **[CLI Plugin](INSTALL_PLUGIN.md)** - Command line installation (recommended, fastest)
+- **[Claude Projects](CLAUDE_PROJECTS_GUIDE.md)** - Browser-based setup (no command line required)
 
 **Reference:**
-- **[Browse All Frameworks](frameworks/)** - See all 15+ PM frameworks included
+- **[Browse All Frameworks](frameworks/)** - See all 20+ PM frameworks included
 - **[View Slash Commands](#slash-commands)** - Quick framework access (CLI plugin only)
 
 ## Installation
@@ -352,11 +350,12 @@ pm-thought-partner/
 ├── frameworks/                       # Core PM frameworks
 │   ├── ai-era-practices/            # Modern product development
 │   │   ├── prototype-first.md       # Build to learn, don't document to build
+│   │   ├── context-engineering.md   # Context > prompts, systems thinking
+│   │   ├── prompt-engineering-for-pms.md # How PMs should think about prompting
 │   │   ├── issues-not-stories.md    # Linear Method approach
 │   │   ├── organizational-ai-adoption.md # CODER framework
 │   │   ├── ai-unit-economics.md     # Monetization and cost modeling
-│   │   ├── continuous-calibration.md # CC/CD for AI products
-│   │   └── prompt-engineering-for-pms.md # How PMs should think about prompting
+│   │   └── continuous-calibration.md # CC/CD for AI products
 │   │
 │   ├── discovery/                   # How to learn what to build
 │   │   ├── continuous-discovery.md  # Teresa Torres

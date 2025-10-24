@@ -1,6 +1,6 @@
-# PM Thought Partner Setup Guide for Non-Technical PMs
+# PM Thought Partner Setup Guide (Browser)
 
-**Simple browser-based setup. No coding, no command line, no Git required.**
+**Browser-based setup. No command line required.**
 
 This guide shows you how to set up the PM Thought Partner in Claude Projects so you can use it on all your PM work—roadmaps, PRDs, prioritization, strategy, etc.
 

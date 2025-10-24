@@ -1,8 +1,8 @@
 # Plugin Installation Guide (CLI)
 
-**For technical PMs and engineers** who use Claude Code CLI.
+**Command line installation** for Claude Code CLI.
 
-**Looking for non-technical PM setup?** → [Claude Projects Guide](CLAUDE_PROJECTS_GUIDE.md)
+**Prefer browser-based setup?** → [Claude Projects Guide](CLAUDE_PROJECTS_GUIDE.md)
 
 ---
 
