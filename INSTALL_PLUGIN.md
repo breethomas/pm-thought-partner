@@ -20,36 +20,35 @@
 
 > **Note:** PM Thought Partner is not yet in the Claude Code Marketplace. For now, installation requires cloning from GitHub. Once published to the marketplace, installation will be simpler: `claude plugin install pm-thought-partner`
 
-### Option 1: Automated Install Script (Recommended)
+### Option 1: Ask Claude to Install (Easiest)
 
-**Run the installer:**
-
-```bash
-curl -sSL https://raw.githubusercontent.com/breethomas/pm-thought-partner/main/install.sh | bash
-```
-
-The script will:
-1. Ask if you want it globally (all projects) or per-project (this repo only)
-2. Clone to the appropriate location
-3. Verify installation
-4. Show next steps
-
-**Choose:**
-- **Global** - Available everywhere (recommended)
-- **Per-project** - Only in this repository
-
----
-
-### Option 2: Ask Claude to Install
-
-**If you prefer, ask Claude Code CLI to install it:**
+**Just ask Claude Code CLI to install it:**
 
 ```
 Install the PM Thought Partner plugin from
 https://github.com/breethomas/pm-thought-partner
 ```
 
-Claude will guide you through the installation process.
+Claude will handle everything - cloning the repo, setting up the plugin directory, and verifying the installation.
+
+---
+
+### Option 2: Run the Install Script
+
+**Download and run the installer:**
+
+```bash
+curl -sSL https://raw.githubusercontent.com/breethomas/pm-thought-partner/main/install.sh -o install.sh
+bash install.sh
+```
+
+The script will:
+1. Install globally (available in all projects)
+2. Clone to `~/.claude/plugins/pm-thought-partner`
+3. Verify installation
+4. Show next steps
+
+**For per-project installation** (team access), see the [Manual Installation](#advanced-manual-installation) section below.
 
 ---
 

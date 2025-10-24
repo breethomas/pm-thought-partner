@@ -8,43 +8,10 @@ set -e
 echo "🚀 PM Thought Partner Plugin Installer"
 echo ""
 
-# Check if we're in a git repo (for per-project install option)
-IN_GIT_REPO=false
-if git rev-parse --git-dir > /dev/null 2>&1; then
-    IN_GIT_REPO=true
-fi
-
-# Ask user for installation preference
-echo "Where would you like to install PM Thought Partner?"
-echo ""
-echo "1. Globally (available in all projects) - Recommended"
-if [ "$IN_GIT_REPO" = true ]; then
-    echo "2. Per-project (only in this repository)"
-    echo ""
-    read -p "Enter your choice (1 or 2): " choice </dev/tty
-else
-    echo ""
-    read -p "Enter your choice (1): " choice </dev/tty
-fi
-
-case $choice in
-    1)
-        INSTALL_PATH="$HOME/.claude/plugins/pm-thought-partner"
-        INSTALL_TYPE="global"
-        ;;
-    2)
-        if [ "$IN_GIT_REPO" = false ]; then
-            echo "❌ Error: Per-project installation requires being in a git repository."
-            exit 1
-        fi
-        INSTALL_PATH=".claude/plugins/pm-thought-partner"
-        INSTALL_TYPE="per-project"
-        ;;
-    *)
-        echo "❌ Invalid choice. Exiting."
-        exit 1
-        ;;
-esac
+# Default to global installation (recommended for 95% of users)
+# For per-project installation, see: https://github.com/breethomas/pm-thought-partner/blob/main/INSTALL_PLUGIN.md
+INSTALL_PATH="$HOME/.claude/plugins/pm-thought-partner"
+INSTALL_TYPE="global"
 
 echo ""
 echo "📦 Installing PM Thought Partner ($INSTALL_TYPE)..."

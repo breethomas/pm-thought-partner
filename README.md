@@ -59,15 +59,16 @@ Acts as your product management thought partner to:
 
 > **Note:** Not yet in Claude Code Marketplace. Installation requires cloning from GitHub for now.
 
-**Install:**
-```bash
-curl -sSL https://raw.githubusercontent.com/breethomas/pm-thought-partner/main/install.sh | bash
-```
-
-Or ask Claude to install it:
+**Easiest - just ask Claude:**
 ```
 Install the PM Thought Partner plugin from
 https://github.com/breethomas/pm-thought-partner
+```
+
+**Or run the installer:**
+```bash
+curl -sSL https://raw.githubusercontent.com/breethomas/pm-thought-partner/main/install.sh -o install.sh
+bash install.sh
 ```
 
 **[→ See full CLI installation guide](INSTALL_PLUGIN.md)** (includes Linear setup)
