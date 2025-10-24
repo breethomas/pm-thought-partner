@@ -9,13 +9,6 @@
   "skills": [
     "./skills/pm-thought-partner"
   ],
-  "commands": [
-    "./commands/lno-prioritize.md",
-    "./commands/now-next-later.md",
-    "./commands/four-risks.md",
-    "./commands/coder.md",
-    "./commands/pmf-survey.md"
-  ],
   "agents": [],
   "hooks": [],
   "dependencies": {
