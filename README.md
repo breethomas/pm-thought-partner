@@ -44,8 +44,12 @@ Acts as your product management thought partner to:
 - **`/now-next-later`** - Generate roadmap from your Linear projects or GitHub milestones
 
 **Strategic framework commands** (MCP optional):
-- **`/growth-loops`**, **`/four-fits`**, **`/ai-cost-check`**, **`/ai-health-check`** - Best with your voice-to-text context
+- **`/growth-loops`**, **`/four-fits`**, **`/ai-cost-check`**, **`/ai-health-check`**, **`/start-evals`** - Best with your voice-to-text context
 - MCP integration lets you attach analysis back to issues as comments (optional)
+
+**Standalone commands** (no MCP needed):
+- **`/pmf-survey`** - Create and analyze PMF surveys (Rahul Vohra's Superhuman framework)
+- **`/coder`** - Organizational AI adoption (Brian Balfour's CODER framework)
 
 **Setup (2 minutes):**
 - **Linear MCP:** [Get API key](https://linear.app/settings/api) → Ask Claude "Set up the Linear MCP server for me"

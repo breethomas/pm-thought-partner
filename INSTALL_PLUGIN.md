@@ -8,7 +8,7 @@
 
 ## What You Get
 
-- ✅ AI thought partner grounded in 12+ PM frameworks
+- ✅ AI thought partner grounded in 20+ PM frameworks
 - ✅ Slash commands for quick framework access (`/lno-prioritize`, `/four-risks`, etc.)
 - ✅ Optional Linear integration (apply frameworks to your backlog)
 - ✅ Works in your actual project repositories

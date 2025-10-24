@@ -292,7 +292,7 @@ No additions needed beyond what's captured through Brian and Elena's individual 
 ## Quality Bar Maintained
 
 All recommended additions come from:
-- ✅ The 12 selected thought leaders
+- ✅ The 13 selected thought leaders (including Chip Huyen added after initial audit)
 - ✅ Substantial frameworks (not generic PM advice)
 - ✅ Publicly available sources
 - ✅ Proven track records at top companies

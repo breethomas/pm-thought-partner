@@ -63,7 +63,7 @@
    - Comprehensive descriptions of expanded content
 
 2. **FRAMEWORK_AUDIT_2025.md** (NEW)
-   - Complete audit of all 12 thought leaders' publicly available frameworks
+   - Complete audit of all thought leaders' publicly available frameworks (12 at time of audit, now 13 with Chip Huyen)
    - Identified gaps and prioritized additions
    - High/Medium/Low priority recommendations
    - Quality bar documentation
@@ -107,4 +107,4 @@ This update represents the most comprehensive expansion of the PM Thought Partne
 ---
 
 **Total Frameworks:** Now 15+ comprehensive frameworks across 6 categories
-**Thought Leaders Covered:** 12 (Marty Cagan, Elena Verna, Brian Balfour, Lenny Rachitsky, Rahul Vohra, Teresa Torres, Janna Bastow, Aakash Gupta, Aman Khan, Ravi Mehta, Linear Method, Reforge)
+**Thought Leaders Covered:** 13 (Marty Cagan, Elena Verna, Brian Balfour, Lenny Rachitsky, Rahul Vohra, Teresa Torres, Janna Bastow, Aakash Gupta, Aman Khan, Chip Huyen, Ravi Mehta, Linear Method, Reforge)

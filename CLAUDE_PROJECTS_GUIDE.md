@@ -15,7 +15,7 @@ Once set up, you'll have an AI thought partner that:
 - Pushes you to prototype instead of write lengthy docs
 - Applies frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and more
 - Works across ALL your PM conversations (not tied to a specific project)
-- Has access to 15+ detailed PM frameworks
+- Has access to 20+ detailed PM frameworks
 
 ---
 
