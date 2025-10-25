@@ -49,7 +49,7 @@ When you use `--send-to-linear`, the command creates Linear issues with clear ca
 Each issue gets:
 - **Title prefix:** `[NOW]`, `[NEXT]`, or `[LATER]` for instant visibility
 - **Description:** Includes priority category, rationale, dependencies, and success criteria
-- **Priority level:** Set appropriately (1 for NOW, 2 for NEXT, 3 for LATER)
+- **Priority level:** Set appropriately (1 for NOW, 2 for NEXT, 0 for LATER)
 
 ### Finding Your Roadmap Issues in Linear
 
