@@ -65,6 +65,7 @@ Acts as your product management thought partner to:
 
 **Reference:**
 - **[Browse All Frameworks](frameworks/)** - See all 20+ PM frameworks included
+- **[Browse Thought Leaders](thought-leaders/)** - Learn about the PM thinkers behind the frameworks
 - **[View Slash Commands](#slash-commands)** - Quick framework access (CLI plugin only)
 
 ## Installation
@@ -554,6 +555,8 @@ The PM Thought Partner synthesizes publicly available frameworks from:
 - **Ravi Mehta** - Product Strategy Stack, AI integration framework
 - **Linear** - Issues not stories, direction → building → quality
 - **Reforge** - Practitioner wisdom, monetization, growth frameworks
+
+**[→ Read detailed profiles and learn more about each thought leader](thought-leaders/)**
 
 ## Contributing & Updates
 
