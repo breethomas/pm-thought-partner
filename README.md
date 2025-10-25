@@ -496,7 +496,7 @@ pm-thought-partner/
 
 5. **AI products need different approaches** - Continuous calibration (CC/CD). Evals for quality. Unit economics for viability.
 
-6. **Speed is the moat** - When everyone has GPT-4, execution velocity matters.
+6. **Speed is the moat** - When powerful AI is everywhere, execution velocity matters.
 
 ## Thought Leaders Included
 
