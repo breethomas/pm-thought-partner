@@ -6,17 +6,19 @@ An AI-powered product management thought partner for Claude Code. Grounded in pr
 
 ## Why I Built This
 
-Here's the thing: I have people whose work fundamentally shaped how I think about building products. Marty Cagan. Teresa Torres. Elena Verna. Brian Balfour, and more. I've read their articles 50 times. Their frameworks were instrumental in how I learned to ship. But when you're building? That knowledge lives in scattered browser tabs and half-remembered podcast episodes. Not exactly helpful.
+I started exploring Anthropic's Skills feature and realized I was building the thought partner I'd always wanted.
 
-I wanted something different. Not plug-and-play templates. I'm not dogmatic about process - I follow the recipe exactly the first time, then I tweak it every time after. What I wanted was their thinking accessible when I needed it. Like having them as thought partners.
+Here's the problem: I have favorite frameworks. Articles I reference constantly. Thought leaders whose work shaped how I think. But it's hard to keep all of that accessible, let alone apply it quickly when you're building.
 
-And then AI made that possible. I could build a tool that lets me work alongside the thinking of people I've been learning from for years. Challenge my assumptions with Cagan's Four Risks. Talk through growth strategy with Verna's loops. Prototype first with Linear Method's philosophy. Not frameworks as checklists. Frameworks as conversations.
+I'm not dogmatic about process. I follow the recipe exactly the first time—then tweak it every time after. Same with frameworks. Learn the foundation, adapt to your context.
 
-It helps that product work got interesting again. For a while, the dynamic between all of us got stale. Product teams had settled into predictable patterns. We all knew our lanes. Then AI showed up and broke everything open. Now we're prototyping in hours, the technology is moving faster than our processes, and we're collaborating in ways that feel genuinely new. It's some of the most fun I've had in a long time. I like that it's all getting weird.
+This is also an homage to product leaders who gave back to the community in ways that shaped how we all work. Marty Cagan. Teresa Torres. Elena Verna. Brian Balfour. Their generosity in sharing frameworks publicly made me better at my job.
 
-**So this is for that world.** All those frameworks that shaped how I work, but as thought partners instead of playbooks. Built for when you're shipping prototypes in an afternoon and the old processes don't quite fit. It's opinionated: focused on people who push modern practices while respecting timeless foundations. Context over prompts. Shipping to learn. Frameworks as tools, not dogma.
+And honestly? Product teams got stale. Engineers, PMs, designers, UX, data analysts—we'd settled into predictable patterns. AI changed that. We're all breaking out of old processes, the technology is moving fast, and we're collaborating in ways that feel new again. It's some of the most fun I've had in a long time. I like that it's all getting weird.
 
-**And it's open source** because these thought leaders gave their work away. They didn't gatekeep. They shared publicly, and I got better because of it. If this helps you, contribute back.
+This is opinionated. It's not every PM practice ever described. It's focused on those who push modern practices while honoring timeless foundations. Context over prompts. Shipping to learn. Frameworks as tools, not rules.
+
+It's open source because the best frameworks came from people sharing what works. If this helps you, contribute back. Add a framework. Update one that evolved. Make it better.
 
 ---
 
