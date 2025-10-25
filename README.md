@@ -179,6 +179,37 @@ Claude will add it to `.claude/plugins/` and you can commit it to version contro
 
 If working correctly, you'll get responses grounded in frameworks from thought leaders like Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, Aman Khan, and more.
 
+---
+
+## 💡 Using Commands Across Projects
+
+**Good news:** You don't need to worry about which folder you're in.
+
+With Linear MCP connected, slash commands work from anywhere:
+
+```
+You: "Run /now-next-later on my Balance project"
+You: "Use /lno-prioritize to analyze my Marketing team's issues"
+You: "Apply /four-risks to issue ENG-245"
+```
+
+**How it works:**
+- Commands with Linear/GitHub MCP pull data from your connected workspace
+- Just tell Claude which team or project you want to analyze
+- Claude handles the context switching for you
+
+**No need to:**
+- ❌ Navigate to specific folders
+- ❌ Understand terminal directory concepts
+- ❌ Worry about "where" you are
+
+**Just ask naturally:**
+- ✅ "Prioritize my backlog using LNO"
+- ✅ "Create a roadmap for the engineering team"
+- ✅ "Check the AI costs for our product"
+
+---
+
 ## Slash Commands
 
 **Available with plugin installation only.** These commands give you quick access to specific frameworks.
