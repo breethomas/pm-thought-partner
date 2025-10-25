@@ -1,6 +1,6 @@
 # PM Thought Partner for the AI Era
 
-An AI-powered product management thought partner for Claude Code. Grounded in proven frameworks from 13 top PM thought leaders, adapted for the reality where you can build MVPs in hours, AI handles coordination work, and speed is the moat.
+An AI-powered product management thought partner for Claude Code. Grounded in proven frameworks from PM thought leaders, adapted for the reality where you can build MVPs in hours, AI handles coordination work, and speed is the moat.
 
 **This is not classic PM knowledge with AI updates bolted on.** It's built AI-era first: prototype-first development, issues over user stories, continuous calibration, and modern execution velocity.
 
@@ -12,7 +12,7 @@ Here's the problem: I have favorite frameworks. Articles I reference constantly.
 
 I'm not dogmatic about process. I follow the recipe exactly the first time—then tweak it every time after. Same with frameworks. Learn the foundation, adapt to your context.
 
-This is also an homage to product leaders who gave back to the community in ways that shaped how we all work. Marty Cagan. Teresa Torres. Elena Verna. Brian Balfour. Their generosity in sharing frameworks publicly made me better at my job.
+This is also an homage to product leaders who gave back to the community in ways that shaped how we all work. Marty Cagan. Teresa Torres. Elena Verna. Brian Balfour, and more. Their generosity in sharing frameworks publicly made me better at my job.
 
 And honestly? Product teams got stale. Engineers, PMs, designers, UX, data analysts—we'd settled into predictable patterns. AI changed that. We're all breaking out of old processes, the technology is moving fast, and we're collaborating in ways that feel new again. It's some of the most fun I've had in a long time. I like that it's all getting weird.
 
