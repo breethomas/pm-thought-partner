@@ -6,17 +6,17 @@ An AI-powered product management thought partner for Claude Code. Grounded in pr
 
 ## Why I Built This
 
-Here's the thing: I have favorite frameworks. Articles I've read 50 times. Thought leaders whose work fundamentally changed how I think about building products. But when you're actually shipping? That knowledge lives in scattered browser tabs and half-remembered podcast episodes. Not exactly helpful.
+Here's the thing: I have people whose work fundamentally shaped how I think about building products. Marty Cagan. Teresa Torres. Elena Verna. Brian Balfour, and more. I've read their articles 50 times. Their frameworks were instrumental in how I learned to ship. But when you're building? That knowledge lives in scattered browser tabs and half-remembered podcast episodes. Not exactly helpful.
 
-So I wanted those frameworks accessible when I'm actually building. But here's what I don't want: rigid playbooks. I'm not dogmatic about process. I follow the recipe exactly the first time, then I tweak it every time after. Same with frameworks. Learn the foundation, then adapt it to your chaos.
+I wanted something different. Not plug-and-play templates. I'm not dogmatic about process - I follow the recipe exactly the first time, then I tweak it every time after. What I wanted was their thinking accessible when I needed it. Like having them as thought partners.
 
-Those foundations came from somewhere. **This is an homage** to product leaders who gave their work away. Marty Cagan. Teresa Torres. Elena Verna. Brian Balfour, and more. They didn't gatekeep their frameworks. They shared them publicly, and I got better at my job because of it.
+And then AI made that possible. I could build a tool that lets me work alongside the thinking of people I've been learning from for years. Challenge my assumptions with Cagan's Four Risks. Talk through growth strategy with Verna's loops. Prototype first with Linear Method's philosophy. Not frameworks as checklists. Frameworks as conversations.
 
-And then for a while, the dynamic between all of us got stale. **Product teams had settled into predictable patterns.** Engineers, PMs, designers, UX, data analysts. We all knew our lanes. Then AI showed up and broke everything open. Now we're prototyping in hours, the technology is moving faster than our processes, and we're collaborating in ways that feel genuinely new. It's some of the most fun I've had in a long time. I like that it's all getting weird.
+It helps that product work got interesting again. For a while, the dynamic between all of us got stale. Product teams had settled into predictable patterns. We all knew our lanes. Then AI showed up and broke everything open. Now we're prototyping in hours, the technology is moving faster than our processes, and we're collaborating in ways that feel genuinely new. It's some of the most fun I've had in a long time. I like that it's all getting weird.
 
-**So this is for the weird new world.** All those frameworks that made me better, but rebuilt for when you're shipping prototypes in an afternoon and the old playbooks don't quite fit anymore. It's opinionated—focused on people who push modern practices while respecting timeless foundations. Context over prompts. Shipping to learn. Frameworks as tools, not dogma.
+**So this is for that world.** All those frameworks that shaped how I work, but as thought partners instead of playbooks. Built for when you're shipping prototypes in an afternoon and the old processes don't quite fit. It's opinionated: focused on people who push modern practices while respecting timeless foundations. Context over prompts. Shipping to learn. Frameworks as tools, not dogma.
 
-**And it's open source** because the best frameworks came from people sharing what actually works. If this helps you, contribute back.
+**And it's open source** because these thought leaders gave their work away. They didn't gatekeep. They shared publicly, and I got better because of it. If this helps you, contribute back.
 
 ---
 
