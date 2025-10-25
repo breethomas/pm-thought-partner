@@ -36,15 +36,15 @@ Acts as your product management thought partner to:
 
 ### Works With Your Issue Tracker
 
-**The real power:** Connect Linear or GitHub to auto-analyze your entire backlog in seconds instead of manual spreadsheet work.
+**The real power:** Connect Linear or GitHub to auto-analyze your entire backlog in seconds.
 
 **Backlog automation commands** (MCP highly recommended):
-- **`/lno-prioritize`** - Analyze 50+ issues and auto-label by impact (Leverage/Neutral/Overhead) in 10 seconds
+- **`/lno-prioritize`** - Analyze 50+ issues and auto-label by impact (Leverage/Neutral/Overhead) in seconds
 - **`/four-risks [issue-id]`** - Pull issue details, assess risks, add analysis as comment
 - **`/now-next-later`** - Generate roadmap from your Linear projects or GitHub milestones
 
 **Strategic framework commands** (MCP optional):
-- **`/growth-loops`**, **`/four-fits`**, **`/ai-cost-check`**, **`/ai-health-check`**, **`/start-evals`** - Best with your voice-to-text context
+- **`/growth-loops`**, **`/four-fits`**, **`/ai-cost-check`**, **`/ai-health-check`**, **`/start-evals`** - Best with your added context
 - MCP integration lets you attach analysis back to issues as comments (optional)
 
 **Standalone commands** (no MCP needed):
