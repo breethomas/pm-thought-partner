@@ -10,7 +10,7 @@ I started exploring Anthropic's Skills feature and realized I was building the t
 
 Here's the problem: I have favorite frameworks. Articles I reference constantly. Thought leaders whose work shaped how I think. But it's hard to keep all of that accessible, let alone apply it quickly when you're building.
 
-I'm not dogmatic about process. I follow the recipe exactly the first time—then tweak it every time after. Same with frameworks. Learn the foundation, adapt to your context.
+I'm not dogmatic about process. I follow the recipe exactly the first time — then tweak it every time after. Same with frameworks. Learn the foundation, adapt to your context.
 
 This is also an homage to product leaders who gave back to the community in ways that shaped how we all work. Marty Cagan. Teresa Torres. Elena Verna. Brian Balfour, and more. Their generosity in sharing frameworks publicly made me better at my job.
 
