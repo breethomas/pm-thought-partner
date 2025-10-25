@@ -2,21 +2,21 @@
 
 An AI-powered product management thought partner for Claude Code. Grounded in proven frameworks from 13 top PM thought leaders, adapted for the reality where you can build MVPs in hours, AI handles coordination work, and speed is the moat.
 
-**This is not classic PM knowledge with AI updates bolted on.** It's built AI-era first—emphasizing prototype-first development, issues over user stories, continuous calibration, and modern execution velocity.
+**This is not classic PM knowledge with AI updates bolted on.** It's built AI-era first: prototype-first development, issues over user stories, continuous calibration, and modern execution velocity.
 
 ## Why I Built This
 
-I have favorite frameworks. Articles I reference constantly. Thought leaders whose work shaped how I think. But it's hard to keep all of that accessible when you're actually building.
+Here's the thing: I have favorite frameworks. Articles I've read 50 times. Thought leaders whose work fundamentally changed how I think about building products. But when you're actually shipping? That knowledge lives in scattered browser tabs and half-remembered podcast episodes. Not exactly helpful.
 
-I'm not dogmatic about process. Follow the recipe exactly the first time—then tweak it. Same with frameworks. Learn the foundation, adapt to your context.
+I'm not dogmatic about process. I follow the recipe exactly the first time, then I tweak it every time after. Same with frameworks. Learn the foundation, then adapt it to your chaos.
 
-**This is an homage** to product leaders who gave back—Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour. Their generosity made me better at my job.
+**This is an homage** to product leaders who gave their work away. Marty Cagan. Teresa Torres. Elena Verna. Brian Balfour. They didn't gatekeep their frameworks. They shared them publicly, and I got better at my job because of it.
 
-**And honestly?** Product teams got stale. Engineers, PMs, designers, UX, data analysts—we'd settled into predictable patterns. AI changed that. We're all breaking out of old processes, the technology is moving fast, and we're collaborating in ways that feel new again. It's some of the most fun I've had in a long time. I like that it's all getting weird.
+**And honestly?** Product teams had gotten stale. We'd all settled into predictable patterns. Then AI showed up and broke everything open. Now we're prototyping in hours, the technology is moving faster than our processes, and we're collaborating in ways that feel genuinely new. It's some of the most fun I've had in a long time. I like that it's all getting weird.
 
-**This is opinionated.** Focused on those who push modern practices while honoring timeless foundations. Context over prompts. Shipping to learn. Frameworks as tools, not rules.
+**This is opinionated.** It's not every PM practice that ever existed. It's focused on people who push modern practices while respecting timeless foundations. Context over prompts. Shipping to learn. Frameworks as tools, not dogma.
 
-**It's open source** because the best frameworks came from people sharing what works. If this helps you, contribute back.
+**It's open source** because the best frameworks came from people sharing what actually works. If this helps you, contribute back.
 
 ---
 
@@ -53,7 +53,7 @@ Acts as your product management thought partner to:
 - **Linear MCP:** [Get API key](https://linear.app/settings/api) → Ask Claude "Set up the Linear MCP server for me"
 - **GitHub MCP:** [GitHub MCP server](https://github.com/github/github-mcp-server) → Follow setup guide
 
-**No MCP?** All commands work with manual input—just paste issues or describe your context directly.
+**No MCP?** All commands work with manual input. Just paste issues or describe your context directly.
 
 ## Quick Links
 
@@ -69,7 +69,7 @@ Acts as your product management thought partner to:
 
 **Choose based on your workflow:**
 
-### CLI Plugin (Command Line) — Recommended
+### CLI Plugin (Command Line) - Recommended
 
 **Fastest and easiest setup.** One command, 30 seconds.
 
@@ -352,7 +352,7 @@ Validate sustainable scaling readiness (Brian Balfour):
 #### AI Products
 
 ```
-"We're building an AI feature—what do I need to think about?"
+"We're building an AI feature. What do I need to think about?"
 ```
 
 **What you'll get:**
@@ -558,7 +558,7 @@ If a thought leader updates their framework or new insights emerge:
 
 All frameworks in this repository come from publicly available content. See `sources.yml` for complete attribution and links to original sources.
 
-**Key principle:** The PM Thought Partner synthesizes and applies existing wisdom. It does not claim to create new frameworks—it makes proven frameworks accessible and applicable.
+**Key principle:** The PM Thought Partner synthesizes and applies existing wisdom. It does not claim to create new frameworks. It makes proven frameworks accessible and applicable.
 
 ## AI-Era Adaptations
 
@@ -580,7 +580,7 @@ While grounded in proven frameworks, the PM Thought Partner emphasizes AI-era re
 - Build MVPs in afternoons
 - Working prototypes as communication
 
-**Classic PM frameworks still apply** (discovery, four risks, growth loops, PMF measurement)—but **execution velocity has fundamentally changed**.
+**Classic PM frameworks still apply** (discovery, four risks, growth loops, PMF measurement), but **execution velocity has fundamentally changed**.
 
 ### What the PM Thought Partner Adds
 
@@ -639,7 +639,7 @@ The PM Thought Partner is designed to be:
 - Explains Rahul Vohra's PMF survey
 - "Run a survey: How would users feel if they could no longer use your product?"
 - ">40% saying 'very disappointed' indicates PMF"
-- "Segment responses by user type—focus on high-expectation customers"
+- "Segment responses by user type. Focus on high-expectation customers"
 - "This is a point-in-time measurement; run quarterly as you evolve"
 
 ### Example 3: Building an AI Feature
@@ -652,7 +652,7 @@ The PM Thought Partner is designed to be:
 - "Have you started with evals? Write 20 test cases in a spreadsheet this week." (PM-friendly evals)
 - "Have you designed evals for what makes a 'good' recommendation vs 'bad'?" (Aman Khan)
 - "What's your cost model? Inference costs scale with usage." (AI unit economics, Chip Huyen)
-- "Start with low agency—AI suggests, human decides. Earn autonomy." (Continuous calibration)
+- "Start with low agency. AI suggests, human decides. Earn autonomy." (Continuous calibration)
 - "How will users override when the AI is wrong?" (UX for AI failures)
 - "What's your prompt strategy for this?" (Prompt engineering)
 
@@ -664,7 +664,7 @@ The PM Thought Partner is designed to be:
 - References Janna Bastow's Now-Next-Later
 - "Roadmaps should communicate sequence and certainty, not false dates"
 - "Now: committed, Next: likely, Later: possible"
-- "Use cone of uncertainty—confidence decreases over time"
+- "Use cone of uncertainty. Confidence decreases over time"
 - "Can you show a working prototype of 'Now' items to validate direction?"
 
 ## Limitations
@@ -779,7 +779,7 @@ The PM Thought Partner is active in the background, but you can ask Claude anyth
 
 **Attribution:** All frameworks attributed to original creators in `sources.yml`.
 
-This repository synthesizes and applies existing wisdom. It does not claim ownership of the frameworks—only the curation, adaptation, and integration for AI-era PM work.
+This repository synthesizes and applies existing wisdom. It does not claim ownership of the frameworks. Only the curation, adaptation, and integration for AI-era PM work.
 
 ## Acknowledgments
 
