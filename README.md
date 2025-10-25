@@ -41,7 +41,7 @@ Acts as your product management thought partner to:
 **Backlog automation commands** (MCP highly recommended):
 - **`/lno-prioritize`** - Analyze 50+ issues and auto-label by impact (Leverage/Neutral/Overhead) in seconds
 - **`/four-risks [issue-id]`** - Pull issue details, assess risks, add analysis as comment
-- **`/now-next-later`** - Generate roadmap from your Linear projects or GitHub milestones
+- **`/now-next-later`** - Generate roadmap from your Linear projects or issues, send back to Linear with clear categorization
 
 **Strategic framework commands** (MCP optional):
 - **`/growth-loops`**, **`/four-fits`**, **`/ai-cost-check`**, **`/ai-health-check`**, **`/start-evals`** - Best with your added context
@@ -220,8 +220,16 @@ Generate a Now-Next-Later roadmap from Linear projects using Janna Bastow's fram
 ```bash
 /now-next-later                   # Generate roadmap
 /now-next-later --team eng        # Specific team
+/now-next-later --send-to-linear  # Create Linear issues
 /now-next-later --export          # Export markdown
 ```
+
+**Linear Integration:**
+When sending to Linear, issues are categorized with `[NOW]`, `[NEXT]`, `[LATER]` title prefixes for instant visibility. Create saved views in Linear to organize roadmap items:
+1. Click **Filters** → Select **Content** → Type `[NOW]` (or `[NEXT]` or `[LATER]`)
+2. Click **Save as View** → Name it "🎯 NOW Roadmap Items" (repeat for NEXT/LATER)
+
+This approach works immediately for any team without conflicting with existing labels or taxonomies.
 
 ### `/coder`
 

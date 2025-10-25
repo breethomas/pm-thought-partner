@@ -24,7 +24,7 @@ Transforms your projects into a roadmap that communicates **sequence and certain
 **Optional parameters:**
 - `/now-next-later --team [team-name]` - Roadmap for specific team
 - `/now-next-later --export` - Generate markdown/mermaid diagram
-- `/now-next-later --update-linear` - Create Linear projects for Now/Next/Later
+- `/now-next-later --send-to-linear` - Create Linear issues from roadmap
 
 ## What Happens
 
@@ -39,6 +39,50 @@ Transforms your projects into a roadmap that communicates **sequence and certain
    - Discovery state
    - Team capacity
 4. **Generates roadmap** showing sequence without dates
+
+## Linear Integration
+
+When you use `--send-to-linear`, the command creates Linear issues with clear categorization:
+
+### How Issues Are Categorized
+
+Each issue gets:
+- **Title prefix:** `[NOW]`, `[NEXT]`, or `[LATER]` for instant visibility
+- **Description:** Includes priority category, rationale, dependencies, and success criteria
+- **Priority level:** Set appropriately (1 for NOW, 2 for NEXT, 3 for LATER)
+
+### Finding Your Roadmap Issues in Linear
+
+**Create saved views** to organize roadmap items:
+
+1. **Go to your team's Issues page in Linear**
+2. **Click Filters** button
+3. **Add filter:** Select **Content** → type `[NOW]` (or `[NEXT]` or `[LATER]`)
+4. **Click "Save as View"** - Name it "🎯 NOW Roadmap Items"
+5. **Repeat for NEXT and LATER**
+
+**Recommended views:**
+- 🎯 **NOW Roadmap Items** - Filter: `Content: [NOW]`
+- ➡️ **NEXT Roadmap Items** - Filter: `Content: [NEXT]`
+- 🔮 **LATER Roadmap Items** - Filter: `Content: [LATER]`
+
+These views can be **shared with your team** for roadmap visibility.
+
+### Why Title Prefixes?
+
+This approach:
+- ✅ Works immediately for any team (no setup required)
+- ✅ Doesn't conflict with existing labels or taxonomies
+- ✅ Visible at a glance in issue lists
+- ✅ Easy to filter and create custom views
+- ✅ Works for both new and existing Linear workspaces
+
+### Optional: Use Labels Instead
+
+If you prefer to use Linear labels:
+1. Create NOW/NEXT/LATER labels in Linear settings
+2. Share the label IDs with Claude during command execution
+3. Claude will apply labels and optionally remove title prefixes
 
 ## Example Output
 
