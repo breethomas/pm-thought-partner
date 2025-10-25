@@ -758,7 +758,7 @@ Enhancement, not restriction.
 **Claude will still help using general PM knowledge.** It'll be transparent that the framework isn't in the curated set and suggest it could be added if valuable.
 
 **What you get:**
-- ✅ Curated frameworks from 13 thought leaders + AI-era adaptations
+- ✅ Curated frameworks from industry thought leaders + AI-era adaptations
 - ✅ General PM help outside these frameworks
 - ✅ Custom solutions for your specific situation
 
