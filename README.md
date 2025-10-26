@@ -60,8 +60,7 @@ Acts as your product management thought partner to:
 ## Quick Links
 
 **Installation:**
-- **[CLI Plugin](INSTALL_PLUGIN.md)** - Command line installation (recommended, fastest)
-- **[Claude Projects](CLAUDE_PROJECTS_GUIDE.md)** - Browser-based setup (no command line required)
+- **[CLI Plugin Setup Guide](INSTALL_PLUGIN.md)** - Complete installation instructions with Linear/GitHub MCP setup
 
 **Reference:**
 - **[Browse All Frameworks](frameworks/)** - See all 20+ PM frameworks included
@@ -70,11 +69,9 @@ Acts as your product management thought partner to:
 
 ## Installation
 
-**Choose based on your workflow:**
+**PM Thought Partner is a CLI plugin for Claude Code.**
 
-### CLI Plugin (Command Line) - Recommended
-
-**Fastest and easiest setup.** One command, 30 seconds.
+**Fastest setup:** One command, 30 seconds.
 
 **What you get:**
 - Slash commands (`/lno-prioritize`, `/four-risks`, `/now-next-later`)
@@ -108,63 +105,21 @@ ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
 
 ---
 
-### Claude Projects (Browser)
+## For Teams
 
-**What you get:**
-- Works across all your PM conversations
-- Full access to all framework content
-- Not tied to a specific repository
+Install to your project repository so your whole team has access:
 
-**Limitations:**
-- ❌ No slash commands
-- ❌ No Linear/GitHub integration
-- ❌ Manual framework application (no automated backlog analysis)
-
-**Why you'd choose this:**
-- ✅ Works on strategy, planning, roadmaps, prioritization
-- ✅ Available everywhere (not repository-specific)
-- ✅ No command line required
-
-**Setup (15 minutes):**
-1. Download the framework files from this repository
-2. Create a Claude Project
-3. Upload the framework files as Project Knowledge
-4. Add the PM Thought Partner instructions
-
-**[→ See step-by-step Claude Projects setup guide](CLAUDE_PROJECTS_GUIDE.md)**
-
----
-
-### 🤔 What About Claude Code in Browser?
-
-**We're skipping it** because it opens a coding session in the PM Thought Partner repository itself, not your actual work. Claude Projects is simpler and more useful for day-to-day PM conversations.
-
----
-
-### 🏢 For Teams
-
-**Option: Per-Project Plugin Install**
-
-Add PM Thought Partner to specific project repositories so your whole team has access.
-
-**Just ask Claude:**
-```
-Add the PM Thought Partner plugin to this project repository
-so my team can use it
+```bash
+git clone https://github.com/breethomas/pm-thought-partner.git .claude/plugins/pm-thought-partner
 ```
 
-Claude will add it to `.claude/plugins/` and you can commit it to version control.
-
-**Benefits:**
-- Team members automatically get it when working on this project
-- Version controlled (everyone uses same frameworks)
-- Can have different versions per project if needed
+Commit to version control. Team members automatically get it when working on the project.
 
 **[→ See full team setup guide](INSTALL_PLUGIN.md#for-teams-per-project-installation)**
 
 ---
 
-### Verification
+## Verification
 
 **Test it works:**
 ```
