@@ -75,6 +75,8 @@ Problem → Try prompting → Still not working?
 
 **Common mistake:** Jumping to fine-tuning without exhausting simpler approaches.
 
+**See also:** For the strategic product decision of when to use RAG vs fine-tuning based on your use case characteristics (data changeability, query volume, style needs), see `frameworks/ai/fine-tuning-vs-rag.md`.
+
 ---
 
 ### 2. Data Quality > Tool Selection
@@ -387,6 +389,7 @@ Use this framework when:
 
 **Complements:**
 - `frameworks/ai/ai-evals.md` - How to test AI quality systematically
+- `frameworks/ai/fine-tuning-vs-rag.md` - Strategic decision framework for choosing RAG vs fine-tuning based on product needs
 - `frameworks/ai-era-practices/ai-unit-economics.md` - Cost and monetization
 - `frameworks/ai-era-practices/continuous-calibration.md` - Ongoing AI improvement
 

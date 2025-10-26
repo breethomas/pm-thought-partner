@@ -209,6 +209,7 @@ Works well with:
 - **Teresa Torres' Continuous Discovery** - Use four risks to prioritize what to test
 - **Assumption Mapping** - Categorize assumptions by risk type
 - **Lean Startup** - Four risks inform what experiments to run
+- `/frameworks/ai/fine-tuning-vs-rag.md` - Strategic decision that impacts feasibility and viability risks for AI products
 
 ## Anti-Patterns to Avoid
 

@@ -345,6 +345,43 @@ thought_leaders:
       - "LinkedIn: https://www.linkedin.com/in/chiphuyen"
       - "Book: Designing Machine Learning Systems (O'Reilly)"
 
+  pavel_horal:
+    name: "Pavel Horal"
+    title: "AI Product Management Educator"
+    background: "Product Compass Newsletter, former Sr. PM at Productboard"
+    website: "https://productcompass.pm"
+    note: "Referenced as source for practical AI PM implementation examples (RAG, fine-tuning demos)"
+    key_works:
+      - title: "Product Compass Newsletter"
+        type: "newsletter"
+        url: "https://productcompass.pm"
+        description: "Weekly AI product management insights, tutorials, and frameworks"
+      - title: "AI Product Management Complete Course"
+        type: "course/podcast"
+        year: 2024
+        collaboration: "One Minute PM podcast with Aakash Gupta"
+        description: "Comprehensive tutorial covering prompting, fine-tuning, RAG, MCP, AI agents"
+      - title: "AIPM PRD Template"
+        type: "template"
+        description: "AI-specific product requirements document"
+      - title: "AI Use Cases for Product Managers"
+        type: "article series"
+        description: "Practical applications of AI tools in PM workflows"
+    frameworks:
+      - "Fine-tuning vs RAG decision framework (contributed to synthesis)"
+      - "AI PRD structure (strategic alignment for AI products)"
+      - "Prompt engineering best practices for PMs"
+    key_insights:
+      - "Start with RAG, add fine-tuning for scale and consistency"
+      - "Fine-tuning teaches style/tone; RAG provides knowledge"
+      - "AI PRDs must address strategic alignment to avoid 'AI for AI's sake'"
+      - "PMs don't need to code, but must understand technical tradeoffs"
+    contribution: "Practical implementation perspective on AI PM concepts. His RAG and fine-tuning demos informed the decision framework synthesis."
+    where_to_follow:
+      - "Newsletter: https://productcompass.pm"
+      - "LinkedIn: https://www.linkedin.com/in/pavelhoral"
+      - "Twitter/X: @pavelhoral"
+
   linear:
     name: "Linear (Methodology)"
     type: "organization"
