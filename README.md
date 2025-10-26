@@ -134,8 +134,6 @@ Commit to version control. Team members automatically get it when working on the
 /now-next-later
 ```
 
-**For voice-first experience:** Use Claude desktop with `/strategy-session` to think through problems out loud.
-
 If working correctly, you'll get responses grounded in frameworks from thought leaders like Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, Aman Khan, and more.
 
 ---
@@ -175,8 +173,8 @@ You: "Apply /four-risks to issue ENG-245"
 
 ### `/strategy-session`
 
-Voice-first strategic thinking partner for PMs:
-- Talk through product problems and decisions
+Strategic thinking partner for PMs:
+- Work through product problems and decisions conversationally
 - Get probing questions that apply PM frameworks naturally
 - Structured capture of decisions, risks, and next actions
 - Creates Linear issues automatically from insights
@@ -188,7 +186,7 @@ Voice-first strategic thinking partner for PMs:
 ```
 
 **How it works:**
-1. Use voice (Claude desktop) to think out loud (10-15 min)
+1. Talk through the problem (10-15 min via typing, dictation, or any input method)
 2. Claude asks questions, challenges assumptions, applies frameworks
 3. Get structured summary: decisions, risks, prototypes, questions
 4. Creates actionable Linear issues with full context
