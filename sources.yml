@@ -20,11 +20,18 @@ thought_leaders:
       - title: "Empowered: Ordinary People, Extraordinary Products"
         type: "book"
         year: 2020
+      - title: "AI Product Management"
+        type: "article"
+        authors: "Marty Cagan & Marily Nika"
+        year: 2024
+        url: "https://www.svpg.com/ai-product-management/"
+        summary: "Extends Four Risks framework for AI products, addressing probabilistic behavior, explainability, unit economics, copyright/data provenance, legal liability, and ethical implications"
       - title: "SVPG Blog"
         type: "blog"
         url: "https://www.svpg.com/articles/"
     frameworks:
       - "Four Risks (value, usability, feasibility, viability)"
+      - "Four Risks for AI Products (2024 update)"
       - "Product Discovery"
       - "Empowered Teams"
     where_to_follow:
