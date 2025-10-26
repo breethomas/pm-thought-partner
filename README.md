@@ -36,7 +36,7 @@ Work through product problems conversationally. Claude gathers project context p
 - "Should we build this?" conversations
 
 **What you get:**
-- 10-15 minute strategic conversation
+- Strategic conversation that adapts to your problem
 - Structured capture: decisions, risks, prototypes, open questions
 - Actionable Linear issues created from insights
 

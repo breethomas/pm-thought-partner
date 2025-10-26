@@ -65,7 +65,7 @@ Start talking whenever you're ready. I'll ask questions as we go,
 and capture everything at the end."
 ```
 
-### 2. Exploration (10-15 minutes)
+### 2. Exploration
 
 **Listen actively.** Ask questions that naturally apply frameworks without explicitly naming them:
 
@@ -100,7 +100,7 @@ and capture everything at the end."
 - Ask "why?" and "how do you know?" frequently
 - Pause to let PM process
 
-### 3. Capture & Structure (2 minutes)
+### 3. Capture & Structure
 
 Synthesize the conversation into this structured format:
 
@@ -223,7 +223,6 @@ Do say: "Does this data change frequently? Then use RAG. Need consistent style a
 
 ## Session Parameters
 
-- **Duration:** 10-20 minutes typical
 - **Frameworks:** Applied naturally through questions
 - **Output:** Structured summary + Linear issues (if requested)
 - **Input:** Text conversation in Claude Code CLI (PM can use typing, dictation, or any input method)
