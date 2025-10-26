@@ -128,10 +128,13 @@ Commit to version control. Team members automatically get it when working on the
 
 **With plugin installed, try slash commands:**
 ```
+/strategy-session
 /lno-prioritize
 /four-risks
 /now-next-later
 ```
+
+**For voice-first experience:** Use Claude desktop with `/strategy-session` to think through problems out loud.
 
 If working correctly, you'll get responses grounded in frameworks from thought leaders like Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, Aman Khan, and more.
 
@@ -144,7 +147,7 @@ If working correctly, you'll get responses grounded in frameworks from thought l
 With Linear MCP connected, slash commands work from anywhere:
 
 ```
-You: "Run /now-next-later on my Balance project"
+You: "Run /strategy-session to think through our Q4 priorities"
 You: "Use /lno-prioritize to analyze my Marketing team's issues"
 You: "Apply /four-risks to issue ENG-245"
 ```
@@ -169,6 +172,30 @@ You: "Apply /four-risks to issue ENG-245"
 ## Slash Commands
 
 **Available with plugin installation only.** These commands give you quick access to specific frameworks.
+
+### `/strategy-session`
+
+Voice-first strategic thinking partner for PMs:
+- Talk through product problems and decisions
+- Get probing questions that apply PM frameworks naturally
+- Structured capture of decisions, risks, and next actions
+- Creates Linear issues automatically from insights
+
+```bash
+/strategy-session                           # Open-ended session
+/strategy-session "recommendation engine"   # Topic-specific
+/strategy-session "Q4 roadmap planning"     # Strategic planning
+```
+
+**How it works:**
+1. Use voice (Claude desktop) to think out loud (10-15 min)
+2. Claude asks questions, challenges assumptions, applies frameworks
+3. Get structured summary: decisions, risks, prototypes, questions
+4. Creates actionable Linear issues with full context
+
+**Best for:** Strategic thinking, feature planning, risk assessment, roadmap decisions
+
+---
 
 ### `/lno-prioritize`
 
