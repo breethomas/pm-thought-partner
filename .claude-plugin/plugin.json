@@ -1,7 +1,7 @@
 {
   "name": "pm-thought-partner",
   "version": "1.0.0",
-  "description": "AI-era product management thought partner grounded in frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and other top PM leaders. Pushes you to prototype instead of document, challenges assumptions, and helps you ship faster. Includes Linear integration for applying frameworks directly to your backlog.",
+  "description": "Strategic thinking partner for product decisions. Works through problems conversationally, challenges assumptions, helps you ship faster. Grounded in frameworks from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, and more. Plus backlog automation with Linear/GitHub integration.",
   "author": "Bree Thomas",
   "repository": "https://github.com/breethomas/pm-thought-partner",
   "license": "MIT",
@@ -10,11 +10,17 @@
     "./skills/pm-thought-partner"
   ],
   "commands": [
+    "./commands/strategy-session.md",
     "./commands/lno-prioritize.md",
-    "./commands/now-next-later.md",
     "./commands/four-risks.md",
-    "./commands/coder.md",
-    "./commands/pmf-survey.md"
+    "./commands/now-next-later.md",
+    "./commands/growth-loops.md",
+    "./commands/four-fits.md",
+    "./commands/ai-cost-check.md",
+    "./commands/ai-health-check.md",
+    "./commands/start-evals.md",
+    "./commands/pmf-survey.md",
+    "./commands/coder.md"
   ],
   "agents": [],
   "hooks": [],
