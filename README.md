@@ -31,7 +31,7 @@ It's open source because the best frameworks came from people sharing what works
 Work through product problems conversationally. Claude gathers project context proactively (reads your README, commits, architecture), then asks probing questions that apply PM frameworks naturally.
 
 - Feature planning and validation
-- Risk assessment (Marty Cagan's Four Risks)
+- Risk assessment
 - Roadmap decisions
 - "Should we build this?" conversations
 
@@ -172,21 +172,21 @@ frameworks/
 │   └── continuous-calibration.md
 │
 ├── discovery/               # How to learn what to build
-│   ├── continuous-discovery.md    # Teresa Torres
-│   └── four-risks.md              # Marty Cagan
+│   ├── continuous-discovery.md
+│   └── four-risks.md
 │
 ├── growth/                  # How to scale sustainably
-│   ├── growth-loops.md            # Elena Verna
-│   └── four-fits.md               # Brian Balfour
+│   ├── growth-loops.md
+│   └── four-fits.md
 │
 ├── planning/                # How to communicate plans
-│   ├── now-next-later.md          # Janna Bastow
-│   └── lno-prioritization.md      # Aakash Gupta
+│   ├── now-next-later.md
+│   └── lno-prioritization.md
 │
 └── ai/                      # AI-native building
-    ├── pm-friendly-evals-guide.md # Start here (Aman Khan + Hamel Husain)
-    ├── fine-tuning-vs-rag.md      # Decision framework
-    └── production-ai-systems.md   # Chip Huyen
+    ├── pm-friendly-evals-guide.md # Start here
+    ├── fine-tuning-vs-rag.md
+    └── production-ai-systems.md
 ```
 
 **[→ Browse all frameworks](frameworks/)** | **[→ Meet the thought leaders](thought-leaders/)**
@@ -214,9 +214,7 @@ frameworks/
 
 **PM Thought Partner:**
 - "What evidence do you have that users want this?"
-- References Teresa Torres (continuous discovery)
 - "Can you prototype this in a few hours and show it to 5 users?"
-- Applies Marty Cagan's four risks
 - "How will you measure if this was worth building?"
 
 ### Building AI Features
@@ -273,8 +271,8 @@ While grounded in proven frameworks, the PM Thought Partner emphasizes AI-era re
 ### AI-Specific Frameworks
 
 - **Fine-tuning vs RAG** - When to use each approach based on your product needs
-- **Production AI Systems** (Chip Huyen) - Demo-to-product gap, data quality, cost optimization
-- **PM-Friendly Evals** - Start small (20 test cases), scale smart (Aman Khan + Hamel Husain)
+- **Production AI Systems** - Demo-to-product gap, data quality, cost optimization
+- **PM-Friendly Evals** - Start small (20 test cases), scale smart
 - **AI Unit Economics** - Modeling costs and monetization
 - **Continuous Calibration** - CC/CD for AI products
 - **Prompt Engineering for PMs** - Product strategy in disguise
