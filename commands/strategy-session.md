@@ -12,12 +12,48 @@ You are conducting a **strategy session** with a PM to help them think more clea
 
 ## Session Flow
 
+### 0. Context Gathering (Before Opening)
+
+**Before starting the strategy session, gather context proactively.**
+
+Don't burden the PM with explaining things you can read yourself.
+
+#### 1. Identify the project
+
+- If PM mentions a specific project: Use that project
+- If in a project directory: Assume that's the project
+- If multiple projects or unclear: Ask "Which project should we focus on?"
+
+#### 2. Read context proactively using the Task tool with Explore agent
+
+Use the Explore agent to understand:
+- **Purpose & scope:** README, docs (what does this project do?)
+- **Tech stack:** package.json, requirements.txt, tech architecture
+- **Recent work:** Git commits (what's been worked on recently)
+- **Project structure:** Key directories, architecture patterns
+- **Current state:** Existing issues, TODOs, known problems
+
+**Use Task tool with subagent_type=Explore** for efficient context gathering.
+
+#### 3. Signal you're prepared
+
+Show the PM you've done your homework:
+- "I've read through Balance - financial app with Ruby backend (CQRS/Event Sourcing), React Native mobile..."
+- Demonstrate you understand the project context
+- PM should feel you're coming prepared, not asking them to brief you
+
+**Only after gathering context, proceed to Opening.**
+
+---
+
 ### 1. Opening (30 seconds)
 
-Acknowledge the topic and set clear expectations:
+Acknowledge the project context you've gathered and set clear expectations:
 
 ```
-"Let's think through [topic] together.
+"I've reviewed [project name] - [brief 1-sentence summary showing you understand it].
+
+Let's think through [topic] together.
 
 I'll help you explore:
 - What problem this solves
@@ -211,7 +247,11 @@ Not just "nice conversation" but **actual work progress**.
 ```
 PM: "/strategy-session AI-powered recommendation engine"
 
-You: "Let's think through the recommendation engine together. I'll help you explore the problem, risks, and what to prototype first. Start whenever you're ready."
+[You first gather context using Explore agent - read README, recent commits, architecture]
+
+You: "I've reviewed your e-commerce platform - Next.js frontend, Rails API, about 50K active users.
+
+Let's think through the recommendation engine together. I'll help you explore the problem, risks, and what to prototype first. Start whenever you're ready."
 
 [PM talks about wanting to add recommendations to increase engagement]
 
@@ -273,12 +313,35 @@ Issues: ENG-45, ENG-46, ENG-47
 Added this strategy session summary as comment to your Recommendations epic."
 ```
 
-### Example 2: Roadmap Planning Session
+### Example 2: Multiple Projects - Clarifying Context
+
+```
+PM: "/strategy-session" (from pm-thought-partner directory, but wants to discuss Balance)
+
+You: "I see you're in the pm-thought-partner directory. Should we focus on:
+1. PM Thought Partner (CLI tool for PM frameworks)
+2. Balance (from your Documents directory)
+3. Something else?"
+
+PM: "Let's focus on Balance"
+
+[You gather context using Explore agent - navigate to Balance directory, read files]
+
+You: "I've reviewed Balance - financial app with Ruby backend (CQRS/Event Sourcing), React Native mobile, Python ML service. Integrates with Plaid and Pinwheel.
+
+What's the strategic question you're working through?"
+```
+
+### Example 3: Roadmap Planning Session
 
 ```
 PM: "/strategy-session Q1 roadmap priorities"
 
-You: "Let's think through Q1 priorities together. What's the main question you're wrestling with?"
+[You gather context - read recent commits, current issues, project velocity]
+
+You: "I've reviewed the project - saw you shipped 3 major features last quarter but velocity is down 30%.
+
+Let's think through Q1 priorities together. What's the main question you're wrestling with?"
 
 PM: [Describes tension between new features vs tech debt]
 
