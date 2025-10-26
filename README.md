@@ -398,6 +398,7 @@ Validate sustainable scaling readiness (Brian Balfour):
 ```
 
 **What you'll get:**
+- Fine-tuning vs RAG decision framework (when to use each approach based on your product needs)
 - Chip Huyen's production AI systems (demo-to-product gap, data quality, cost optimization)
 - PM-friendly evals guide (start with 20 test cases, scale smart - Aman Khan + Hamel Husain)
 - Aman Khan's comprehensive evals framework (systematic testing when you're ready)
@@ -499,6 +500,7 @@ pm-thought-partner/
 │   └── ai/                          # AI-native building
 │       ├── pm-friendly-evals-guide.md # Start here for evals (Aman Khan + Hamel Husain)
 │       ├── ai-evals.md              # Comprehensive evals (Aman Khan)
+│       ├── fine-tuning-vs-rag.md    # Strategic decision framework (Pavel Horal insights)
 │       └── production-ai-systems.md # Chip Huyen
 │
 ├── templates/                       # Modern deliverables
@@ -629,6 +631,7 @@ While grounded in proven frameworks, the PM Thought Partner emphasizes AI-era re
 ### What the PM Thought Partner Adds
 
 **AI-specific frameworks:**
+- Fine-tuning vs RAG Decision Framework - When to use each approach based on data changeability, query volume, style needs, and cost
 - Production AI Systems (Chip Huyen) - Demo-to-product gap, data quality over tools, cost optimization
 - PM-Friendly Evals Guide - Start small (20 test cases), scale smart (Aman Khan + Hamel Husain)
 - AI Evals & Testing (Aman Khan) - Comprehensive systematic testing approach
@@ -691,6 +694,7 @@ The PM Thought Partner is designed to be:
 **You:** "We want to add AI-powered recommendations."
 
 **PM Thought Partner:**
+- "Does your data change frequently? Use RAG. Need consistent style at scale? Consider fine-tuning." (Fine-tuning vs RAG framework)
 - "Have you tried prompt engineering before fine-tuning? Fine-tuning should be your last resort." (Chip Huyen)
 - "What's your data quality strategy? Data quality beats tool selection." (Chip Huyen)
 - "Have you started with evals? Write 20 test cases in a spreadsheet this week." (PM-friendly evals)
