@@ -1,5 +1,20 @@
 # Changelog
 
+## October 27, 2024 - Repository Cleanup & Accuracy
+
+### Changes
+- Fixed misleading "20+ PM frameworks" to "10+ strategic commands and 40+ documented frameworks"
+- Removed "how you like to PM" language that implied personalization
+- Removed confusing "For Teams" installation section from README
+- Added GitHub Sponsors button
+- Removed internal development files (REFLECT_SPEC.md, REFLECT_IMPLEMENTATION.md)
+- Updated INSTALL_PLUGIN.md for consistency with README
+
+### Commands Available
+- 12 total slash commands: `/strategy-session`, `/reflect`, `/lno-prioritize`, `/four-risks`, `/now-next-later`, `/pmf-survey`, `/start-evals`, `/ai-cost-check`, `/ai-health-check`, `/coder`, `/four-fits`, `/growth-loops`
+
+---
+
 ## January 23, 2025 - Major Framework Update
 
 ### New Frameworks Added
