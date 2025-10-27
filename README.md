@@ -14,7 +14,7 @@ It quickly turned into something more interesting. A plugin. A way to leverage C
 
 This is also an homage to product leaders who gave back to the community in ways that shaped how we all work. The thought leaders included here shared their frameworks publicly, and that generosity made me better at my job.
 
-And honestly? Product teams got stale. Engineers, PMs, designers, UX, data analysts... we'd settled into predictable patterns. AI changed that. We're breaking out of old processes, the technology is moving fast, and we're collaborating in ways that feel new again. I like that it's all getting weird.
+And honestly? Product teams got stale. Engineers, PMs, designers, UX, data analysts... we'd settled into predictable patterns. AI changed that. We're breaking out of old processes, the technology is moving fast, and we're collaborating in ways that feel new again. I like that it's all getting weird. ✨
 
 This is opinionated. Not every PM practice ever described. Focused on those who push modern practices while honoring timeless foundations. Context over prompts. Shipping to learn. Frameworks as tools, not rules.
 
@@ -139,7 +139,7 @@ Commit to version control. Team members get it automatically when working on the
 /four-risks
 ```
 
-You'll get responses grounded in frameworks from thought leaders like Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, and more.
+You'll get responses grounded in proven frameworks.
 
 ---
 
@@ -155,7 +155,7 @@ You'll get responses grounded in frameworks from thought leaders like Marty Caga
 
 3. **Issues not user stories** - Clear tasks. Skip the ceremony.
 
-4. **Apply proven frameworks** - Grounded in wisdom from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, Aman Khan, and others. Adapted for AI-era speed.
+4. **Apply proven frameworks** - Grounded in proven wisdom. Adapted for AI-era speed.
 
 5. **AI products need different approaches** - Continuous calibration (CC/CD). Evals for quality. Unit economics for viability.
 
@@ -352,4 +352,4 @@ This repository synthesizes and applies existing wisdom. It does not claim owner
 
 **Remember:** This is a thought partner for the AI era. It will push you to prototype instead of document, challenge assumptions with proven frameworks, and help you ship faster while thinking deeper.
 
-Let's build great products.
+Let's build great products. 🚀
