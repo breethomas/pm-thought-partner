@@ -1,23 +1,31 @@
 ---
-description: Pre-launch health check for AI features using Chip Huyen's production AI framework
+description: Pre-launch health check that blocks you from shipping broken AI features
 ---
 
 # AI Health Check Command
 
-Run a comprehensive **production AI readiness assessment** using Chip Huyen's framework.
+**Before you ship an AI feature, it needs to pass 6 checks.**
+
+Most AI products fail because PMs skip the basics: no cost model, broken failure UX, terrible data quality. This command stops you from launching garbage.
 
 **Works with:**
-- **Linear MCP / GitHub MCP** - Optional: Can attach readiness assessment to an issue as comment
-- **Manual** - Describe your AI feature directly (recommended for detailed assessment)
+- **Linear MCP / GitHub MCP** - Optional: Can attach assessment to an issue
+- **Manual** - Describe your AI feature directly
 
 ## What This Does
 
-Prevents common AI product mistakes before launch by checking:
-- Have you tried simpler approaches before fine-tuning?
-- What's your data quality strategy?
-- What's your cost model at scale?
-- How will you monitor quality?
-- What's your failure UX?
+**Checks if you're ready to ship:**
+- ❌ **Blockers** - Missing these = don't ship
+- ⚠️ **Risks** - Fix these or accept the consequences
+- ✅ **Ready** - Good to go
+
+**Six dimensions:**
+1. Model selection (did you try simple approaches first?)
+2. Data quality (the thing you're probably ignoring)
+3. Cost modeling (can you afford this at scale?)
+4. Production monitoring (how will you know if it breaks?)
+5. Failure UX (what happens when AI screws up?)
+6. System optimization (are you measuring the right things?)
 
 **Philosophy:** "Most AI failures are UX problems, not technical ones. Data quality beats tool selection. Fine-tuning should be your last resort." - Chip Huyen
 
@@ -35,22 +43,14 @@ Prevents common AI product mistakes before launch by checking:
 
 ## What Happens
 
-1. **Fetches feature details** from Linear/GitHub (or uses your description)
-2. **Runs health check** across 6 critical dimensions:
-   - Model Selection Strategy
-   - Data Quality & Preparation
-   - Cost Modeling
-   - Production Monitoring
-   - Failure Handling (UX)
-   - System-Level Optimization
+1. **Asks hard questions** about your AI feature
+2. **Grades each dimension:** ✅ Ready / ⚠️ Risk / ❌ Blocked
+3. **Tells you if you can ship:**
+   - All green? Ship it.
+   - Any blockers? Fix them or don't ship.
+   - Risks? Your call, but you've been warned.
 
-3. **Returns assessment** with:
-   - Readiness score per dimension (Ready / Needs Work / Blocked)
-   - Missing pieces flagged
-   - Specific questions to answer
-   - Links to relevant framework sections
-
-4. **Optionally adds** checklist to issue as comment
+4. **Optionally creates** Linear issues for blockers
 
 ## Example Output
 
@@ -72,49 +72,53 @@ Status: Following the hierarchy correctly (prompting → context → tools → f
 
 ---
 
-⚠️ DATA QUALITY & PREPARATION (Needs Work)
+⚠️ DATA QUALITY & PREPARATION (Risk)
 What's your data quality strategy?
-→ Not defined yet
+→ "Not defined yet"
 
-How are you chunking/formatting data?
-→ Using default chunking, no custom metadata
+🚨 THIS IS A PROBLEM
 
-What's your data refresh strategy?
-→ Not defined
+You're building an AI feature with no data quality strategy.
+Data quality beats tool selection. Always.
 
-⚠️ Concerns:
-- Data quality beats tool selection, but quality strategy is undefined
-- Default chunking may not be optimal for email templates
-- No plan for handling outdated templates
+Default chunking is lazy. Email templates need:
+- Metadata (category, tone, audience)
+- Thoughtful chunking (by use case, not by character count)
+- Refresh strategy (outdated templates = bad suggestions)
 
-📋 Action Items:
-1. Define thoughtful chunking strategy for email templates
-2. Add metadata (category, tone, audience) to chunks
-3. Plan for data freshness (how often to refresh templates)
+FIX THIS BEFORE LAUNCH:
+1. Define chunking strategy (2 hours)
+2. Add metadata to all templates (4 hours)
+3. Set up data refresh pipeline (1 day)
 
-See: production-ai-systems.md "Data Quality Over Tool Selection" section
+OR: Prototype with better data first, see if results improve 10x
+
+See: production-ai-systems.md "Data Quality Over Tool Selection"
 
 ---
 
-❌ COST MODELING (Blocked)
+❌ COST MODELING (BLOCKER)
 What's your cost per request?
-→ Unknown
+→ "Unknown"
 
-What's the cost per user per month at 10x scale?
-→ Not calculated
+What's cost per user at 10K users?
+→ "Not calculated"
 
-What percentage of revenue is inference cost?
-→ Not analyzed
+🛑 DON'T SHIP WITHOUT A COST MODEL
 
-🚨 BLOCKED: Cannot ship responsibly without cost model
+You're about to launch with zero idea if this bankrupts you at scale.
 
-📋 Action Items:
-1. Calculate cost per email generation (model API + embedding + retrieval)
-2. Model at 100 users, 1K users, 10K users
-3. Compare to pricing/revenue model
-4. Identify cost optimization opportunities (caching, cheaper models for simple emails)
+This isn't optional. You MUST know:
+- Cost per email generation
+- Cost at 1K, 10K, 100K users
+- % of revenue consumed by AI
+- What happens if usage is 10x higher than expected
 
-See: production-ai-systems.md "Cost Optimization" + ai-unit-economics.md
+RUN /ai-cost-check RIGHT NOW
+
+Then come back when you have numbers.
+
+See: ai-unit-economics.md
 
 ---
 
@@ -129,26 +133,32 @@ Status: Good monitoring plan in place
 
 ---
 
-⚠️ FAILURE HANDLING UX (Needs Work)
+⚠️ FAILURE HANDLING UX (Risk)
 What happens when AI fails?
-→ Generic error message: "Something went wrong"
+→ "Something went wrong"
 
-Can users override bad suggestions?
-→ Yes, full edit capability
+Can users tell when AI is uncertain?
+→ No
 
-How do users know when to trust AI output?
-→ Not addressed
+🚨 YOUR FAILURE UX IS BROKEN
 
-⚠️ Concerns:
-- Generic error messages don't help users
-- No confidence indicators
-- Users can't tell when AI is uncertain
+"Something went wrong" tells users nothing.
+No confidence indicators = users don't know when to trust the AI.
 
-📋 Action Items:
-1. Design specific error messages ("I couldn't generate an email" vs generic error)
-2. Add confidence indicators when AI is uncertain
-3. Show AI as assistant, not final authority (e.g., "Here's a draft you can edit")
-4. Provide fallback options when AI fails
+Users WILL see failures. How you handle them = your product quality.
+
+FIX BEFORE LAUNCH:
+1. Write specific error messages (2 hours)
+   - "I couldn't find relevant templates for this request"
+   - Not "Something went wrong"
+
+2. Add confidence indicators (1 day)
+   - Show when AI is uncertain
+   - Let users know it's a draft, not final
+
+3. Build fallback UX (3 hours with Cursor)
+   - What happens if AI takes >10s?
+   - What if it returns nothing useful?
 
 See: production-ai-systems.md "Handling AI Failures Gracefully"
 
@@ -165,35 +175,48 @@ Status: System-level thinking in place
 
 ---
 
-📊 SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 VERDICT: DON'T SHIP YET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Ready to Ship: ❌ Not Yet
+✅ Ready: 4/6
+⚠️ Risks: 2/6
+❌ Blockers: 1/6
 
-Dimensions Ready: 4/6
-- ✅ Model Selection Strategy
-- ⚠️ Data Quality (needs work)
-- ❌ Cost Modeling (blocked)
-- ✅ Production Monitoring
-- ⚠️ Failure Handling UX (needs work)
-- ✅ System-Level Optimization
+🛑 YOU HAVE 1 BLOCKER:
+- No cost model → Run /ai-cost-check RIGHT NOW
 
-🚨 BLOCKERS (Must fix before launch):
-1. Cost modeling - Calculate costs at scale
-2. Data quality strategy - Define chunking, metadata, refresh
-
-⚠️ SHOULD FIX (Quality improvements):
-3. Failure UX - Better error messages, confidence indicators
+⚠️ YOU HAVE 2 RISKS (fix or accept):
+- Data quality strategy undefined
+- Failure UX is broken
 
 ✅ GOOD TO GO:
-- Model selection following best practices
-- Monitoring plan in place
-- System-level optimization thinking
+- Model selection
+- Production monitoring
+- System optimization
 
-📋 NEXT STEPS:
-1. Run /ai-cost-check to model economics
-2. Define data quality strategy (2-3 hours)
-3. Design failure UX (user-facing error states)
-4. Rerun /ai-health-check after fixes
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT TO DO NOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**Option A: Fix everything (RECOMMENDED)**
+1. Run /ai-cost-check (10 min)
+2. Define data quality strategy (2 hours)
+3. Build better failure UX with Cursor (3 hours)
+4. Rerun /ai-health-check
+
+Time: 1 day. Result: Ship confidently.
+
+**Option B: Ship with known risks**
+1. Fix the blocker (run /ai-cost-check)
+2. Ship knowing:
+   - Data quality might be bad
+   - Failure UX will frustrate users
+3. Plan to fix in week 1
+
+Time: 10 min. Result: Ship fast, fix later.
+
+Want me to create Linear issues for Option A?
 
 Full framework: frameworks/ai/production-ai-systems.md
 ```
