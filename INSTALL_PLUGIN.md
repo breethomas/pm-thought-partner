@@ -1,8 +1,6 @@
-# Plugin Installation Guide (CLI)
+# Plugin Installation Guide
 
 **Command line installation** for Claude Code CLI.
-
-**Prefer browser-based setup?** → [Claude Projects Guide](CLAUDE_PROJECTS_GUIDE.md)
 
 ---
 
@@ -31,8 +29,6 @@ https://github.com/breethomas/pm-thought-partner
 
 Claude will handle everything - cloning the repo, setting up the plugin directory, and verifying the installation.
 
-**⚠️ IMPORTANT: YOU MUST RESTART CLAUDE CODE** to load the slash commands. Exit your current session and run `claude` again.
-
 ---
 
 ### Option 2: Clone and Run Install Script
@@ -55,10 +51,6 @@ The install script will automatically symlink the slash commands to `~/.claude/c
 git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
 ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
 ```
-
-**⚠️ IMPORTANT: YOU MUST RESTART CLAUDE CODE** to load the slash commands. Exit your current session and run `claude` again.
-
-**For per-project installation** (team access), see the [Manual Installation](#advanced-manual-installation) section below.
 
 ---
 
@@ -141,98 +133,20 @@ The slash commands will prompt you for manual input instead of pulling from an i
 
 ### Test It Works
 
-**After restarting Claude Code**, start a new session in any project:
+Start a new Claude Code session in any project and ask:
 
-```bash
-claude
-```
-
-Then ask: **"Should I write a PRD or prototype first?"**
+**"Should I write a PRD or prototype first?"**
 
 **Expected behavior:** Claude pushes you toward prototyping, references frameworks, challenges assumptions.
 
 **Try slash commands:**
+- `/strategy-session` - Work through product decisions conversationally
+- `/reflect` - Analyze patterns across your strategic thinking
 - `/lno-prioritize` - Categorize issues by impact
 - `/four-risks` - Run risk assessment on a feature
 - `/now-next-later` - Generate a roadmap
 
----
-
-## Available Slash Commands
-
-### `/lno-prioritize`
-
-Apply Aakash Gupta's LNO framework to categorize Linear issues:
-- **Leverage (L):** 10x impact tasks - your highest priority
-- **Neutral (N):** Regular impact tasks
-- **Overhead (O):** Minimal impact tasks to minimize
-
-```bash
-/lno-prioritize                    # Categorize all issues
-/lno-prioritize --team product     # Specific team
-/lno-prioritize --label            # Auto-add Linear labels
-```
-
-### `/four-risks`
-
-Run Marty Cagan's Four Risks assessment (value, usability, feasibility, viability):
-
-```bash
-/four-risks ENG-245               # Assess specific issue
-/four-risks --current-sprint      # Assess sprint issues
-/four-risks --add-comment         # Add assessment to Linear
-```
-
-### `/now-next-later`
-
-Generate a Now-Next-Later roadmap from Linear projects (Janna Bastow's framework):
-
-```bash
-/now-next-later                   # Generate roadmap
-/now-next-later --team eng        # Specific team
-/now-next-later --export          # Export markdown
-```
-
-### `/coder`
-
-Apply Brian Balfour's CODER framework for organizational AI adoption:
-
-```bash
-/coder                            # Start CODER framework
-/coder --diagnose                 # Identify adoption barriers
-```
-
-### `/pmf-survey`
-
-Create and analyze PMF surveys (Rahul Vohra's Superhuman method):
-
-```bash
-/pmf-survey                       # Start PMF survey wizard
-/pmf-survey --create              # Generate survey questions
-/pmf-survey --analyze [data]      # Analyze results
-```
-
-**[→ See detailed command documentation in README](README.md#slash-commands)**
-
----
-
-## For Teams: Per-Project Installation
-
-Want your whole team to have PM Thought Partner when working on a specific project?
-
-**Just ask Claude:**
-
-```
-Add the PM Thought Partner plugin to this project repository
-so my team can use it
-```
-
-Claude will add it to `.claude/plugins/` in your project and you can commit it.
-
-**Benefits:**
-- Team members automatically get it when working on this project
-- Version controlled (everyone uses same frameworks)
-- Can have different versions per project if needed
+**[→ See all commands and detailed usage in README](README.md)**
 
 ---
 
@@ -254,7 +168,6 @@ Claude will pull the latest changes from GitHub.
 - Make sure you're in a Claude Code session (`claude` command)
 - Check if commands are symlinked: `ls -la ~/.claude/commands/` should show the command files
 - If commands aren't symlinked, run: `ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/`
-- Restart Claude Code after symlinking
 - Try using natural language: "Apply LNO prioritization to my issues"
 
 **"Claude says it can't find Linear issues"**
