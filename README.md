@@ -22,6 +22,27 @@ It's open source because the best frameworks came from people sharing what works
 
 ---
 
+## Thought Leaders Included
+
+The PM Thought Partner synthesizes publicly available frameworks from:
+
+- **Marty Cagan** - Product discovery, four risks, empowered teams
+- **Teresa Torres** - Continuous discovery habits, opportunity solution trees
+- **Elena Verna** - Growth loops, product-led growth
+- **Brian Balfour** - Four fits, focus wins, growth strategy
+- **Chip Huyen** - Production AI systems, ML engineering, data quality
+- **Aman Khan** - AI evals, vibe-driven development, AI-native products
+- **Janna Bastow** - Now-Next-Later roadmapping, cone of uncertainty
+- **Aakash Gupta** - Visual frameworks, stakeholder communication
+- **Rahul Vohra** - PMF survey, high-expectation customers
+- **Ravi Mehta** - Product Strategy Stack, AI integration framework
+- **Linear** - Issues not stories, direction → building → quality
+- **Reforge** - Practitioner wisdom, monetization, growth frameworks
+
+**[→ Read detailed profiles](thought-leaders/)**
+
+---
+
 ## What This Does
 
 ### Strategic Thinking Partner
@@ -226,27 +247,6 @@ frameworks/
 - "Have you started with evals? Write 20 test cases in a spreadsheet this week."
 - "What's your cost model? Inference costs scale with usage."
 - "How will users override when the AI is wrong?"
-
----
-
-## Thought Leaders Included
-
-The PM Thought Partner synthesizes publicly available frameworks from:
-
-- **Marty Cagan** - Product discovery, four risks, empowered teams
-- **Teresa Torres** - Continuous discovery habits, opportunity solution trees
-- **Elena Verna** - Growth loops, product-led growth
-- **Brian Balfour** - Four fits, focus wins, growth strategy
-- **Chip Huyen** - Production AI systems, ML engineering, data quality
-- **Aman Khan** - AI evals, vibe-driven development, AI-native products
-- **Janna Bastow** - Now-Next-Later roadmapping, cone of uncertainty
-- **Aakash Gupta** - Visual frameworks, stakeholder communication
-- **Rahul Vohra** - PMF survey, high-expectation customers
-- **Ravi Mehta** - Product Strategy Stack, AI integration framework
-- **Linear** - Issues not stories, direction → building → quality
-- **Reforge** - Practitioner wisdom, monetization, growth frameworks
-
-**[→ Read detailed profiles](thought-leaders/)**
 
 ---
 
