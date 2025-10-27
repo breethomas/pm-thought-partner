@@ -89,7 +89,7 @@ Sessions are saved locally (gitignored by default for privacy).
 
 **No MCP?** All commands work with manual input. Paste issues or describe context directly.
 
-### 20+ PM Frameworks On Demand
+### 10+ Strategic Commands
 
 Applied through conversation, not lectures:
 
@@ -98,9 +98,9 @@ Applied through conversation, not lectures:
 - **Measurement:** `/pmf-survey`
 - **Adoption:** `/coder`
 
-**[→ See all 20+ commands](commands/)** | **[→ Browse frameworks](frameworks/)**
+**[→ See all commands](commands/)** | **[→ Browse frameworks](frameworks/)**
 
-Plus comprehensive framework library covering discovery, growth, AI, planning, and measurement.
+Plus comprehensive framework library with 40+ documented approaches covering discovery, growth, AI, planning, and measurement.
 
 ---
 
@@ -110,7 +110,7 @@ Most AI tools for PMs automate busy work: generate PRDs, create tickets, reply t
 
 **PM Thought Partner is your sparring partner, not your assistant.**
 
-It applies proven frameworks to real product decisions. Challenges assumptions. Pushes you toward prototypes over docs. Knows not just PM frameworks, but *how you like to PM*.
+It applies proven frameworks to real product decisions. Challenges assumptions. Pushes you toward prototypes over docs.
 
 Automation is table stakes. Strategic thinking is the moat.
 
@@ -149,16 +149,6 @@ By default, `/strategy-session` outputs and `/reflect` summaries are saved local
 3. Now your product thinking is version-controlled and searchable
 
 **Why gitignore by default?** Sessions contain company strategy, competitive insights, and product decisions that most PMs won't want in their git history.
-
-### For Teams
-
-Install to your project so the whole team has access:
-
-```bash
-git clone https://github.com/breethomas/pm-thought-partner.git .claude/plugins/pm-thought-partner
-```
-
-Commit to version control. Team members get it automatically when working on the project.
 
 ---
 
