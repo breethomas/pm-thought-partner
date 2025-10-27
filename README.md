@@ -98,9 +98,9 @@ Applied through conversation, not lectures:
 - **Measurement:** `/pmf-survey`
 - **Adoption:** `/coder`
 
-Plus comprehensive framework library covering discovery, growth, AI, planning, and measurement.
+**[→ See all 20+ commands](commands/)** | **[→ Browse frameworks](frameworks/)**
 
-**[→ Browse all frameworks](frameworks/)** | **[→ See all commands](commands/)**
+Plus comprehensive framework library covering discovery, growth, AI, planning, and measurement.
 
 ---
 
