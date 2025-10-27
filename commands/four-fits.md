@@ -1,24 +1,25 @@
 ---
-description: Validate product-market-channel-model alignment using Brian Balfour's Four Fits framework
+description: Find which fit is broken before you burn cash scaling
 ---
 
 # Four Fits Command
 
-Validate **sustainable scaling readiness** using Brian Balfour's Four Fits framework.
+**Before you scale, all four fits must work. If one is broken, scaling fails.**
+
+Most companies scale too early. They have product-market fit and think they're ready. They're not. You need all four:
+
+1. **Market ↔ Product** - Do customers want this?
+2. **Product ↔ Channel** - Can you reach customers efficiently?
+3. **Channel ↔ Model** - Can your business model support acquisition costs?
+4. **Model ↔ Market** - Can you monetize this market profitably?
+
+**One broken fit = don't scale yet.** Fix it first.
 
 **Works with:**
-- **Linear MCP / GitHub MCP** - Optional: Can attach analysis to an issue as comment
-- **Manual** - Provide product/market context directly (recommended for strategic thinking)
+- **Linear MCP / GitHub MCP** - Optional: Can attach analysis to an issue
+- **Manual** - Provide context directly (recommended)
 
-## What This Does
-
-Prevents scaling too early by validating ALL four fits are aligned:
-1. **Market ↔ Product** - Do customers want this?
-2. **Product ↔ Channel** - Can we reach customers efficiently?
-3. **Channel ↔ Model** - Does our business model support acquisition costs?
-4. **Model ↔ Market** - Can we monetize this market profitably?
-
-**Philosophy:** "All four fits must align for $100M+ growth." Scaling with misaligned fits burns cash and fails. - Brian Balfour
+**Philosophy:** "All four fits must align for $100M+ growth. Scaling with misaligned fits burns cash." - Brian Balfour
 
 ## Usage
 
@@ -99,41 +100,44 @@ Why: Multiple strong signals. Product-market fit is real.
 
 ---
 
-FIT #2: PRODUCT ↔ CHANNEL (⚠️ NEEDS WORK)
+FIT #2: PRODUCT ↔ CHANNEL (❌ BROKEN)
 
 Questions:
-⚠️ Can customers discover us through this channel?
-   → Partially - paid search works, content struggling
-
-⚠️ Can we acquire customers at sustainable cost?
-   → Partially - CAC $400, LTV $1,200 (3:1 ratio is healthy but...)
+❌ Can customers discover us through this channel?
+   → Paid search works. Content doesn't (only 5% of traffic).
 
 ❌ Is our product suited to this channel?
-   → Questionable - paid search requires instant "aha moment"
-   → Our product has 7-day onboarding (too slow)
+   → NO. Paid search needs instant value.
+   → Your product takes 7 days to show value.
+   → Users churn before they see why they should pay.
 
 ❌ Can we scale this channel 10x?
-   → No - paid search is competitive, CPCs rising
-   → Content SEO takes 6-12 months to compound
+   → NO. CPCs up 40% in 6 months (channel saturating).
+   → You're dependent on one expensive, competitive channel.
 
-Evidence:
-- Paid search CPC: Increased 40% in 6 months (channel saturation)
-- Content SEO: Only 5% of traffic (nascent, not scaling yet)
-- Activation rate: 30% (too low for paid channel)
-- Time to value: 7 days (too slow, users churn before "aha")
+THE PROBLEM:
+- You're trying to scale paid acquisition
+- But your product takes 7 days to activate users
+- Paid channels need instant "aha moments"
+- Activation rate is 30% (should be 50%+)
+- CPCs are rising, making this worse
 
-Confidence: ⚠️ NEEDS WORK
+FIX OPTIONS:
+1. **Drastically improve onboarding** (7 days → <1 day)
+   - Prototype faster onboarding in Cursor this week
+   - Test with 50 users
+   - This is your most direct path
 
-Issues:
-1. Product onboarding too slow for paid acquisition
-2. Paid search channel saturating (rising CPCs)
-3. Alternative channels (content, viral) not mature yet
+2. **Change channels** (stop scaling paid, focus content/viral)
+   - Content SEO works for slower onboarding
+   - Takes 6-12 months to compound
+   - Run /growth-loops to explore viral options
 
-📋 Fixes Required:
-1. Shorten time-to-value (7 days → 2 days)
-2. Improve activation rate (30% → 50%+)
-3. Build viral loop to reduce paid dependency (see /growth-loops)
-4. Scale content SEO (current 5% → 30% of acquisition)
+3. **Don't scale yet**
+   - Product-channel mismatch will burn cash
+   - Fix onboarding first, then scale
+
+Verdict: ❌ BROKEN - Fix onboarding OR change channels before scaling
 
 ---
 
