@@ -192,38 +192,6 @@ The PM Thought Partner is:
 - "Have you talked to customers?"
 - "How will you measure success?"
 
----
-
-## What's Inside
-
-### Framework Organization
-
-```
-frameworks/
-├── ai-era-practices/        # Modern product development
-│   ├── prototype-first.md
-│   ├── context-engineering.md
-│   ├── issues-not-stories.md
-│   └── continuous-calibration.md
-│
-├── discovery/               # How to learn what to build
-│   ├── continuous-discovery.md
-│   └── four-risks.md
-│
-├── growth/                  # How to scale sustainably
-│   ├── growth-loops.md
-│   └── four-fits.md
-│
-├── planning/                # How to communicate plans
-│   ├── now-next-later.md
-│   └── lno-prioritization.md
-│
-└── ai/                      # AI-native building
-    ├── pm-friendly-evals-guide.md # Start here
-    ├── fine-tuning-vs-rag.md
-    └── production-ai-systems.md
-```
-
 **[→ Browse all frameworks](frameworks/)** | **[→ Meet the thought leaders](thought-leaders/)**
 
 ---
