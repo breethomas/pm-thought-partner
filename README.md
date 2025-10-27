@@ -63,6 +63,20 @@ Work through product problems conversationally. Claude gathers project context p
 
 **Start:** `/strategy-session` or `/strategy-session "recommendation engine"`
 
+### Strategic Reflection
+
+**`/reflect` - Pattern recognition across your decisions**
+
+See patterns in your strategic thinking over time:
+- Analyze decision-making trends across multiple sessions
+- Track which frameworks you use most
+- Identify unresolved questions blocking progress
+- Weekly/monthly reflection ritual
+
+Sessions are saved locally (gitignored by default for privacy).
+
+**Start:** `/reflect` or `/reflect "this month"`
+
 ### Backlog Automation
 
 **Connect Linear or GitHub to auto-analyze your backlog in seconds.**
@@ -124,6 +138,17 @@ cd ~/.claude/plugins/pm-thought-partner
 **⚠️ Restart Claude Code** after installation to load slash commands.
 
 **[→ Full installation guide with Linear/GitHub setup](INSTALL_PLUGIN.md)**
+
+### Privacy Note
+
+By default, `/strategy-session` outputs and `/reflect` summaries are saved locally but gitignored.
+
+**If you want to commit your strategic thinking:**
+1. Remove `sessions/` and `reflections/` from `.gitignore`
+2. Commit to your repo (or team repo)
+3. Now your product thinking is version-controlled and searchable
+
+**Why gitignore by default?** Sessions contain company strategy, competitive insights, and product decisions that most PMs won't want in their git history.
 
 ### For Teams
 
@@ -293,8 +318,12 @@ While grounded in proven frameworks, the PM Thought Partner emphasizes AI-era re
 
 ## What's Next
 
-This has a long way to go, but we're shipping to learn. On the horizon:
+This has a long way to go, but we're shipping to learn.
 
+**Recently shipped:**
+- ✅ **Strategic reflection** (`/reflect`) - Pattern recognition across your thinking over time
+
+**On the horizon:**
 - **PM onboarding workflows** - New job? Plugin reads repos, docs, recent issues, gives you a strategic brief on the domain and key decisions
 - **Bidirectional sync** - Write comments, update issues, not just read them
 - **Analytics tool integrations** - Bring product data (Amplitude, Mixpanel) into strategic conversations

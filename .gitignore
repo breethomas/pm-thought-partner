@@ -40,3 +40,8 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Strategy sessions and reflections (may contain sensitive product info)
+# Users can opt-in to committing by removing these lines
+sessions/
+reflections/

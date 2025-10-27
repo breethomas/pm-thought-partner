@@ -294,7 +294,7 @@ You: "Great session. Here's what I captured:
 
 Want me to:
 1. Create Linear issues for user research + data analysis
-2. Save this summary
+2. Save this session for future reflection
 3. Continue exploring
 4. Wrap up"
 
@@ -389,6 +389,68 @@ Strategy sessions often lead to:
 - `/start-evals` - Create eval framework for AI features discussed
 - `/ai-cost-check` - Model costs for AI features at scale
 
+## Session Persistence
+
+When PM chooses "Save this session for future reflection", you should save the session to enable pattern recognition over time.
+
+### 1. Create sessions directory
+
+Check if `sessions/` directory exists in the plugin root. If not:
+- Create it using Write tool
+- Confirm: "Created sessions/ directory for saving your strategic thinking."
+
+### 2. Generate filename
+
+Format: `YYYY-MM-DD-topic-slug.md`
+
+**Rules:**
+- Use system date: Run `date +%Y-%m-%d` command to get the current date (don't guess)
+- Topic slug: lowercase, hyphens, max 50 chars, derived from session topic
+- If file already exists, append `-2`, `-3`, etc.
+
+Example: `2025-01-27-recommendation-engine.md`
+
+### 3. Write session file
+
+Use this exact template:
+
+```markdown
+# Strategy Session: [Topic Title]
+**Date:** [Full date - Month Day, Year]
+**Duration:** [Estimate from conversation - e.g., "23 minutes"]
+**Frameworks Applied:** [Comma-separated list of frameworks you applied]
+
+## Context
+- Project: [Project name and key details]
+- Current state: [What's happening now]
+- Trigger: [What prompted this session]
+
+## Core Decisions
+[Bullet list of concrete decisions made during session]
+
+## Key Risks Identified
+[Risks with severity: HIGH/MEDIUM/LOW]
+
+## Prototypes to Build
+[List of prototypes or experiments discussed]
+
+## Open Questions
+[Questions to answer, with context]
+
+## Next Actions
+[Concrete next steps with owners if mentioned]
+
+## Linear Issues Created
+[List with issue IDs, or "None created" if PM didn't request]
+
+---
+*Session saved by PM Thought Partner*
+```
+
+### 4. Confirm save
+
+Message: "Session saved to sessions/[filename]. Run `/reflect` anytime to see patterns across your sessions."
+
 ## Notes
 
 - This is the **strategic soundboard** use case - helping PMs think better
@@ -396,6 +458,7 @@ Strategy sessions often lead to:
 - Capture everything important - PMs shouldn't lose insights
 - Structure output so it's actionable, not just documented
 - Linear integration makes this differentiated vs base Claude
+- Session persistence enables `/reflect` command for pattern recognition over time
 
 ---
 
