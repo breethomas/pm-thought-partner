@@ -1,24 +1,32 @@
 ---
-description: Calculate AI feature costs at scale to validate economic viability
+description: Calculate AI feature costs and challenge if you actually need it
 ---
 
 # AI Cost Check Command
 
-Calculate the **true cost of your AI feature at scale** to validate economic viability.
+Before you build an AI feature, answer two questions:
+1. **Do you actually need this feature?**
+2. **Can you afford it?**
+
+Most PMs skip #1 and regret #2 later.
 
 **Works with:**
-- **Linear MCP / GitHub MCP** - Optional: Can attach cost analysis to an issue as comment
+- **Linear MCP / GitHub MCP** - Optional: Can attach analysis to an issue as comment
 - **Manual** - Describe your AI feature directly (recommended for detailed analysis)
 
 ## What This Does
 
-Prevents expensive surprises by modeling AI costs BEFORE launch:
-- Cost per request
-- Cost per user per month at different scales
-- Percentage of revenue consumed by AI
-- Cost optimization opportunities
+**Challenges you first:**
+- Is this solving a real problem or feature theater?
+- Have you validated users want this?
+- Could a simpler approach work?
 
-**Philosophy:** "AI products have marginal costs. Inference scales with usage." Unlike traditional SaaS (fixed infrastructure), every user interaction costs money.
+**Then models the economics:**
+- Cost per user at 100, 1K, 10K, 100K scale
+- % of revenue consumed by AI inference
+- Break-even analysis
+
+**Philosophy:** AI products have marginal costs that scale with usage. Every user interaction costs money. Model this BEFORE building, not after launch when you're hemorrhaging cash.
 
 ## Usage
 
@@ -35,176 +43,153 @@ Prevents expensive surprises by modeling AI costs BEFORE launch:
 
 ## What Happens
 
-1. **Understands your AI feature:**
-   - What model are you using? (GPT-4, Claude, custom)
-   - How many API calls per user action?
-   - Input/output token estimates
-   - Additional costs (embeddings, vector DB, etc.)
+### Step 1: Challenge the Premise
 
-2. **Calculates costs at scale:**
-   - Per request
-   - Per user per day/month
-   - At 100 users, 1K, 10K, 100K users
-   - Annual run rate at each scale
+Before calculating anything, I'll ask:
 
-3. **Compares to revenue:**
-   - % of revenue consumed by AI
-   - Break-even analysis
-   - Sustainability assessment
+**"Why are you building this?"**
+- What problem does this solve?
+- Have you validated users want this? (Not "we think" — actual evidence)
+- Could you solve this without AI? (Simpler is usually better)
 
-4. **Identifies optimization opportunities:**
-   - Caching potential
-   - Cheaper models for simple queries
-   - Batch processing opportunities
-   - Prompt length reduction
+**Real talk:** Most AI features are solutions looking for problems. If you can't answer these questions clearly, stop. Prototype something simple and test with 10 users FIRST.
 
-5. **Returns detailed breakdown** with warnings if unsustainable
+### Step 2: Model the Economics
+
+If you have real evidence users want this, let's calculate if you can afford it:
+
+1. **Cost per request** (input tokens + output tokens + infrastructure)
+2. **Cost at scale** (100 → 100K users)
+3. **Revenue comparison** (% of revenue consumed)
+4. **Sustainability assessment** (can your business model support this?)
+
+### Step 3: Give You Options
+
+Based on the numbers:
+
+**If sustainable (AI costs <15% of revenue):**
+- ✅ Economics work. Here's how to optimize further.
+- **Your call:** Want to prototype this in Cursor/Claude Code today?
+
+**If marginal (15-30% of revenue):**
+- ⚠️ Expensive but viable. You MUST optimize.
+- **Before building:** Prototype the optimization strategy first (caching, cheaper models, etc.)
+- **Your call:** Build full feature OR build cost-optimized version first?
+
+**If unsustainable (>30% of revenue):**
+- 🚨 **Economics don't work. Don't build this.**
+- **Options:**
+  1. Raise prices 2-3x (have you validated willingness to pay?)
+  2. Gate this feature for premium tier only
+  3. Rebuild with fundamentally cheaper approach
+  4. **Don't build it** (saying no is valid)
 
 ## Example Output
 
 ```
 💰 AI Cost Check: Product Recommendations
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WAIT — Before We Calculate Costs
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❓ Why are you building AI recommendations?
+
+You said: "Users struggle to discover relevant products"
+
+Evidence you have:
+- ❌ No user interviews validating this is the problem
+- ❌ No data on search/browse abandonment rates
+- ❌ Haven't tested simpler approaches (better search, filters, trending)
+
+🚨 HOLD UP: You don't have evidence this solves a real problem.
+
+Before modeling costs, validate the problem:
+
+1. **Talk to 10 users this week:**
+   - "When you're looking for products, what's frustrating?"
+   - "Would AI recommendations help or just add noise?"
+   - "What would make discovery easier?"
+
+2. **Prototype in 2 hours with Cursor/Claude Code:**
+   - Add a "Trending this week" section (no AI, just sorted by orders)
+   - Deploy to 50 beta users
+   - See if this solves discovery WITHOUT AI costs
+
+3. **A/B test simpler options:**
+   - 50% see trending products (no AI)
+   - 50% see basic collaborative filtering (cheap, no LLM)
+   - Measure conversion lift
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Okay, assuming you validated users want this, here are the economics:
+
 FEATURE DETAILS:
 - Model: GPT-4 Turbo
-- Use case: Generate personalized product recommendations
-- Calls per recommendation: 1 (no chaining)
-- Average input: 1,500 tokens (user profile + product catalog context)
-- Average output: 300 tokens (5 recommendations with reasoning)
+- Use case: Generate personalized recommendations
+- Calls per recommendation: 1
+- Input: 1,500 tokens (user profile + catalog context)
+- Output: 300 tokens (5 recommendations)
 
----
+📊 COST BREAKDOWN
 
-📊 COST BREAKDOWN (Per Request)
+Per request: $0.024
+Per user/month (3 requests/day): $2.16
 
-Input Tokens:  1,500 @ $0.01/1K  = $0.015
-Output Tokens:   300 @ $0.03/1K  = $0.009
-Total per request:               = $0.024
+| Scale | Monthly Cost | Your Revenue | AI % of Revenue |
+|-------|-------------|--------------|-----------------|
+| 100   | $216        | $2,000       | 10.8% ✅         |
+| 1K    | $2,160      | $20,000      | 10.8% ✅         |
+| 10K   | $21,600     | $200,000     | 10.8% ✅         |
+| 100K  | $216,000    | $2M          | 10.8% ✅         |
 
-Additional costs:
-- Embeddings (if using RAG): $0.0001 per request
-- Vector DB query: ~$0.00005 per request
-- Total system cost: $0.024 per recommendation
+✅ VERDICT: Sustainable at 10.8% of revenue
 
----
+BUT — this assumes:
+- Users request exactly 3 recommendations/day (what if it's 10x?)
+- Pricing stays at $20/month (can you raise prices if needed?)
+- You optimize caching/models (saving 40-60%)
 
-📈 COST AT SCALE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 YOUR DECISION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Assumptions:
-- Average user requests 3 recommendations per day
-- 30 days per month
-- $0.024 per recommendation
+Economics work IF your assumptions hold.
 
-| Users | Requests/Month | Monthly Cost | Annual Cost |
-|-------|----------------|--------------|-------------|
-| 100   | 9,000          | $216         | $2,592      |
-| 1,000 | 90,000         | $2,160       | $25,920     |
-| 10,000| 900,000        | $21,600      | $259,200    |
-| 100,000| 9,000,000     | $216,000     | $2,592,000  |
+Before building the full feature:
 
----
+**Option A: Validate the problem first (RECOMMENDED)**
+- Prototype a simpler solution in 2 hours (trending products, better filters)
+- Test with 50 users this week
+- See if AI is actually needed
+- Want me to create this validation spike in Linear?
 
-⚠️ VIABILITY ANALYSIS
+**Option B: Prototype AI version cheaply**
+- Build with Cursor/Claude Code in 4 hours
+- Use GPT-3.5 first (70% cheaper) to validate quality is good enough
+- Deploy to 20 beta users
+- Measure conversion lift vs cost
+- Want me to create this prototype task in Linear?
 
-Your pricing: $20/user/month
+**Option C: Build full production feature**
+- Implement with GPT-4 + caching
+- Set up cost monitoring alerts (warn if >15% revenue)
+- Define usage limits (prevent cost blow-up)
+- Want me to create these implementation tasks in Linear?
 
-| Scale   | Revenue/Month | AI Cost/Month | AI % of Revenue |
-|---------|---------------|---------------|-----------------|
-| 100     | $2,000        | $216          | 10.8% ✅        |
-| 1,000   | $20,000       | $2,160        | 10.8% ✅        |
-| 10,000  | $200,000      | $21,600       | 10.8% ✅        |
-| 100,000 | $2,000,000    | $216,000      | 10.8% ✅        |
+What's your call?
 
-✅ SUSTAINABLE: 10.8% of revenue at all scales
-   (Industry benchmark: AI costs should be <20% of revenue)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+💡 OPTIMIZATION PATHS (if you proceed)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-However, note:
-- This assumes 3 recommendations/user/day
-- If usage is 10x higher (30/day), costs become 108% of revenue ⚠️
-- Monitor actual usage patterns closely
+1. **Caching** (saves 40-60%): $8,640/month at 10K users
+2. **Model selection** (saves 70%): Use GPT-3.5 for simple cases
+3. **Prompt optimization** (saves 20-30%): Reduce input tokens
+4. **Batch processing** (saves 15-25%): Pre-generate common queries
 
----
-
-💡 COST OPTIMIZATION OPPORTUNITIES
-
-1. **Caching** (Potential savings: 40-60%)
-   - Cache frequent queries (e.g., "laptop under $500")
-   - Reuse recommendations for similar user profiles
-   - Estimated savings: $8,640/month at 10K users
-
-2. **Model Selection** (Potential savings: 70%)
-   - Use GPT-3.5 for simple recommendations: $0.007/request (vs $0.024)
-   - Use GPT-4 only for complex/personalized requests
-   - Estimated savings: $15,120/month at 10K users
-
-3. **Prompt Optimization** (Potential savings: 20-30%)
-   - Reduce input tokens (1,500 → 1,000 with better context selection)
-   - Use shorter examples in prompt
-   - Estimated savings: $4,320/month at 10K users
-
-4. **Batch Processing** (Potential savings: 15-25%)
-   - Pre-generate recommendations for common queries
-   - Refresh daily instead of real-time
-   - Estimated savings: $3,240/month at 10K users
-
-TOTAL POTENTIAL SAVINGS: $31,320/month at 10K users (145% of current cost)
-Optimized cost: $13,608/month (6.8% of revenue)
-
----
-
-🎯 RECOMMENDATIONS
-
-✅ CURRENT STATE:
-- Costs are sustainable at 10.8% of revenue
-- Within industry benchmarks (<20%)
-
-⚠️ WATCH OUT FOR:
-- Usage spikes (what if users request 10x more recommendations?)
-- Feature creep (adding AI to more features multiplies costs)
-- Model price changes (API pricing can change)
-
-📋 ACTION ITEMS:
-
-Priority 1 (Do Before Launch):
-1. Implement basic caching for repeat queries
-2. Set up cost monitoring alerts (warn if >15% of revenue)
-3. Define usage limits per user (prevent abuse)
-
-Priority 2 (First Month):
-4. Test GPT-3.5 for simple recommendations (A/B test quality vs cost)
-5. Optimize prompt length (reduce input tokens by 30%)
-6. Monitor actual usage patterns vs assumptions
-
-Priority 3 (When Scaling):
-7. Consider fine-tuned smaller model (if cost becomes issue)
-8. Implement tiered pricing based on AI usage
-
----
-
-📊 COMPARISON: Different Models
-
-| Model | Cost/Request | Cost at 10K users/mo | Quality | Recommendation |
-|-------|--------------|----------------------|---------|----------------|
-| GPT-4 Turbo | $0.024 | $21,600 | Excellent | ✅ Current choice |
-| GPT-3.5 Turbo | $0.007 | $6,300 | Good | 💡 Test for simple cases |
-| Claude 3 Haiku | $0.006 | $5,400 | Good | 💡 Alternative option |
-| Claude 3 Sonnet | $0.018 | $16,200 | Excellent | 💡 Slightly cheaper |
-
-Recommendation: Start with GPT-4 for quality. Test GPT-3.5 for 50% of requests (simple queries). Could save $7,650/month.
-
----
-
-🚨 RED FLAGS (None detected)
-
-✅ Cost per user ($2.16/month) is <15% of revenue ($20/month)
-✅ Costs scale linearly (no exponential blow-up)
-✅ Multiple optimization levers available
-✅ Business model can support AI costs
-
-If any were true, would flag:
-❌ AI costs >30% of revenue (unsustainable)
-❌ No optimization opportunities (trapped at high cost)
-❌ Costs grow faster than revenue (broken economics)
-❌ Single point of failure (one model, no alternatives)
+Total potential: Reduce from $21,600 → $9,000/month (58% savings)
 ```
 
 ## Cost Check Dimensions
@@ -360,7 +345,6 @@ Run monthly to track cost trends and optimization opportunities
 ---
 
 **Framework:** AI Unit Economics
-**Best for:** Economic validation of AI features
-**Key insight:** "AI products have marginal costs. Model at 10x, 100x scale BEFORE launch."
-**Industry benchmark:** AI costs should be <20% of revenue per user
-**Remember:** Optimization can reduce costs by 50-70%. Don't abandon features prematurely—explore optimization first.
+**Best for:** Economic validation of AI features AND challenging if you need the feature
+**Key insight:** "Most AI features are solutions looking for problems. Validate the problem before modeling costs."
+**Industry benchmark:** AI costs should be <15% of revenue (sustainable), <20% (viable), >30% (unsustainable)
