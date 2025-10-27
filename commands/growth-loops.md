@@ -1,22 +1,28 @@
 ---
-description: Identify and design growth loops using Elena Verna's framework for sustainable, compounding growth
+description: Find your growth loop or stay stuck in linear acquisition hell
 ---
 
 # Growth Loops Command
 
-Design **compounding growth systems** using Elena Verna's Growth Loops framework.
+**If you're buying all your growth, you're doing it wrong.**
+
+Most PMs think about growth as a funnel: spend money → acquire users → hope they stick. That's expensive and doesn't compound.
+
+Growth loops are different: users create value → that value attracts more users → they create more value. It compounds.
 
 **Works with:**
-- **Linear MCP / GitHub MCP** - Optional: Can attach analysis to an issue as comment
-- **Manual** - Provide product context directly (recommended for strategic thinking)
+- **Linear MCP / GitHub MCP** - Optional: Can attach analysis to an issue
+- **Manual** - Provide product context (recommended)
 
 ## What This Does
 
-Helps PMs shift from **linear funnels** (which leak) to **growth loops** (which compound):
-- Identifies where output becomes input
-- Maps potential viral, content, network effect, or paid loops
-- Analyzes loop velocity and optimization opportunities
-- Suggests growth mechanics to build into your product
+Identifies if your product has (or could have) compounding growth:
+- **Viral loops** - Users invite users
+- **Content loops** - User-generated content attracts organic traffic
+- **Network effects** - More users = more value
+- **Paid loops** - Revenue funds acquisition (only if efficient)
+
+Then tells you which loop fits your product and how to build it.
 
 **Philosophy:** "Growth isn't a funnel that leaks. It's a loop that compounds." - Elena Verna
 
@@ -148,11 +154,13 @@ Blockers:
 Type: Multi-sided Network Effect
 
 Why It Doesn't Fit:
-- Product is team-based, not marketplace
-- Value doesn't increase with total platform users
-- Value comes from YOUR team size, not platform size
+- Your product is team-based, not a marketplace
+- Value comes from YOUR team, not the platform
+- You're trying to force a network effect that doesn't exist
 
-Recommendation: Don't force network effects. Focus on viral + content loops.
+STOP trying to build network effects. Your product doesn't support them.
+
+Focus on viral loop (team invites) and content loop (public templates) instead.
 
 ---
 
