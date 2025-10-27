@@ -12,7 +12,7 @@ I started exploring Anthropic's Skills feature as an exercise in creating specif
 
 It quickly turned into something more interesting. A plugin. A way to leverage Claude Code as a meaningful thought partner capable of getting up to speed on two kinds of context: the problem I'm solving *and* how I approach product work.
 
-This is also an homage to product leaders who gave back to the community in ways that shaped how we all work. Marty Cagan. Teresa Torres. Elena Verna. Brian Balfour. Their generosity in sharing frameworks publicly made me better at my job.
+This is also an homage to product leaders who gave back to the community in ways that shaped how we all work. The thought leaders included here shared their frameworks publicly, and that generosity made me better at my job.
 
 And honestly? Product teams got stale. Engineers, PMs, designers, UX, data analysts... we'd settled into predictable patterns. AI changed that. We're breaking out of old processes, the technology is moving fast, and we're collaborating in ways that feel new again. I like that it's all getting weird.
 
@@ -339,16 +339,6 @@ No. It enhances Claude's PM capabilities but doesn't restrict general knowledge.
 **Attribution:** All frameworks attributed to original creators in sources.yml.
 
 This repository synthesizes and applies existing wisdom. It does not claim ownership of the frameworks. Only the curation, adaptation, and integration for AI-era PM work.
-
----
-
-## Acknowledgments
-
-Grateful to the thought leaders whose public work made this possible:
-
-Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Lenny Rachitsky, Rahul Vohra, Janna Bastow, Aakash Gupta, Aman Khan, Chip Huyen, Ravi Mehta, the Linear team, and the Reforge community.
-
-Their generosity in sharing frameworks publicly enables PMs everywhere to improve their craft.
 
 ---
 
