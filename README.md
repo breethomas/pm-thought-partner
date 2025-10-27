@@ -90,6 +90,18 @@ Plus comprehensive framework library covering discovery, growth, AI, planning, a
 
 ---
 
+## Why This Is Different
+
+Most AI tools for PMs automate busy work: generate PRDs, create tickets, reply to comments.
+
+**PM Thought Partner is your sparring partner, not your assistant.**
+
+It applies proven frameworks to real product decisions. Challenges assumptions. Pushes you toward prototypes over docs. Knows not just PM frameworks, but *how you like to PM*.
+
+Automation is table stakes. Strategic thinking is the moat.
+
+---
+
 ## Installation
 
 **PM Thought Partner is a CLI plugin for Claude Code.**
@@ -276,6 +288,19 @@ While grounded in proven frameworks, the PM Thought Partner emphasizes AI-era re
 - **AI Unit Economics** - Modeling costs and monetization
 - **Continuous Calibration** - CC/CD for AI products
 - **Prompt Engineering for PMs** - Product strategy in disguise
+
+---
+
+## What's Next
+
+This has a long way to go, but we're shipping to learn. On the horizon:
+
+- **PM onboarding workflows** - New job? Plugin reads repos, docs, recent issues, gives you a strategic brief on the domain and key decisions
+- **Bidirectional sync** - Write comments, update issues, not just read them
+- **Analytics tool integrations** - Bring product data (Amplitude, Mixpanel) into strategic conversations
+- **Claude marketplace submission** - When it's ready
+
+Want to contribute? See [Contributing](#contributing) below.
 
 ---
 
