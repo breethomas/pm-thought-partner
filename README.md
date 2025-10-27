@@ -118,26 +118,13 @@ Automation is table stakes. Strategic thinking is the moat.
 
 ## Installation
 
-**PM Thought Partner is a CLI plugin for Claude Code.**
-
-**Fastest setup (30 seconds):**
-
-Ask Claude:
+Ask Claude Code:
 ```
 Install the PM Thought Partner plugin from
 https://github.com/breethomas/pm-thought-partner
 ```
 
-Or clone manually:
-```bash
-git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
-cd ~/.claude/plugins/pm-thought-partner
-./install.sh
-```
-
-**⚠️ Restart Claude Code** after installation to load slash commands.
-
-**[→ Full installation guide with Linear/GitHub setup](INSTALL_PLUGIN.md)**
+**[→ Full guide with Linear/GitHub setup](INSTALL_PLUGIN.md)**
 
 ### Privacy Note
 
