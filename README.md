@@ -2,23 +2,23 @@
 
 Your strategic thinking partner for product decisions. Works through problems with you, asks tough questions, challenges assumptions, helps you ship faster by thinking clearer.
 
-Grounded in frameworks from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, and more. Plus backlog automation when you need it.
+Grounded in proven frameworks, reimagined through an AI-first lens. A soundboard for strategy first, automation second. Bringing AI as a meaningful partner to PM work, not just knowledge about it.
 
 ## Why I Built This
 
-I started exploring Anthropic's Skills feature and realized I was building the thought partner I'd always wanted.
+I have favorite frameworks. Articles I reference constantly. Thought leaders whose work shaped how I think about product. But it's hard to keep all of that accessible, let alone apply it quickly when you're building.
 
-Here's the problem: I have favorite frameworks. Articles I reference constantly. Thought leaders whose work shaped how I think. But it's hard to keep all of that accessible, let alone apply it quickly when you're building.
+I started exploring Anthropic's Skills feature as an exercise in creating specificity for Claude around the kinds of product management that matter to me. Could I teach Claude not just PM frameworks, but *how I like to PM*? The frameworks that influence how I ship?
 
-I'm not dogmatic about process. I follow the recipe exactly the first time — then tweak it every time after. Same with frameworks. Learn the foundation, adapt to your context.
+It quickly turned into something more interesting. A plugin. A way to leverage Claude Code as a meaningful thought partner capable of getting up to speed on two kinds of context: the problem I'm solving *and* how I approach product work.
 
-This is also an homage to product leaders who gave back to the community in ways that shaped how we all work. Marty Cagan. Teresa Torres. Elena Verna. Brian Balfour, and more. Their generosity in sharing frameworks publicly made me better at my job.
+This is also an homage to product leaders who gave back to the community in ways that shaped how we all work. Marty Cagan. Teresa Torres. Elena Verna. Brian Balfour. Their generosity in sharing frameworks publicly made me better at my job.
 
-And honestly? Product teams got stale. Engineers, PMs, designers, UX, data analysts... we'd settled into predictable patterns. AI changed that. We're all breaking out of old processes, the technology is moving fast, and we're collaborating in ways that feel new again. It's some of the most fun I've had in a long time. I like that it's all getting weird.
+And honestly? Product teams got stale. Engineers, PMs, designers, UX, data analysts... we'd settled into predictable patterns. AI changed that. We're breaking out of old processes, the technology is moving fast, and we're collaborating in ways that feel new again. I like that it's all getting weird.
 
-This is opinionated. It's not every PM practice ever described. It's focused on those who push modern practices while honoring timeless foundations. Context over prompts. Shipping to learn. Frameworks as tools, not rules.
+This is opinionated. Not every PM practice ever described. Focused on those who push modern practices while honoring timeless foundations. Context over prompts. Shipping to learn. Frameworks as tools, not rules.
 
-It's open source because the best frameworks came from people sharing what works. If this helps you, contribute back. Add a framework. Update one that evolved. Make it better.
+It has a long way to go, but it's a start. And it's open source because the best frameworks came from people sharing what works.
 
 ---
 
