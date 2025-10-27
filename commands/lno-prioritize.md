@@ -1,22 +1,30 @@
 ---
-description: Apply Aakash Gupta's LNO framework to categorize issues by impact (Leverage, Neutral, Overhead)
+description: Find out if you're spending time on the wrong things
 ---
 
 # LNO Prioritize Command
 
-Apply the **LNO Prioritization Framework** (Aakash Gupta) to categorize your issues by impact level.
+**Most PMs waste time on overhead disguised as strategy.**
+
+This command categorizes your backlog by actual impact:
+- **Leverage (L):** 10x impact - the work that actually matters
+- **Neutral (N):** Regular work - do it well enough, move on
+- **Overhead (O):** Busywork - minimize or automate
+
+Then tells you if your time allocation is broken.
 
 **Works with:**
-- **Linear MCP** - Analyzes your issues and auto-labels by priority (L/N/O)
-- **GitHub MCP** - Analyzes your issues and auto-labels by priority (L/N/O)
-- **Manual** - Paste your issues if no MCP configured
+- **Linear MCP** - Auto-analyzes and labels your issues
+- **GitHub MCP** - Auto-analyzes and labels your issues
+- **Manual** - Paste your issue list
 
 ## What This Does
 
-Analyzes your issues and categorizes them as:
-- **Leverage (L):** 10x impact tasks - your highest priority strategic work
-- **Neutral (N):** Regular impact tasks - important but not transformational
-- **Overhead (O):** Minimal impact tasks - necessary evils to minimize
+Categorizes every issue, then challenges your priorities:
+- Are you spending 60%+ time on Leverage work? (You should be)
+- Is "strategy work" actually Overhead disguised as important?
+- Which Neutral tasks can you delegate or do at B- quality?
+- Which Overhead tasks can you eliminate entirely?
 
 ## Usage
 
@@ -72,10 +80,35 @@ Analyzes your issues and categorizes them as:
 - [ENG-288] Update Linear labels
   Reason: Organizational cleanup
 
-💡 Recommendations:
-- Spend 60% of PM time on Leverage tasks
-- Spend 30% on Neutral tasks (aim for C+/B- quality)
-- Minimize Overhead to 10% (automate or delegate where possible)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 YOUR TIME ALLOCATION IS BROKEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Current backlog:
+- 2 Leverage tasks (20%)
+- 4 Neutral tasks (40%)
+- 4 Overhead tasks (40%)
+
+TARGET allocation:
+- 60% Leverage (you're at 20% - way too low)
+- 30% Neutral
+- 10% Overhead (you're at 40% - way too high)
+
+WHAT TO DO:
+1. **Kill or delegate 3 of 4 Overhead tasks**
+   - Reformatting templates? Not your job.
+   - Linear labels? Automate it.
+
+2. **Stop perfectionism on Neutral work**
+   - Onboarding copy doesn't need to be perfect
+   - Ship at B- quality and move on
+
+3. **Focus on Leverage:**
+   - Recommendation engine = your #1 priority
+   - Q2 strategy = your #2 priority
+   - Everything else can wait
+
+Want me to create Linear issues to delegate/automate the Overhead work?
 ```
 
 ## Requirements
