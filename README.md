@@ -147,6 +147,16 @@ This is a living repository. PM frameworks evolve.
 
 ---
 
+## Ideas & Future Directions
+
+Exploring what PM Thought Partner could become. These aren't commitments—they're concepts to discuss and evolve with the community.
+
+**[→ Browse ideas](ideas/)** - Potential features like PM onboarding intelligence, analytics integration, responsible vibe coding workflows
+
+**Want to discuss an idea?** Open an issue. **Have your own idea?** Check the ideas directory for the template.
+
+---
+
 ## License & Attribution
 
 MIT License. All frameworks attributed to original creators in [sources.yml](sources.yml).
