@@ -88,11 +88,11 @@ Inspired by Teresa Torres' compounding systems approach. Thorough competitor res
 - **`/four-risks [issue-id]`** - Pull issue, assess risks, add analysis as comment
 - **`/now-next-later`** - Generate roadmap from Linear projects, send back categorized
 
-**Setup (2 min):** [Get Linear API key](https://linear.app/settings/api) → Ask Claude "Set up the Linear MCP server"
+**Setup (2 min):** [Get Linear API key](https://linear.app/docs/api-and-webhooks) (Settings > Account > Security & Access) → Ask Claude "Set up the Linear MCP server"
 
 **No MCP?** All commands work with manual input. Paste issues or describe context directly.
 
-### 11+ Strategic Commands
+### Strategic Commands
 
 Applied through conversation, not lectures:
 
@@ -104,7 +104,7 @@ Applied through conversation, not lectures:
 
 **[→ See all commands](commands/)** | **[→ Browse frameworks](frameworks/)**
 
-Plus comprehensive framework library with 40+ documented approaches covering discovery, growth, AI, planning, and measurement.
+Plus comprehensive framework library covering discovery, growth, AI, planning, and measurement.
 
 ---
 

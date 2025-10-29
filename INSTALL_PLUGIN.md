@@ -6,10 +6,10 @@
 
 ## What You Get
 
-- ✅ AI thought partner with 11+ strategic commands and 40+ documented frameworks
+- ✅ AI thought partner with strategic commands and comprehensive framework library
 - ✅ Slash commands for quick framework access (`/lno-prioritize`, `/four-risks`, `/competitive-research`, etc.)
 - ✅ Optional Linear integration (apply frameworks to your backlog)
-- ✅ Competitive intelligence system (parallel competitor analysis)
+- ✅ Competitive intelligence system (systematic competitor analysis)
 - ✅ Works in your actual project repositories
 - ✅ All frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and more
 
