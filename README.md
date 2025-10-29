@@ -65,11 +65,13 @@ Sessions are saved locally (gitignored by default for privacy).
 
 ### Competitive Intelligence
 
-**`/competitive-research` - Systematic competitive analysis using parallel agents**
+**`/competitive-research` - Systematic competitive analysis that compounds over time**
 
-Inspired by Teresa Torres' compounding systems approach. Analyze 5-15 competitors in parallel, generate comparison tables, and identify strategic gaps.
+Inspired by Teresa Torres' compounding systems approach. Thorough competitor research with automated synthesis, comparison tables, and strategic insights.
 
-- Parallel agent research (analyze multiple competitors simultaneously)
+- Sequential agent research (thorough analysis per competitor)
+- First analysis: ~1 hour for 5 competitors with structured output
+- Update existing research: ~15 minutes (that's the compound effect)
 - Automated synthesis with comparison tables
 - Saved to personal research directory (outside company repos)
 - Optional Linear integration for roadmap impact

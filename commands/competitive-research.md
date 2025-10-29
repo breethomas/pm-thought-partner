@@ -76,43 +76,75 @@ Focus areas:
 
 2. Use the competitive analysis template from `/templates/competitive-analysis.md` as the framework
 
-### Step 3: Parallel Agent Research
+### Step 3: Sequential Competitor Research
 
-**For each competitor, launch a research agent:**
+**IMPORTANT - Set expectations upfront:**
 
-Use the Task tool with subagent_type="general-purpose" to research each competitor in parallel.
-
-**Agent prompt template:**
+Tell the user:
 ```
-Research [Competitor Name] for competitive analysis.
+I'll research each competitor thoroughly and sequentially.
 
-Focus areas: [user's focus areas]
+Expected timing:
+- Each competitor: 10-15 minutes of deep analysis
+- Total for [X] competitors: ~[X * 12] minutes
 
-Visit their website [if URL provided], analyze:
-1. Product positioning & value proposition
-2. Target market & customer segments
-3. Key features & capabilities
-4. Pricing model & tiers
-5. UX strengths & weaknesses
-6. Growth/GTM strategy (visible tactics)
-7. AI-specific features (if applicable)
-8. Customer reviews/sentiment (if publicly available)
+You can walk away - I'll work through the list and notify you when complete.
 
-Use the structure from this competitive analysis template:
-[Include relevant sections from /templates/competitive-analysis.md]
-
-Output your findings in markdown format with clear headings.
-Focus on insights and strategic implications, not just feature lists.
+This is your FIRST analysis - thorough and time-consuming.
+Next time you update this research? Minutes, not hours.
+That's how systems compound.
 ```
 
-**Run all agents in parallel** - don't wait for one to finish before starting the next.
+**For each competitor (one at a time):**
+
+1. **Announce progress:**
+   ```
+   📊 Analyzing competitor [N] of [Total]: [Competitor Name]
+   ⏱️  Estimated time: 10-15 minutes
+   ```
+
+2. Use the Task tool with subagent_type="general-purpose" to research the competitor.
+
+3. **Agent prompt template:**
+   ```
+   Research [Competitor Name] for competitive analysis.
+
+   Focus areas: [user's focus areas]
+
+   Visit their website [if URL provided], analyze:
+   1. Product positioning & value proposition
+   2. Target market & customer segments
+   3. Key features & capabilities
+   4. Pricing model & tiers
+   5. UX strengths & weaknesses
+   6. Growth/GTM strategy (visible tactics)
+   7. AI-specific features (if applicable)
+   8. Customer reviews/sentiment (if publicly available)
+
+   Use the structure from this competitive analysis template:
+   [Include relevant sections from /templates/competitive-analysis.md]
+
+   Output your findings in markdown format with clear headings.
+   Focus on insights and strategic implications, not just feature lists.
+   ```
+
+4. **Wait for agent to complete** before moving to next competitor
+
+5. **Report completion:**
+   ```
+   ✅ [Competitor Name] complete ([actual time] minutes)
+   Key insight: [1-sentence takeaway from analysis]
+   ```
+
+**Process sequentially to avoid rate limits.** This ensures reliability for all users regardless of Claude plan tier.
 
 ### Step 4: Save Individual Competitor Files
 
-As each agent completes:
+After each competitor analysis completes:
 
 1. Save findings to `[research-dir]/[session-folder]/[competitor-name].md`
 2. Use lowercase-hyphenated filenames (e.g., `github-copilot.md`)
+3. Immediately show user what was saved
 
 ### Step 5: Synthesize Findings
 
@@ -278,8 +310,8 @@ Want to discuss these findings? Run `/strategy-session "competitive positioning"
 
 **From Teresa Torres' approach:**
 
-1. **Parallel processing** - Don't do sequential research. Spin up all agents at once.
-2. **Reusable system** - This command gets faster each time as agents improve
+1. **Sequential reliability** - Process one competitor at a time to avoid rate limits and ensure consistent experience for all users
+2. **Compounding system** - First analysis is thorough (time-consuming). Updates take minutes. That's the compound effect.
 3. **Data ownership** - Everything stored locally, under PM's control
 4. **Synthesis matters** - Raw research isn't useful. Create comparison tables and actionable insights.
 5. **Integration** - Connect to Linear so insights inform roadmap decisions
@@ -315,6 +347,12 @@ Want to discuss these findings? Run `/strategy-session "competitive positioning"
 
 ---
 
-**Remember:** This is about building a system that compounds. Second time you research these competitors? Update their files. Third time? Compare to previous analyses to see how they've evolved.
+**Remember:** This is about building a system that compounds.
+
+First analysis: 1 hour for thorough, structured research
+Second analysis: 15 minutes to update existing files
+Third analysis: Compare to previous versions to track competitor evolution
+
+The compound effect comes from reusability, not speed.
 
 You're not just answering questions - you're building competitive intelligence infrastructure.
