@@ -63,23 +63,6 @@ Sessions are saved locally (gitignored by default for privacy).
 
 **Start:** `/reflect` or `/reflect "this month"`
 
-### Competitive Intelligence
-
-**`/competitive-research` - Systematic competitive analysis that compounds over time**
-
-Inspired by Teresa Torres' compounding systems approach. Thorough competitor research with automated synthesis, comparison tables, and strategic insights.
-
-- Sequential agent research (thorough analysis per competitor)
-- First analysis: ~1 hour for 5 competitors with structured output
-- Update existing research: ~15 minutes (that's the compound effect)
-- Automated synthesis with comparison tables
-- Saved to personal research directory (outside company repos)
-- Optional Linear integration for roadmap impact
-
-**First run:** Sets up personal competitive research directory for privacy
-
-**Start:** `/competitive-research` then provide competitor list
-
 ### Backlog Automation
 
 **Connect Linear or GitHub to auto-analyze your backlog in seconds.**
@@ -96,11 +79,10 @@ Inspired by Teresa Torres' compounding systems approach. Thorough competitor res
 
 Applied through conversation, not lectures:
 
-- **Competitive Intel:** `/competitive-research`
-- **Growth:** `/growth-loops`, `/four-fits`
+- **AI-Era Growth:** `/four-fits` (modernized for ChatGPT discovery, AI costs, TAM shifts)
 - **AI Products:** `/ai-cost-check`, `/ai-health-check`, `/start-evals`
+- **Growth Mechanics:** `/growth-loops`
 - **Measurement:** `/pmf-survey`
-- **Adoption:** `/coder`
 
 **[→ See all commands](commands/)** | **[→ Browse frameworks](frameworks/)**
 
