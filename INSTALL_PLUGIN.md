@@ -6,9 +6,10 @@
 
 ## What You Get
 
-- ✅ AI thought partner with 10+ strategic commands and 40+ documented frameworks
-- ✅ Slash commands for quick framework access (`/lno-prioritize`, `/four-risks`, etc.)
+- ✅ AI thought partner with 11+ strategic commands and 40+ documented frameworks
+- ✅ Slash commands for quick framework access (`/lno-prioritize`, `/four-risks`, `/competitive-research`, etc.)
 - ✅ Optional Linear integration (apply frameworks to your backlog)
+- ✅ Competitive intelligence system (parallel competitor analysis)
 - ✅ Works in your actual project repositories
 - ✅ All frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and more
 
@@ -51,6 +52,24 @@ The install script will automatically symlink the slash commands to `~/.claude/c
 git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
 ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
 ```
+
+---
+
+## Set Up Competitive Research Directory (Optional)
+
+**First time running `/competitive-research`?** The command will guide you through creating a personal research directory.
+
+**Why a separate directory?**
+- Keeps competitive intel separate from company codebases
+- You own your strategic research, independent of employer
+- No risk of accidentally committing sensitive analysis to git
+
+**Recommended setup:**
+```
+~/Documents/pm-work/competitive-research/
+```
+
+The command will ask you where to save competitive research on first run and remember your preference.
 
 ---
 
@@ -142,6 +161,7 @@ Start a new Claude Code session in any project and ask:
 **Try slash commands:**
 - `/strategy-session` - Work through product decisions conversationally
 - `/reflect` - Analyze patterns across your strategic thinking
+- `/competitive-research` - Parallel competitor analysis with synthesis
 - `/lno-prioritize` - Categorize issues by impact
 - `/four-risks` - Run risk assessment on a feature
 - `/now-next-later` - Generate a roadmap

@@ -63,6 +63,21 @@ Sessions are saved locally (gitignored by default for privacy).
 
 **Start:** `/reflect` or `/reflect "this month"`
 
+### Competitive Intelligence
+
+**`/competitive-research` - Systematic competitive analysis using parallel agents**
+
+Inspired by Teresa Torres' compounding systems approach. Analyze 5-15 competitors in parallel, generate comparison tables, and identify strategic gaps.
+
+- Parallel agent research (analyze multiple competitors simultaneously)
+- Automated synthesis with comparison tables
+- Saved to personal research directory (outside company repos)
+- Optional Linear integration for roadmap impact
+
+**First run:** Sets up personal competitive research directory for privacy
+
+**Start:** `/competitive-research` then provide competitor list
+
 ### Backlog Automation
 
 **Connect Linear or GitHub to auto-analyze your backlog in seconds.**
@@ -75,10 +90,11 @@ Sessions are saved locally (gitignored by default for privacy).
 
 **No MCP?** All commands work with manual input. Paste issues or describe context directly.
 
-### 10+ Strategic Commands
+### 11+ Strategic Commands
 
 Applied through conversation, not lectures:
 
+- **Competitive Intel:** `/competitive-research`
 - **Growth:** `/growth-loops`, `/four-fits`
 - **AI Products:** `/ai-cost-check`, `/ai-health-check`, `/start-evals`
 - **Measurement:** `/pmf-survey`

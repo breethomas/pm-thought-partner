@@ -45,3 +45,10 @@ yarn-error.log*
 # Users can opt-in to committing by removing these lines
 sessions/
 reflections/
+
+# Competitive research config (stores personal directory path)
+.pm-config.json
+
+# Note: Competitive research files are saved to a user-configured directory
+# outside this repo (typically ~/Documents/pm-work/competitive-research)
+# so they don't need to be gitignored here
