@@ -2,6 +2,8 @@
 
 **Your sparring partner, not your assistant.** 🥊
 
+**Built on publicly available frameworks from leading product thinkers.**
+
 Claude Code plugin that applies proven PM frameworks to real product decisions. Challenges assumptions. Asks tough questions. Pushes you toward prototypes over docs.
 
 Opinionated. Curated for prototype-first, AI-era product work.
