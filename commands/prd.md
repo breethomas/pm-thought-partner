@@ -310,6 +310,6 @@ See the full PRD framework at:
 
 ---
 
-**Framework:** Aakash Gupta (Product Growth)
+**Framework:** Aakash Gupta (Product Growth), enhanced with modern AI-era best practices
 **Best for:** Feature documentation, alignment, shipping with confidence
-**Key insight:** Modern PRDs are shorter but more insightful - quality over completeness
+**Key insight:** Modern PRDs are shorter but more insightful - quality over completeness. PRDs are about decisions, not documentation.

@@ -1,7 +1,8 @@
-# PRD Framework (Aakash Gupta)
+# PRD Framework
 
-**Source:** Aakash Gupta, Product Growth Newsletter
-**Context:** Modern approach to PRDs - shorter, more insightful, focused on quality over completeness
+**Primary Source:** Aakash Gupta, Product Growth Newsletter
+**Enhancements:** Modern AI-era best practices from leading tech companies (OpenAI, etc.)
+**Context:** Modern approach to PRDs - shorter, more insightful, focused on quality over completeness, enhanced with AI-specific requirements and decision-forcing frameworks
 
 ## Core Philosophy
 
@@ -319,12 +320,19 @@ Before finalizing, ask:
 
 ## References
 
+**Primary Framework:**
 - [PRDs: A Modern Guide](https://www.productgrowth.com/p/product-requirements-documents) - Aakash Gupta
 - Includes 2 example PRDs (6/10 and 8/10) with detailed critique
+
+**AI-Specific Enhancements:**
+- OpenAI Model Spec - Gold standard for AI behavior specification with concrete examples
+- Modern AI-era PRD practices from leading tech companies
+- Decision-forcing frameworks and antipatterns
+- AI prototyping integration (Cursor, Replit, v0)
 
 ---
 
 **Best for:** Feature planning, team alignment, reducing ambiguity
 **When to use:** Any feature you want to measure results for
 **Anti-pattern:** Creating 10-page documents no one reads
-**Modern approach:** Shorter, more insightful, quality over completeness
+**Modern approach:** Shorter, more insightful, quality over completeness, decisions over documentation

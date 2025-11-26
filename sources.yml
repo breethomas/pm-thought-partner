@@ -199,11 +199,16 @@ thought_leaders:
       - title: "Visual Framework Library"
         type: "content"
         description: "PM frameworks visualized"
+      - title: "PRDs: A Modern Guide"
+        type: "article"
+        url: "https://www.productgrowth.com/p/product-requirements-documents"
+        description: "Modern approach to PRDs - 8/10 quality, 5-stage evolution, quality over completeness"
     frameworks:
       - "Visual frameworks for PM concepts"
       - "Stakeholder communication strategies"
       - "AI prototyping tool comparison"
       - "Prompt engineering mental models"
+      - "Modern PRD framework (5 stages, 8/10 quality principle)"
     where_to_follow:
       - "Newsletter: https://www.news.aakashg.com"
       - "LinkedIn: Daily visual frameworks"
@@ -602,6 +607,27 @@ frameworks:
           - "Next: Likely, in validation"
           - "Later: Possible, being explored"
         key_insight: "Communicate sequence and certainty, not false dates"
+
+      modern_prd_framework:
+        name: "Modern PRD Framework"
+        file: "prd-framework.md"
+        command: "/prd"
+        sources:
+          - "Aakash Gupta: PRDs: A Modern Guide (https://www.productgrowth.com/p/product-requirements-documents)"
+          - "Modern AI-era best practices from leading tech companies"
+          - "OpenAI Model Spec (for AI-specific requirements)"
+        enhancements:
+          - "Decision-forcing frameworks"
+          - "AI-specific requirements (15-25 examples, behavior contracts)"
+          - "AI prototyping integration (Cursor, Replit, v0)"
+        components:
+          - "5-stage evolution (Planning → Kickoff → Solution Review → Launch → Impact)"
+          - "8/10 quality principle (Pareto)"
+          - "Quality content over completeness"
+          - "Decisions over documentation"
+          - "AI behavior contracts with concrete examples"
+          - "Living document approach"
+        key_insight: "PRDs are about decisions, not documentation. When building fast becomes easy (thanks to AI), knowing what to build becomes even more important."
 
   ai:
     category: "AI-native product development"
