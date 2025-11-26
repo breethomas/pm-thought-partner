@@ -5,11 +5,15 @@
 
 ## Core Philosophy
 
+**PRDs are about decisions, not documentation.**
+
 Modern PRDs are not 10-page documents. They're:
 - **Shorter but more insightful**
-- **Focused on quality content** over template completion
+- **Decision-focused** - Every section decides something
+- **Specific, not generic** - "≥10%" not "improve"
 - **Designed to excite teams** not just inform them
 - **Living documents** that evolve through 5 stages
+- **Works alongside AI prototyping** - When building fast becomes easy (thanks to AI), knowing what to build becomes even more important
 
 ## The 8/10 Rule
 
@@ -19,6 +23,28 @@ Modern PRDs are not 10-page documents. They're:
 - 10/10 PRD: 2+ weeks of work by senior PM
 
 The Pareto principle applies. Get to 8/10 and ship. Reserve 10/10 for critical executive reviews.
+
+## Modern Product Development Flow
+
+**Old flow (linear):** PRD → Design → Build → Test
+
+**New flow (cyclical):** Idea → Quick Prototype → PRD → Refined Prototype → Ship
+
+### How PRDs and Prototypes Work Together
+
+**Prototypes as discovery tools:**
+- Use AI tools (Cursor, Replit, v0) to mock up 3 different approaches in an afternoon
+- Each prototype teaches something about the problem space
+- PRD captures learnings and sets direction
+
+**PRDs as prototype constraints:**
+- PRD provides guardrails for prototyping
+- Answers: What edge cases? What metrics? How does this fit strategy?
+
+**The feedback loop:**
+- Iterate between prototypes and PRDs multiple times
+- Each prototype informs the PRD
+- Each PRD update guides the next prototype
 
 ## The 5 Stages of a PRD
 
@@ -76,6 +102,49 @@ PM should put together a napkin drawing, but design team should be willing to bl
 - Anyone looking back knows what happened
 
 **Why:** Future you (or others) will come back to understand why this was built. Having results linked makes that much easier.
+
+## AI-Specific PRD Requirements
+
+For AI/ML features, add these critical elements to your PRD:
+
+### Behavior Contract with Examples (MANDATORY)
+The defining characteristic of AI PRDs: **tons of concrete examples**
+
+Include 15-25 labeled examples showing:
+- **Good responses:** What the AI should do
+- **Bad responses:** Common failure modes
+- **Reject cases:** When AI should refuse/defer
+
+**Format for each example:**
+```
+User Input: [specific query or scenario]
+Good Response: [desired AI behavior]
+Bad Response: [what to avoid]
+Reject: [when to refuse]
+```
+
+**Reference model:** OpenAI's Model Spec is the gold standard - filled with concrete examples, not abstract principles.
+
+### Principles and Instructions
+- Clear guidelines for AI behavior
+- Specific risks and how to avoid them
+- Guardrails and safety measures
+
+### Edge Cases and Red-Team List
+- Adversarial inputs
+- PII/sensitive data handling
+- Performance degradation scenarios
+- Code snippets, special characters, multi-language inputs
+
+### Validation Mechanisms
+- **Offline Golden Set:** Test data for validation
+- **Human Review Rubric:** Qualitative checks with specific criteria
+- **Online Metrics:** Specific KPIs with thresholds (not "improve X")
+
+### Safety and Fallbacks
+- **Detection:** How to spot failures
+- **Fallback & Kill Switch:** Recovery mechanisms with owners
+- **Legal/Security Review:** PII handling, compliance requirements
 
 ## Quality Content Over Completeness
 
@@ -159,6 +228,33 @@ Features rarely have only upside. If users do X, they're not doing Y. Measure th
 ### 5. Looking Complete But Being Vacuous
 Having every section filled out means nothing if the content is generic. "Ensure legal compliance" is not a legal requirement. "@Legal to confirm details on GDPR for email AI" is.
 
+## Critical Antipatterns
+
+### Antipattern 1: Prose Without Decisions
+**Symptom:** Long paragraphs explaining context with no actionable outcomes
+
+**Fix:** Every paragraph should end with a decision or a specific example
+
+### Antipattern 2: Metric Theater
+**Symptom:** "Improve engagement", "Increase satisfaction", "Reduce costs"
+
+**Fix:** "P50 engagement time increases ≥15%", "NPS increases from 42 to 48+", "Server costs decrease $12K/month"
+
+### Antipattern 3: Implementation Fantasy
+**Symptom:** "Start small, then ramp" or "Three-phase approach"
+
+**Fix:** "Week 1: 5% US users, Week 2: Graduate if p<0.05 and +10% metric, Week 3: Scale to 25%"
+
+### Antipattern 4: Vibe-Based Behavior (for AI features)
+**Symptom:** "Generate helpful replies" or "Provide good recommendations"
+
+**Fix:** 25 labeled examples showing good/bad/reject cases with specific inputs and outputs
+
+### Antipattern 5: One-and-Done Documentation
+**Symptom:** PRD written once, never updated, gathering dust
+
+**Fix:** Update PRD at each stage, link to results, annex learnings from production
+
 ## What Makes an 8/10 vs 10/10?
 
 ### 8/10 PRD includes:
@@ -203,8 +299,15 @@ If your company has a template, use 80% of it and add 20% specific to your featu
 **Just Start Writing:**
 Don't overthink it. The PRD builds up over stages. Start with what you know in Stage 1, add more in Stage 2, etc.
 
-**Use AI to Draft, Not to Finish:**
-ChatGPT can help draft sections based on your notes, but you need to upgrade it with specific data, quotes, and insights.
+**CRITICAL: Don't Use LLMs for First Drafts**
+
+**Why:** LLMs create verbose, decision-free documentation that says nothing. You'll get generic prose that looks complete but is vacuous.
+
+**Instead:**
+- Write the first draft yourself with clear decisions
+- Use LLM as copilot to improve and finesse
+- Think of AI as teammate, not ghostwriter
+- You make the decisions, AI helps you communicate them better
 
 **Quality Check:**
 Before finalizing, ask:
@@ -212,6 +315,7 @@ Before finalizing, ask:
 - Is the user evidence specific and compelling?
 - Does the impact sizing feel credible?
 - Have I identified what might go down (counter metrics)?
+- Does every section make a decision (not just describe)?
 
 ## References
 

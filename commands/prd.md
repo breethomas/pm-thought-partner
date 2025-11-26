@@ -14,11 +14,14 @@ Write a **Product Requirements Document** following **Aakash Gupta's modern PRD 
 ## What This Does
 
 Guides you through writing a PRD that:
+- **Makes explicit decisions** at every turn (not just documentation)
 - **Gets teams excited** to build (not just informed)
 - **Aims for 8/10 quality** (Pareto principle applied)
-- **Focuses on quality content** over template completion
-- **Includes user evidence** and impact sizing
+- **Works alongside AI prototyping** (Cursor, Replit, v0)
+- **Includes concrete examples** (15-25 for AI features)
 - **Evolves through 5 stages** from planning to impact review
+
+**Core principle:** PRDs are about decisions, not documentation. When building fast becomes easy (thanks to AI), knowing what to build becomes even more important.
 
 ## Usage
 
@@ -61,11 +64,14 @@ Guides you through writing a PRD that:
 
 **Checklist:**
 - [ ] Edge cases identified
-- [ ] Roll-out plan defined
+- [ ] Roll-out plan defined (specific %s, duration, ramp gates)
 - [ ] XFN requirements outlined
 - [ ] Tracking & analytics requirements specified
 - [ ] Go-to-market strategy outlined
 - [ ] Risks and mitigations documented
+- [ ] **For AI features:** Behavior contract with 15-25 examples
+- [ ] **For AI features:** Good/Bad/Reject cases for each scenario
+- [ ] **For AI features:** Red-team list (adversarial inputs, PII handling)
 
 ### 4. Launch Readiness
 **When:** Final review before launch
@@ -77,15 +83,22 @@ Guides you through writing a PRD that:
 - [ ] GTM teams enabled
 - [ ] Test plan ready
 - [ ] Corner cases discovered and handled
+- [ ] **For AI features:** Offline eval golden set ready
+- [ ] **For AI features:** Human review rubric defined
+- [ ] **For AI features:** Fallback mechanisms & kill switch wired
+- [ ] **For AI features:** Legal/Security reviewed
 
 ### 5. Impact Review
 **When:** Post-launch
 
 **Checklist:**
-- [ ] Results review document linked
+- [ ] Results review document linked (at top of PRD)
 - [ ] Stats sniff test passed
+- [ ] What surprised us documented
 - [ ] Continuous monitoring plan defined
 - [ ] Improvements identified for future iterations
+- [ ] **For AI features:** Annex real examples from production (good/bad/reject)
+- [ ] Decision: iterate, scale, or retire
 
 ## What Happens
 
@@ -189,6 +202,19 @@ Current quality: 7/10 → Aim for 8/10 before kickoff
 
 ## Key Principles
 
+### Make Decisions, Not Descriptions
+**Every section should answer a decision:**
+- ❌ "We will test the feature"
+- ✅ "A/B test with 5% user-level randomization for 2 weeks, graduating at p<0.05 with 10%+ metric lift"
+
+**Be specific, not generic:**
+- ❌ "Improve user engagement"
+- ✅ "P50 reply time drops ≥10% vs control group"
+
+**Use thresholds, not vague language:**
+- ❌ "Reduce support tickets"
+- ✅ "Decrease returns-related tickets by 15-20% (from 18% to 14.4-14.8%) over 30 days"
+
 ### Aim for 8/10, Not 10/10
 Unless you have an exec review, don't spend 2 weeks on a perfect PRD. The Pareto principle applies. Get to 8/10 in 1-2 days.
 
@@ -199,18 +225,63 @@ Don't just fill in sections. Make them compelling:
 - **Counter metrics:** What might go down?
 - **Competition:** What are they doing?
 
+### Work Alongside AI Prototyping
+**Modern flow:** Idea → Quick Prototype → PRD → Refined Prototype → Ship
+
+- Use AI tools to mock up 3 different approaches in an afternoon
+- Each prototype teaches something about the problem space
+- PRD captures learnings and sets direction
+- Iterate between prototypes and PRDs multiple times
+
+### For AI Features: Examples Are Mandatory
+Include 15-25 labeled examples showing:
+- **Good responses:** What the AI should do
+- **Bad responses:** Common failure modes
+- **Reject cases:** When AI should refuse/defer
+
+**Format:**
+```
+User Input: [specific query]
+Good Response: [desired AI behavior]
+Bad Response: [what to avoid]
+Reject: [when to refuse]
+```
+
 ### Get People Excited
 PRDs should make teams want to build this. Show:
 - Why this matters to users (evidence)
 - Why this matters to business (impact)
 - Why now is the right time (opportunity)
 
-### Common Mistakes to Avoid
-- ❌ No impact sizing (just vague goals)
-- ❌ No user evidence (just assumptions)
-- ❌ Missing counter metrics
-- ❌ Excessive delegation to design
-- ❌ Looking complete but being vacuous
+### Don't Use LLMs for First Drafts
+**Why:** LLMs create verbose, decision-free documentation that says nothing.
+
+**Instead:**
+- Write the first draft yourself with clear decisions
+- Use LLM as copilot to improve and finesse
+- Think of AI as teammate, not ghostwriter
+
+### Common Antipatterns to Avoid
+
+**Antipattern 1: Prose Without Decisions**
+- Long paragraphs explaining context with no actionable outcomes
+- Fix: Every paragraph should end with a decision or specific example
+
+**Antipattern 2: Metric Theater**
+- "Improve engagement", "Increase satisfaction", "Reduce costs"
+- Fix: "P50 engagement time increases ≥15%", "NPS increases from 42 to 48+"
+
+**Antipattern 3: Implementation Fantasy**
+- "Start small, then ramp" or "Three-phase approach"
+- Fix: "Week 1: 5% US users, Week 2: Graduate if p<0.05 and +10% metric, Week 3: Scale to 25%"
+
+**Antipattern 4: Vibe-Based Behavior** (for AI features)
+- "Generate helpful replies" or "Provide good recommendations"
+- Fix: 25 labeled examples showing good/bad/reject cases with specific inputs and outputs
+
+**Antipattern 5: One-and-Done Documentation**
+- PRD written once, never updated, gathering dust
+- Fix: Update PRD at each stage, link to results, annex learnings from production
 
 ## Requirements
 
