@@ -15,21 +15,83 @@ Analyze a Linear workspace against Linear methodology best practices. Produces a
 
 ### Step 1: Fetch Data
 
-**CRITICAL: Always use `limit: 250` to avoid default truncation.**
+Use pagination to get complete data for teams and projects. Use time-bucketed sampling for issues.
 
-Fetch in this order:
+#### 1a. Teams (paginated for complete data)
 ```
-1. list_teams with limit: 250
-2. list_projects with limit: 250
-3. list_issue_labels with limit: 250
-4. list_issues with limit: 100 (sample for quality check)
+cursor = null
+all_teams = []
+do:
+  result = list_teams(limit: 25, after: cursor)
+  all_teams.append(result.teams)
+  cursor = result.next_cursor
+while result.count == 25
+
+Total teams: len(all_teams) (actual - complete data)
 ```
 
-Record the counts before proceeding.
+#### 1b. Projects (two-phase: sample + count)
+
+**Phase 1 - Get sample for analysis:**
+```
+result = list_projects(limit: 250)
+sample_projects = result.projects
+```
+
+**Phase 2 - If capped, paginate to get accurate TOTAL COUNT:**
+```
+if result.count == 250:
+  # Sample is capped - paginate to count all projects
+  total_count = 250
+  cursor = result.next_cursor
+  while cursor:
+    page = list_projects(limit: 250, after: cursor)
+    total_count += page.count
+    cursor = page.next_cursor
+
+  Report: "[total_count] (actual count, 250 sampled for analysis)"
+else:
+  Report: "[count] (actual)"
+```
+
+**Why two phases:** Getting accurate total count (e.g., 497) is critical for understanding project sprawl. The 250 sample is sufficient for analyzing ownership/dates patterns.
+
+#### 1c. Labels (single fetch, usually <250)
+```
+list_issue_labels(limit: 250)
+If count = 250, note as capped.
+```
+
+#### 1d. Issues (time-bucketed sampling for trend analysis)
+
+Fetch three samples to show quality trends over time. **Use limit: 20 to avoid token overflow.**
+
+```
+Recent (last 30 days):
+  list_issues(createdAt: "-P30D", limit: 20)
+
+Medium (30-90 days ago):
+  list_issues(createdAt: "-P90D", limit: 20)
+  Filter to exclude issues from last 30 days
+
+Legacy (90+ days ago):
+  list_issues(createdAt: "-P180D", limit: 20)
+  Filter to exclude issues from last 90 days
+```
+
+This reveals whether issue quality is improving, declining, or persistent.
+
+**Data status tracking:**
+- Teams: Should always be **actual** (complete) due to pagination
+- Projects: **actual** count via two-phase approach; analysis based on 250 sample if capped
+- Labels: **actual** if count < 250, **capped** if count = 250
+- Issues: **sampled** (intentionally limited, time-bucketed)
+
+If pagination fails due to API errors, note as **partial** and document the error.
 
 ### Step 2: Apply Thresholds
 
-Use these EXACT thresholds. No interpretation - just apply them:
+**CRITICAL: Use these EXACT thresholds. Do not interpret, round, or modify them. Display these exact threshold values in the report.**
 
 #### Team Structure
 | Count | Rating | Meaning |
@@ -79,11 +141,33 @@ Use these EXACT thresholds. No interpretation - just apply them:
 | 26-50 labels | 🟡 | Getting complex |
 | 51+ labels | 🔴 | Label sprawl - needs cleanup |
 
-#### Issue Quality (sample check)
-Check 20 recent issues for:
+#### Project Count
+| Count | Rating | Meaning |
+|-------|--------|---------|
+| 1-50 projects | 🟢 | Manageable scope |
+| 51-150 projects | 🟡 | Getting sprawling - consider consolidation |
+| 151+ projects | 🔴 | Project sprawl - audit and archive |
+
+#### Issue Quality (time-bucketed trend analysis)
+
+For each time bucket (Recent/Medium/Legacy), check for:
 - User story format ("As a...") = 🔴 per Linear methodology
 - Vague titles (<4 words, no verb) = 🟡
-- Missing descriptions on complex issues = 🟡
+- Missing descriptions = 🟡
+
+**Trend Rating:**
+| Pattern | Rating | Meaning |
+|---------|--------|---------|
+| Recent better than Legacy | 🟢 | Improving - current process is working |
+| Consistent across all buckets | 🟡 | Persistent - never been enforced |
+| Recent worse than Legacy | 🔴 | Declining - check intake process |
+
+**Quality Rating (based on Recent bucket):**
+| Recent issues with problems | Rating |
+|-----------------------------|--------|
+| <10% | 🟢 |
+| 10-25% | 🟡 |
+| >25% | 🔴 |
 
 ### Step 3: Output Report
 
@@ -94,35 +178,114 @@ Check 20 recent issues for:
 
 **Workspace:** [name]
 **Date:** [YYYY-MM-DD]
-**Analyzed:** [X teams, Y projects, Z labels, N issues sampled]
+**Analyzed:**
+- Teams: [N] (actual) - paginated, complete data
+- Projects: [N] (actual count, [M] sampled for analysis if capped)
+- Labels: [N] (actual/capped)
+- Issues: [N] (sampled) - time-bucketed for trend analysis
+
+**Data Quality Notes:** (required if any status is capped, sampled, or partial)
+```
+[For each non-actual status, explain what happened, including API call and methodology:]
+
+Projects (sampled): list_projects(limit: 250) returned 250 results (capped).
+Paginated to get actual count: 497 total projects.
+Project Count metric uses actual (497). Project Ownership and Project Dates
+metrics are based on 250-project sample.
+
+Labels (capped): list_issue_labels(limit: 250) returned exactly 250 results.
+Actual label count may be higher.
+
+Projects (partial): Pagination failed at page 3. list_projects(limit: 250, after: xyz)
+returned "Too many subrequests". Retrieved 250 of unknown total.
+```
+
+⚠️ *Metrics marked with † are based on sampled data, not the full dataset.*
 
 ---
 
 ## Health Indicators
 
-| Dimension | Count | Rating | Finding |
-|-----------|-------|--------|---------|
-| Team Count | [N] | 🟢/🟡/🔴 | [one-line assessment] |
-| Team Sizes | [avg] | 🟢/🟡/🔴 | [one-line assessment] |
-| Stale Teams | [N%] | 🟢/🟡/🔴 | [one-line assessment] |
-| Project Ownership | [N%] | 🟢/🟡/🔴 | [one-line assessment] |
-| Project Dates | [N%] | 🟢/🟡/🔴 | [one-line assessment] |
-| Backlog Staleness | [N%] | 🟢/🟡/🔴 | [one-line assessment] |
-| Label Count | [N] | 🟢/🟡/🔴 | [one-line assessment] |
-| Issue Quality | — | 🟢/🟡/🔴 | [one-line assessment] |
+**IMPORTANT: Always include exact counts alongside percentages using format: N% (X of Y)**
+**IMPORTANT: Show the exact threshold from Step 2 in the Threshold column - do not paraphrase**
+
+| Dimension | Value | Threshold | Rating | Finding |
+|-----------|-------|-----------|--------|---------|
+| Team Count | [N] | 4-15 🟢 / 16-30 🟡 / 31+ 🔴 | 🟢/🟡/🔴 | [one-line assessment] |
+| Team Sizes | [avg] | 4+ 🟢 / 2-3 🟡 / 0-1 🔴 | 🟢/🟡/🔴 | [one-line assessment] |
+| Stale Teams | [N% (X of Y)] | <10% 🟢 / 10-25% 🟡 / >25% 🔴 | 🟢/🟡/🔴 | [one-line assessment] |
+| Project Count | [N] | 1-50 🟢 / 51-150 🟡 / 151+ 🔴 | 🟢/🟡/🔴 | [one-line assessment] (actual count) |
+| Project Ownership † | [N% (X of Y) missing] | <10% 🟢 / 10-30% 🟡 / >30% 🔴 | 🟢/🟡/🔴 | [one-line assessment] (based on [M] sample if capped) |
+| Project Dates † | [N% (X of Y) missing] | <20% 🟢 / 20-50% 🟡 / >50% 🔴 | 🟢/🟡/🔴 | [one-line assessment] (based on [M] sample if capped) |
+| Backlog Staleness | [N% (X of Y)] | <20% 🟢 / 20-40% 🟡 / >40% 🔴 | 🟢/🟡/🔴 | [one-line assessment] |
+| Label Count | [N] | 10-25 🟢 / 26-50 🟡 / 51+ 🔴 | 🟢/🟡/🔴 | [one-line assessment] |
+| Issue Quality | See trend ↓ | <10% 🟢 / 10-25% 🟡 / >25% 🔴 | 🟢/🟡/🔴 | [one-line assessment based on Recent bucket] |
+| Issue Quality Trend | — | Recent < Legacy 🟢 / Equal 🟡 / Recent > Legacy 🔴 | 🟢/🟡/🔴 | [Improving / Persistent / Declining] |
 
 **Overall Health:** [🟢 Healthy / 🟡 Needs Attention / 🔴 Action Required]
 
 (Overall = 🔴 if any dimension is 🔴, 🟡 if any is 🟡, else 🟢)
 
+† = Metric based on sampled data. See Data Quality Notes for sample size and methodology.
+
+---
+
+## Issue Quality Trend
+
+**Time-bucketed analysis showing whether issue hygiene is improving or declining.**
+
+| Period | Sample Size | Missing Descriptions | Vague Titles | User Story Format |
+|--------|-------------|---------------------|--------------|-------------------|
+| Recent (0-30 days) | [N] | [N% (X of Y)] | [N% (X of Y)] | [N% (X of Y)] |
+| Medium (30-90 days) | [N] | [N% (X of Y)] | [N% (X of Y)] | [N% (X of Y)] |
+| Legacy (90+ days) | [N] | [N% (X of Y)] | [N% (X of Y)] | [N% (X of Y)] |
+
+**Trend Analysis:**
+- Missing Descriptions: [🟢 Improving / 🟡 Persistent / 🔴 Declining] - [one sentence explanation]
+- Vague Titles: [🟢 Improving / 🟡 Persistent / 🔴 Declining] - [one sentence explanation]
+- User Story Format: [🟢 Improving / 🟡 Persistent / 🔴 Declining] - [one sentence explanation]
+
+**What this means:**
+- 🟢 **Improving**: Recent issues are cleaner than old ones. Current process is working.
+- 🟡 **Persistent**: Quality is consistent across time. This was never enforced.
+- 🔴 **Declining**: Recent issues are worse than old ones. Check your intake process.
+
 ---
 
 ## Red Flags
 
-List ALL dimensions rated 🔴 or 🟡:
+List ALL dimensions rated 🔴 or 🟡. **Always include exact counts (X of Y) in explanations.**
 
-1. **[Dimension]** (🔴/🟡): [Specific problem and why it matters]
-2. **[Dimension]** (🔴/🟡): [Specific problem and why it matters]
+**REQUIRED: For EVERY red flag, include an "Ask Claude:" section with 2-3 actionable prompts. Use the example prompts table below as reference. Do not skip this section.**
+
+1. **[Dimension]** (🔴/🟡): [Specific problem with counts, e.g., "62 teams exceeds threshold of 31+ (🔴)"]
+
+   **Ask Claude:**
+   - "[List question to see specific items]"
+   - "[Analysis question to understand priority]"
+   - "[Action question to fix it]"
+
+2. **[Dimension]** (🔴/🟡): [Specific problem with counts, e.g., "427 of 497 projects (86%) missing target dates"]
+
+   **Ask Claude:**
+   - "[Contextual prompt 1]"
+   - "[Contextual prompt 2]"
+   - "[Contextual prompt 3]"
+
+**Example prompts by dimension:**
+
+| Dimension | List | Analyze | Act |
+|-----------|------|---------|-----|
+| Team Count | "List all teams with fewer than 3 members" | "Which teams have no activity in 90 days?" | "Show issues in [team] so I can move them before archiving" |
+| Project Ownership | "List all projects without leads" | "Which unowned projects have the most issues?" | "Assign me as lead to [project]" |
+| Project Dates | "List projects without target dates" | "Which undated projects are in progress?" | "Set target date for [project] to [date]" |
+| Stale Teams | "List teams with no activity in 90+ days" | "How many issues are in each stale team?" | "Archive [team] after moving its issues" |
+| Backlog Staleness | "List issues untouched for 60+ days" | "Which stale issues are still assigned?" | "Close stale issues in [team] backlog" |
+| Label Sprawl | "List all labels with usage counts" | "Which labels have fewer than 5 issues?" | "Merge [label1] and [label2]" |
+| Issue Quality | "List active issues missing descriptions" | "Which in-progress issues have vague titles?" | "Add description to [issue]" |
+| Issue Quality Trend | "Compare issue quality by team for last 30 days" | "Which teams have declining issue quality?" | "Show [team]'s recent issues that need cleanup" |
+
+**Note on issue prompts:** Use `state: "In Progress"` or `state: "To Do"` filters to focus on active work. Historical issues are for trend analysis; active issues are for action.
 
 If no red flags: "No red flags identified. Workspace follows Linear best practices."
 

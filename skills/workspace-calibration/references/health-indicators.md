@@ -2,6 +2,8 @@
 
 Dimensions to analyze when calibrating a Linear workspace.
 
+> **Note:** For canonical thresholds with exact pass/fail values, see `/linear-calibrate` command. This document provides narrative guidance and context.
+
 ---
 
 ## 1. Team Structure
@@ -19,10 +21,10 @@ Dimensions to analyze when calibrating a Linear workspace.
 - Work distributed across teams (not concentrated in 1-2)
 
 **Warning signals:**
-- 30+ teams (likely labels-as-teams)
-- Many teams with 0-3 members
+- 16-30 teams = review needed; 31+ teams = problem (likely labels-as-teams)
+- Many teams with 0-3 members (ghost teams)
 - Teams named after topics ("Bugs", "Tech Debt", "Ideas")
-- Many teams with zero activity in 90 days
+- Many teams with zero activity in 90 days (>25% stale = problem)
 
 **Gut-check questions:**
 - Can you explain what each team owns in one sentence?
@@ -81,9 +83,9 @@ Dimensions to analyze when calibrating a Linear workspace.
 - Duplicate or overlapping issues
 
 **Staleness thresholds:**
-- Green: <20% issues older than 60 days
-- Yellow: 20-40% issues older than 60 days
-- Red: >40% issues older than 60 days
+- 🟢 Green: <20% issues untouched 60+ days
+- 🟡 Yellow: 20-40% issues untouched 60+ days
+- 🔴 Red: >40% issues untouched 60+ days
 
 ---
 
@@ -102,11 +104,16 @@ Dimensions to analyze when calibrating a Linear workspace.
 - Reasonable scope (10-50 issues typically)
 
 **Warning signals:**
-- Projects without owners
-- Projects with no dates ("someday" projects)
+- Projects without owners (>30% missing = problem)
+- Projects with no dates (>50% missing = problem)
 - Projects with 100+ issues (too big)
 - Projects with 0 activity for 60+ days
 - Projects named as ongoing work ("Maintenance", "Bugs")
+
+**Project count thresholds:**
+- 🟢 Green: 1-50 projects (manageable)
+- 🟡 Yellow: 51-150 projects (sprawling)
+- 🔴 Red: 151+ projects (audit and archive needed)
 
 ---
 
@@ -186,13 +193,13 @@ Dimensions to analyze when calibrating a Linear workspace.
 - Label usage distribution
 
 **Healthy signals:**
-- Minimal labels (10-20 max)
+- Minimal labels (10-25 = healthy)
 - Consistent naming (no "Bug" vs "bug" vs "Bugs")
 - Labels complement teams (not duplicate)
 - Most labels actually used
 
 **Warning signals:**
-- 50+ labels (chaos)
+- 26-50 labels = getting complex; 51+ labels = sprawl
 - Inconsistent naming conventions
 - Labels that should be teams
 - Many labels with <5 issues
@@ -223,21 +230,21 @@ Dimensions to analyze when calibrating a Linear workspace.
 
 ## Calibration Output Summary
 
-After analysis, produce ratings for each dimension:
+After analysis, produce ratings for each dimension. For the full structured report format with exact thresholds, run `/linear-calibrate`.
 
-| Dimension | Status | Key Finding |
-|-----------|--------|-------------|
-| Team Structure | 🟢/🟡/🔴 | [summary] |
-| Issue Quality | 🟢/🟡/🔴 | [summary] |
-| Backlog Health | 🟢/🟡/🔴 | [summary] |
-| Project Health | 🟢/🟡/🔴 | [summary] |
-| Cycle Usage | 🟢/🟡/🔴 | [summary] |
-| Workflow Complexity | 🟢/🟡/🔴 | [summary] |
-| Triage Usage | 🟢/🟡/🔴 | [summary] |
-| Label Hygiene | 🟢/🟡/🔴 | [summary] |
-| Cross-Team Patterns | 🟢/🟡/🔴 | [summary] |
+| Dimension | Threshold | Status | Key Finding |
+|-----------|-----------|--------|-------------|
+| Team Count | 4-15 🟢 / 16-30 🟡 / 31+ 🔴 | 🟢/🟡/🔴 | [summary] |
+| Team Sizes | 4+ 🟢 / 2-3 🟡 / 0-1 🔴 | 🟢/🟡/🔴 | [summary] |
+| Stale Teams | <10% 🟢 / 10-25% 🟡 / >25% 🔴 | 🟢/🟡/🔴 | [summary] |
+| Project Count | 1-50 🟢 / 51-150 🟡 / 151+ 🔴 | 🟢/🟡/🔴 | [summary] |
+| Project Ownership | <10% 🟢 / 10-30% 🟡 / >30% 🔴 missing | 🟢/🟡/🔴 | [summary] |
+| Project Dates | <20% 🟢 / 20-50% 🟡 / >50% 🔴 missing | 🟢/🟡/🔴 | [summary] |
+| Backlog Staleness | <20% 🟢 / 20-40% 🟡 / >40% 🔴 | 🟢/🟡/🔴 | [summary] |
+| Label Count | 10-25 🟢 / 26-50 🟡 / 51+ 🔴 | 🟢/🟡/🔴 | [summary] |
+| Issue Quality | <10% 🟢 / 10-25% 🟡 / >25% 🔴 problems | 🟢/🟡/🔴 | [summary] |
 
 Plus:
-- Top 3 recommendations
+- Top 3 recommendations (Immediate / Near-Term / Maintenance)
 - Conventions guide (how this org uses Linear)
-- Red flags requiring attention
+- Red flags requiring attention with "Ask Claude" follow-up prompts
