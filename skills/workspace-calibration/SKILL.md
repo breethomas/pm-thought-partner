@@ -2,6 +2,15 @@
 
 Analyze Linear workspace health and usage patterns before jumping into backlog work. Like a pre-flight check for a new PM joining a team or organization.
 
+## Critical Output Requirement
+
+**This skill MUST produce a structured Calibration Report with:**
+1. Health Indicators table (🟢/🟡/🔴 for each dimension)
+2. Red Flags section (specific issues requiring attention)
+3. Recommendations (Immediate / Near-Term / Consider)
+
+Do NOT just describe the workspace conversationally. The user needs the structured report to know where to focus. See Step 4 for the required format.
+
 ## When to Invoke
 
 Auto-invoke this skill when:
@@ -131,7 +140,9 @@ For each dimension, compare findings to Linear best practices:
 
 ### Step 4: Produce Calibration Report
 
-Use this format:
+**REQUIRED:** Always output the full structured report below. Do not summarize conversationally - the user needs the health indicators table and red flags to know where to focus.
+
+Output this exact format:
 
 ```markdown
 # Workspace Calibration Report
