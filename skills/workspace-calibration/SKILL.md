@@ -35,6 +35,16 @@ Auto-invoke this skill when:
 
 ## What This Skill Does
 
+### CRITICAL: API Limits
+
+**When calling Linear MCP tools, ALWAYS specify `limit: 250`** to avoid default truncation:
+- `list_teams` defaults to 50 - use `limit: 250`
+- `list_projects` defaults to 50 - use `limit: 250`
+- `list_issues` defaults to 50 - use `limit: 250`
+- `list_issue_labels` defaults to 50 - use `limit: 250`
+
+If any result count equals 250, note there may be more items.
+
 ### 1. Workspace Discovery
 Gather data about the workspace structure using Linear MCP tools:
 - List all teams, their members, and activity
