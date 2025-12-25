@@ -30,31 +30,35 @@ while result.count == 25
 Total teams: len(all_teams) (actual - complete data)
 ```
 
-#### 1b. Projects (two-phase: sample + count)
+#### 1b. Projects (one-more-page counting)
 
-**Phase 1 - Get sample for analysis:**
+**MANDATORY: Always fetch one more page if capped to get accurate count.**
+
+**IMPORTANT: Fetch projects BEFORE other calls (not in parallel) to avoid "Too many subrequests" API errors.**
+
+**Step 1 - Get sample for analysis:**
 ```
-result = list_projects(limit: 250)
-sample_projects = result.projects
+page1 = list_projects(limit: 250)
+sample_projects = page1.projects
 ```
 
-**Phase 2 - If capped, paginate to get accurate TOTAL COUNT:**
+**Step 2 - If capped (count = 250), fetch ONE more page:**
 ```
-if result.count == 250:
-  # Sample is capped - paginate to count all projects
-  total_count = 250
-  cursor = result.next_cursor
-  while cursor:
-    page = list_projects(limit: 250, after: cursor)
-    total_count += page.count
-    cursor = page.next_cursor
+if page1.count == 250:
+  page2 = list_projects(limit: 250, after: page1.cursor)
 
-  Report: "[total_count] (actual count, 250 sampled for analysis)"
+  if page2.count < 250:
+    # Page 2 is the last page - we have EXACT count
+    total = 250 + page2.count
+    Report: "[total] (actual count, 250 sampled for analysis)"
+  else:
+    # Page 2 also capped - estimate range
+    Report: "500+ (estimated 500-750, 250 sampled for analysis)"
 else:
   Report: "[count] (actual)"
 ```
 
-**Why two phases:** Getting accurate total count (e.g., 497) is critical for understanding project sprawl. The 250 sample is sufficient for analyzing ownership/dates patterns.
+**Why one-more-page:** Most workspaces have <500 projects, so 2 API calls gets exact count (e.g., 250 + 247 = 497). Only workspaces with 500+ projects get an estimate range. This is fast (max 2 calls) and much more precise than "250+".
 
 #### 1c. Labels (single fetch, usually <250)
 ```
@@ -188,10 +192,10 @@ For each time bucket (Recent/Medium/Legacy), check for:
 ```
 [For each non-actual status, explain what happened, including API call and methodology:]
 
-Projects (sampled): list_projects(limit: 250) returned 250 results (capped).
-Paginated to get actual count: 497 total projects.
-Project Count metric uses actual (497). Project Ownership and Project Dates
-metrics are based on 250-project sample.
+Projects (one-more-page): list_projects(limit: 250) returned 250 results (capped).
+Fetched page 2: list_projects(limit: 250, after: cursor) returned 247 results.
+Total: 497 projects (exact). Project Ownership and Project Dates metrics
+are based on 250-project sample from page 1.
 
 Labels (capped): list_issue_labels(limit: 250) returned exactly 250 results.
 Actual label count may be higher.
@@ -258,6 +262,8 @@ List ALL dimensions rated 🔴 or 🟡. **Always include exact counts (X of Y) i
 
 **REQUIRED: For EVERY red flag, include an "Ask Claude:" section with 2-3 actionable prompts. Use the example prompts table below as reference. Do not skip this section.**
 
+**FORMATTING: Use this exact structure. The "Ask Claude:" line must NOT be numbered - it's a sub-section under each numbered red flag.**
+
 1. **[Dimension]** (🔴/🟡): [Specific problem with counts, e.g., "62 teams exceeds threshold of 31+ (🔴)"]
 
    **Ask Claude:**
@@ -271,6 +277,8 @@ List ALL dimensions rated 🔴 or 🟡. **Always include exact counts (X of Y) i
    - "[Contextual prompt 1]"
    - "[Contextual prompt 2]"
    - "[Contextual prompt 3]"
+
+(Continue this pattern for all red flags. Do NOT restart numbering or number the "Ask Claude:" lines.)
 
 **Example prompts by dimension:**
 

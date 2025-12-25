@@ -65,24 +65,62 @@ Sessions are saved locally (gitignored by default for privacy).
 
 **Start:** `/reflect` or `/reflect "this month"`
 
-### Linear Workspace Health
+### Linear Workspace Analysis
+
+A drill-down hierarchy for understanding workspace health at different levels:
+
+```
+/linear-calibrate        → Workspace-level (30,000 ft view)
+         ↓
+/project-health [name]   → Single project deep-dive
+         ↓
+/team-health [name]      → Single team workflow analysis
+```
+
+Each command is standalone but designed to work together. Run calibrate first to spot problems, then drill down into specific projects or teams.
+
+---
 
 **`/linear-calibrate` - Workspace health check with explicit thresholds**
 
-Analyze your Linear workspace against Linear methodology best practices. Produces a structured report with pass/fail ratings:
+Analyze your entire Linear workspace against Linear methodology best practices. Produces a structured report with pass/fail ratings:
 
 - Team structure (4-15 teams = 🟢, 31+ = 🔴)
 - Project ownership and dates
-- Backlog staleness
-- Label hygiene
-- Issue quality
+- Backlog staleness and label hygiene
+- Issue quality trends (improving / persistent / declining)
 
 **What you get:**
 - Health indicators table with 🟢/🟡/🔴 ratings
-- Red flags requiring attention
+- Issue quality trend analysis (time-bucketed)
+- Red flags with "Ask Claude" follow-up prompts
 - Specific recommendations (Immediate / Near-Term / Maintenance)
 
 **Start:** `/linear-calibrate`
+
+---
+
+**`/project-health [project-name]` - Single project deep-dive** *(coming soon)*
+
+When calibrate flags project issues, drill down on a specific project:
+
+- Ownership, timeline, and progress tracking
+- Scope clarity and issue distribution
+- Blockers and staleness detection
+- Team scatter (coordination overhead)
+
+**Output:** On Track / At Risk / Stalled assessment with specific actions.
+
+---
+
+**`/team-health [team-name]` - Team workflow analysis** *(coming soon)*
+
+Analyze a single team's execution health:
+
+- Backlog size and WIP count
+- Throughput and cycle time
+- Triage health and staleness
+- Project coverage
 
 ### Backlog Automation
 

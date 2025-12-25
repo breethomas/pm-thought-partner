@@ -5,6 +5,104 @@ All notable changes to PM Thought Partner will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2025-12-25
+
+### Added - `/issue-audit` Command
+
+New command for discovering issue patterns and quality - designed for PMs onboarding to new teams.
+
+**Use Case:**
+PM joins a team with an existing Linear backlog. `/issue-audit` helps them understand how the team works and where quality gaps exist.
+
+**What It Analyzes:**
+
+1. **Organization Patterns**
+   - Parent/child issue structure (epics vs sub-tasks)
+   - Labels used and frequency
+   - Milestones and cycles in use
+
+2. **Quality Patterns**
+   - Description completeness (% with content)
+   - Quality by issue type (parents vs children, features vs bugs)
+   - Example well-written issues to use as templates
+   - Example sparse issues that need attention
+
+3. **Backlog Profile**
+   - Age distribution (recent, medium, legacy)
+   - Status distribution
+   - Stale issues (open but untouched 60+ days)
+   - Quality trend over time (improving or declining)
+
+4. **Active Work Gaps**
+   - Issues in progress with no description
+   - Parent issues missing structured content
+   - Vague titles
+
+**Scope Options:**
+- `/issue-audit [project]` - Audit a specific project
+- `/issue-audit team:[team]` - Audit all issues for a team
+
+**Updated Command Hierarchy:**
+```
+/linear-calibrate        → Workspace-wide health
+         ↓
+    ┌────┴────┐
+    ↓         ↓
+/project-health       /issue-audit
+[project]             [project or team]
+(execution health)    (patterns + quality)
+```
+
+`/project-health` and `/issue-audit` are peer commands - both drill down from `/linear-calibrate` but examine different dimensions (execution vs quality).
+
+### Changed
+- Skipped `/team-health` command - Linear Insights + Cycles already cover team metrics (velocity, WIP, cycle time). Team health is more engineering manager territory than PM.
+
+---
+
+## [1.2.0] - 2025-12-25
+
+### Added - `/project-health` Command
+
+New command for deep-dive health checks on individual Linear projects:
+
+**Dimensions Analyzed (7 total):**
+- **Ownership** - Lead assigned or not
+- **Timeline** - Has dates, overdue status
+- **Progress** - Activity + completion percentage
+- **Scope Clarity** - Description length (>300 chars = healthy)
+- **Issue Distribution** - Issue count (5-100 = healthy)
+- **Blockers** - Percentage of open issues blocked
+- **Staleness** - Days since last activity
+
+**Smart Features:**
+- **Status-based logic** - Thresholds adjust based on project status (Drafting, In Progress, Done, Paused, Canceled)
+- **Canceled project handling** - Excluded from health checks entirely
+- **Drafting project allowances** - 0 issues and missing dates are less severe for planning-phase projects
+- **Done project handling** - Staleness and timeline checks skipped for completed work
+
+**Output:**
+- Overall assessment: On Track / At Risk / Stalled
+- Health indicators table with explicit thresholds
+- Issue state breakdown
+- Red flags with "Ask Claude" follow-up prompts
+- Specific recommendations
+
+**Relationship to `/linear-calibrate`:**
+```
+/linear-calibrate        → Workspace-level (30,000 ft view)
+         ↓
+/project-health [name]   → Deep-dive on specific projects
+```
+
+### Fixed
+- `/linear-calibrate` "Ask Claude" section numbering glitch - added explicit formatting instructions
+
+### Changed
+- README updated to show Linear command hierarchy
+
+---
+
 ## [1.1.0] - 2025-12-25
 
 ### Added - `/linear-calibrate` Command Overhaul

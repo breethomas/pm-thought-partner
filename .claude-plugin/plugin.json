@@ -1,6 +1,6 @@
 {
   "name": "pm-thought-partner",
-  "version": "1.1.0",
+  "version": "1.3.0",
   "description": "Strategic thinking partner for product decisions. Works through problems conversationally, challenges assumptions, helps you ship faster. Grounded in frameworks from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, and more. Plus backlog automation with Linear/GitHub integration.",
   "author": {
     "name": "Bree Thomas"
@@ -19,6 +19,8 @@
     "./commands/strategy-session.md",
     "./commands/reflect.md",
     "./commands/linear-calibrate.md",
+    "./commands/project-health.md",
+    "./commands/issue-audit.md",
     "./commands/lno-prioritize.md",
     "./commands/four-risks.md",
     "./commands/now-next-later.md",
