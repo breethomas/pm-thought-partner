@@ -65,6 +65,25 @@ Sessions are saved locally (gitignored by default for privacy).
 
 **Start:** `/reflect` or `/reflect "this month"`
 
+### Linear Workspace Health
+
+**`/linear-calibrate` - Workspace health check with explicit thresholds**
+
+Analyze your Linear workspace against Linear methodology best practices. Produces a structured report with pass/fail ratings:
+
+- Team structure (4-15 teams = 🟢, 31+ = 🔴)
+- Project ownership and dates
+- Backlog staleness
+- Label hygiene
+- Issue quality
+
+**What you get:**
+- Health indicators table with 🟢/🟡/🔴 ratings
+- Red flags requiring attention
+- Specific recommendations (Immediate / Near-Term / Maintenance)
+
+**Start:** `/linear-calibrate`
+
 ### Backlog Automation
 
 **Connect Linear or GitHub to auto-analyze your backlog in seconds.**
@@ -96,7 +115,7 @@ These skills are automatically invoked by Claude when relevant to your task:
 
 | Skill | What it does | When Claude uses it |
 |-------|--------------|---------------------|
-| **workspace-calibration** | Analyzes Linear workspace health and usage patterns against Linear methodology | When joining a new team, onboarding to an unfamiliar workspace, or asking "how is this org using Linear?" |
+| **workspace-calibration** | Provides Linear workspace context; directs to `/linear-calibrate` for formal analysis | When joining a new team or asking "how is this org using Linear?" |
 | **pm-frameworks** | Surfaces PM frameworks for discovery, growth, planning, measurement, and AI | When discussing product strategy, prioritization, user research, growth, or roadmapping |
 | **agent-workflow** | Designs AI agent architectures using Meta's 9-step process and 8-layer framework | When building AI agents, designing agent workflows, or architecting agentic systems |
 | **prd-writer** | Creates modern, decision-focused PRDs for the AI era | When writing PRDs, spec documents, or feature specifications |

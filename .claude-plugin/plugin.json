@@ -18,6 +18,7 @@
   "commands": [
     "./commands/strategy-session.md",
     "./commands/reflect.md",
+    "./commands/linear-calibrate.md",
     "./commands/lno-prioritize.md",
     "./commands/four-risks.md",
     "./commands/now-next-later.md",

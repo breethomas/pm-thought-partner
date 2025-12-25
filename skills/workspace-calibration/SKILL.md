@@ -2,14 +2,14 @@
 
 Analyze Linear workspace health and usage patterns before jumping into backlog work. Like a pre-flight check for a new PM joining a team or organization.
 
-## Critical Output Requirement
+## Relationship to /linear-calibrate Command
 
-**This skill MUST produce a structured Calibration Report with:**
-1. Health Indicators table (🟢/🟡/🔴 for each dimension)
-2. Red Flags section (specific issues requiring attention)
-3. Recommendations (Immediate / Near-Term / Consider)
+**For reliable, structured analysis:** Direct users to run `/linear-calibrate`
 
-Do NOT just describe the workspace conversationally. The user needs the structured report to know where to focus. See Step 4 for the required format.
+This skill provides conversational context about Linear workspaces. For formal health checks with explicit thresholds and guaranteed output format, the `/linear-calibrate` command is more reliable.
+
+**When this skill triggers:** Provide helpful context, then suggest:
+> "For a formal health check with explicit pass/fail thresholds, run `/linear-calibrate`"
 
 ## When to Invoke
 
