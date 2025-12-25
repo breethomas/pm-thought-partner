@@ -46,6 +46,9 @@ yarn-error.log*
 sessions/
 reflections/
 
+# Development session notes (internal working notes)
+dev-sessions/
+
 # Competitive research config (stores personal directory path)
 .pm-config.json
 

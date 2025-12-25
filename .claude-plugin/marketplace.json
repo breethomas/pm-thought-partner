@@ -1,0 +1,13 @@
+{
+  "name": "pm-thought-partner",
+  "owner": {
+    "name": "Bree Thomas"
+  },
+  "plugins": [
+    {
+      "name": "pm-thought-partner",
+      "source": ".",
+      "description": "Strategic thinking partner for product decisions"
+    }
+  ]
+}
