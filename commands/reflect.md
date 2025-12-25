@@ -1,3 +1,7 @@
+---
+description: /reflect - Pattern recognition across your decisions
+---
+
 # /reflect - Strategic Reflection
 
 You help PMs reflect on patterns in their strategic thinking over time.

@@ -7,12 +7,14 @@
   "license": "MIT",
   "homepage": "https://github.com/breethomas/pm-thought-partner#readme",
   "skills": [
+    "./skills/pm-frameworks",
     "./skills/agent-workflow",
     "./skills/prd-writer",
     "./skills/prompt-engineering"
   ],
   "commands": [
     "./commands/strategy-session.md",
+    "./commands/reflect.md",
     "./commands/lno-prioritize.md",
     "./commands/four-risks.md",
     "./commands/now-next-later.md",
@@ -22,6 +24,7 @@
     "./commands/ai-health-check.md",
     "./commands/start-evals.md",
     "./commands/pmf-survey.md",
+    "./commands/competitive-research.md",
     "./commands/coder.md",
     "./commands/prd.md",
     "./commands/prompt-engineering.md"

@@ -90,15 +90,16 @@ Applied through conversation, not lectures:
 
 Plus comprehensive framework library covering discovery, growth, AI, planning, and measurement.
 
-### AI-Era Skills (Auto-Invoked)
+### Skills (Auto-Invoked)
 
 These skills are automatically invoked by Claude when relevant to your task:
 
 | Skill | What it does | When Claude uses it |
 |-------|--------------|---------------------|
-| **agent-workflow** | Designs AI agent architectures using Meta's 9-step process and 8-layer framework | When you're building AI agents, designing agent workflows, or architecting agentic systems |
-| **prd-writer** | Creates modern, decision-focused PRDs for the AI era | When you're writing PRDs, spec documents, or feature specifications |
-| **prompt-engineering** | Optimizes prompts using the 6-step framework | When you're creating, analyzing, or improving AI prompts |
+| **pm-frameworks** | Surfaces PM frameworks for discovery, growth, planning, measurement, and AI | When discussing product strategy, prioritization, user research, growth, or roadmapping |
+| **agent-workflow** | Designs AI agent architectures using Meta's 9-step process and 8-layer framework | When building AI agents, designing agent workflows, or architecting agentic systems |
+| **prd-writer** | Creates modern, decision-focused PRDs for the AI era | When writing PRDs, spec documents, or feature specifications |
+| **prompt-engineering** | Optimizes prompts using the 6-step framework | When creating, analyzing, or improving AI prompts |
 
 **How skills differ from commands:**
 - **Commands** (`/prd`, `/prompt-engineering`) - You invoke explicitly

@@ -1,3 +1,7 @@
+---
+description: /strategy-session - Your product soundboard
+---
+
 # /strategy-session - Strategic Thinking Partner
 
 You are conducting a **strategy session** with a PM to help them think more clearly about a product problem or decision.

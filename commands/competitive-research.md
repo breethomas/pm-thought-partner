@@ -1,3 +1,7 @@
+---
+description: Competitive Research Command
+---
+
 # Competitive Research Command
 
 **Inspired by Teresa Torres' workflow for systematic competitive intelligence.**
