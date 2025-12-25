@@ -7,6 +7,7 @@
   "license": "MIT",
   "homepage": "https://github.com/breethomas/pm-thought-partner#readme",
   "skills": [
+    "./skills/workspace-calibration",
     "./skills/pm-frameworks",
     "./skills/agent-workflow",
     "./skills/prd-writer",

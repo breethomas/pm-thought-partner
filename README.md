@@ -96,6 +96,7 @@ These skills are automatically invoked by Claude when relevant to your task:
 
 | Skill | What it does | When Claude uses it |
 |-------|--------------|---------------------|
+| **workspace-calibration** | Analyzes Linear workspace health and usage patterns against Linear methodology | When joining a new team, onboarding to an unfamiliar workspace, or asking "how is this org using Linear?" |
 | **pm-frameworks** | Surfaces PM frameworks for discovery, growth, planning, measurement, and AI | When discussing product strategy, prioritization, user research, growth, or roadmapping |
 | **agent-workflow** | Designs AI agent architectures using Meta's 9-step process and 8-layer framework | When building AI agents, designing agent workflows, or architecting agentic systems |
 | **prd-writer** | Creates modern, decision-focused PRDs for the AI era | When writing PRDs, spec documents, or feature specifications |
