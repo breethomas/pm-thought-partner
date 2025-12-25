@@ -1,6 +1,6 @@
-# PM Thought Partner !
+# PM Thought Partner 🥊
 
-**Your sparring partner, not your assistant.** 🥊
+**Your sparring partner, not your assistant.** 
 
 **Built on publicly available frameworks from leading product thinkers.**
 
