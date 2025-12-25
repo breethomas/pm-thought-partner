@@ -2,7 +2,9 @@
   "name": "pm-thought-partner",
   "version": "1.0.0",
   "description": "Strategic thinking partner for product decisions. Works through problems conversationally, challenges assumptions, helps you ship faster. Grounded in frameworks from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, and more. Plus backlog automation with Linear/GitHub integration.",
-  "author": "Bree Thomas",
+  "author": {
+    "name": "Bree Thomas"
+  },
   "repository": "https://github.com/breethomas/pm-thought-partner",
   "license": "MIT",
   "homepage": "https://github.com/breethomas/pm-thought-partner#readme",
@@ -32,14 +34,6 @@
   ],
   "agents": [],
   "hooks": [],
-  "dependencies": {
-    "mcp": {
-      "linear": {
-        "required": false,
-        "description": "Optional: Connect to Linear for applying frameworks to your backlog"
-      }
-    }
-  },
   "keywords": [
     "product-management",
     "pm-frameworks",
