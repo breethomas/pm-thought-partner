@@ -68,7 +68,8 @@ Use Linear MCP tools to collect:
 
 ```
 1. Teams
-   - list_teams: Get all teams
+   - list_teams with limit: 250 (max)
+   - If count = 250, flag as SEVERE: "Workspace may have 250+ teams - extreme proliferation"
    - For each active team: get_team for details
    - Note: member count, activity, naming patterns
 
