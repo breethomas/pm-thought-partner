@@ -32,18 +32,18 @@ Examples:
 
 ### Step 1: Find and Fetch Issues
 
-**IMPORTANT:** Linear API can return large payloads. Use limit: 50 to avoid token overflow.
+**IMPORTANT:** Linear API can return large payloads. Use limit: 25 to avoid token overflow.
 
 **For project scope:**
 ```
 get_project(query: "[name]")
-list_issues(project: "[name]", limit: 50)
+list_issues(project: "[name]", limit: 25)
 ```
 
 **For team scope:**
 ```
 get_team(query: "[name]")
-list_issues(team: "[name]", limit: 50)
+list_issues(team: "[name]", limit: 25)
 ```
 
 If not found, list similar options and ask user to clarify.
@@ -135,7 +135,7 @@ List up to 10 issues with gaps, showing:
 # Issue Audit: [Project or Team Name]
 
 **Scope:** [Project / Team]
-**Issues Analyzed:** [N] (limit: 50)
+**Issues Analyzed:** [N] (limit: 25)
 **Date Range:** [oldest createdAt] → [newest createdAt]
 
 ---
