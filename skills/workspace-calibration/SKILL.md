@@ -22,13 +22,16 @@ Auto-invoke this skill when:
 - User asks **"where do I start?"** with a large existing backlog
 - Before running backlog commands like `/lno-prioritize` on an unfamiliar workspace
 
-**Trigger phrases:**
+**Trigger phrases (must mention Linear explicitly):**
 - "Help me understand this Linear workspace"
 - "How is this org using Linear?"
-- "There are so many teams, where do I start?"
-- "Is this workspace healthy?"
-- "I just joined, help me get oriented"
-- "Run a workspace health check"
+- "Run a Linear workspace health check"
+- "Analyze our Linear workspace"
+- "Calibrate this Linear workspace"
+- "Is our Linear workspace healthy?"
+- "There are so many teams in Linear, where do I start?"
+
+**Note:** Generic phrases like "workspace health check" may be interpreted as project/codebase checks. Always include "Linear" in the request.
 
 ## What This Skill Does
 
