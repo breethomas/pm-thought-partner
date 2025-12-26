@@ -70,14 +70,16 @@ Sessions are saved locally (gitignored by default for privacy).
 A drill-down hierarchy for understanding workspace health at different levels:
 
 ```
-/linear-calibrate        → Workspace-level (30,000 ft view)
+/linear-calibrate        → Workspace-wide health (30,000 ft view)
          ↓
-/project-health [name]   → Single project deep-dive
-         ↓
-/team-health [name]      → Single team workflow analysis
+    ┌────┴────┐
+    ↓         ↓
+/project-health       /issue-audit
+[project]             [team]
+(execution health)    (organization patterns)
 ```
 
-Each command is standalone but designed to work together. Run calibrate first to spot problems, then drill down into specific projects or teams.
+Each command is standalone but designed to work together. Run calibrate first to spot problems, then drill into project execution or team conventions.
 
 ---
 
@@ -100,27 +102,28 @@ Analyze your entire Linear workspace against Linear methodology best practices. 
 
 ---
 
-**`/project-health [project-name]` - Single project deep-dive** *(coming soon)*
+**`/project-health [project-name]` - Single project deep-dive**
 
 When calibrate flags project issues, drill down on a specific project:
 
 - Ownership, timeline, and progress tracking
 - Scope clarity and issue distribution
 - Blockers and staleness detection
-- Team scatter (coordination overhead)
 
 **Output:** On Track / At Risk / Stalled assessment with specific actions.
 
 ---
 
-**`/team-health [team-name]` - Team workflow analysis** *(coming soon)*
+**`/issue-audit [team-name]` - Understand how a team organizes work**
 
-Analyze a single team's execution health:
+Helps PMs onboarding to new teams learn conventions fast:
 
-- Backlog size and WIP count
-- Throughput and cycle time
-- Triage health and staleness
-- Project coverage
+- Workflow states (team's process from triage to done)
+- Label taxonomy (what categories exist)
+- Cycle cadence (sprint structure)
+- 9 sample issues (active, completed, backlog)
+
+**Output:** Organization patterns, conventions to follow, and drill-down prompts for exploration.
 
 ### Backlog Automation
 
