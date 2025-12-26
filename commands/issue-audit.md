@@ -32,23 +32,23 @@ Examples:
 
 ### Step 1: Find and Fetch Issues
 
-**IMPORTANT:** Linear API can return large payloads. Use limit: 25 to avoid token overflow.
+**IMPORTANT:** Linear API can return large payloads. Use limit: 20 and filter to last 90 days to avoid token overflow.
 
 **For project scope:**
 ```
 get_project(query: "[name]")
-list_issues(project: "[name]", limit: 25)
+list_issues(project: "[name]", limit: 20, createdAt: "-P90D")
 ```
 
 **For team scope:**
 ```
 get_team(query: "[name]")
-list_issues(team: "[name]", limit: 25)
+list_issues(team: "[name]", limit: 20, createdAt: "-P90D")
 ```
 
 If not found, list similar options and ask user to clarify.
 
-**If you need more issues for accuracy:** Fetch in batches of 50 using the `after` cursor, but analyze incrementally rather than loading all at once.
+**Note:** The 90-day filter focuses on recent issues, which are most relevant for PM onboarding. Legacy issues are excluded from analysis.
 
 ### Step 2: Analyze Organization Patterns
 
@@ -135,7 +135,7 @@ List up to 10 issues with gaps, showing:
 # Issue Audit: [Project or Team Name]
 
 **Scope:** [Project / Team]
-**Issues Analyzed:** [N] (limit: 25)
+**Issues Analyzed:** [N] (last 90 days, limit: 20)
 **Date Range:** [oldest createdAt] → [newest createdAt]
 
 ---
