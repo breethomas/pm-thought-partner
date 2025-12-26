@@ -1,10 +1,10 @@
 ---
-description: /issue-audit [project or team] - Discover issue patterns and quality for PM onboarding
+description: /issue-audit [team] - Understand how a team organizes work in Linear
 ---
 
 # Issue Audit
 
-Analyze how a project or team writes issues. Helps PMs onboarding to new teams understand patterns, see examples of well-written issues, and identify quality gaps.
+Understand how a team organizes and writes issues in Linear. Helps PMs onboarding to new teams learn conventions, see examples, and know what questions to ask.
 
 ## Prerequisites
 
@@ -13,274 +13,190 @@ Analyze how a project or team writes issues. Helps PMs onboarding to new teams u
 ## Usage
 
 ```
-/issue-audit [project or team name]
-```
-
-**Defaults to project scope.** To audit a team's issues across all projects, prefix with `team:`:
-
-```
-/issue-audit Customer Experience          # Audits project named "Customer Experience"
-/issue-audit team:Customer Experience     # Audits all issues for the team
+/issue-audit [team name]
 ```
 
 Examples:
-- `/issue-audit AI Video`
-- `/issue-audit "HBN for Agent Customers"`
-- `/issue-audit team:Platform`
+- `/issue-audit Customer Experience`
+- `/issue-audit Platform`
+- `/issue-audit "Data Engineering"`
 
 ## Instructions
 
-### Step 1: Find and Fetch Issues
+### Phase 1: Fetch Organization Structure
 
-**IMPORTANT:** Linear API can return large payloads. Use limit: 20 and filter to last 90 days to avoid token overflow.
+**These calls are lightweight and won't hit token limits.**
 
-**For project scope:**
-```
-get_project(query: "[name]")
-list_issues(project: "[name]", limit: 20, createdAt: "-P90D")
-```
-
-**For team scope:**
 ```
 get_team(query: "[name]")
-list_issues(team: "[name]", limit: 20, createdAt: "-P90D")
+list_issue_labels(team: "[name]")
+list_issue_statuses(team: "[name]")
+list_cycles(team: "[team_id]", type: "current")
+list_cycles(team: "[team_id]", type: "next")
 ```
 
-If not found, list similar options and ask user to clarify.
+If team not found, use `list_teams()` and suggest similar names.
 
-**Note:** The 90-day filter focuses on recent issues, which are most relevant for PM onboarding. Legacy issues are excluded from analysis.
+From this, extract:
+- Team metadata (key, member count if available)
+- Label taxonomy (what categories exist, any hierarchy)
+- Workflow states (the team's process from triage to done)
+- Cycle cadence (are they using sprints? what duration?)
 
-### Step 2: Analyze Organization Patterns
+### Phase 2: Surgical Issue Samples
 
-From the issues, extract:
+**Fetch exactly 9 issues: 3 per key state.**
 
-**Structure:**
-- Count of parent issues (issues with children)
-- Count of child issues (issues with `parentId`)
-- Count of standalone issues (neither parent nor child)
-- Depth: Are there sub-sub-issues?
+```
+list_issues(team: "[name]", state: "In Progress", limit: 3)
+list_issues(team: "[name]", state: "Done", limit: 3, updatedAt: "-P7D")
+list_issues(team: "[name]", state: "Backlog", limit: 3)
+```
 
-**Labels:**
-- Which labels are used?
-- Frequency of each label
-- Are labels used consistently?
+Note: State names vary by team. Use the actual state names from Phase 1. Map to:
+- **Active work**: States of type "started" (In Progress, In Review, etc.)
+- **Completed**: States of type "completed" (Done, Completed, etc.)
+- **Waiting**: States of type "backlog" or "unstarted" (Backlog, To Do, etc.)
 
-**Milestones:**
-- Which milestones exist?
-- How many issues per milestone?
+If a state returns no issues, that's useful information too.
 
-**Cycles:**
+### Phase 3: Analyze Patterns
+
+From the 9 sample issues, observe and report:
+
+**Structure patterns:**
+- Do any have `parentId`? (using sub-issues)
+- Do any have children? (using epics/parent issues)
+- Are labels applied consistently?
 - Are issues assigned to cycles?
-- What % have cycle assignments?
 
-### Step 3: Analyze Quality Patterns
+**Quality patterns:**
+- Do descriptions exist? (note which have content vs empty)
+- Are titles clear and specific, or vague?
+- Is there a consistent format? (e.g., "As a user...", acceptance criteria)
+- Any patterns in how they write issues?
 
-**Description completeness:**
-- Count issues with description >50 chars (has content)
-- Count issues with description 1-50 chars (minimal)
-- Count issues with empty description
+**Don't calculate percentages** - just describe what you observe in the samples.
 
-**Calculate by issue type:**
-- Parent issues: % with descriptions >50 chars
-- Child issues: % with descriptions >50 chars
-- By label (if Feature vs Bug labels exist): % with descriptions
+### Phase 4: Output Report
 
-**Identify examples:**
-- **Well-written:** 2 issues with longest/most structured descriptions
-- **Sparse:** 2 issues in active states (In Progress, In Review, Selected for Development) with empty or minimal descriptions
-
-### Step 4: Analyze Backlog Profile
-
-**Age distribution (based on `createdAt`):**
-- Recent: Created in last 30 days
-- Medium: Created 30-90 days ago
-- Legacy: Created 90+ days ago
-
-**Status distribution:**
-- Done / Completed
-- In Progress / In Review
-- Backlog / To Do / Selected for Development
-- Blocked
-- Canceled
-
-**Stale issues:**
-- Open issues (not Done/Canceled) with `updatedAt` older than 60 days
-- List up to 5 with identifiers
-
-**Quality by age (if pattern exists):**
-- Compare description completeness: Recent vs Legacy
-- Note if team is improving or declining
-
-### Step 5: Identify Active Work Gaps
-
-Find issues that are actively being worked on but missing quality:
-
-**Active states:** In Progress, In Review, Selected for Development
-
-**Quality gaps:**
-1. Active issues with empty descriptions
-2. Parent issues (any state) with description <100 chars
-3. Active issues with vague titles (contains only: "fix", "update", "changes", "bug", "issue", "WIP")
-
-List up to 10 issues with gaps, showing:
-- Identifier (e.g., CSX-901)
-- Title
-- What's missing
-
-### Step 6: Output Report
-
-**USE THIS EXACT FORMAT:**
+**USE THIS FORMAT:**
 
 ```markdown
-# Issue Audit: [Project or Team Name]
+# Issue Audit: [Team Name]
 
-**Scope:** [Project / Team]
-**Issues Analyzed:** [N] (last 90 days, limit: 20)
-**Date Range:** [oldest createdAt] → [newest createdAt]
+**Team Key:** [KEY]
+**Workflow States:** [N] states
+**Labels:** [N] labels
+**Cycles:** [Active/Not using cycles]
 
 ---
 
-## Organization Patterns
+## How This Team Organizes Work
 
-### Structure
-- **Parent issues (epics):** [N]
-- **Child issues (sub-tasks):** [N]
-- **Standalone issues:** [N]
+### Workflow
+[Describe the states from left to right]
 
-[If parent/child used]: "This [project/team] uses parent-child hierarchy for organizing work."
-[If not]: "Issues are flat - no parent-child hierarchy detected."
+Example: "Issues flow through: Triage → Backlog → Selected → In Progress → In Review → Done. There's also a Blocked state for issues waiting on dependencies."
 
 ### Labels
-| Label | Count | % of Issues |
-|-------|-------|-------------|
-| [label] | [N] | [X]% |
-| ... | ... | ... |
-| (none) | [N] | [X]% |
+[Describe the label taxonomy]
 
-### Milestones
-[If milestones exist]:
-| Milestone | Issues |
-|-----------|--------|
-| [name] | [N] |
-
-[If no milestones]: "No milestones in use."
+Example: "The team uses 12 labels organized into groups:
+- **Type:** Bug, Feature, Tech Debt, Chore
+- **Area:** Frontend, Backend, API, Infrastructure
+- **Priority:** P0, P1, P2 (though priority field may also be used)"
 
 ### Cycles
-- **Issues in cycles:** [N] ([X]%)
-- **Issues without cycle:** [N] ([X]%)
+[Describe cycle usage]
+
+Example: "The team runs 2-week cycles. Current cycle: Dec 16-30. Issues are assigned to cycles for sprint planning."
+
+Or: "This team doesn't appear to use cycles for sprint planning."
 
 ---
 
-## Quality Patterns
+## Sample Issues
 
-### Description Completeness
-| Category | Count | % |
-|----------|-------|---|
-| Has content (>50 chars) | [N] | [X]% |
-| Minimal (1-50 chars) | [N] | [X]% |
-| Empty | [N] | [X]% |
+### Active Work (In Progress)
+| Issue | Title | Has Description | Labels |
+|-------|-------|-----------------|--------|
+| [ID] | [title] | Yes/No | [labels] |
+| [ID] | [title] | Yes/No | [labels] |
+| [ID] | [title] | Yes/No | [labels] |
 
-### Quality by Issue Type
-| Type | Has Description | % |
-|------|-----------------|---|
-| Parent issues | [N] of [M] | [X]% |
-| Child issues | [N] of [M] | [X]% |
-| [Label: Feature] | [N] of [M] | [X]% |
-| [Label: Bug] | [N] of [M] | [X]% |
+### Recently Completed
+| Issue | Title | Has Description | Labels |
+|-------|-------|-----------------|--------|
+| [ID] | [title] | Yes/No | [labels] |
+| [ID] | [title] | Yes/No | [labels] |
+| [ID] | [title] | Yes/No | [labels] |
 
-### Example: Well-Written Issue
-**[IDENTIFIER]:** [Title]
-> [First 200 chars of description]...
-
-[What makes it good: "Has clear problem statement, acceptance criteria as checklist, linked to milestone"]
-
-### Example: Sparse Issue (Active)
-**[IDENTIFIER]:** [Title]
-Status: [status]
-Description: [empty / minimal content]
+### In Backlog
+| Issue | Title | Has Description | Labels |
+|-------|-------|-----------------|--------|
+| [ID] | [title] | Yes/No | [labels] |
+| [ID] | [title] | Yes/No | [labels] |
+| [ID] | [title] | Yes/No | [labels] |
 
 ---
 
-## Backlog Profile
+## Patterns Observed
 
-### Age Distribution
-| Age | Count | % |
-|-----|-------|---|
-| Recent (0-30 days) | [N] | [X]% |
-| Medium (30-90 days) | [N] | [X]% |
-| Legacy (90+ days) | [N] | [X]% |
+### What I Notice
+[Bullet points of patterns from the 9 samples]
 
-### Status Distribution
-| Status | Count | % |
-|--------|-------|---|
-| Done | [N] | [X]% |
-| In Progress | [N] | [X]% |
-| In Review | [N] | [X]% |
-| Backlog/To Do | [N] | [X]% |
-| Blocked | [N] | [X]% |
+Examples:
+- "5 of 9 samples have descriptions; the 4 without are all in Backlog"
+- "Titles are specific and action-oriented (e.g., 'Add retry logic to payment webhook')"
+- "Labels are used consistently - every issue has a Type label"
+- "2 issues are sub-issues (have parentId), suggesting they use parent/child for larger work"
+- "No issues in the sample are assigned to cycles"
 
-### Quality Trend
-[If pattern detected]:
-"Recent issues (30d) have descriptions [X]% of the time vs [Y]% for legacy issues → [Improving / Declining / Stable]"
+### Conventions to Follow
+[Infer conventions a new PM should follow]
 
-[If no clear pattern]: "No clear trend in description quality over time."
-
-### Stale Issues
-[If any]: "[N] open issues haven't been updated in 60+ days:"
-- [IDENTIFIER]: [Title] (last updated [date])
-- ...
-
-[If none]: "No stale issues detected."
+Examples:
+- "Use Type labels on every issue"
+- "Parent issues for epics, child issues for implementation tasks"
+- "Descriptions expected for features, optional for bugs"
 
 ---
 
-## Active Work Gaps
+## Explore Further
 
-[If gaps found]:
-**[N] issues in active work are missing quality:**
+Based on what you've seen, here are questions you might want to ask:
 
-| Issue | Title | Gap |
-|-------|-------|-----|
-| [ID] | [title] | No description |
-| [ID] | [title] | Vague title |
-| [ID] | [title] | Parent issue, minimal description |
+**See specific issues:**
+- "Show me issue [ID]" - get full details on any issue from the samples
+- "Show me 3 parent issues" - see how epics are structured
 
-[If no gaps]: "All active issues have descriptions and clear titles."
+**Explore by label:**
+- "Show me 3 issues labeled [Feature/Bug/etc.]"
+- "Show me issues labeled [specific label you noticed]"
 
----
+**Explore by state:**
+- "Show me what's blocked"
+- "Show me what's in review"
 
-## Recommendations
+**Quality deep-dive:**
+- "Show me an issue with a good description" - I'll pick the best from samples
+- "Show me issues without descriptions that are in progress"
 
-### Learn From
-- **[IDENTIFIER]** is a good template for how this team writes feature issues
-- [Other patterns observed]
-
-### Quick Wins
-[Based on gaps found]:
-- Add descriptions to [N] active issues currently in progress
-- Consider using `/prd` on parent issue [IDENTIFIER] to add structure
-
-### Patterns to Note
-[Observations that help PM understand how team works]:
-- "This team uses labels consistently for Bug vs Feature distinction"
-- "Parent issues tend to be well-specified; child issues are lightweight"
-- "Most issues come from Slack (descriptions start with '@name said:')"
+**Compare projects:**
+- "Run /issue-audit on [another team]" - see if patterns differ
 
 ---
 
 *Generated by PM Thought Partner /issue-audit*
 ```
 
-### Step 7: Offer Next Steps
+## Notes for Claude
 
-After the report, ask:
-```
-What would you like to explore?
-1. See full details on a specific issue
-2. Audit another project or team
-3. Run /project-health on this project
-4. Get help writing a PRD for a sparse parent issue
-```
+- **Don't apologize for limited data.** 9 samples is enough to observe patterns.
+- **Be specific about what you see.** "5 of 9 have descriptions" not "most have descriptions."
+- **Infer conventions.** Help the PM understand what's expected on this team.
+- **Offer concrete next steps.** The drill-down prompts should use actual labels/states from this team.
 
 ## Relationship to Other Commands
 
@@ -290,13 +206,13 @@ What would you like to explore?
     ┌────┴────┐
     ↓         ↓
 /project-health       /issue-audit
-[project]             [project or team]
-(execution health)    (patterns + quality)
+[project]             [team]
+(execution health)    (organization patterns)
 ```
 
-- `/linear-calibrate` flags "68% of issues missing descriptions" workspace-wide
-- `/issue-audit` drills into a specific project/team to understand the patterns and see examples
-- `/project-health` checks if a specific project is on track (dates, lead, progress)
+- `/linear-calibrate` flags workspace-level issues
+- `/project-health` checks if a specific project is on track
+- `/issue-audit` helps PM understand how a team works
 
 ---
 

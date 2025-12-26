@@ -9,38 +9,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added - `/issue-audit` Command
 
-New command for discovering issue patterns and quality - designed for PMs onboarding to new teams.
+New command for understanding how a team organizes work in Linear - designed for PMs onboarding to new teams.
 
 **Use Case:**
-PM joins a team with an existing Linear backlog. `/issue-audit` helps them understand how the team works and where quality gaps exist.
+PM joins a team with an existing Linear backlog. `/issue-audit` helps them understand conventions, see examples, and know what questions to ask.
 
-**What It Analyzes:**
+**Approach: Metadata-First**
 
-1. **Organization Patterns**
-   - Parent/child issue structure (epics vs sub-tasks)
-   - Labels used and frequency
-   - Milestones and cycles in use
+Previous versions tried to bulk-fetch issues for analysis, which hit token limits. This version uses a smarter approach:
 
-2. **Quality Patterns**
-   - Description completeness (% with content)
-   - Quality by issue type (parents vs children, features vs bugs)
-   - Example well-written issues to use as templates
-   - Example sparse issues that need attention
+1. **Phase 1: Organization Structure** (lightweight, no token issues)
+   - Workflow states (team's process)
+   - Label taxonomy (what categories exist)
+   - Cycle cadence (sprint structure)
 
-3. **Backlog Profile**
-   - Age distribution (recent, medium, legacy)
-   - Status distribution
-   - Stale issues (open but untouched 60+ days)
-   - Quality trend over time (improving or declining)
+2. **Phase 2: Surgical Samples** (9 issues max)
+   - 3 issues in progress (active work)
+   - 3 recently completed (what "done" looks like)
+   - 3 in backlog (what's waiting)
 
-4. **Active Work Gaps**
-   - Issues in progress with no description
-   - Parent issues missing structured content
-   - Vague titles
+3. **Phase 3: Pattern Analysis**
+   - Observe patterns from the 9 samples
+   - Infer conventions to follow
+   - No bulk percentages - just what's visible
 
-**Scope Options:**
-- `/issue-audit [project]` - Audit a specific project
-- `/issue-audit team:[team]` - Audit all issues for a team
+4. **Phase 4: Drill-Down Prompts**
+   - Offers specific follow-up questions
+   - User-driven exploration by label, state, or specific issue
+
+**Usage:**
+```
+/issue-audit [team name]
+```
 
 **Updated Command Hierarchy:**
 ```
@@ -49,14 +49,14 @@ PM joins a team with an existing Linear backlog. `/issue-audit` helps them under
     ┌────┴────┐
     ↓         ↓
 /project-health       /issue-audit
-[project]             [project or team]
-(execution health)    (patterns + quality)
+[project]             [team]
+(execution health)    (organization patterns)
 ```
 
-`/project-health` and `/issue-audit` are peer commands - both drill down from `/linear-calibrate` but examine different dimensions (execution vs quality).
-
 ### Changed
-- Skipped `/team-health` command - Linear Insights + Cycles already cover team metrics (velocity, WIP, cycle time). Team health is more engineering manager territory than PM.
+- `/issue-audit` now team-scoped (was project or team) - labels, statuses, and cycles are team-level concepts
+- Removed bulk issue fetching - replaced with surgical 9-issue sampling
+- Skipped `/team-health` command - Linear Insights + Cycles already cover team metrics
 
 ---
 
