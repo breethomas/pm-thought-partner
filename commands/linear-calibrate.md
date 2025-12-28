@@ -30,33 +30,50 @@ while result.count == 25
 Total teams: len(all_teams) (actual - complete data)
 ```
 
-#### 1b. Projects (one-more-page counting)
+#### 1b. Projects (one-more-page counting, active only)
 
 **MANDATORY: Always fetch one more page if capped to get accurate count.**
 
 **IMPORTANT: Fetch projects BEFORE other calls (not in parallel) to avoid "Too many subrequests" API errors.**
 
+**IMPORTANT: Exclude Completed and Canceled projects.** These have served their purpose and shouldn't count toward workspace health metrics. Filter by checking `project.state.type` - exclude `completed` and `canceled` types.
+
 **Step 1 - Get sample for analysis:**
 ```
 page1 = list_projects(limit: 250)
-sample_projects = page1.projects
+all_projects = page1.projects
+active_projects = filter(all_projects, state.type NOT IN ["completed", "canceled"])
+
+# Group active projects by state.type for breakdown
+by_status = group_by(active_projects, state.type)
+# Linear status types (not custom names):
+#   backlog - early stage, not yet planned (yellow dotted icons)
+#   planned - ready to start (empty circle icons)
+#   started - in progress (green partial circle icons)
+#   paused  - on hold (orange pause icons)
+#   completed - done (green checkmark) - EXCLUDED
+#   canceled - won't do (X icon) - EXCLUDED
 ```
 
 **Step 2 - If capped (count = 250), fetch ONE more page:**
 ```
 if page1.count == 250:
   page2 = list_projects(limit: 250, after: page1.cursor)
+  all_projects = page1.projects + page2.projects
+  active_projects = filter(all_projects, state.type NOT IN ["completed", "canceled"])
 
   if page2.count < 250:
     # Page 2 is the last page - we have EXACT count
-    total = 250 + page2.count
-    Report: "[total] (actual count, 250 sampled for analysis)"
+    total_fetched = 250 + page2.count
+    Report: "[active_count] active ([total_fetched] total, excludes completed/canceled)"
   else:
     # Page 2 also capped - estimate range
-    Report: "500+ (estimated 500-750, 250 sampled for analysis)"
+    Report: "[active_count] active (500+ total, excludes completed/canceled)"
 else:
-  Report: "[count] (actual)"
+  Report: "[active_count] active ([total] total, excludes completed/canceled)"
 ```
+
+**Why exclude completed/canceled:** A workspace with 200 projects where 150 are completed is healthy - they shipped. A workspace with 200 *active* projects is concerning. Health metrics should reflect current load, not historical output.
 
 **Why one-more-page:** Most workspaces have <500 projects, so 2 API calls gets exact count (e.g., 250 + 247 = 497). Only workspaces with 500+ projects get an estimate range. This is fast (max 2 calls) and much more precise than "250+".
 
@@ -87,7 +104,7 @@ This reveals whether issue quality is improving, declining, or persistent.
 
 **Data status tracking:**
 - Teams: Should always be **actual** (complete) due to pagination
-- Projects: **actual** count via two-phase approach; analysis based on 250 sample if capped
+- Projects: **actual** count via two-phase approach; **active only** (excludes completed/canceled); analysis based on sample if capped
 - Labels: **actual** if count < 250, **capped** if count = 250
 - Issues: **sampled** (intentionally limited, time-bucketed)
 
@@ -184,7 +201,11 @@ For each time bucket (Recent/Medium/Legacy), check for:
 **Date:** [YYYY-MM-DD]
 **Analyzed:**
 - Teams: [N] (actual) - paginated, complete data
-- Projects: [N] (actual count, [M] sampled for analysis if capped)
+- Projects: [N] active ([M] total, excludes completed/canceled)
+  - Backlog: [N] (e.g., Drafting, To Do, icebox)
+  - Planned: [N] (e.g., Shaping, Ready for Kickoff)
+  - Started: [N] (e.g., In Progress, QA)
+  - Paused: [N]
 - Labels: [N] (actual/capped)
 - Issues: [N] (sampled) - time-bucketed for trend analysis
 
@@ -194,8 +215,9 @@ For each time bucket (Recent/Medium/Legacy), check for:
 
 Projects (one-more-page): list_projects(limit: 250) returned 250 results (capped).
 Fetched page 2: list_projects(limit: 250, after: cursor) returned 247 results.
-Total: 497 projects (exact). Project Ownership and Project Dates metrics
-are based on 250-project sample from page 1.
+Total: 497 projects fetched. Filtered to 312 active (excludes 185 completed/canceled).
+Breakdown by type: 145 backlog, 32 planned, 110 started, 25 paused.
+Project Ownership and Project Dates metrics are based on active projects only.
 
 Labels (capped): list_issue_labels(limit: 250) returned exactly 250 results.
 Actual label count may be higher.
@@ -218,9 +240,9 @@ returned "Too many subrequests". Retrieved 250 of unknown total.
 | Team Count | [N] | 4-15 🟢 / 16-30 🟡 / 31+ 🔴 | 🟢/🟡/🔴 | [one-line assessment] |
 | Team Sizes | [avg] | 4+ 🟢 / 2-3 🟡 / 0-1 🔴 | 🟢/🟡/🔴 | [one-line assessment] |
 | Stale Teams | [N% (X of Y)] | <10% 🟢 / 10-25% 🟡 / >25% 🔴 | 🟢/🟡/🔴 | [one-line assessment] |
-| Project Count | [N] | 1-50 🟢 / 51-150 🟡 / 151+ 🔴 | 🟢/🟡/🔴 | [one-line assessment] (actual count) |
-| Project Ownership † | [N% (X of Y) missing] | <10% 🟢 / 10-30% 🟡 / >30% 🔴 | 🟢/🟡/🔴 | [one-line assessment] (based on [M] sample if capped) |
-| Project Dates † | [N% (X of Y) missing] | <20% 🟢 / 20-50% 🟡 / >50% 🔴 | 🟢/🟡/🔴 | [one-line assessment] (based on [M] sample if capped) |
+| Project Count | [N] active | 1-50 🟢 / 51-150 🟡 / 151+ 🔴 | 🟢/🟡/🔴 | [one-line assessment] (excludes completed/canceled) |
+| Project Ownership † | [N% (X of Y) missing] | <10% 🟢 / 10-30% 🟡 / >30% 🔴 | 🟢/🟡/🔴 | [one-line assessment] (active projects only) |
+| Project Dates † | [N% (X of Y) missing] | <20% 🟢 / 20-50% 🟡 / >50% 🔴 | 🟢/🟡/🔴 | [one-line assessment] (active projects only) |
 | Backlog Staleness | [N% (X of Y)] | <20% 🟢 / 20-40% 🟡 / >40% 🔴 | 🟢/🟡/🔴 | [one-line assessment] |
 | Label Count | [N] | 10-25 🟢 / 26-50 🟡 / 51+ 🔴 | 🟢/🟡/🔴 | [one-line assessment] |
 | Issue Quality | See trend ↓ | <10% 🟢 / 10-25% 🟡 / >25% 🔴 | 🟢/🟡/🔴 | [one-line assessment based on Recent bucket] |
