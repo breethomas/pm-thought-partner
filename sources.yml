@@ -203,16 +203,53 @@ thought_leaders:
         type: "article"
         url: "https://www.productgrowth.com/p/product-requirements-documents"
         description: "Modern approach to PRDs - 8/10 quality, 5-stage evolution, quality over completeness"
+      - title: "The Ultimate Guide to Context Engineering for PMs"
+        type: "article"
+        year: 2025
+        url: "https://www.productgrowth.com"
+        collaboration: "Co-authored with Miqdad Jaffer (OpenAI)"
+        description: "Comprehensive guide to context engineering - the 6 layers of context, 4D Context Canvas, C.E.O. Framework"
     frameworks:
       - "Visual frameworks for PM concepts"
       - "Stakeholder communication strategies"
       - "AI prototyping tool comparison"
       - "Prompt engineering mental models"
       - "Modern PRD framework (5 stages, 8/10 quality principle)"
+      - "Context Engineering (6 layers, 4D Canvas, C.E.O. Framework)"
     where_to_follow:
       - "Newsletter: https://www.news.aakashg.com"
       - "LinkedIn: Daily visual frameworks"
       - "YouTube: Framework explanations"
+
+  miqdad_jaffer:
+    name: "Miqdad Jaffer"
+    title: "Product Leader at OpenAI"
+    background: "Former Product at Shopify, ex-Founder"
+    focus: "AI product development, context engineering"
+    key_works:
+      - title: "The Ultimate Guide to Context Engineering for PMs"
+        type: "article"
+        year: 2025
+        collaboration: "Co-authored with Aakash Gupta"
+        description: "Comprehensive guide to context engineering for AI PMs"
+      - title: "AI PM Certification Course"
+        type: "course"
+        collaboration: "With Aakash Gupta"
+        description: "6-week cohort course on AI product management"
+    frameworks:
+      - "Context Engineering (6 layers of context)"
+      - "4D Context Canvas (Demand, Data, Discovery, Defense)"
+      - "C.E.O. Framework (Capture, Enrich, Orchestrate)"
+      - "Context Pyramid"
+    key_insights:
+      - "Context engineering is one of the most important disciplines for AI PMs"
+      - "The delicate art and science of filling the context window with just the right information"
+      - "Models are commodities; context is competitive advantage"
+      - "If you cannot articulate the model's job, the model cannot do it"
+    contribution: "Practitioner perspective on AI product development from inside OpenAI"
+    where_to_follow:
+      - "LinkedIn: AI product insights"
+      - "Collaboration with Product Growth newsletter"
 
   aman_khan:
     name: "Aman Khan"
@@ -680,6 +717,22 @@ frameworks:
           - "Cost optimization strategies"
           - "Production monitoring"
         key_insight: "Fine-tuning is the last resort. Most AI failures are UX problems. Data quality beats tool selection."
+
+      context_engineering:
+        name: "Context Engineering & 4D Canvas"
+        file: "context-engineering.md"
+        command: "/context-canvas"
+        sources:
+          - "Aakash Gupta & Miqdad Jaffer: The Ultimate Guide to Context Engineering for PMs (2025)"
+          - "Tobi Lutke (Shopify CEO): Context engineering over prompt engineering"
+          - "Andrej Karpathy (OpenAI): Context window as the 'entire world the model sees'"
+        components:
+          - "6 Layers of Context (Intent, User, Domain, Rules, Environment, Exposition)"
+          - "4D Context Canvas (Demand, Data, Discovery, Defense)"
+          - "C.E.O. Framework (Capture, Enrich, Orchestrate)"
+          - "Context Quality Checklist"
+          - "Two-Wall Constraint Framework (soft walls vs hard walls)"
+        key_insight: "Most AI features fail before they reach the model. Context is the only durable moat."
 
 ---
 

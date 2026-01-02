@@ -49,6 +49,9 @@ reflections/
 # Development session notes (internal working notes)
 dev-sessions/
 
+# Claude Code local settings and session notes
+.claude/
+
 # Competitive research config (stores personal directory path)
 .pm-config.json
 

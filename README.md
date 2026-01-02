@@ -21,7 +21,8 @@ The PM Thought Partner synthesizes publicly available frameworks from:
 - **Chip Huyen** - Production AI systems, ML engineering, data quality
 - **Aman Khan** - AI evals, vibe-driven development, AI-native products
 - **Janna Bastow** - Now-Next-Later roadmapping, cone of uncertainty
-- **Aakash Gupta** - Visual frameworks, stakeholder communication
+- **Aakash Gupta** - Visual frameworks, context engineering, PRDs
+- **Miqdad Jaffer** - Context engineering, AI product development (OpenAI)
 - **Rahul Vohra** - PMF survey, high-expectation customers
 - **Ravi Mehta** - Product Strategy Stack, AI integration framework
 - **Linear** - Issues not stories, direction → building → quality
@@ -142,7 +143,7 @@ Helps PMs onboarding to new teams learn conventions fast:
 Applied through conversation, not lectures:
 
 - **AI-Era Growth:** `/four-fits` (modernized for ChatGPT discovery, AI costs, TAM shifts)
-- **AI Products:** `/ai-cost-check`, `/ai-health-check`, `/start-evals`
+- **AI Products:** `/context-canvas`, `/ai-cost-check`, `/ai-health-check`, `/start-evals`
 - **Growth Mechanics:** `/growth-loops`
 - **Measurement:** `/pmf-survey`
 
