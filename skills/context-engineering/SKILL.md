@@ -330,6 +330,11 @@ How do you want to start?
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
+**⚠️ TOKEN MANAGEMENT (for Claude):**
+When pulling from Linear, use `get_issue` for a single issue ID—don't search
+broadly. If searching, always use `limit: 10` and get titles first before
+fetching full details.
+
 ### Scope Check (for multi-issue features)
 
 ```
@@ -352,6 +357,17 @@ What's the scope?
 **If "Entire feature":**
 
 Ask for parent/overview issue ID, then use Linear MCP to find related issues.
+
+**⚠️ IMPLEMENTATION NOTE FOR CLAUDE:**
+Linear queries can return massive amounts of data that exceed token limits.
+ALWAYS follow this pattern:
+
+1. **First query: titles only** — Use `list_issues` with `limit: 20` max
+2. **Count results** — Report how many issues were found
+3. **Ask user preference** — Before fetching full details
+4. **Selective fetch** — Only `get_issue` on specifically selected issues
+
+NEVER try to read all issue details in one query. This will fail.
 
 ```
 Found 12 related issues:
