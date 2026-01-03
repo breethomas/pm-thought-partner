@@ -13,7 +13,8 @@
     "./skills/pm-frameworks",
     "./skills/agent-workflow",
     "./skills/prd-writer",
-    "./skills/prompt-engineering"
+    "./skills/prompt-engineering",
+    "./skills/context-engineering"
   ],
   "commands": [
     "./commands/strategy-session.md",
