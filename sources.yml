@@ -721,7 +721,7 @@ frameworks:
       context_engineering:
         name: "Context Engineering & 4D Canvas"
         file: "context-engineering.md"
-        command: "/context-canvas"
+        skill: "/context-engineering"
         sources:
           - "Aakash Gupta & Miqdad Jaffer: The Ultimate Guide to Context Engineering for PMs (2025)"
           - "Tobi Lutke (Shopify CEO): Context engineering over prompt engineering"
