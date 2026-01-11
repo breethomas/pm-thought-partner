@@ -1,270 +1,119 @@
-# PM Thought Partner 🥊
+# PM Thought Partner
 
-**Your sparring partner, not your assistant.** 
+**Your sparring partner, not your assistant.**
 
-**Built on publicly available frameworks from leading product thinkers.**
+A Claude Code plugin that challenges your product thinking. You don't memorize commands—you have conversations. Describe your problem, and Claude will ask hard questions, push back on weak reasoning, and guide you to proven frameworks.
 
-Claude Code plugin that applies proven PM frameworks to real product decisions. Challenges assumptions. Asks tough questions. Pushes you toward prototypes over docs.
-
-Opinionated. Curated for prototype-first, AI-era product work.
+Built for the AI era. Grounded in frameworks from Marty Cagan, Teresa Torres, Ryan Singer, Chip Huyen, and more.
 
 ---
 
-## Thought Leaders Included
+## How to Use This
 
-The PM Thought Partner synthesizes publicly available frameworks from:
+**Just talk.** Start with what you're trying to figure out:
 
-- **Marty Cagan** - Product discovery, four risks, empowered teams
-- **Teresa Torres** - Continuous discovery habits, opportunity solution trees
-- **Elena Verna** - Growth loops, product-led growth
-- **Brian Balfour** - Four fits, focus wins, growth strategy
-- **Ryan Singer** - Shape Up, fixed time/variable scope, pitches and betting
-- **Chip Huyen** - Production AI systems, ML engineering, data quality
-- **Aman Khan** - AI evals, vibe-driven development, AI-native products
-- **Janna Bastow** - Now-Next-Later roadmapping, cone of uncertainty
-- **Aakash Gupta** - Visual frameworks, context engineering, PRDs
-- **Miqdad Jaffer** - Context engineering, AI product development (OpenAI)
-- **Rahul Vohra** - PMF survey, high-expectation customers
-- **Ravi Mehta** - Product Strategy Stack, AI integration framework
-- **Linear** - Issues not stories, direction → building → quality
-- **Reforge** - Practitioner wisdom, monetization, growth frameworks
+> "I'm building an AI feature that recommends which clients to call. Help me think through it."
 
-**[→ Read detailed profiles](thought-leaders/)**
+> "We're planning our next cycle. I have three pitches competing for the same slot."
+
+> "My AI feature is hallucinating. I don't know why."
+
+Claude will:
+- Ask clarifying questions
+- Challenge assumptions ("What evidence do you have?")
+- Surface relevant frameworks
+- Push you toward prototypes and user conversations
+- Help you write specs, pitches, or issues when you're ready
+
+**You don't need to know the commands.** But if you want shortcuts, here are the ones that matter most.
 
 ---
 
-## What This Does
+## Top Commands
 
-### Strategic Thinking Partner
-
-**`/strategy-session` - Your product soundboard**
-
-Work through product problems conversationally. Claude gathers project context proactively (reads your README, commits, architecture), then asks probing questions that apply PM frameworks naturally.
-
-- Feature planning and validation
-- Risk assessment
-- Roadmap decisions
-- "Should we build this?" conversations
-
-**What you get:**
-- Strategic conversation that adapts to your problem
-- Structured capture: decisions, risks, prototypes, open questions
-- Actionable Linear issues created from insights
-
-**Start:** `/strategy-session` or `/strategy-session "recommendation engine"`
-
-### Strategic Reflection
-
-**`/reflect` - Pattern recognition across your decisions**
-
-See patterns in your strategic thinking over time:
-- Analyze decision-making trends across multiple sessions
-- Track which frameworks you use most
-- Identify unresolved questions blocking progress
-- Weekly/monthly reflection ritual
-
-Sessions are saved locally (gitignored by default for privacy).
-
-**Start:** `/reflect` or `/reflect "this month"`
-
-### Linear Workspace Analysis
-
-A drill-down hierarchy for understanding workspace health at different levels:
+### `/strategy-session`
+Start any product conversation. Claude gathers context, then works through the problem with you.
 
 ```
-/linear-calibrate        → Workspace-wide health (30,000 ft view)
-         ↓
-    ┌────┴────┐
-    ↓         ↓
-/project-health       /issue-audit
-[project]             [team]
-(execution health)    (organization patterns)
+/strategy-session "should we build AI recommendations or improve search first?"
 ```
 
-Each command is standalone but designed to work together. Run calibrate first to spot problems, then drill into project execution or team conventions.
+### `/spec --ai`
+Spec an AI feature with context requirements, behavior examples, and eval strategy.
+
+```
+/spec --ai
+```
+
+### `/shape`
+Shape work using Shape Up methodology. Walk through appetite, solution sketching, rabbit holes, and output a pitch.
+
+```
+/shape "notifications for upcoming appointments"
+```
+
+### `/linear-calibrate`
+Analyze your Linear workspace against best practices. Get health indicators and specific recommendations.
+
+```
+/linear-calibrate
+```
+
+### `/start-evals`
+Set up AI evals without overengineering. Create your first 20 test cases in a spreadsheet.
+
+```
+/start-evals
+```
+
+**[See all commands →](commands/)**
 
 ---
 
-**`/linear-calibrate` - Workspace health check with explicit thresholds**
+## What's Inside
 
-Analyze your entire Linear workspace against Linear methodology best practices. Produces a structured report with pass/fail ratings:
+**Frameworks** from leading product thinkers—discovery, growth, planning, measurement, and AI-native development.
 
-- Team structure (4-15 teams = 🟢, 31+ = 🔴)
-- Project ownership and dates
-- Backlog staleness and label hygiene
-- Issue quality trends (improving / persistent / declining)
+**[Browse frameworks →](frameworks/)** · **[Meet the thought leaders →](thought-leaders/)**
 
-**What you get:**
-- Health indicators table with 🟢/🟡/🔴 ratings
-- Issue quality trend analysis (time-bucketed)
-- Red flags with "Ask Claude" follow-up prompts
-- Specific recommendations (Immediate / Near-Term / Maintenance)
+**Linear & GitHub integration** for backlog analysis, issue creation, and workspace health checks.
 
-**Start:** `/linear-calibrate`
+**AI-era focus**: context engineering, evals, cost modeling, production AI systems. Not just classic PM—built for what's next.
 
 ---
 
-**`/project-health [project-name]` - Single project deep-dive**
-
-When calibrate flags project issues, drill down on a specific project:
-
-- Ownership, timeline, and progress tracking
-- Scope clarity and issue distribution
-- Blockers and staleness detection
-
-**Output:** On Track / At Risk / Stalled assessment with specific actions.
-
----
-
-**`/issue-audit [team-name]` - Understand how a team organizes work**
-
-Helps PMs onboarding to new teams learn conventions fast:
-
-- Workflow states (team's process from triage to done)
-- Label taxonomy (what categories exist)
-- Cycle cadence (sprint structure)
-- 9 sample issues (active, completed, backlog)
-
-**Output:** Organization patterns, conventions to follow, and drill-down prompts for exploration.
-
-### Backlog Automation
-
-**Connect Linear or GitHub to auto-analyze your backlog in seconds.**
-
-- **`/lno-prioritize`** - Categorize 50+ issues by impact (Leverage/Neutral/Overhead)
-- **`/four-risks [issue-id]`** - Pull issue, assess risks, add analysis as comment
-- **`/now-next-later`** - Generate roadmap from Linear projects, send back categorized
-
-**Setup (2 min):** [Get Linear API key](https://linear.app/docs/api-and-webhooks) (Settings > Account > Security & Access) → Ask Claude "Set up the Linear MCP server"
-
-**No MCP?** All commands work with manual input. Paste issues or describe context directly.
-
-### Specification Commands
-
-**`/spec` - Write specs at the right depth**
-
-The unified entry point for all spec work. Progressive disclosure based on what you're building:
-
-| Level | Use When | Output |
-|-------|----------|--------|
-| `/spec --quick` | Hours to days, clear scope | Linear issue |
-| `/spec --feature` | 1-3 weeks, needs alignment | Lite PRD |
-| `/spec --ai` | Any AI/ML/LLM work | Full spec with context requirements |
-| `/spec --pitch` | Shape Up workflow | 5-ingredient pitch |
-
-**Deep dive options:** `--deep context`, `--deep examples`, `--deep rollout`, `--deep full-prd`
-
-**Related commands:**
-- `/shape` - Full Shape Up shaping workflow (4 steps → pitch)
-- `/ai-debug` - Diagnose why an AI feature is underperforming
-- `/context-check` - 5-point quality check before shipping
-
-### Strategic Commands
-
-Applied through conversation, not lectures:
-
-- **AI-Era Growth:** `/four-fits` (modernized for ChatGPT discovery, AI costs, TAM shifts)
-- **AI Products:** `/spec --ai`, `/ai-debug`, `/context-check`, `/ai-cost-check`, `/ai-health-check`, `/start-evals`
-- **Growth Mechanics:** `/growth-loops`
-- **Measurement:** `/pmf-survey`
-
-**[→ See all commands](commands/)** | **[→ Browse frameworks](frameworks/)**
-
-Plus comprehensive framework library covering discovery, growth, AI, planning, and measurement.
-
-### Skills (Auto-Invoked)
-
-These skills are automatically invoked by Claude when relevant to your task:
-
-| Skill | What it does | When Claude uses it |
-|-------|--------------|---------------------|
-| **workspace-calibration** | Provides Linear workspace context; directs to `/linear-calibrate` for formal analysis | When joining a new team or asking "how is this org using Linear?" |
-| **pm-frameworks** | Surfaces PM frameworks for discovery, growth, planning, measurement, and AI | When discussing product strategy, prioritization, user research, growth, or roadmapping |
-| **agent-workflow** | Designs AI agent architectures using Meta's 9-step process and 8-layer framework | When building AI agents, designing agent workflows, or architecting agentic systems |
-| **spec** | Progressive disclosure specs - from quick issues to full AI feature specs | When writing specs, PRDs, feature docs, or AI product specifications |
-| **shape-up** | Shape Up methodology - shaping, pitches, betting table, fixed time/variable scope | When shaping work, writing pitches, or discussing cycle planning |
-| **prd-writer** | Full 5-stage PRD framework (deep reference) | When using `/spec --deep full-prd` for complex features |
-| **prompt-engineering** | Optimizes prompts using the 6-step framework | When creating, analyzing, or improving AI prompts |
-
-**How skills differ from commands:**
-- **Commands** (`/spec`, `/ai-debug`, `/context-check`) - You invoke explicitly
-- **Skills** - Claude invokes automatically based on context
-
-`/spec` is the primary entry point for all specification work. `/prd` routes through `/spec --feature` for backward compatibility.
-
-**[→ Browse skills](skills/)**
-
----
-
-## Installation
+## Install
 
 Ask Claude Code:
+
 ```
 Install the PM Thought Partner plugin from
 https://github.com/breethomas/pm-thought-partner
 ```
 
-**[→ Full guide with Linear/GitHub setup](INSTALL_PLUGIN.md)**
-
-### Privacy Note
-
-By default, `/strategy-session` outputs and `/reflect` summaries are saved locally but gitignored.
-
-**If you want to commit your strategic thinking:**
-1. Remove `sessions/` and `reflections/` from `.gitignore`
-2. Commit to your repo (or team repo)
-3. Now your product thinking is version-controlled and searchable
-
-**Why gitignore by default?** Sessions contain company strategy, competitive insights, and product decisions that most PMs won't want in their git history.
+**[Full setup guide →](INSTALL_PLUGIN.md)**
 
 ---
 
-## How It Works
+## Philosophy
 
-**You:** "Should I build AI recommendations or improve search first?"
+This plugin won't just agree with you. It will:
 
-**PM Thought Partner:**
-- Reads your codebase context
-- "What evidence do you have that discovery is the problem?"
-- "Can you prototype both and test with 10 users this week?"
-- Applies Four Risks framework, suggests evals strategy
-- Creates Linear issues with next steps
+- Ask for evidence before accepting assumptions
+- Suggest prototypes over PRDs
+- Challenge you to talk to users
+- Push back when thinking is fuzzy
 
-**It pushes back.** Won't just agree with your idea. Will ask for evidence, suggest prototypes over PRDs, and challenge you to talk to users.
+**Opinionated. Curated. AI-era first.**
 
 ---
 
 ## Contributing
 
-This is a living repository. PM frameworks evolve.
+PM frameworks evolve. Contributions welcome.
 
-**How to contribute:**
-1. Open an issue to discuss proposed changes
-2. Submit a pull request with framework updates or new thought leaders
-3. Include sources - all frameworks must link to publicly available content
-
-**Quality standards:**
-- ✅ Reference publicly available content (articles, podcasts, books)
-- ✅ Provide attribution to original thinkers
-- ✅ Focus on frameworks and mental models (not just tactics)
-- ✅ Maintain AI-era first perspective
-
-**[→ See sources.yml for complete attribution](sources.yml)**
+**[See sources.yml for attribution](sources.yml)** · **[Browse ideas](ideas/)**
 
 ---
 
-## Ideas & Future Directions
-
-Exploring what PM Thought Partner could become. These aren't commitments—they're concepts to discuss and evolve with the community.
-
-**[→ Browse ideas](ideas/)** - Potential features like PM onboarding intelligence, analytics integration, responsible vibe coding workflows
-
-**Want to discuss an idea?** Open an issue. **Have your own idea?** Check the ideas directory for the template.
-
----
-
-## License & Attribution
-
-MIT License. All frameworks attributed to original creators in [sources.yml](sources.yml).
-
-Built with Claude Code by [Bree Thomas](https://github.com/breethomas)
+MIT License. Built with Claude Code by [Bree Thomas](https://github.com/breethomas).
