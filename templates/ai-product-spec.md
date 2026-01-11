@@ -25,6 +25,40 @@ Focus on the AI-specific risks: How will you test quality? What will it cost? Ho
 
 ---
 
+## Context Requirements (for AI features)
+
+**90% of AI quality comes from context quality.** Most AI features fail because nobody mapped what context the model needs.
+
+### What context does the AI need?
+
+| Data Needed | Source | Availability | Notes |
+|-------------|--------|--------------|-------|
+| [Entity/signal] | [DB/API/user] | [Always/Sometimes/Never] | [Sensitivity, freshness] |
+
+**Availability meanings:**
+- **Always:** Available 100% of the time
+- **Sometimes:** Depends on user actions or data freshness (design fallback!)
+- **Never:** Must be requested explicitly or cannot be assumed (blocker!)
+
+### What happens when context is missing?
+
+[Fallback behavior - one sentence per "Sometimes" or "Never" row]
+
+**Example:**
+```
+| Data Needed          | Source      | Availability | Notes |
+|---------------------|-------------|--------------|-------|
+| User's draft email  | User input  | Always       | Max 500 chars |
+| Previous subjects   | Database    | Sometimes    | Empty for new users |
+| Preferred tone      | User settings| Sometimes   | Default: professional |
+
+Fallback: If no history, use industry defaults. If no tone preference, use professional.
+```
+
+**See:** `skills/spec/references/context-table.md` for the full format guide.
+
+---
+
 ## Additional Sections (Use What You Need)
 
 Pick the sections that matter for your specific feature. Skip the rest.

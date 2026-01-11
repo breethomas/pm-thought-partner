@@ -5,6 +5,74 @@ All notable changes to PM Thought Partner will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2026-01-11
+
+### Added - Unified Spec System
+
+**`/spec` - Progressive disclosure specification command**
+
+New unified entry point for all spec work. Routes to the right depth based on what you're building:
+
+| Level | Use When | Output |
+|-------|----------|--------|
+| `/spec --quick` | Hours to days, clear scope | Linear issue |
+| `/spec --feature` | 1-3 weeks, needs alignment | Lite PRD |
+| `/spec --ai` | Any AI/ML/LLM work | Full spec with context requirements |
+
+**Philosophy:** Write what's needed. Skip what's not. Embeds Linear Method principles (brevity, clarity, momentum).
+
+**Deep dive options:**
+- `--deep context` - Full 4D Canvas walkthrough
+- `--deep examples` - Expand to 15-25 behavior examples
+- `--deep rollout` - Detailed phased rollout with gates
+- `--deep full-prd` - Complete 5-stage PRD framework
+
+**New supporting commands:**
+
+- **`/ai-debug`** - Diagnose why an AI feature is underperforming, hallucinating, or behaving inconsistently. Uses 4D audit (Demand, Data, Discovery, Defense) to find root cause.
+
+- **`/context-check`** - Fast 5-point quality check before shipping. Validates: Relevance, Freshness, Sufficiency, Structure, Constraints.
+
+**New skill: `spec`**
+
+Core skill with progressive disclosure routing:
+- Level 1: Quick task flow (Linear issue format)
+- Level 2: Feature flow (Lite PRD)
+- Level 3: AI feature flow (full spec + context requirements)
+- Level 4: Deep dive expansions
+
+Reference files in `skills/spec/references/`:
+- `philosophy.md` - Linear Method principles
+- `context-table.md` - Context requirements format guide
+- `behavior-examples.md` - How to write good/bad/reject cases
+
+### Changed
+
+- **`/prd`** - Now routes through `/spec --feature` for unified experience. Use `/prd --deep` for full 5-stage PRD framework.
+
+- **`prd-writer` skill** - Repositioned as deep reference for complex features. Use via `/spec --deep full-prd`.
+
+- **`templates/ai-product-spec.md`** - Added Context Requirements section with availability table and fallback guidance.
+
+### Archived
+
+- **`context-engineering` skill** - Paths extracted to standalone commands:
+  - Path 1 (Spec new) → `/spec --ai`
+  - Path 2 (Diagnose) → `/ai-debug`
+  - Path 3 (Quality check) → `/context-check`
+
+  Original skill remains as reference for full 4D Context Canvas framework.
+
+---
+
+## [1.4.0] - 2026-01-XX
+
+### Added - `/context-engineering` Skill
+
+New skill for context engineering with AI features. Based on the 4D Context Canvas framework from Aakash Gupta and Miqdad Jaffer (OpenAI).
+
+---
+
 ## [1.3.0] - 2025-12-25
 
 ### Added - `/issue-audit` Command

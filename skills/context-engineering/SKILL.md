@@ -1,9 +1,20 @@
 ---
 name: context-engineering
-description: Master context engineering for AI features - the skill that separates AI products that work from ones that hallucinate. Use when speccing new AI features, diagnosing underperforming AI features, or doing quality checks before shipping. Helps PMs define what context AI needs, where to get it, and what to do when it fails. Based on the 4D Context Canvas framework.
+description: "[ARCHIVED] Full 4D Context Canvas reference. For new AI features, use /spec --ai. For debugging, use /ai-debug. For quality checks, use /context-check."
 ---
 
 # Context Engineering for AI Products
+
+> **ARCHIVED SKILL**
+>
+> This skill has been integrated into the unified spec system:
+> - **New AI features:** Use `/spec --ai` or `/spec --deep context`
+> - **Diagnose issues:** Use `/ai-debug`
+> - **Quality checks:** Use `/context-check`
+>
+> This file remains as a **reference** for the full 4D Context Canvas framework.
+
+---
 
 ## Core Philosophy
 

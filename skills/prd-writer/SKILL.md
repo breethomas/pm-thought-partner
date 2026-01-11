@@ -1,9 +1,18 @@
 ---
 name: prd-writer
-description: Expert PRD (Product Requirements Document) writer for the AI era. Use when users want to create PRDs, spec documents, product specifications, feature specs, or technical requirements documents. Also use when users ask to review/improve existing PRDs, want PRD templates, need guidance on product documentation, or mention writing product specs. Handles both traditional and AI-specific product features with emphasis on decision-making over documentation.
+description: Full 5-stage PRD framework for complex features. Use for deep PRD work via /spec --deep full-prd. For quick feature specs, use /spec --feature instead.
 ---
 
 # PRD Writer - AI Era Product Specifications
+
+> **DEEP REFERENCE SKILL**
+>
+> For most PRD work, start with `/spec --feature` (Lite PRD flow).
+> Use this skill via `/spec --deep full-prd` when you need:
+> - The full 5-stage evolution (Planning → Kickoff → Solution Review → Launch Ready → Impact Review)
+> - 15-25 behavior examples for AI features
+> - Detailed rollout planning with gates
+> - Complete quality checklists
 
 This skill creates modern, decision-focused PRDs that work with AI prototyping tools while maintaining strategic clarity. Based on proven practices from leading tech companies including OpenAI.
 

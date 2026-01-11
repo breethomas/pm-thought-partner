@@ -138,12 +138,30 @@ Helps PMs onboarding to new teams learn conventions fast:
 
 **No MCP?** All commands work with manual input. Paste issues or describe context directly.
 
+### Specification Commands
+
+**`/spec` - Write specs at the right depth**
+
+The unified entry point for all spec work. Progressive disclosure based on what you're building:
+
+| Level | Use When | Output |
+|-------|----------|--------|
+| `/spec --quick` | Hours to days, clear scope | Linear issue |
+| `/spec --feature` | 1-3 weeks, needs alignment | Lite PRD |
+| `/spec --ai` | Any AI/ML/LLM work | Full spec with context requirements |
+
+**Deep dive options:** `--deep context`, `--deep examples`, `--deep rollout`, `--deep full-prd`
+
+**Related commands:**
+- `/ai-debug` - Diagnose why an AI feature is underperforming
+- `/context-check` - 5-point quality check before shipping
+
 ### Strategic Commands
 
 Applied through conversation, not lectures:
 
 - **AI-Era Growth:** `/four-fits` (modernized for ChatGPT discovery, AI costs, TAM shifts)
-- **AI Products:** `/context-canvas`, `/ai-cost-check`, `/ai-health-check`, `/start-evals`
+- **AI Products:** `/spec --ai`, `/ai-debug`, `/context-check`, `/ai-cost-check`, `/ai-health-check`, `/start-evals`
 - **Growth Mechanics:** `/growth-loops`
 - **Measurement:** `/pmf-survey`
 
@@ -160,14 +178,15 @@ These skills are automatically invoked by Claude when relevant to your task:
 | **workspace-calibration** | Provides Linear workspace context; directs to `/linear-calibrate` for formal analysis | When joining a new team or asking "how is this org using Linear?" |
 | **pm-frameworks** | Surfaces PM frameworks for discovery, growth, planning, measurement, and AI | When discussing product strategy, prioritization, user research, growth, or roadmapping |
 | **agent-workflow** | Designs AI agent architectures using Meta's 9-step process and 8-layer framework | When building AI agents, designing agent workflows, or architecting agentic systems |
-| **prd-writer** | Creates modern, decision-focused PRDs for the AI era | When writing PRDs, spec documents, or feature specifications |
+| **spec** | Progressive disclosure specs - from quick issues to full AI feature specs | When writing specs, PRDs, feature docs, or AI product specifications |
+| **prd-writer** | Full 5-stage PRD framework (deep reference) | When using `/spec --deep full-prd` for complex features |
 | **prompt-engineering** | Optimizes prompts using the 6-step framework | When creating, analyzing, or improving AI prompts |
 
 **How skills differ from commands:**
-- **Commands** (`/prd`, `/prompt-engineering`) - You invoke explicitly
+- **Commands** (`/spec`, `/ai-debug`, `/context-check`) - You invoke explicitly
 - **Skills** - Claude invokes automatically based on context
 
-Both `/prd` and `/prompt-engineering` commands are available as shortcuts to explicitly invoke their corresponding skills.
+`/spec` is the primary entry point for all specification work. `/prd` routes through `/spec --feature` for backward compatibility.
 
 **[→ Browse skills](skills/)**
 
