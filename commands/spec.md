@@ -17,6 +17,7 @@ Write **specifications** at the right depth for any project.
 /spec --quick             # Quick task (Linear issue)
 /spec --feature           # Feature (Lite PRD)
 /spec --ai                # AI feature (full spec)
+/spec --pitch             # Shape Up pitch format
 /spec LIN-123             # Start from Linear issue
 ```
 
@@ -29,6 +30,7 @@ Routes you to the right spec depth:
 | **Quick task** | Hours to days, clear scope | Linear issue |
 | **Feature** | 1-3 weeks, needs alignment | Lite PRD |
 | **AI feature** | Any AI/ML/LLM work | Full spec with context requirements |
+| **Pitch** | Shape Up workflow | 5-ingredient pitch |
 
 **Philosophy:** Write what's needed. Skip what's not.
 
@@ -57,5 +59,6 @@ The skill contains:
 
 ---
 
-**Frameworks:** Linear Method, Aakash Gupta (PRD/AI Spec), 4D Context Canvas
+**Frameworks:** Linear Method, Aakash Gupta (PRD/AI Spec), 4D Context Canvas, Shape Up (Ryan Singer)
 **Best for:** Any spec work - from quick tasks to complex AI features
+**Related:** `/shape` for full Shape Up shaping workflow (coaching through all 4 steps)

@@ -424,6 +424,49 @@ thought_leaders:
       - "LinkedIn: https://www.linkedin.com/in/pavelhoral"
       - "Twitter/X: @pavelhoral"
 
+  ryan_singer:
+    name: "Ryan Singer"
+    title: "Product Strategist, Author"
+    background: "Former Head of Strategy at Basecamp (17 years), creator of Shape Up methodology"
+    website: "https://feltpresence.com"
+    key_works:
+      - title: "Shape Up: Stop Running in Circles and Ship Work that Matters"
+        type: "book"
+        year: 2019
+        url: "https://basecamp.com/shapeup"
+        description: "Free online book describing Basecamp's product development methodology"
+      - title: "New Product Mode"
+        type: "article"
+        year: 2024
+        url: "https://world.hey.com/bb/new-product-mode-48a43806"
+        author: "Brian Bailey (synthesizing Ryan's ideas)"
+        description: "Adapting Shape Up for new product development vs established products"
+      - title: "Felt Presence"
+        type: "blog"
+        url: "https://feltpresence.com"
+    frameworks:
+      - "Shape Up (fixed time, variable scope)"
+      - "Appetite (time budget drives scope)"
+      - "Pitches (5 ingredients: Problem, Appetite, Solution, Rabbit Holes, No-Gos)"
+      - "Betting Table (pitches compete, no backlog)"
+      - "Circuit Breaker (auto-cancellation at deadline)"
+      - "Breadboarding (workflow design at right abstraction)"
+      - "Fat Marker Sketches (deliberately rough visual design)"
+      - "Hill Charts (progress without estimates)"
+      - "Scopes (integrated slices, not tasks)"
+      - "Cool-Down (unscheduled time between cycles)"
+    key_insights:
+      - "Appetite drives scope, not the reverse"
+      - "Shaped work is rough but solved"
+      - "Fixed time, variable scope (not the reverse)"
+      - "Pitches compete at the betting table - no infinite backlog"
+      - "Teams get full responsibility, not tasks"
+      - "If it doesn't ship in the appetite, it gets cut"
+    where_to_follow:
+      - "Shape Up (free book): https://basecamp.com/shapeup"
+      - "Felt Presence: https://feltpresence.com"
+      - "Twitter/X: @rjs"
+
   linear:
     name: "Linear (Methodology)"
     type: "organization"
@@ -665,6 +708,28 @@ frameworks:
           - "AI behavior contracts with concrete examples"
           - "Living document approach"
         key_insight: "PRDs are about decisions, not documentation. When building fast becomes easy (thanks to AI), knowing what to build becomes even more important."
+
+      shape_up:
+        name: "Shape Up Methodology"
+        file: "shape-up.md"
+        skill: "/shape"
+        sources:
+          - "Ryan Singer: Shape Up (https://basecamp.com/shapeup)"
+          - "Brian Bailey: New Product Mode (https://world.hey.com/bb/new-product-mode-48a43806)"
+        components:
+          - "Four shaping steps (Set Boundaries → Find Elements → Address Risks → Write Pitch)"
+          - "Pitches with 5 ingredients (Problem, Appetite, Solution, Rabbit Holes, No-Gos)"
+          - "Betting table (no backlog, pitches compete)"
+          - "Fixed time, variable scope"
+          - "Circuit breaker (auto-cancel at deadline)"
+          - "Two product modes (Established vs New Product)"
+        techniques:
+          - "Breadboarding (places, affordances, connections)"
+          - "Fat marker sketches (deliberately rough)"
+          - "Hill charts (uphill/downhill progress)"
+          - "Scopes (integrated slices, not tasks)"
+          - "Scope hammering (cut aggressively when needed)"
+        key_insight: "Appetite drives scope, not the reverse. Ship work that matters by setting clear boundaries and trading scope for time."
 
   ai:
     category: "AI-native product development"

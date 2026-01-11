@@ -1,7 +1,7 @@
 {
   "name": "pm-thought-partner",
-  "version": "1.5.0",
-  "description": "Strategic thinking partner for product decisions. Works through problems conversationally, challenges assumptions, helps you ship faster. Grounded in frameworks from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, and more. Plus backlog automation with Linear/GitHub integration.",
+  "version": "1.6.0",
+  "description": "Strategic thinking partner for product decisions. Works through problems conversationally, challenges assumptions, helps you ship faster. Grounded in frameworks from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, Ryan Singer, and more. Plus backlog automation with Linear/GitHub integration.",
   "author": {
     "name": "Bree Thomas"
   },
@@ -14,7 +14,8 @@
     "./skills/agent-workflow",
     "./skills/spec",
     "./skills/prd-writer",
-    "./skills/prompt-engineering"
+    "./skills/prompt-engineering",
+    "./skills/shape-up"
   ],
   "commands": [
     "./commands/strategy-session.md",
@@ -37,7 +38,8 @@
     "./commands/ai-debug.md",
     "./commands/context-check.md",
     "./commands/prd.md",
-    "./commands/prompt-engineering.md"
+    "./commands/prompt-engineering.md",
+    "./commands/shape.md"
   ],
   "agents": [],
   "hooks": [],
@@ -48,6 +50,8 @@
     "elena-verna",
     "brian-balfour",
     "teresa-torres",
+    "ryan-singer",
+    "shape-up",
     "linear",
     "roadmapping",
     "discovery",
