@@ -4,7 +4,7 @@
 
 A Claude Code plugin that challenges your product thinking. You don't memorize commands—you have conversations. Describe your problem, and Claude will ask hard questions, push back on weak reasoning, and guide you to proven frameworks.
 
-Built for the AI era. Grounded in frameworks from Marty Cagan, Teresa Torres, Ryan Singer, Chip Huyen, and more.
+Built for the AI era. Grounded in [proven frameworks from industry leaders](thought-leaders/).
 
 ---
 
