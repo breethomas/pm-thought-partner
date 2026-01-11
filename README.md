@@ -18,6 +18,7 @@ The PM Thought Partner synthesizes publicly available frameworks from:
 - **Teresa Torres** - Continuous discovery habits, opportunity solution trees
 - **Elena Verna** - Growth loops, product-led growth
 - **Brian Balfour** - Four fits, focus wins, growth strategy
+- **Ryan Singer** - Shape Up, fixed time/variable scope, pitches and betting
 - **Chip Huyen** - Production AI systems, ML engineering, data quality
 - **Aman Khan** - AI evals, vibe-driven development, AI-native products
 - **Janna Bastow** - Now-Next-Later roadmapping, cone of uncertainty
@@ -149,10 +150,12 @@ The unified entry point for all spec work. Progressive disclosure based on what 
 | `/spec --quick` | Hours to days, clear scope | Linear issue |
 | `/spec --feature` | 1-3 weeks, needs alignment | Lite PRD |
 | `/spec --ai` | Any AI/ML/LLM work | Full spec with context requirements |
+| `/spec --pitch` | Shape Up workflow | 5-ingredient pitch |
 
 **Deep dive options:** `--deep context`, `--deep examples`, `--deep rollout`, `--deep full-prd`
 
 **Related commands:**
+- `/shape` - Full Shape Up shaping workflow (4 steps → pitch)
 - `/ai-debug` - Diagnose why an AI feature is underperforming
 - `/context-check` - 5-point quality check before shipping
 
@@ -179,6 +182,7 @@ These skills are automatically invoked by Claude when relevant to your task:
 | **pm-frameworks** | Surfaces PM frameworks for discovery, growth, planning, measurement, and AI | When discussing product strategy, prioritization, user research, growth, or roadmapping |
 | **agent-workflow** | Designs AI agent architectures using Meta's 9-step process and 8-layer framework | When building AI agents, designing agent workflows, or architecting agentic systems |
 | **spec** | Progressive disclosure specs - from quick issues to full AI feature specs | When writing specs, PRDs, feature docs, or AI product specifications |
+| **shape-up** | Shape Up methodology - shaping, pitches, betting table, fixed time/variable scope | When shaping work, writing pitches, or discussing cycle planning |
 | **prd-writer** | Full 5-stage PRD framework (deep reference) | When using `/spec --deep full-prd` for complex features |
 | **prompt-engineering** | Optimizes prompts using the 6-step framework | When creating, analyzing, or improving AI prompts |
 

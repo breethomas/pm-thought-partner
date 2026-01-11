@@ -5,6 +5,61 @@ All notable changes to PM Thought Partner will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.0] - 2026-01-11
+
+### Added - Shape Up Methodology
+
+**`/shape` - Shape Up shaping workflow**
+
+New command for walking through Ryan Singer's Shape Up methodology. Guides you through the 4-step shaping process to create pitches ready for betting:
+
+1. **Set Boundaries** - Choose appetite (Small Batch 1-2 weeks, Big Batch 6 weeks), narrow the problem
+2. **Find the Elements** - Breadboard the solution, fat marker sketches if visual
+3. **Address Risks** - Identify rabbit holes, patch or cut, declare no-gos
+4. **Write the Pitch** - Compile 5 ingredients (Problem, Appetite, Solution, Rabbit Holes, No-Gos)
+
+**Product mode awareness:**
+- **Established product** - Full rigor, circuit breaker, betting table ready
+- **New product** - Looser constraints, validation focus
+
+**Usage:**
+```
+/shape                     # Start shaping workflow
+/shape "feature idea"      # Start with context
+/shape --review            # Review an existing pitch
+/shape --established       # Established product mode (full rigor)
+/shape --new-product       # New product mode (looser constraints)
+```
+
+**New skill: `shape-up`**
+
+Full Shape Up methodology implementation with three flows:
+- Shape New Work (full 4-step process)
+- Review Existing Pitch (challenge and improve)
+- Quick Pitch (via `/spec --pitch`)
+
+Reference files in `skills/shape-up/references/`:
+- `methodology.md` - Core philosophy, fixed time/variable scope, circuit breaker
+- `techniques.md` - Breadboarding, fat marker sketches, de-risking
+- `pitch-template.md` - 5 ingredients with examples
+
+**`/spec --pitch` - Quick pitch format**
+
+New option on `/spec` command for users who want pitch format without the full shaping workflow.
+
+**New thought leader: Ryan Singer**
+
+Added Ryan Singer (Shape Up creator, former Head of Strategy at Basecamp) to:
+- `thought-leaders/ryan-singer.md` - Full profile
+- `sources.yml` - Attribution with frameworks and key works
+
+### Changed
+
+- **`/spec`** - Added `--pitch` option routing to shape-up skill
+- **README.md** - Added Ryan Singer to thought leaders, updated spec table and skills table
+
+---
+
 ## [1.5.0] - 2026-01-11
 
 ### Added - Unified Spec System
