@@ -263,6 +263,67 @@ When and how you'd turn it off if needed
 
 ---
 
+### 🔄 Agency Progression Plan (CC/CD)
+
+**Use when:** Planning how the AI feature will evolve from low to high autonomy
+
+AI products earn autonomy. Plan the ladder upfront.
+
+| Version | Capability | Control | Agency | What You're Testing |
+|---------|------------|---------|--------|---------------------|
+| V1 (this spec) | [describe] | High | Low | [what you learn] |
+| V2 (future) | [describe] | Medium | Medium | [what you learn] |
+| V3 (future) | [describe] | Low | High | [what you learn] |
+
+**Promotion criteria V1→V2:**
+[What must be true before increasing agency?]
+
+---
+
+### 🎛️ Control Handoffs
+
+**Use when:** Designing the human-AI collaboration interface
+
+How do humans take back control when the AI is wrong?
+
+**Override mechanism:**
+[How users correct/reject AI output]
+
+**Escalation path:**
+[When AI should defer to human]
+
+**Feedback capture:**
+[How corrections feed back into system]
+
+**Good patterns:**
+- "AI suggested X. Accept or edit?"
+- Clear confidence indicators
+- Easy override path
+- Corrections improve the system
+
+---
+
+### 📊 Reference Dataset
+
+**Use when:** Preparing to build (this should be BEFORE development starts)
+
+Before building, you need 20-100 examples of expected behavior.
+This forces alignment on what "good" looks like.
+
+**Source of examples:**
+- [ ] Historical data (logs, past interactions)
+- [ ] Manual curation (team creates examples)
+- [ ] User research (observed behaviors)
+- [ ] Synthetic generation (for edge cases)
+
+**Target count:** [X] examples before V1 launch
+
+**Current status:** [X/Y collected]
+
+**Why this matters:** Reference datasets force the team to align on expected behavior before writing prompts. Most AI features fail because teams skip this step.
+
+---
+
 ## Real Examples
 
 ### Example 1: Simple AI Feature
@@ -383,10 +444,18 @@ AI doesn't replace product management - it adds new considerations.
 
 ## Related Frameworks
 
+- **Continuous Calibration (CC/CD):** `frameworks/ai-era-practices/continuous-calibration.md`
 - **AI Evals:** `frameworks/ai/ai-evals.md`
 - **AI Unit Economics:** `frameworks/ai-era-practices/ai-unit-economics.md`
 - **Prototype First:** `frameworks/ai-era-practices/prototype-first.md`
 - **Four Risks:** `frameworks/discovery/four-risks.md`
+
+## Related Commands
+
+- `/agency-ladder` - Plan the v1→v2→v3 agency progression
+- `/calibrate` - Post-launch calibration and agency promotion
+- `/ai-health-check` - Pre-launch readiness validation
+- `/start-evals` - Set up AI evaluation infrastructure
 
 ---
 
@@ -399,9 +468,10 @@ The goal is shipping high-quality AI features that:
 - Don't bankrupt you (unit econ)
 - Fail gracefully (safety)
 - Improve over time (calibration)
+- **Earn autonomy** (CC/CD)
 
 Write what creates shared understanding. Skip the rest. Move fast.
 
 ---
 
-**Pro tip:** If your eval strategy is "we'll see how it goes in prod," you're not ready to ship.
+**Pro tip:** If your eval strategy is "we'll see how it goes in prod," you're not ready to ship. And if your agency plan is "ship V3 and see what happens," you're not ready either.

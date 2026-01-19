@@ -388,6 +388,82 @@ Reject: [When to refuse - if applicable]
 - 1-2 adversarial inputs
 - 1-2 boundary cases (out of scope)
 
+### Phase 4: Agency Progression Plan
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ AGENCY PROGRESSION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+AI products earn autonomy. What's your ladder?
+
+| Version | Capability | Control | Agency | What You're Testing |
+|---------|------------|---------|--------|---------------------|
+| V1      | [describe] | High    | Low    | [what you learn]    |
+| V2      | [describe] | Medium  | Medium | [what you learn]    |
+| V3      | [describe] | Low     | High   | [what you learn]    |
+
+Which version are you speccing right now? (Usually V1)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**Key questions:**
+- What's the minimum viable agency for V1?
+- What must the AI prove before V2?
+- What would full autonomy (V3) even look like?
+
+**See:** `skills/spec/references/agency-progression.md` for examples and ladder patterns.
+
+### Phase 5: Control Handoffs
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ CONTROL HANDOFFS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+How do humans take back control when the AI is wrong?
+
+- Override mechanism: [how users correct/reject AI output]
+- Escalation path: [when AI should defer to human]
+- Feedback capture: [how corrections feed back into system]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**Good control handoffs:**
+- "AI suggested X. Accept or edit?"
+- Clear confidence indicators
+- Easy override path
+- Corrections improve the system
+
+**Bad control handoffs:**
+- AI acts without confirmation
+- No way to correct mistakes
+- User doesn't know AI made the decision
+
+### Phase 6: Reference Dataset
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ REFERENCE DATASET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Before building, you need 20-100 examples of expected behavior.
+This forces alignment on what "good" looks like.
+
+Where will reference examples come from?
+- [ ] Historical data (logs, past interactions)
+- [ ] Manual curation (team creates examples)
+- [ ] User research (observed behaviors)
+- [ ] Synthetic generation (for edge cases)
+
+Target count: [X] examples before V1 launch
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**Why this matters:** Reference datasets force the team to align on expected behavior before writing prompts. Most AI features fail because teams skip this step.
+
+**Golden dataset = baseline for evals.** Without it, you're testing against vibes.
+
 ### Output
 
 ```
@@ -425,6 +501,26 @@ Reject: [When to refuse - if applicable]
 
 [5-10 examples]
 
+## Agency Progression Plan
+
+| Version | Capability | Control | Agency | What You're Testing |
+|---------|------------|---------|--------|---------------------|
+| V1 (this spec) | ... | High | Low | ... |
+| V2 (future) | ... | Medium | Medium | ... |
+| V3 (future) | ... | Low | High | ... |
+
+## Control Handoffs
+
+**Override:** [mechanism]
+**Escalation:** [path]
+**Feedback:** [capture method]
+
+## Reference Dataset
+
+**Source:** [where examples come from]
+**Target:** [X] examples before launch
+**Status:** [X/Y collected]
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 What next?
@@ -433,6 +529,8 @@ What next?
   2. Export markdown
   3. Go deeper (→ Level 4 options)
   4. Run /ai-health-check
+  5. Plan agency ladder (/agency-ladder)
+  6. Set up post-launch calibration (/calibrate)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

@@ -39,10 +39,25 @@ Start any product conversation. Claude gathers context, then works through the p
 ```
 
 ### `/spec --ai`
-Spec an AI feature with context requirements, behavior examples, and eval strategy.
+Spec an AI feature with context requirements, behavior examples, eval strategy, and CC/CD planning (agency progression, control handoffs, reference dataset).
 
 ```
 /spec --ai
+```
+
+### `/agency-ladder`
+Plan the v1→v2→v3 agency progression for an AI feature. Map how autonomy increases over time.
+
+```
+/agency-ladder "feature name"
+```
+
+### `/calibrate`
+Post-launch AI feature calibration. Document error patterns, review evals, decide on agency promotion.
+
+```
+/calibrate --errors    # Document error patterns
+/calibrate --promote   # Check if ready for more autonomy
 ```
 
 ### `/shape`

@@ -5,6 +5,133 @@ All notable changes to PM Thought Partner will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.8.0] - 2026-01-19
+
+### Added - CC/CD Framework Integration
+
+**CC/CD (Continuous Calibration/Continuous Development)** - For companies transitioning from traditional SaaS to AI features, CC/CD provides the operational framework for building AI products differently.
+
+Based on Aishwarya Naresh Reganti & Kiriti Badam's article "Why your AI product needs a different development lifecycle" (Lenny's Newsletter, August 2025).
+
+**Three new components embed CC/CD thinking at different moments:**
+
+| Component | Type | Purpose | When Used |
+|-----------|------|---------|-----------|
+| `/spec --ai` (enhanced) | Skill update | Force CC/CD thinking at spec time | Before building |
+| `/agency-ladder` | New command + skill | Map v1→v2→v3 progression | Planning/conversations |
+| `/calibrate` | New command + skill | Post-launch error patterns, agency promotion | After launch |
+
+### `/spec --ai` Enhancements
+
+Added three new required sections for AI feature specs:
+
+**Phase 4: Agency Progression Plan**
+- Map v1→v2→v3 autonomy progression
+- Define what you're testing at each level
+- Identify which version you're speccing now
+
+**Phase 5: Control Handoffs**
+- Override mechanism (how users correct AI)
+- Escalation path (when AI defers to human)
+- Feedback capture (how corrections improve system)
+
+**Phase 6: Reference Dataset**
+- 20-100 examples of expected behavior before building
+- Forces alignment on what "good" looks like
+- Becomes baseline for evals
+
+### `/agency-ladder` - New Command + Skill
+
+Plan the agency ladder for any AI feature:
+
+```
+/agency-ladder                    # Start planning workflow
+/agency-ladder "feature name"     # Start with context
+/agency-ladder --review           # Map existing feature's level
+/agency-ladder --promote          # Check promotion readiness
+/agency-ladder --export           # Generate stakeholder artifact
+```
+
+**Four flows:**
+1. Plan new feature (full ladder from scratch)
+2. Review existing feature (map current state)
+3. Promotion check (readiness assessment)
+4. Export for stakeholder discussion
+
+**Output: Flywheel table**
+
+| Version | What You're Testing | What You Learn | What Feeds Next Loop |
+|---------|---------------------|----------------|----------------------|
+| V1 | ... | ... | ... |
+| V2 | ... | ... | ... |
+| V3 | ... | ... | ... |
+
+### `/calibrate` - New Command + Skill
+
+Post-launch calibration workflow:
+
+```
+/calibrate                        # Start calibration workflow
+/calibrate --errors               # Document error patterns
+/calibrate --evals                # Review eval performance
+/calibrate --promote              # Agency promotion decision
+/calibrate --quick                # Quick health check
+```
+
+**Four flows:**
+1. Document error patterns (categorize, analyze, prioritize fixes)
+2. Review eval performance (gaps, staleness, effectiveness)
+3. Agency promotion decision (checklist + verdict)
+4. Quick calibration check (health status)
+
+**Error Pattern Table output:**
+
+| Error Pattern | Category | Likely Reason | Potential Fix | Priority |
+|---------------|----------|---------------|---------------|----------|
+| ... | ... | ... | ... | P1/P2/P3 |
+
+### New Skill Files
+
+```
+skills/
+├── agency-ladder/
+│   ├── SKILL.md
+│   └── references/
+│       └── ladder-examples.md
+├── calibrate/
+│   ├── SKILL.md
+│   └── references/
+│       └── error-pattern-template.md
+└── spec/
+    └── references/
+        └── agency-progression.md   # NEW
+```
+
+### Updated Files
+
+- `skills/spec/SKILL.md` - Added Phases 4-6 for CC/CD sections
+- `templates/ai-product-spec.md` - Added Agency Progression, Control Handoffs, Reference Dataset sections
+- `frameworks/ai-era-practices/continuous-calibration.md` - Added "Operationalizing CC/CD" section with command links
+- `sources.yml` - Added Aishwarya Naresh Reganti & Kiriti Badam as thought leaders, updated continuous_calibration entry
+- `README.md` - Added new commands to Top Commands section
+
+### Philosophy
+
+**Core insight from CC/CD:**
+- AI products earn autonomy, they don't start with it
+- Every increase in AI agency means surrendering human control
+- Calibration happens after launch, not before
+- Reference datasets force alignment before building
+
+**The ladder:**
+| Version | Control | Agency | Pattern |
+|---------|---------|--------|---------|
+| V1 | High | Low | AI suggests, human decides |
+| V2 | Medium | Medium | AI handles routine, escalates edge cases |
+| V3 | Low | High | AI acts autonomously, human spot-checks |
+
+---
+
 ## [1.7.0] - 2026-01-19
 
 ### Added - Agent Architecture

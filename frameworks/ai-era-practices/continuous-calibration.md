@@ -472,6 +472,38 @@ Day 21: 100%
 7. **Build eval infrastructure** - Test before deploying changes
 8. **Learn from corrections** - User overrides show where to improve
 
+## Operationalizing CC/CD
+
+Use these commands to embed CC/CD in your workflow:
+
+### Before Building
+
+**`/spec --ai`** - Spec AI features with CC/CD thinking built in
+- Agency Progression Plan (v1→v2→v3)
+- Control Handoffs (override, escalation, feedback)
+- Reference Dataset (golden examples before building)
+
+**`/agency-ladder`** - Plan the autonomy progression
+- Map v1→v2→v3 for any AI feature
+- Define promotion criteria upfront
+- Export for stakeholder alignment
+
+### After Launch
+
+**`/calibrate`** - Post-launch calibration workflow
+- Document error patterns
+- Review eval performance
+- Make agency promotion decisions
+- Quick health checks
+
+### Related Commands
+
+- `/ai-health-check` - Pre-launch readiness validation
+- `/start-evals` - Set up evaluation infrastructure
+- `/ai-cost-check` - Model unit economics
+
+---
+
 ## Resources
 
 **Conceptual:**
@@ -483,6 +515,9 @@ Day 21: 100%
 - Aman Khan: AI Evals framework (`/frameworks/ai/ai-evals.md`)
 - Golden dataset creation
 - Production monitoring strategies
+
+**Source:**
+- Aishwarya Naresh Reganti & Kiriti Badam: "Why your AI product needs a different development lifecycle" (Lenny's Newsletter, August 2025)
 
 **Related:**
 - CI/CD → CC/CD evolution

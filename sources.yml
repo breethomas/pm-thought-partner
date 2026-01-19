@@ -467,6 +467,52 @@ thought_leaders:
       - "Felt Presence: https://feltpresence.com"
       - "Twitter/X: @rjs"
 
+  aishwarya_naresh_reganti:
+    name: "Aishwarya Naresh Reganti"
+    title: "AI Product Leader"
+    background: "Product leadership focused on AI product development lifecycle"
+    key_works:
+      - title: "Why your AI product needs a different development lifecycle"
+        type: "article"
+        year: 2025
+        url: "https://www.lennysnewsletter.com"
+        collaboration: "Co-authored with Kiriti Badam"
+        description: "Introduces CC/CD (Continuous Calibration/Continuous Development) framework for AI products"
+    frameworks:
+      - "CC/CD (Continuous Calibration/Continuous Development)"
+      - "Agency Ladder (v1→v2→v3 progression)"
+      - "Reference Dataset approach"
+      - "Control Handoff design"
+    key_insights:
+      - "AI products need CC/CD, not just CI/CD"
+      - "Start with low agency, earn autonomy through proven reliability"
+      - "Reference datasets force alignment before building"
+      - "Every increase in AI agency means surrendering human control"
+    contribution: "Framework for transitioning from traditional SaaS to AI features"
+    where_to_follow:
+      - "Lenny's Newsletter (guest author)"
+
+  kiriti_badam:
+    name: "Kiriti Badam"
+    title: "AI Product Leader"
+    background: "Product leadership focused on AI product development lifecycle"
+    key_works:
+      - title: "Why your AI product needs a different development lifecycle"
+        type: "article"
+        year: 2025
+        url: "https://www.lennysnewsletter.com"
+        collaboration: "Co-authored with Aishwarya Naresh Reganti"
+        description: "Introduces CC/CD framework for AI products"
+    frameworks:
+      - "CC/CD (Continuous Calibration/Continuous Development)"
+      - "Agency Ladder (v1→v2→v3 progression)"
+    key_insights:
+      - "Calibration happens after launch, not before"
+      - "Error patterns are the richest signal for improvement"
+    contribution: "Framework for transitioning from traditional SaaS to AI features"
+    where_to_follow:
+      - "Lenny's Newsletter (guest author)"
+
   linear:
     name: "Linear (Methodology)"
     type: "organization"
@@ -572,10 +618,14 @@ frameworks:
         name: "Continuous Calibration (CC/CD)"
         file: "continuous-calibration.md"
         sources:
-          - "Lenny's Newsletter: AI product development"
+          - "Aishwarya Naresh Reganti & Kiriti Badam: Why your AI product needs a different development lifecycle (Lenny's Newsletter, August 2025)"
           - "Aman Khan: Start low agency, earn autonomy"
           - "AI product best practices (2024-2025)"
         key_insight: "AI products need CC/CD (Continuous Calibration), not just CI/CD"
+        commands:
+          - "/spec --ai (with CC/CD sections)"
+          - "/agency-ladder"
+          - "/calibrate"
 
       prompt_engineering_for_pms:
         name: "Prompt Engineering for PMs"
