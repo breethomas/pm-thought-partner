@@ -16,187 +16,41 @@ Understand how a team organizes and writes issues in Linear. Helps PMs onboardin
 /issue-audit [team name]
 ```
 
-Examples:
+**Examples:**
 - `/issue-audit Customer Experience`
 - `/issue-audit Platform`
 - `/issue-audit "Data Engineering"`
 
-## Instructions
+## What Happens
 
-### Phase 1: Fetch Organization Structure
+1. Invokes the **team-organization-analyzer** agent with your team name
+2. Agent fetches team structure: workflow states, labels, cycles
+3. Samples 9 issues (3 active, 3 completed, 3 backlog)
+4. Analyzes patterns and infers conventions
 
-**These calls are lightweight and won't hit token limits.**
+## What You'll Learn
 
-```
-get_team(query: "[name]")
-list_issue_labels(team: "[name]")
-list_issue_statuses(team: "[name]")
-list_cycles(team: "[team_id]", type: "current")
-list_cycles(team: "[team_id]", type: "next")
-```
+- **Workflow**: How issues flow through states (Triage -> Done)
+- **Labels**: What taxonomy the team uses (Type, Area, Priority)
+- **Cycles**: Whether they use sprints and cadence
+- **Patterns**: How they write issues (descriptions, titles, hierarchy)
+- **Conventions**: What a new PM should follow
 
-If team not found, use `list_teams()` and suggest similar names.
+## Sample Size Philosophy
 
-From this, extract:
-- Team metadata (key, member count if available)
-- Label taxonomy (what categories exist, any hierarchy)
-- Workflow states (the team's process from triage to done)
-- Cycle cadence (are they using sprints? what duration?)
+9 issues is intentional - enough to observe patterns without overwhelming. The agent:
+- Won't apologize for limited data
+- Reports specific observations ("5 of 9 have descriptions")
+- Infers conventions from patterns
+- Offers concrete drill-down prompts
 
-### Phase 2: Surgical Issue Samples
+## After the Report
 
-**Fetch exactly 9 issues: 3 per key state.**
-
-```
-list_issues(team: "[name]", state: "In Progress", limit: 3)
-list_issues(team: "[name]", state: "Done", limit: 3, updatedAt: "-P7D")
-list_issues(team: "[name]", state: "Backlog", limit: 3)
-```
-
-Note: State names vary by team. Use the actual state names from Phase 1. Map to:
-- **Active work**: States of type "started" (In Progress, In Review, etc.)
-- **Completed**: States of type "completed" (Done, Completed, etc.)
-- **Waiting**: States of type "backlog" or "unstarted" (Backlog, To Do, etc.)
-
-If a state returns no issues, that's useful information too.
-
-### Phase 3: Analyze Patterns
-
-From the 9 sample issues, observe and report:
-
-**Structure patterns:**
-- Do any have `parentId`? (using sub-issues)
-- Do any have children? (using epics/parent issues)
-- Are labels applied consistently?
-- Are issues assigned to cycles?
-
-**Quality patterns:**
-- Do descriptions exist? (note which have content vs empty)
-- Are titles clear and specific, or vague?
-- Is there a consistent format? (e.g., "As a user...", acceptance criteria)
-- Any patterns in how they write issues?
-
-**Don't calculate percentages** - just describe what you observe in the samples.
-
-### Phase 4: Output Report
-
-**USE THIS FORMAT:**
-
-```markdown
-# Issue Audit: [Team Name]
-
-**Team Key:** [KEY]
-**Workflow States:** [N] states
-**Labels:** [N] labels
-**Cycles:** [Active/Not using cycles]
-
----
-
-## How This Team Organizes Work
-
-### Workflow
-[Describe the states from left to right]
-
-Example: "Issues flow through: Triage → Backlog → Selected → In Progress → In Review → Done. There's also a Blocked state for issues waiting on dependencies."
-
-### Labels
-[Describe the label taxonomy]
-
-Example: "The team uses 12 labels organized into groups:
-- **Type:** Bug, Feature, Tech Debt, Chore
-- **Area:** Frontend, Backend, API, Infrastructure
-- **Priority:** P0, P1, P2 (though priority field may also be used)"
-
-### Cycles
-[Describe cycle usage]
-
-Example: "The team runs 2-week cycles. Current cycle: Dec 16-30. Issues are assigned to cycles for sprint planning."
-
-Or: "This team doesn't appear to use cycles for sprint planning."
-
----
-
-## Sample Issues
-
-### Active Work (In Progress)
-| Issue | Title | Has Description | Labels |
-|-------|-------|-----------------|--------|
-| [ID] | [title] | Yes/No | [labels] |
-| [ID] | [title] | Yes/No | [labels] |
-| [ID] | [title] | Yes/No | [labels] |
-
-### Recently Completed
-| Issue | Title | Has Description | Labels |
-|-------|-------|-----------------|--------|
-| [ID] | [title] | Yes/No | [labels] |
-| [ID] | [title] | Yes/No | [labels] |
-| [ID] | [title] | Yes/No | [labels] |
-
-### In Backlog
-| Issue | Title | Has Description | Labels |
-|-------|-------|-----------------|--------|
-| [ID] | [title] | Yes/No | [labels] |
-| [ID] | [title] | Yes/No | [labels] |
-| [ID] | [title] | Yes/No | [labels] |
-
----
-
-## Patterns Observed
-
-### What I Notice
-[Bullet points of patterns from the 9 samples]
-
-Examples:
-- "5 of 9 samples have descriptions; the 4 without are all in Backlog"
-- "Titles are specific and action-oriented (e.g., 'Add retry logic to payment webhook')"
-- "Labels are used consistently - every issue has a Type label"
-- "2 issues are sub-issues (have parentId), suggesting they use parent/child for larger work"
-- "No issues in the sample are assigned to cycles"
-
-### Conventions to Follow
-[Infer conventions a new PM should follow]
-
-Examples:
-- "Use Type labels on every issue"
-- "Parent issues for epics, child issues for implementation tasks"
-- "Descriptions expected for features, optional for bugs"
-
----
-
-## Explore Further
-
-Based on what you've seen, here are questions you might want to ask:
-
-**See specific issues:**
-- "Show me issue [ID]" - get full details on any issue from the samples
-- "Show me 3 parent issues" - see how epics are structured
-
-**Explore by label:**
-- "Show me 3 issues labeled [Feature/Bug/etc.]"
-- "Show me issues labeled [specific label you noticed]"
-
-**Explore by state:**
-- "Show me what's blocked"
-- "Show me what's in review"
-
-**Quality deep-dive:**
-- "Show me an issue with a good description" - I'll pick the best from samples
-- "Show me issues without descriptions that are in progress"
-
-**Compare projects:**
-- "Run /issue-audit on [another team]" - see if patterns differ
-
----
-
-*Generated by PM Thought Partner /issue-audit*
-```
-
-## Notes for Claude
-
-- **Don't apologize for limited data.** 9 samples is enough to observe patterns.
-- **Be specific about what you see.** "5 of 9 have descriptions" not "most have descriptions."
-- **Infer conventions.** Help the PM understand what's expected on this team.
-- **Offer concrete next steps.** The drill-down prompts should use actual labels/states from this team.
+Explore further:
+- "Show me issue [ID]" - Full details on any sample
+- "Show me 3 parent issues" - See epic structure
+- "Show me issues labeled [X]" - Filter by label
+- "Run /issue-audit on [other team]" - Compare patterns
 
 ## Relationship to Other Commands
 
@@ -207,7 +61,7 @@ Based on what you've seen, here are questions you might want to ask:
     ↓         ↓
 /project-health       /issue-audit
 [project]             [team]
-(execution health)    (organization patterns)
+(execution health)    (organization patterns) ← THIS COMMAND
 ```
 
 - `/linear-calibrate` flags workspace-level issues

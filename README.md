@@ -70,6 +70,24 @@ Set up AI evals without overengineering. Create your first 20 test cases in a sp
 
 ---
 
+## Agents
+
+Seven specialized agents handle research and analysis tasks. They run autonomously and return structured output.
+
+| Agent | What It Does | Triggered By |
+|-------|--------------|--------------|
+| `linear-workspace-analyzer` | Workspace health against Linear methodology | `/linear-calibrate` |
+| `project-health-checker` | Single project deep-dive (On Track/At Risk/Stalled) | `/project-health` |
+| `team-organization-analyzer` | Team conventions and patterns | `/issue-audit` |
+| `ai-cost-analyzer` | AI feature economics and viability | `/ai-cost-check` |
+| `ai-implementation-auditor` | Pre-launch readiness (6 dimensions) | `/ai-health-check` |
+| `competitor-researcher` | Individual competitor analysis | `/competitive-research` |
+| `eval-generator` | Create AI test cases | `/start-evals` |
+
+**[Browse agents →](agents/)**
+
+---
+
 ## What's Inside
 
 **Frameworks** from leading product thinkers—discovery, growth, planning, measurement, and AI-native development.

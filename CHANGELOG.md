@@ -5,6 +5,67 @@ All notable changes to PM Thought Partner will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.7.0] - 2026-01-19
+
+### Added - Agent Architecture
+
+**7 new specialized agents** for research and analysis tasks. Agents run autonomously and return structured output. Commands become thin wrappers that invoke agents.
+
+| Agent | Purpose | Tools |
+|-------|---------|-------|
+| `linear-workspace-analyzer` | Workspace health against Linear methodology | Linear MCP |
+| `project-health-checker` | Single project deep-dive | Linear MCP |
+| `team-organization-analyzer` | Team conventions and patterns | Linear MCP |
+| `ai-cost-analyzer` | AI feature economics and viability | Read, Grep, Glob |
+| `ai-implementation-auditor` | Pre-launch readiness (6 dimensions) | Read, Grep, Glob |
+| `competitor-researcher` | Individual competitor analysis | WebFetch, WebSearch |
+| `eval-generator` | Create AI test cases | Write, Linear MCP |
+
+**Why agents?**
+- Agents are auto-discovered from `agents/` directory
+- YAML frontmatter defines metadata: `name`, `description`, `tools`, `model`
+- Commands stay conversational; agents handle the heavy lifting
+- Structured output for each agent type
+
+**New directory structure:**
+```
+pm-thought-partner/
+├── agents/                          # NEW - 7 specialized agents
+│   ├── linear-workspace-analyzer.md
+│   ├── project-health-checker.md
+│   ├── team-organization-analyzer.md
+│   ├── ai-cost-analyzer.md
+│   ├── ai-implementation-auditor.md
+│   ├── competitor-researcher.md
+│   └── eval-generator.md
+├── commands/                        # Refactored to thin wrappers
+│   └── ... (7 commands invoke agents, 11 unchanged)
+└── ...
+```
+
+### Changed
+
+**Commands refactored to thin wrappers:**
+- `/linear-calibrate` → invokes `linear-workspace-analyzer` agent
+- `/project-health` → invokes `project-health-checker` agent
+- `/issue-audit` → invokes `team-organization-analyzer` agent
+- `/ai-cost-check` → invokes `ai-cost-analyzer` agent
+- `/ai-health-check` → invokes `ai-implementation-auditor` agent
+- `/competitive-research` → invokes `competitor-researcher` agent
+- `/start-evals` → invokes `eval-generator` agent
+
+**Commands unchanged (11):**
+- `/strategy-session`, `/four-risks`, `/growth-loops`, `/four-fits`, `/pmf-survey`
+- `/lno-prioritize`, `/now-next-later`, `/reflect`
+- `/shape`, `/spec`, `/prd`
+
+### Documentation
+
+- **README.md** - Added Agents section with table and link to agents directory
+- Agent files include full workflow, output format, and edge case handling
+
+---
+
 ## [1.6.0] - 2026-01-11
 
 ### Added - Shape Up Methodology
