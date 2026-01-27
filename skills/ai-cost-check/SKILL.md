@@ -1,5 +1,6 @@
 ---
-description: /ai-cost-check [feature-name] - Calculate AI feature costs and challenge if you actually need it
+name: ai-cost-check
+description: Calculate AI feature costs and challenge if you actually need it. Invokes ai-cost-analyzer agent for detailed economics modeling.
 ---
 
 # AI Cost Check
@@ -9,6 +10,23 @@ Before you build an AI feature, answer two questions:
 2. **Can you afford it?**
 
 Most PMs skip #1 and regret #2 later.
+
+## Entry Point
+
+When this skill is invoked, start with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ AI COST CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+AI features have marginal costs that scale with usage.
+Model this BEFORE building, not after launch.
+
+What AI feature are you considering?
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## Usage
 

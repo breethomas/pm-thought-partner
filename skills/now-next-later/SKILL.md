@@ -1,8 +1,9 @@
 ---
-description: Generate a Now-Next-Later roadmap using Janna Bastow's framework
+name: now-next-later
+description: Generate a Now-Next-Later roadmap using Janna Bastow's framework. Communicates sequence and certainty without false dates.
 ---
 
-# Now-Next-Later Roadmap Command
+# Now-Next-Later Roadmap
 
 Create a **Now-Next-Later roadmap** using Janna Bastow's framework.
 
@@ -10,6 +11,31 @@ Create a **Now-Next-Later roadmap** using Janna Bastow's framework.
 - **Linear MCP** - Reads your projects and generates roadmap automatically
 - **GitHub MCP** - Reads your projects/milestones and generates roadmap automatically
 - **Manual** - Describe your projects directly
+
+## Entry Point
+
+When this skill is invoked, start with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ NOW-NEXT-LATER ROADMAP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Roadmaps should communicate sequence and certainty, not dates.
+
+What do you want to do?
+
+  1. Generate roadmap from Linear/GitHub
+     → I'll fetch your projects and categorize them
+
+  2. Create roadmap from description
+     → Tell me about your projects
+
+  3. Review existing roadmap
+     → Paste your current roadmap for analysis
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## What This Does
 
@@ -66,24 +92,6 @@ Each issue gets:
 - ➡️ **NEXT Roadmap Items** - Filter: `Content: [NEXT]`
 - 🔮 **LATER Roadmap Items** - Filter: `Content: [LATER]`
 
-These views can be **shared with your team** for roadmap visibility.
-
-### Why Title Prefixes?
-
-This approach:
-- ✅ Works immediately for any team (no setup required)
-- ✅ Doesn't conflict with existing labels or taxonomies
-- ✅ Visible at a glance in issue lists
-- ✅ Easy to filter and create custom views
-- ✅ Works for both new and existing Linear workspaces
-
-### Optional: Use Labels Instead
-
-If you prefer to use Linear labels:
-1. Create NOW/NEXT/LATER labels in Linear settings
-2. Share the label IDs with Claude during command execution
-3. Claude will apply labels and optionally remove title prefixes
-
 ## Example Output
 
 ```
@@ -127,12 +135,6 @@ If you prefer to use Linear labels:
 - LATER = Possible (we might do this, many options)
 - No fake dates - communicate sequence and certainty instead
 ```
-
-## Requirements
-
-- ✅ PM Thought Partner plugin installed
-- ✅ **Optional:** Linear MCP or GitHub MCP for automatic project fetching ([setup guide](../INSTALL_PLUGIN.md#connect-your-issue-tracker))
-- ✅ **Manual mode:** Works without MCP - describe your projects directly
 
 ## Integration Options
 

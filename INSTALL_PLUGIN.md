@@ -6,12 +6,12 @@
 
 ## What You Get
 
-- ✅ AI thought partner with strategic commands and comprehensive framework library
-- ✅ Slash commands for quick framework access (`/lno-prioritize`, `/four-risks`, `/competitive-research`, etc.)
+- ✅ AI thought partner with 26 skills and 7 specialized agents
+- ✅ Slash commands for quick framework access (`/strategy-session`, `/four-risks`, `/shape`, etc.)
 - ✅ Optional Linear integration (apply frameworks to your backlog)
 - ✅ Competitive intelligence system (systematic competitor analysis)
 - ✅ Works in your actual project repositories
-- ✅ All frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, and more
+- ✅ All frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, Ryan Singer, and more
 
 ---
 
@@ -32,26 +32,15 @@ Claude will handle everything - cloning the repo, setting up the plugin director
 
 ---
 
-### Option 2: Clone and Run Install Script
+### Option 2: Clone Manually
 
-**Automated setup with install script:**
-
-```bash
-git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
-cd ~/.claude/plugins/pm-thought-partner
-./install.sh
-```
-
-The install script will automatically symlink the slash commands to `~/.claude/commands/`.
-
-### Option 3: Manual Installation (No Script)
-
-**If you prefer full control:**
+**Clone to your plugins directory:**
 
 ```bash
 git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
-ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
 ```
+
+That's it. The plugin uses the new skills architecture - no symlinks needed.
 
 ---
 
@@ -160,11 +149,11 @@ Start a new Claude Code session in any project and ask:
 
 **Try slash commands:**
 - `/strategy-session` - Work through product decisions conversationally
-- `/reflect` - Analyze patterns across your strategic thinking
-- `/competitive-research` - Parallel competitor analysis with synthesis
-- `/lno-prioritize` - Categorize issues by impact
+- `/shape` - Shape work using Shape Up methodology
+- `/spec --ai` - Spec an AI feature with context engineering
 - `/four-risks` - Run risk assessment on a feature
-- `/now-next-later` - Generate a roadmap
+- `/linear-calibrate` - Analyze your Linear workspace health
+- `/reflect` - Analyze patterns across your strategic thinking
 
 **[→ See all commands and detailed usage in README](README.md)**
 
@@ -186,8 +175,7 @@ Claude will pull the latest changes from GitHub.
 
 **"Slash commands aren't working"**
 - Make sure you're in a Claude Code session (`claude` command)
-- Check if commands are symlinked: `ls -la ~/.claude/commands/` should show the command files
-- If commands aren't symlinked, run: `ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/`
+- Verify the plugin is installed: `ls ~/.claude/plugins/pm-thought-partner`
 - Try using natural language: "Apply LNO prioritization to my issues"
 
 **"Claude says it can't find Linear issues"**
@@ -210,7 +198,7 @@ Once installed, use your PM Thought Partner for:
 - Growth strategy planning
 - Roadmap generation
 - PMF measurement
-- AI adoption planning
+- AI feature planning and calibration
 
 **This is your on-demand PM advisor, grounded in frameworks from the world's best product leaders.**
 
@@ -230,16 +218,12 @@ git clone https://github.com/breethomas/pm-thought-partner.git
 # Symlink to Claude's plugins directory (recommended)
 ln -s "$(pwd)/pm-thought-partner" ~/.claude/plugins/pm-thought-partner
 
-# Symlink the slash commands
-ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
-
 # Or copy if you prefer a stable version
 mkdir -p ~/.claude/plugins
 cp -r pm-thought-partner ~/.claude/plugins/
-ln -sf ~/.claude/plugins/pm-thought-partner/commands/*.md ~/.claude/commands/
 ```
 
-**Tip:** Plugin symlink is better - `git pull` updates automatically apply. Commands must always be symlinked to `~/.claude/commands/`.
+**Tip:** Plugin symlink is better - `git pull` updates automatically apply.
 
 ### Per-Project Install (Team access)
 
@@ -251,16 +235,11 @@ cd /path/to/your/project
 mkdir -p .claude/plugins
 cp -r /path/to/pm-thought-partner .claude/plugins/pm-thought-partner
 
-# Symlink the slash commands to global commands directory
-ln -sf "$(pwd)/.claude/plugins/pm-thought-partner/commands"/*.md ~/.claude/commands/
-
 # Commit to your repo
 git add .claude/
 git commit -m "Add PM Thought Partner plugin"
 git push
 ```
-
-**Note:** Commands are still symlinked to `~/.claude/commands/` globally, but the plugin content lives in your project.
 
 ### Verify Manual Installation
 
@@ -271,8 +250,8 @@ ls -la ~/.claude/plugins/pm-thought-partner
 # Check per-project install
 ls -la .claude/plugins/pm-thought-partner
 
-# Check commands are linked
-ls -la ~/.claude/commands/
+# Check plugin.json exists
+cat ~/.claude/plugins/pm-thought-partner/.claude-plugin/plugin.json
 ```
 
 </details>
@@ -281,4 +260,4 @@ ls -la ~/.claude/commands/
 
 **Need help?** Open an issue: https://github.com/breethomas/pm-thought-partner/issues
 
-🚀 **Happy shipping!**
+**Happy shipping!**

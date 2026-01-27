@@ -1,5 +1,6 @@
 ---
-description: /competitive-research - Systematic competitive intelligence with parallel agent analysis
+name: competitive-research
+description: Systematic competitive intelligence with parallel agent analysis. Analyzes competitors thoroughly and synthesizes into actionable insights.
 ---
 
 # Competitive Research
@@ -7,6 +8,30 @@ description: /competitive-research - Systematic competitive intelligence with pa
 Conduct systematic competitive research using the **competitor-researcher** agent. Analyzes each competitor thoroughly and synthesizes findings into actionable insights.
 
 **Inspired by Teresa Torres' workflow for systematic competitive intelligence.**
+
+## Entry Point
+
+When this skill is invoked, start with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ COMPETITIVE RESEARCH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Systematic competitive intelligence that compounds over time.
+
+What competitors do you want to analyze?
+(Names or URLs)
+
+What's your focus?
+  • Pricing
+  • AI features
+  • UX/product experience
+  • Go-to-market
+  • All of the above
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## Usage
 

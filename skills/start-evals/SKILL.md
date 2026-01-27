@@ -1,5 +1,6 @@
 ---
-description: /start-evals [feature-name] - Start AI evals without overengineering - create your first 20 test cases
+name: start-evals
+description: Start AI evals without overengineering. Create your first 20 test cases in a spreadsheet using PM-Friendly Evals approach.
 ---
 
 # Start Evals
@@ -7,6 +8,22 @@ description: /start-evals [feature-name] - Start AI evals without overengineerin
 Launch your AI evaluation process using the **PM-Friendly Evals approach** (Aman Khan + Hamel Husain).
 
 Start with 20 test cases in a spreadsheet. Scale when ready. Error analysis > automation.
+
+## Entry Point
+
+When this skill is invoked, start with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ START EVALS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Start with 20 test cases. Scale when ready.
+
+What AI feature are you evaluating?
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## Usage
 

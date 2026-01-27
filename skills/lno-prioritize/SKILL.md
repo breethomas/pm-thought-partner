@@ -1,12 +1,13 @@
 ---
-description: Find out if you're spending time on the wrong things
+name: lno-prioritize
+description: Find out if you're spending time on the wrong things. Categorize backlog by Leverage/Neutral/Overhead and challenge your time allocation.
 ---
 
-# LNO Prioritize Command
+# LNO Prioritize
 
 **Most PMs waste time on overhead disguised as strategy.**
 
-This command categorizes your backlog by actual impact:
+This skill categorizes your backlog by actual impact:
 - **Leverage (L):** 10x impact - the work that actually matters
 - **Neutral (N):** Regular work - do it well enough, move on
 - **Overhead (O):** Busywork - minimize or automate
@@ -17,6 +18,32 @@ Then tells you if your time allocation is broken.
 - **Linear MCP** - Auto-analyzes and labels your issues
 - **GitHub MCP** - Auto-analyzes and labels your issues
 - **Manual** - Paste your issue list
+
+## Entry Point
+
+When this skill is invoked, start with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ LNO PRIORITIZATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Are you spending 60%+ time on Leverage work?
+Most PMs aren't.
+
+What do you want to analyze?
+
+  1. Current sprint/cycle
+     → I'll fetch and categorize all active issues
+
+  2. Specific team or project
+     → Focus on a subset of your backlog
+
+  3. Paste issue list
+     → I'll categorize what you provide
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## What This Does
 
@@ -41,7 +68,7 @@ Categorizes every issue, then challenges your priorities:
 ## What Happens
 
 1. **Fetches issues** from Linear or GitHub (if MCPs configured)
-2. **Applies LNO framework** from PM Thought Partner skill
+2. **Applies LNO framework**
 3. **Categorizes each issue** based on:
    - Strategic importance
    - Impact potential
@@ -111,12 +138,6 @@ WHAT TO DO:
 Want me to create Linear issues to delegate/automate the Overhead work?
 ```
 
-## Requirements
-
-- ✅ PM Thought Partner plugin installed
-- ✅ **Optional:** Linear MCP or GitHub MCP for automatic issue fetching ([setup guide](../INSTALL_PLUGIN.md#connect-your-issue-tracker))
-- ✅ **Manual mode:** Works without MCP - paste your issue list
-
 ## Integration Options
 
 **With Linear MCP:**
@@ -126,7 +147,7 @@ Automatically fetches Linear issues and can add L/N/O labels.
 Automatically fetches GitHub issues and can add labels.
 
 **Manual mode:**
-Paste your issues and the command will categorize them:
+Paste your issues and the skill will categorize them:
 ```
 Apply the LNO framework to these issues: [paste issue list]
 ```

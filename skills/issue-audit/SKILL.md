@@ -1,5 +1,6 @@
 ---
-description: /issue-audit [team] - Understand how a team organizes work in Linear
+name: issue-audit
+description: Understand how a team organizes work in Linear. Helps PMs onboarding to new teams learn conventions, see examples, and know what questions to ask.
 ---
 
 # Issue Audit
@@ -9,6 +10,23 @@ Understand how a team organizes and writes issues in Linear. Helps PMs onboardin
 ## Prerequisites
 
 - Linear MCP must be configured
+
+## Entry Point
+
+When this skill is invoked, start with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ISSUE AUDIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Learn how a team organizes work in Linear.
+Helps you onboard faster and follow team conventions.
+
+Which team do you want to analyze?
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## Usage
 

@@ -25,11 +25,11 @@ Claude will:
 - Push you toward prototypes and user conversations
 - Help you write specs, pitches, or issues when you're ready
 
-**You don't need to know the commands.** But if you want shortcuts, here are the ones that matter most.
+**You don't need to know the skills.** But if you want shortcuts, here are the ones that matter most.
 
 ---
 
-## Top Commands
+## Top Skills
 
 ### `/strategy-session`
 Start any product conversation. Claude gathers context, then works through the problem with you.
@@ -67,11 +67,11 @@ Shape work using Shape Up methodology. Walk through appetite, solution sketching
 /shape "notifications for upcoming appointments"
 ```
 
-### `/linear-calibrate`
+### `/workspace-calibration`
 Analyze your Linear workspace against best practices. Get health indicators and specific recommendations.
 
 ```
-/linear-calibrate
+/workspace-calibration
 ```
 
 ### `/start-evals`
@@ -81,7 +81,7 @@ Set up AI evals without overengineering. Create your first 20 test cases in a sp
 /start-evals
 ```
 
-**[See all commands →](commands/)**
+**[See all 26 skills →](skills/)**
 
 ---
 

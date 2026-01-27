@@ -1,14 +1,35 @@
 ---
-description: Diagnose why an AI feature is underperforming, hallucinating, or behaving inconsistently. Work backwards from symptoms to root cause.
+name: ai-debug
+description: Diagnose why an AI feature is underperforming, hallucinating, or behaving inconsistently. Uses 4D audit to work backwards from symptoms to root cause.
 ---
 
-# AI Debug Command
+# AI Debug
 
 Figure out **why an existing AI feature is broken**.
 
 **Works with:**
 - **Linear MCP** - Pull issue/bug details
 - **Manual** - Describe the symptoms
+
+## Entry Point
+
+When this skill is invoked, start with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ AI DEBUG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+When AI fails, teams blame the model.
+But 90% of failures are context failures.
+
+What's going wrong?
+
+  1. Provide a Linear issue ID
+  2. Describe the symptoms
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## Usage
 
@@ -83,19 +104,13 @@ Quick Win: [Smallest change that would help]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-## Instructions
+## Workflow
 
-**Workflow:**
 1. Collect symptoms (what's going wrong)
 2. Map symptoms to likely causes using the table above
 3. Audit each D dimension with diagnostic questions
 4. Identify root cause and prioritize fixes
 5. Offer to add findings to Linear or export
-
-**For Linear issues:**
-- Use `get_issue` for a single issue ID
-- If searching, use `limit: 10` and get titles first
-- Ask before pulling full details of related issues
 
 **Questions to ask at each step:**
 - "What specific behavior are you seeing?"

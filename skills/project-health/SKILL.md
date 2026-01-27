@@ -1,5 +1,6 @@
 ---
-description: /project-health [project-name] - Deep-dive health check on a single Linear project
+name: project-health
+description: Deep-dive health check on a single Linear project. Produces assessment with 7 dimensions - On Track / At Risk / Stalled.
 ---
 
 # Project Health Check
@@ -10,6 +11,22 @@ Analyze a single Linear project against execution best practices. Produces a hea
 
 - Linear MCP must be configured
 - Run `/linear-calibrate` first to identify projects worth investigating
+
+## Entry Point
+
+When this skill is invoked, start with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PROJECT HEALTH CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Deep-dive health check on a specific Linear project.
+
+Which project do you want to analyze?
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## Usage
 

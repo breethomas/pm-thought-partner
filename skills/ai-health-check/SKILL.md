@@ -1,12 +1,29 @@
 ---
-description: /ai-health-check [feature-name] - Pre-launch health check that blocks you from shipping broken AI features
+name: ai-health-check
+description: Pre-launch health check that blocks you from shipping broken AI features. Grades 6 dimensions (model selection, data quality, cost, monitoring, failure UX, optimization).
 ---
 
 # AI Health Check
 
 Before you ship an AI feature, it needs to pass 6 checks.
 
-Most AI products fail because PMs skip the basics: no cost model, broken failure UX, terrible data quality. This command stops you from launching garbage.
+Most AI products fail because PMs skip the basics: no cost model, broken failure UX, terrible data quality. This skill stops you from launching garbage.
+
+## Entry Point
+
+When this skill is invoked, start with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ AI HEALTH CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Before shipping an AI feature, it needs to pass 6 checks.
+
+What AI feature are you preparing to launch?
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## Usage
 

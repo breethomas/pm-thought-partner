@@ -1,10 +1,36 @@
 ---
-description: Create and analyze a PMF survey using Rahul Vohra's Superhuman framework
+name: pmf-survey
+description: Create and analyze a PMF survey using Rahul Vohra's Superhuman framework. The magic 40% benchmark for product-market fit.
 ---
 
-# PMF Survey Command
+# PMF Survey
 
 Create and analyze a **Product-Market Fit survey** using Rahul Vohra's Superhuman framework.
+
+## Entry Point
+
+When this skill is invoked, start with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PMF SURVEY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The magic number: >40% "very disappointed" = PMF
+
+What do you want to do?
+
+  1. Create a PMF survey
+     → Generate the four questions + implementation guide
+
+  2. Analyze existing results
+     → Paste your data, get PMF score + action plan
+
+  3. Understand the framework
+     → Learn when and how to use this
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## What This Does
 
@@ -151,12 +177,6 @@ Now that you have PMF (58% > 40%):
 - Build supporter-requested features
 - Survey again in 3 months to measure improvement
 ```
-
-## Requirements
-
-- ✅ PM Thought Partner plugin installed
-- ✅ Active users who've experienced your core product
-- ✅ Survey data (for analysis mode)
 
 ## Learn More
 

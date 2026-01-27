@@ -1,8 +1,9 @@
 ---
-description: Run Marty Cagan's Four Risks assessment on an issue (value, usability, feasibility, viability)
+name: four-risks
+description: Run Marty Cagan's Four Risks assessment on an issue (value, usability, feasibility, viability). Use when evaluating features before building.
 ---
 
-# Four Risks Assessment Command
+# Four Risks Assessment
 
 Apply **Marty Cagan's Four Risks Framework** to assess an issue before building.
 
@@ -10,6 +11,29 @@ Apply **Marty Cagan's Four Risks Framework** to assess an issue before building.
 - **Linear MCP** - Reads issue details and adds assessment as comment
 - **GitHub MCP** - Reads issue details and adds assessment as comment
 - **Manual** - Describe the feature directly
+
+## Entry Point
+
+When this skill is invoked, start with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ FOUR RISKS ASSESSMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+What are you assessing?
+
+  1. Specific issue/feature
+     → Provide issue ID or describe the feature
+
+  2. Current sprint issues
+     → Assess all issues in current sprint
+
+  3. Quick risk check
+     → Fast assessment on something you're considering
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## What This Does
 
@@ -116,12 +140,6 @@ Only proceed if:
 ✓ Prototype test shows clear value
 ✓ Unit economics support freemium model
 ```
-
-## Requirements
-
-- ✅ PM Thought Partner plugin installed
-- ✅ **Optional:** Linear MCP or GitHub MCP for automatic issue fetching ([setup guide](../INSTALL_PLUGIN.md#connect-your-issue-tracker))
-- ✅ **Manual mode:** Works without MCP - describe the feature directly
 
 ## Integration Options
 
