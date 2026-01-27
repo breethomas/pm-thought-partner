@@ -5,6 +5,34 @@ All notable changes to PM Thought Partner will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2026-01-26
+
+### Changed - Skills Architecture Migration
+
+**BREAKING CHANGE:** Migrated from `commands/` to `skills/` architecture.
+
+This aligns with Claude Code's native plugin system. The old symlink-based commands are replaced with skills that use YAML frontmatter.
+
+**What changed:**
+- Removed `commands/` directory (24 files)
+- Added 16 new skills in `skills/*/SKILL.md` format
+- Updated `plugin.json` to declare all 26 skills
+- Simplified installation (no symlinks needed)
+
+**Migration for existing users:**
+```bash
+# Re-clone to get the new structure
+rm -rf ~/.claude/plugins/pm-thought-partner
+git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
+```
+
+**Renamed skill:**
+- `/linear-calibrate` → `/workspace-calibration`
+
+All slash commands work the same way. No changes to how you use the plugin.
+
+---
+
 ## [1.8.0] - 2026-01-19
 
 ### Added - CC/CD Framework Integration

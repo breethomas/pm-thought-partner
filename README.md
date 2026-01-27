@@ -91,7 +91,7 @@ Seven specialized agents handle research and analysis tasks. They run autonomous
 
 | Agent | What It Does | Triggered By |
 |-------|--------------|--------------|
-| `linear-workspace-analyzer` | Workspace health against Linear methodology | `/linear-calibrate` |
+| `linear-workspace-analyzer` | Workspace health against Linear methodology | `/workspace-calibration` |
 | `project-health-checker` | Single project deep-dive (On Track/At Risk/Stalled) | `/project-health` |
 | `team-organization-analyzer` | Team conventions and patterns | `/issue-audit` |
 | `ai-cost-analyzer` | AI feature economics and viability | `/ai-cost-check` |
