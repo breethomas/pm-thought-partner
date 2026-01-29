@@ -25,6 +25,7 @@ Temporary Items
 # Editor directories and files
 .vscode/
 .idea/
+.obsidian/
 *.swp
 *.swo
 *~
