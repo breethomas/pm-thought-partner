@@ -1,3 +1,8 @@
+---
+name: workspace-calibration
+description: Analyze Linear workspace health and usage patterns before jumping into backlog work. Like a pre-flight check for a new PM joining a team or organization.
+---
+
 # Workspace Calibration Skill
 
 Analyze Linear workspace health and usage patterns before jumping into backlog work. Like a pre-flight check for a new PM joining a team or organization.

@@ -1,3 +1,8 @@
+---
+name: pm-frameworks
+description: Expert knowledge of proven product management frameworks for discovery, growth, measurement, planning, and AI-era practices.
+---
+
 # PM Frameworks Skill
 
 Expert knowledge of proven product management frameworks for discovery, growth, measurement, planning, and AI-era practices.
