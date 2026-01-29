@@ -17,30 +17,37 @@
 
 ## Installation
 
-> **Note:** PM Thought Partner is not yet in the Claude Code Marketplace. For now, installation requires cloning from GitHub. Once published to the marketplace, installation will be simpler: `claude plugin install pm-thought-partner`
+### Quick Install (Copy/Paste)
 
-### Option 1: Ask Claude (Easiest)
-
-**Just ask Claude Code CLI to install it:**
+Run these two commands in Claude Code:
 
 ```
-Install the PM Thought Partner plugin from
-https://github.com/breethomas/pm-thought-partner
+/plugin marketplace add breethomas/pm-thought-partner
 ```
 
-Claude will handle everything - cloning the repo, setting up the plugin directory, and verifying the installation.
+```
+/plugin install pm-thought-partner
+```
+
+That's it. Start a new session and your skills are available.
 
 ---
 
-### Option 2: Clone Manually
+### Why Two Steps?
 
-**Clone to your plugins directory:**
+Claude Code plugins use a "marketplace" system. First you add the source (the GitHub repo), then you install from that source. This is similar to how package managers work (add a repo, then install from it).
+
+---
+
+### Alternative: Clone Manually
+
+If you prefer not to use the plugin system:
 
 ```bash
 git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
 ```
 
-That's it. The plugin uses the new skills architecture - no symlinks needed.
+This also works but won't get automatic updates.
 
 ---
 
@@ -161,21 +168,30 @@ Start a new Claude Code session in any project and ask:
 
 ## Updating
 
-**To get the latest frameworks:**
+**To get the latest version:**
 
 ```
-Update the PM Thought Partner plugin to the latest version
+/plugin update pm-thought-partner
 ```
 
-Claude will pull the latest changes from GitHub.
+Or if you cloned manually:
+
+```bash
+cd ~/.claude/plugins/pm-thought-partner && git pull
+```
 
 ---
 
 ## Troubleshooting
 
+**"Skills don't appear in slash command autocomplete"**
+- This is a [known Claude Code bug](https://github.com/anthropics/claude-code/issues/17271) affecting all plugins
+- Skills still work — type `/pm-thought-partner:skill-name` directly, or just describe your problem in natural language
+- Run `/skills` to see all available skills
+
 **"Slash commands aren't working"**
 - Make sure you're in a Claude Code session (`claude` command)
-- Verify the plugin is installed: `ls ~/.claude/plugins/pm-thought-partner`
+- Verify the plugin is installed: `/plugin list` should show pm-thought-partner
 - Try using natural language: "Apply LNO prioritization to my issues"
 
 **"Claude says it can't find Linear issues"**

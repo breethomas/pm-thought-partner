@@ -27,6 +27,16 @@ Claude will:
 
 **You don't need to know the skills.** But if you want shortcuts, here are the ones that matter most.
 
+### Discovering Skills
+
+Three ways to find what's available:
+
+1. **Just describe your problem** — Claude reads skill descriptions and invokes them when relevant
+2. **Type `/skills`** — Lists all available skills from this plugin
+3. **Invoke directly** — Type `/pm-thought-partner:skill-name` (e.g., `/pm-thought-partner:four-fits`)
+
+> **Note:** Due to a [known Claude Code issue](https://github.com/anthropics/claude-code/issues/17271), plugin skills don't appear in slash command autocomplete. They work fine when typed directly or invoked via natural language.
+
 ---
 
 ## Top Skills
@@ -117,14 +127,17 @@ Seven specialized agents handle research and analysis tasks. They run autonomous
 
 ## Install
 
-Ask Claude Code:
+Run these two commands in Claude Code:
 
 ```
-Install the PM Thought Partner plugin from
-https://github.com/breethomas/pm-thought-partner
+/plugin marketplace add breethomas/pm-thought-partner
 ```
 
-**[Full setup guide →](INSTALL_PLUGIN.md)**
+```
+/plugin install pm-thought-partner
+```
+
+**[Full setup guide →](INSTALL_PLUGIN.md)** (includes Linear/GitHub integration)
 
 ---
 
