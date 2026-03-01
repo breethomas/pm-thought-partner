@@ -9,7 +9,15 @@
   "license": "MIT",
   "homepage": "https://github.com/breethomas/pm-thought-partner#readme",
   "skills": "./skills/",
-  "agents": "./agents/",
+  "agents": [
+    "./agents/linear-workspace-analyzer.md",
+    "./agents/project-health-checker.md",
+    "./agents/team-organization-analyzer.md",
+    "./agents/ai-cost-analyzer.md",
+    "./agents/ai-implementation-auditor.md",
+    "./agents/competitor-researcher.md",
+    "./agents/eval-generator.md"
+  ],
   "hooks": [],
   "keywords": [
     "product-management",
