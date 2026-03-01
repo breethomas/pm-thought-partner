@@ -6,12 +6,12 @@
 
 ## What You Get
 
-- ✅ AI thought partner with 26 skills and 7 specialized agents
-- ✅ Slash commands for quick framework access (`/strategy-session`, `/four-risks`, `/shape`, etc.)
-- ✅ Optional Linear integration (apply frameworks to your backlog)
-- ✅ Competitive intelligence system (systematic competitor analysis)
-- ✅ Works in your actual project repositories
-- ✅ All frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, Ryan Singer, and more
+- 26 skills and 7 specialized agents as your PM thinking partner
+- Skills for quick framework access (`/strategy-session`, `/four-risks`, `/shape`, etc.)
+- Optional Linear integration (apply frameworks to your backlog)
+- Competitive intelligence system (systematic competitor analysis)
+- Works in your actual project repositories
+- All frameworks from Marty Cagan, Elena Verna, Brian Balfour, Teresa Torres, Ryan Singer, and more
 
 ---
 
@@ -26,7 +26,7 @@ Run these two commands in Claude Code:
 ```
 
 ```
-/plugin install pm-thought-partner
+/plugin install pm-thought-partner@breethomas
 ```
 
 That's it. Start a new session and your skills are available.
@@ -39,21 +39,9 @@ Claude Code plugins use a "marketplace" system. First you add the source (the Gi
 
 ---
 
-### Alternative: Clone Manually
-
-If you prefer not to use the plugin system:
-
-```bash
-git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
-```
-
-This also works but won't get automatic updates.
-
----
-
 ## Set Up Competitive Research Directory (Optional)
 
-**First time running `/competitive-research`?** The command will guide you through creating a personal research directory.
+**First time running `/competitive-research`?** The skill will guide you through creating a personal research directory.
 
 **Why a separate directory?**
 - Keeps competitive intel separate from company codebases
@@ -65,7 +53,7 @@ This also works but won't get automatic updates.
 ~/Documents/pm-work/competitive-research/
 ```
 
-The command will ask you where to save competitive research on first run and remember your preference.
+The skill will ask you where to save competitive research on first run and remember your preference.
 
 ---
 
@@ -120,7 +108,7 @@ Follow the prompts to add your Linear API key.
 **Already have GitHub connected?** The PM Thought Partner will automatically detect and use it.
 
 **What you get:**
-- Same slash command capabilities as Linear MCP
+- Same skill capabilities as Linear MCP
 - Issue management, PR integration, project boards
 - Full create/update/label capabilities
 - Great if your team already lives in GitHub
@@ -142,7 +130,7 @@ Set up the GitHub MCP server for me
 - Describe your backlog in conversation
 - Still get all framework guidance and strategic advice
 
-The slash commands will prompt you for manual input instead of pulling from an integration.
+The skills will prompt you for manual input instead of pulling from an integration.
 
 ---
 
@@ -154,15 +142,15 @@ Start a new Claude Code session in any project and ask:
 
 **Expected behavior:** Claude pushes you toward prototyping, references frameworks, challenges assumptions.
 
-**Try slash commands:**
+**Try skills:**
 - `/strategy-session` - Work through product decisions conversationally
 - `/shape` - Shape work using Shape Up methodology
 - `/spec --ai` - Spec an AI feature with context engineering
 - `/four-risks` - Run risk assessment on a feature
-- `/linear-calibrate` - Analyze your Linear workspace health
+- `/workspace-calibration` - Analyze your Linear workspace health
 - `/reflect` - Analyze patterns across your strategic thinking
 
-**[→ See all commands and detailed usage in README](README.md)**
+**[See all skills and detailed usage in README](README.md)**
 
 ---
 
@@ -171,13 +159,7 @@ Start a new Claude Code session in any project and ask:
 **To get the latest version:**
 
 ```
-/plugin update pm-thought-partner
-```
-
-Or if you cloned manually:
-
-```bash
-cd ~/.claude/plugins/pm-thought-partner && git pull
+/plugin update pm-thought-partner@breethomas
 ```
 
 ---
@@ -189,7 +171,7 @@ cd ~/.claude/plugins/pm-thought-partner && git pull
 - Skills still work — type `/pm-thought-partner:skill-name` directly, or just describe your problem in natural language
 - Run `/skills` to see all available skills
 
-**"Slash commands aren't working"**
+**"Skills aren't working"**
 - Make sure you're in a Claude Code session (`claude` command)
 - Verify the plugin is installed: `/plugin list` should show pm-thought-partner
 - Try using natural language: "Apply LNO prioritization to my issues"
@@ -220,60 +202,4 @@ Once installed, use your PM Thought Partner for:
 
 ---
 
-<details>
-<summary><strong>Advanced: Manual Installation</strong></summary>
-
-If you prefer to install manually without asking Claude:
-
-### Global Install (Available in all projects)
-
-```bash
-# Clone the repository
-git clone https://github.com/breethomas/pm-thought-partner.git
-
-# Symlink to Claude's plugins directory (recommended)
-ln -s "$(pwd)/pm-thought-partner" ~/.claude/plugins/pm-thought-partner
-
-# Or copy if you prefer a stable version
-mkdir -p ~/.claude/plugins
-cp -r pm-thought-partner ~/.claude/plugins/
-```
-
-**Tip:** Plugin symlink is better - `git pull` updates automatically apply.
-
-### Per-Project Install (Team access)
-
-```bash
-# In YOUR project directory
-cd /path/to/your/project
-
-# Add as project plugin
-mkdir -p .claude/plugins
-cp -r /path/to/pm-thought-partner .claude/plugins/pm-thought-partner
-
-# Commit to your repo
-git add .claude/
-git commit -m "Add PM Thought Partner plugin"
-git push
-```
-
-### Verify Manual Installation
-
-```bash
-# Check global install
-ls -la ~/.claude/plugins/pm-thought-partner
-
-# Check per-project install
-ls -la .claude/plugins/pm-thought-partner
-
-# Check plugin.json exists
-cat ~/.claude/plugins/pm-thought-partner/.claude-plugin/plugin.json
-```
-
-</details>
-
----
-
 **Need help?** Open an issue: https://github.com/breethomas/pm-thought-partner/issues
-
-**Happy shipping!**

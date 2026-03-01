@@ -91,7 +91,7 @@ Set up AI evals without overengineering. Create your first 20 test cases in a sp
 /start-evals
 ```
 
-**[See all 26 skills →](skills/)**
+**[See all 26 skills →](plugins/pm-thought-partner/skills/)**
 
 ---
 
@@ -109,7 +109,7 @@ Seven specialized agents handle research and analysis tasks. They run autonomous
 | `competitor-researcher` | Individual competitor analysis | `/competitive-research` |
 | `eval-generator` | Create AI test cases | `/start-evals` |
 
-**[Browse agents →](agents/)**
+**[Browse agents →](plugins/pm-thought-partner/agents/)**
 
 ---
 
@@ -117,7 +117,7 @@ Seven specialized agents handle research and analysis tasks. They run autonomous
 
 **Frameworks** from leading product thinkers—discovery, growth, planning, measurement, and AI-native development.
 
-**[Browse frameworks →](frameworks/)** · **[Meet the thought leaders →](thought-leaders/)**
+**[Browse frameworks →](plugins/pm-thought-partner/frameworks/)** · **[Meet the thought leaders →](plugins/pm-thought-partner/thought-leaders/)**
 
 **Linear & GitHub integration** for backlog analysis, issue creation, and workspace health checks.
 
@@ -134,7 +134,7 @@ Run these two commands in Claude Code:
 ```
 
 ```
-/plugin install pm-thought-partner
+/plugin install pm-thought-partner@breethomas
 ```
 
 **[Full setup guide →](INSTALL_PLUGIN.md)** (includes Linear/GitHub integration)
@@ -158,7 +158,7 @@ This plugin won't just agree with you. It will:
 
 PM frameworks evolve. Contributions welcome.
 
-**[See sources.yml for attribution](sources.yml)** · **[Browse ideas](ideas/)**
+**[See sources.yml for attribution](plugins/pm-thought-partner/sources.yml)** · **[Browse ideas](ideas/)**
 
 ---
 
