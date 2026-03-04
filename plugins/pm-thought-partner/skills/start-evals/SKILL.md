@@ -110,8 +110,21 @@ A: First time: 30-60 min. After that: 15-20 min per run.
 **Q: Do I need special tools?**
 A: No. Spreadsheet works great. Graduate to tools when manual gets painful.
 
+## Ready to Scale?
+
+| Signal | Next Step |
+|--------|-----------|
+| You have 50+ test cases or see production failures | `/upgrade-evals` — Systematic error analysis on real traces |
+| You need more diverse test inputs | `/generate-test-data` — Dimension-based synthetic data |
+| Your AI feature uses retrieval (search, knowledge base) | `/eval-rag` — Separate retrieval from generation evaluation |
+
 ## Related Commands
 
+- `/upgrade-evals` - Error analysis on real traces (next step after this)
+- `/build-judge` - LLM-as-Judge for subjective failure modes
+- `/generate-test-data` - Diverse synthetic test inputs
+- `/eval-rag` - RAG-specific retrieval + generation evaluation
+- `/calibrate` - Ongoing post-launch calibration
 - `/ai-health-check` - Full pre-launch readiness audit
 - `/ai-cost-check` - Economic validation
 

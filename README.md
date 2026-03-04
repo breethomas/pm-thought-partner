@@ -91,7 +91,22 @@ Set up AI evals without overengineering. Create your first 20 test cases in a sp
 /start-evals
 ```
 
-**[See all 26 skills →](plugins/pm-thought-partner/skills/)**
+### Eval Skills Chain
+
+Scale from 20 test cases to systematic error analysis, automated judges, and RAG evaluation:
+
+```
+/start-evals        → 20 test cases (start here)
+/upgrade-evals      → Error analysis on real traces
+/generate-test-data → Dimension-based synthetic data
+/build-judge        → LLM-as-Judge per failure mode
+/eval-rag           → RAG retrieval + generation eval
+/calibrate          → Continuous calibration
+```
+
+Methodology adapted from [Hamel Husain's evals-skills](https://github.com/hamelsmu/evals-skills) (MIT license) for PM audience.
+
+**[See all 30 skills →](plugins/pm-thought-partner/skills/)**
 
 ---
 

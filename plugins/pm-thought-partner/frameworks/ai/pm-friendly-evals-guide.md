@@ -87,49 +87,48 @@ Input                          | Expected Output      | Pass/Fail | Notes
 
 **What you get:** Growing test coverage + ability to catch regressions
 
+**Skills:** `/upgrade-evals` (error analysis), `/build-judge` (automated evaluation), `/generate-test-data` (diverse inputs)
+
 **How to do it:**
 
-1. **Expand your test set to 50-100 cases**
-   - Every time you find a bug → add it as a test case
-   - Every time a user reports an issue → add it
-   - Cover different user types, edge cases, failure scenarios
+1. **Run error analysis on real traces** (`/upgrade-evals`)
+   - Read ~100 traces from production or staging
+   - Judge each trace pass/fail
+   - Let failure categories emerge from what you observe — don't start with pre-defined categories
+   - Compute failure rates to prioritize what to fix
 
-2. **Use LLM-as-judge for consistency**
-   - Instead of manual pass/fail, use another LLM to score
-   - Write a clear rubric for what "good" means
-   - Still review results weekly yourself
+2. **Fix obvious problems first**
+   - Missing prompt instructions → add them
+   - Engineering bugs → fix the code
+   - Missing tools → add them
+   - Only build evaluators for failures that persist after fixing
 
-   **Simple LLM judge prompt:**
-   ```
-   You are evaluating AI-generated product recommendations.
+3. **Build LLM-as-Judge for subjective failures** (`/build-judge`)
+   - One judge per failure mode. Binary pass/fail only.
+   - Each judge checks exactly one thing (tone, faithfulness, relevance — not all at once)
+   - Prefer code-based checks (regex, schema validation) for anything objective
+   - Only use LLM judges when code can't check the failure mode
 
-   Score this output as PASS or FAIL based on:
-   - Accuracy: Does it match user requirements?
-   - Relevance: Is the recommendation appropriate?
-   - Completeness: Does it explain why?
+4. **Generate diverse test data when needed** (`/generate-test-data`)
+   - Define dimensions of variation (query type, user persona, complexity)
+   - Generate tuples, convert to natural language, filter for quality
+   - Use to fill gaps in underrepresented scenarios
 
-   User input: {input}
-   AI output: {output}
-
-   Verdict: PASS or FAIL
-   Reason: [1-2 sentences explaining why]
-   ```
-
-3. **Track pass rate over time**
+5. **Track pass rate over time**
    - Create a simple dashboard (spreadsheet works!)
    - Chart: Pass rate by week
    - Goal: Don't let quality degrade as you iterate
 
-4. **Review failures weekly**
+6. **Review failures weekly**
    - Spend 30 minutes looking at what failed
-   - Categorize: Is it a prompt issue? Data issue? Model limitation?
-   - Prioritize fixes based on user impact
+   - Categorize by the failure modes from your error analysis
+   - Prioritize fixes based on frequency and business impact
 
 **When to graduate to Better:**
-- ✅ Your basic test set (20 cases) is consistently passing
-- ✅ You're making frequent changes to prompts or context
-- ✅ You have 30 min/week to maintain this
-- ✅ Manual review is getting tedious
+- Your basic test set (20 cases) is consistently passing
+- You're making frequent changes to prompts or context
+- You have 30 min/week to maintain this
+- Manual review is getting tedious
 
 **Tool recommendations:**
 - Spreadsheets (Google Sheets, Excel) - Works great
@@ -493,21 +492,23 @@ You need both:
 ## Summary: Your Path Forward
 
 ```
-Week 1: Good
+Week 1: Good (/start-evals)
 ├─ 20 test cases in spreadsheet
 ├─ Manual pass/fail review
 └─ Identify top failure pattern
 
-Week 5: Better
-├─ 50-100 test cases
-├─ LLM-as-judge for consistency
-├─ Weekly review meeting
+Week 5: Better (/upgrade-evals → /build-judge)
+├─ Error analysis on ~100 real traces
+├─ Failure categories emerge from data (not brainstormed)
+├─ LLM-as-Judge per failure mode (binary pass/fail)
+├─ /generate-test-data for diverse inputs
 └─ Track pass rate over time
 
 Month 4+: Best
 ├─ 200+ test cases
 ├─ Automated regression testing
-├─ Production monitoring
+├─ /eval-rag for retrieval-specific evaluation
+├─ /calibrate for continuous monitoring
 └─ Continuous improvement loop
 ```
 
@@ -528,13 +529,31 @@ Month 4+: Best
 
 ---
 
+## The Eval Skills Chain
+
+```
+/start-evals              → 20 test cases (start here)
+  ↓ "ready to scale"
+/upgrade-evals             → Error analysis on real traces
+  ↓ "need more diverse inputs"
+/generate-test-data        → Dimension-based synthetic data
+  ↓ "need automated evaluation"
+/build-judge               → LLM-as-Judge per failure mode
+  ↓ "RAG-specific issues"
+/eval-rag                  → Retrieval + generation eval
+  ↓ "ongoing maintenance"
+/calibrate                 → Continuous calibration
+```
+
 ## Key Takeaways
 
 1. **Start small** - 20 test cases this week > perfect eval system never
 2. **Error analysis > automation** - Looking at failures teaches you what matters
-3. **PMs own quality** - You define "good," eng implements the testing
-4. **Graduate when ready** - Don't jump to "Best" before mastering "Good"
-5. **Tools come last** - Understand the problem before building infrastructure
+3. **Categories emerge from traces, never brainstormed** - Pre-defined lists cause confirmation bias
+4. **Binary pass/fail only** - No Likert scales, no letter grades. Forces clear decision boundaries.
+5. **PMs own quality** - You define "good," eng implements the testing
+6. **Graduate when ready** - Don't jump to "Best" before mastering "Good"
+7. **Tools come last** - Understand the problem before building infrastructure
 
 **Remember:** The best eval system is the one you actually use. Start simple. Improve continuously.
 

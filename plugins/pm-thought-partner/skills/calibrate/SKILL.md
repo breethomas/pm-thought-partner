@@ -95,24 +95,9 @@ Where are you seeing errors?
 
 ### Step 2: Categorize Errors
 
-```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
- ERROR CATEGORIES
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Categories must emerge from the errors you actually observe — not from a pre-defined list. Read the failures first, then group similar ones together. Pre-defined categories cause confirmation bias.
 
-Common error categories for AI features:
-
-  • Hallucination - AI makes things up
-  • Wrong context - AI misreads the situation
-  • Tone mismatch - Output style is wrong
-  • Scope creep - AI goes beyond boundaries
-  • Missing information - AI lacks needed context
-  • Confidence miscalibration - Too certain or uncertain
-  • Edge case - Scenario not covered
-  • Adversarial - Intentional misuse
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
+For the systematic process (reading traces, emergent categorization, failure rates), run `/upgrade-evals`. Flow 1 here is for quick ad-hoc error documentation when you don't need the full analysis.
 
 ### Step 3: Analyze Root Causes
 
@@ -407,6 +392,9 @@ NEXT CHECK: [recommended cadence]
 **Related:**
 - `/ai-health-check` - Pre-launch validation
 - `/start-evals` - Set up eval infrastructure
+- `/upgrade-evals` - Systematic error analysis on real traces
+- `/build-judge` - LLM-as-Judge for automating subjective evals
+- `/eval-rag` - RAG-specific retrieval + generation evaluation
 
 ---
 
