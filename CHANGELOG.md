@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to PM Thought Partner will be documented in this file.
+All notable changes to bette-think will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -22,8 +22,8 @@ This aligns with Claude Code's native plugin system. The old symlink-based comma
 **Migration for existing users:**
 ```bash
 # Re-clone to get the new structure
-rm -rf ~/.claude/plugins/pm-thought-partner
-git clone https://github.com/breethomas/pm-thought-partner.git ~/.claude/plugins/pm-thought-partner
+rm -rf ~/.claude/plugins/bette-think
+git clone https://github.com/breethomas/bette-think.git ~/.claude/plugins/bette-think
 ```
 
 **Renamed skill:**
@@ -184,7 +184,7 @@ skills/
 
 **New directory structure:**
 ```
-pm-thought-partner/
+bette-think/
 ├── agents/                          # NEW - 7 specialized agents
 │   ├── linear-workspace-analyzer.md
 │   ├── project-health-checker.md

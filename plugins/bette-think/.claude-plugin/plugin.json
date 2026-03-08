@@ -1,13 +1,13 @@
 {
-  "name": "pm-thought-partner",
-  "version": "2.2.0",
+  "name": "bette-think",
+  "version": "3.0.0",
   "description": "Strategic thinking partner for product decisions. Works through problems conversationally, challenges assumptions, helps you ship faster. Grounded in frameworks from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Chip Huyen, Ryan Singer, Hamel Husain, and more. Complete eval chain from first 20 test cases through error analysis, LLM judges, and RAG evaluation. Plus backlog automation with Linear/GitHub integration.",
   "author": {
     "name": "Bree Thomas"
   },
-  "repository": "https://github.com/breethomas/pm-thought-partner",
+  "repository": "https://github.com/breethomas/bette-think",
   "license": "MIT",
-  "homepage": "https://github.com/breethomas/pm-thought-partner#readme",
+  "homepage": "https://github.com/breethomas/bette-think#readme",
   "skills": "./skills/",
   "keywords": [
     "product-management",

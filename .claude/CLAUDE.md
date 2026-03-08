@@ -5,17 +5,17 @@
 This is an **open-source Claude Code plugin** for product managers.
 It provides PM frameworks, skills, and thought partnership for product decisions.
 
-**Repository:** https://github.com/breethomas/pm-thought-partner
+**Repository:** https://github.com/breethomas/bette-think
 
 ## Architecture
 
-This repo is a **marketplace** (named `breethomas`) containing one plugin (`pm-thought-partner`).
+This repo is a **marketplace** (named `breethomas`) containing one plugin (`bette-think`).
 
 ```
 .claude-plugin/
   marketplace.json       # Marketplace config (name: breethomas)
 plugins/
-  pm-thought-partner/    # The plugin
+  bette-think/    # The plugin
     .claude-plugin/
       plugin.json        # Plugin manifest
     skills/              # Skills (the main interface)
@@ -30,9 +30,9 @@ sessions/                # Strategy session outputs (gitignored)
 
 ## Technology Stack
 
-- Claude Code skills (markdown files in `plugins/pm-thought-partner/skills/`)
-- Framework documentation (markdown in `plugins/pm-thought-partner/frameworks/`)
-- Thought leader profiles (markdown in `plugins/pm-thought-partner/thought-leaders/`)
+- Claude Code skills (markdown files in `plugins/bette-think/skills/`)
+- Framework documentation (markdown in `plugins/bette-think/frameworks/`)
+- Thought leader profiles (markdown in `plugins/bette-think/thought-leaders/`)
 - No build process - pure markdown
 
 ## Code Style & Conventions
@@ -58,7 +58,7 @@ sessions/                # Strategy session outputs (gitignored)
 **When adding new skills:**
 1. Research the framework/concept thoroughly
 2. Add attribution to `sources.yml`
-3. Create skill directory in `plugins/pm-thought-partner/skills/`
+3. Create skill directory in `plugins/bette-think/skills/`
 4. Update README.md if it's a major addition
 5. Test the skill works as expected
 
@@ -91,7 +91,7 @@ sessions/                # Strategy session outputs (gitignored)
 - Commit messages should be clear and descriptive
 - Tag releases when publishing new versions
 - Keep changelog updated for significant changes
-- Version bump in `plugins/pm-thought-partner/.claude-plugin/plugin.json`
+- Version bump in `plugins/bette-think/.claude-plugin/plugin.json`
 
 ## Community & Open Source
 
@@ -110,4 +110,4 @@ When working on skills:
 
 ---
 
-*Project-specific rules for pm-thought-partner plugin development*
+*Project-specific rules for bette-think plugin development*

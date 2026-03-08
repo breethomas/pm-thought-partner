@@ -22,11 +22,11 @@
 Run these two commands in Claude Code:
 
 ```
-/plugin marketplace add breethomas/pm-thought-partner
+/plugin marketplace add breethomas/bette-think
 ```
 
 ```
-/plugin install pm-thought-partner@breethomas
+/plugin install bette-think@breethomas
 ```
 
 That's it. Start a new session and your skills are available.
@@ -159,7 +159,7 @@ Start a new Claude Code session in any project and ask:
 **To get the latest version:**
 
 ```
-/plugin update pm-thought-partner@breethomas
+/plugin update bette-think@breethomas
 ```
 
 ---
@@ -168,12 +168,12 @@ Start a new Claude Code session in any project and ask:
 
 **"Skills don't appear in slash command autocomplete"**
 - This is a [known Claude Code bug](https://github.com/anthropics/claude-code/issues/17271) affecting all plugins
-- Skills still work — type `/pm-thought-partner:skill-name` directly, or just describe your problem in natural language
+- Skills still work — type `/bette-think:skill-name` directly, or just describe your problem in natural language
 - Run `/skills` to see all available skills
 
 **"Skills aren't working"**
 - Make sure you're in a Claude Code session (`claude` command)
-- Verify the plugin is installed: `/plugin list` should show pm-thought-partner
+- Verify the plugin is installed: `/plugin list` should show bette-think
 - Try using natural language: "Apply LNO prioritization to my issues"
 
 **"Claude says it can't find Linear issues"**
@@ -202,4 +202,4 @@ Once installed, use your PM Thought Partner for:
 
 ---
 
-**Need help?** Open an issue: https://github.com/breethomas/pm-thought-partner/issues
+**Need help?** Open an issue: https://github.com/breethomas/bette-think/issues

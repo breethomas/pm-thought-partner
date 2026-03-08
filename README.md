@@ -1,10 +1,10 @@
-# PM Thought Partner
+# bette-think
 
 **Your sparring partner, not your assistant.**
 
 A Claude Code plugin that challenges your product thinking. You don't memorize commands—you have conversations. Describe your problem, and Claude will ask hard questions, push back on weak reasoning, and guide you to proven frameworks.
 
-Built for the AI era. Grounded in [proven frameworks from industry leaders](plugins/pm-thought-partner/thought-leaders/).
+Built for the AI era. Grounded in [proven frameworks from industry leaders](plugins/bette-think/thought-leaders/).
 
 ---
 
@@ -33,7 +33,7 @@ Three ways to find what's available:
 
 1. **Just describe your problem** — Claude reads skill descriptions and invokes them when relevant
 2. **Type `/skills`** — Lists all available skills from this plugin
-3. **Invoke directly** — Type `/pm-thought-partner:skill-name` (e.g., `/pm-thought-partner:four-fits`)
+3. **Invoke directly** — Type `/bette-think:skill-name` (e.g., `/bette-think:four-fits`)
 
 > **Note:** Due to a [known Claude Code issue](https://github.com/anthropics/claude-code/issues/17271), plugin skills don't appear in slash command autocomplete. They work fine when typed directly or invoked via natural language.
 
@@ -106,7 +106,7 @@ Scale from 20 test cases to systematic error analysis, automated judges, and RAG
 
 Methodology adapted from [Hamel Husain's evals-skills](https://github.com/hamelsmu/evals-skills) (MIT license) for PM audience.
 
-**[See all 30 skills →](plugins/pm-thought-partner/skills/)**
+**[See all 30 skills →](plugins/bette-think/skills/)**
 
 ---
 
@@ -124,7 +124,7 @@ Seven specialized agents handle research and analysis tasks. They run autonomous
 | `competitor-researcher` | Individual competitor analysis | `/competitive-research` |
 | `eval-generator` | Create AI test cases | `/start-evals` |
 
-**[Browse agents →](plugins/pm-thought-partner/agents/)**
+**[Browse agents →](plugins/bette-think/agents/)**
 
 ---
 
@@ -132,7 +132,7 @@ Seven specialized agents handle research and analysis tasks. They run autonomous
 
 **Frameworks** from leading product thinkers—discovery, growth, planning, measurement, and AI-native development.
 
-**[Browse frameworks →](plugins/pm-thought-partner/frameworks/)** · **[Meet the thought leaders →](plugins/pm-thought-partner/thought-leaders/)**
+**[Browse frameworks →](plugins/bette-think/frameworks/)** · **[Meet the thought leaders →](plugins/bette-think/thought-leaders/)**
 
 **Linear & GitHub integration** for backlog analysis, issue creation, and workspace health checks.
 
@@ -145,11 +145,11 @@ Seven specialized agents handle research and analysis tasks. They run autonomous
 Run these two commands in Claude Code:
 
 ```
-/plugin marketplace add breethomas/pm-thought-partner
+/plugin marketplace add breethomas/bette-think
 ```
 
 ```
-/plugin install pm-thought-partner@breethomas
+/plugin install bette-think@breethomas
 ```
 
 **[Full setup guide →](INSTALL_PLUGIN.md)** (includes Linear/GitHub integration)
@@ -173,7 +173,7 @@ This plugin won't just agree with you. It will:
 
 PM frameworks evolve. Contributions welcome.
 
-**[See sources.yml for attribution](plugins/pm-thought-partner/sources.yml)** · **[Browse ideas](ideas/)**
+**[See sources.yml for attribution](plugins/bette-think/sources.yml)** · **[Browse ideas](ideas/)**
 
 ---
 
