@@ -1,180 +1,42 @@
 # bette-think
 
-**Your sparring partner, not your assistant.**
+> "Attempt the impossible in order to improve your work." — Bette Davis
 
-A Claude Code plugin that challenges your product thinking. You don't memorize commands—you have conversations. Describe your problem, and Claude will ask hard questions, push back on weak reasoning, and guide you to proven frameworks.
+PM frameworks and strategic sparring for Claude Code.
 
-Built for the AI era. Grounded in [proven frameworks from industry leaders](plugins/bette-think/thought-leaders/).
+**This repo is now part of [Bette](https://github.com/breethomas/bette).** Install the unified plugin to get all 57 skills including everything in this repo.
+
+## Install Bette
+
+```
+/plugin marketplace add breethomas/bette
+/plugin install bette@breethomas
+```
+
+## What's Here
+
+30 skills and frameworks from Marty Cagan, Teresa Torres, Elena Verna, Brian Balfour, Ryan Singer, Hamel Husain, and more. Your sparring partner, not your assistant.
+
+**Top skills:** strategy-session, spec, shape-up, four-risks, agency-ladder, start-evals, competitive-research, calibrate, now-next-later, growth-loops
+
+**7 agents** for autonomous research and analysis.
+
+**Browse:** [skills/](plugins/bette-think/skills/) · [frameworks/](plugins/bette-think/frameworks/) · [thought-leaders/](plugins/bette-think/thought-leaders/)
+
+## Migrating from pm-thought-partner
+
+```
+/plugin uninstall pm-thought-partner@breethomas
+/plugin marketplace add breethomas/bette
+/plugin install bette@breethomas
+```
+
+All your skills are still there, plus 27 more.
+
+## License
+
+MIT
 
 ---
 
-## How to Use This
-
-**Just talk.** Start with what you're trying to figure out:
-
-> "I'm building an AI feature that recommends which clients to call. Help me think through it."
-
-> "We're planning our next cycle. I have three pitches competing for the same slot."
-
-> "My AI feature is hallucinating. I don't know why."
-
-Claude will:
-- Ask clarifying questions
-- Challenge assumptions ("What evidence do you have?")
-- Surface relevant frameworks
-- Push you toward prototypes and user conversations
-- Help you write specs, pitches, or issues when you're ready
-
-**You don't need to know the skills.** But if you want shortcuts, here are the ones that matter most.
-
-### Discovering Skills
-
-Three ways to find what's available:
-
-1. **Just describe your problem** — Claude reads skill descriptions and invokes them when relevant
-2. **Type `/skills`** — Lists all available skills from this plugin
-3. **Invoke directly** — Type `/bette-think:skill-name` (e.g., `/bette-think:four-fits`)
-
-> **Note:** Due to a [known Claude Code issue](https://github.com/anthropics/claude-code/issues/17271), plugin skills don't appear in slash command autocomplete. They work fine when typed directly or invoked via natural language.
-
----
-
-## Top Skills
-
-### `/strategy-session`
-Start any product conversation. Claude gathers context, then works through the problem with you.
-
-```
-/strategy-session "should we build AI recommendations or improve search first?"
-```
-
-### `/spec --ai`
-Spec an AI feature with context requirements, behavior examples, eval strategy, and CC/CD planning (agency progression, control handoffs, reference dataset).
-
-```
-/spec --ai
-```
-
-### `/agency-ladder`
-Plan the v1→v2→v3 agency progression for an AI feature. Map how autonomy increases over time.
-
-```
-/agency-ladder "feature name"
-```
-
-### `/calibrate`
-Post-launch AI feature calibration. Document error patterns, review evals, decide on agency promotion.
-
-```
-/calibrate --errors    # Document error patterns
-/calibrate --promote   # Check if ready for more autonomy
-```
-
-### `/shape`
-Shape work using Shape Up methodology. Walk through appetite, solution sketching, rabbit holes, and output a pitch.
-
-```
-/shape "notifications for upcoming appointments"
-```
-
-### `/workspace-calibration`
-Analyze your Linear workspace against best practices. Get health indicators and specific recommendations.
-
-```
-/workspace-calibration
-```
-
-### `/start-evals`
-Set up AI evals without overengineering. Create your first 20 test cases in a spreadsheet.
-
-```
-/start-evals
-```
-
-### Eval Skills Chain
-
-Scale from 20 test cases to systematic error analysis, automated judges, and RAG evaluation:
-
-```
-/start-evals        → 20 test cases (start here)
-/upgrade-evals      → Error analysis on real traces
-/generate-test-data → Dimension-based synthetic data
-/build-judge        → LLM-as-Judge per failure mode
-/eval-rag           → RAG retrieval + generation eval
-/calibrate          → Continuous calibration
-```
-
-Methodology adapted from [Hamel Husain's evals-skills](https://github.com/hamelsmu/evals-skills) (MIT license) for PM audience.
-
-**[See all 30 skills →](plugins/bette-think/skills/)**
-
----
-
-## Agents
-
-Seven specialized agents handle research and analysis tasks. They run autonomously and return structured output.
-
-| Agent | What It Does | Triggered By |
-|-------|--------------|--------------|
-| `linear-workspace-analyzer` | Workspace health against Linear methodology | `/workspace-calibration` |
-| `project-health-checker` | Single project deep-dive (On Track/At Risk/Stalled) | `/project-health` |
-| `team-organization-analyzer` | Team conventions and patterns | `/issue-audit` |
-| `ai-cost-analyzer` | AI feature economics and viability | `/ai-cost-check` |
-| `ai-implementation-auditor` | Pre-launch readiness (6 dimensions) | `/ai-health-check` |
-| `competitor-researcher` | Individual competitor analysis | `/competitive-research` |
-| `eval-generator` | Create AI test cases | `/start-evals` |
-
-**[Browse agents →](plugins/bette-think/agents/)**
-
----
-
-## What's Inside
-
-**Frameworks** from leading product thinkers—discovery, growth, planning, measurement, and AI-native development.
-
-**[Browse frameworks →](plugins/bette-think/frameworks/)** · **[Meet the thought leaders →](plugins/bette-think/thought-leaders/)**
-
-**Linear & GitHub integration** for backlog analysis, issue creation, and workspace health checks.
-
-**AI-era focus**: context engineering, evals, cost modeling, production AI systems. Not just classic PM—built for what's next.
-
----
-
-## Install
-
-Run these two commands in Claude Code:
-
-```
-/plugin marketplace add breethomas/bette-think
-```
-
-```
-/plugin install bette-think@breethomas
-```
-
-**[Full setup guide →](INSTALL_PLUGIN.md)** (includes Linear/GitHub integration)
-
----
-
-## Philosophy
-
-This plugin won't just agree with you. It will:
-
-- Ask for evidence before accepting assumptions
-- Suggest prototypes over PRDs
-- Challenge you to talk to users
-- Push back when thinking is fuzzy
-
-**Opinionated. Curated. AI-era first.**
-
----
-
-## Contributing
-
-PM frameworks evolve. Contributions welcome.
-
-**[See sources.yml for attribution](plugins/bette-think/sources.yml)** · **[Browse ideas](ideas/)**
-
----
-
-MIT License. Built with Claude Code by [Bree Thomas](https://github.com/breethomas).
+*Part of the [Bette](https://github.com/breethomas/bette) system. Fasten your seatbelts.*
